@@ -1,0 +1,26 @@
+name: Lint
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - "frontend/**"
+
+defaults:
+  run:
+    working-directory: ./frontend
+
+jobs:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          cache: "yarn"
+          cache-dependency-path: frontend/yarn.lock
+      - run: yarn install
+      - run: yarn lint
