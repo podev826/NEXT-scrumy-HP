@@ -12,6 +12,7 @@
 
 - clsx
 - framer-motion
+- fortawesome
 
 ### other
 
