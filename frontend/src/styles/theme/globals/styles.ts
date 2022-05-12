@@ -6,7 +6,7 @@ export const styles = {
     body: {
       fontSize: 'md',
       fontWeight: 'normal',
-      fontFamily: '"Montserrat", "Noto Sans JP", "sans-serif"',
+      fontFamily: '"Noto Sans JP", "sans-serif"',
       color: 'sub.100',
       letterSpacing: '0.08em',
       overflowY: 'hidden',
@@ -21,6 +21,9 @@ export const styles = {
     },
     small: {
       fontSize: '100%',
+    },
+    '*[lang="en"]': {
+      fontFamily: '"Montserrat", "sans-serif"',
     },
   },
 };
