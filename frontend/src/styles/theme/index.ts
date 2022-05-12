@@ -1,9 +1,13 @@
 import { extendTheme } from '@chakra-ui/react';
 
-import { colors } from './foundations';
-import { styles } from './styles';
+import * as components from './components';
+import * as foundations from './foundations';
+import * as globals from './globals/styles';
 
 export const theme = extendTheme({
-  styles,
-  colors,
+  ...globals,
+  ...foundations,
+  components: {
+    ...components,
+  },
 });
