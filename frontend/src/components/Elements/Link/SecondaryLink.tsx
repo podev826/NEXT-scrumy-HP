@@ -29,7 +29,12 @@ export const SecondaryLink: VFC<SecondaryLinkProps> = ({
       textAlign="center"
       {...props}
     >
-      <Flex as="span" alignItems="center" position="relative" w="full" px={8}>
+      <Flex
+        as="span"
+        alignItems="center"
+        justifyContent="center"
+        position="relative"
+      >
         <Box as="span" mr={4}>
           {children}
         </Box>
