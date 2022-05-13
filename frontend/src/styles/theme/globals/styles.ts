@@ -1,15 +1,17 @@
 export const styles = {
   global: {
     html: {
-      overflowY: 'hidden',
+      overflowX: 'hidden',
     },
     body: {
       fontSize: 'md',
       fontWeight: 'normal',
       fontFamily: '"Noto Sans JP", "sans-serif"',
       color: 'sub.100',
+      overflowX: 'hidden',
+    },
+    '*': {
       letterSpacing: '0.08em',
-      overflowY: 'hidden',
     },
     img: {
       maxWidth: '100%',
