@@ -16,11 +16,11 @@ export const SecondaryLink: VFC<SecondaryLinkProps> = ({
   return (
     <BaseLink
       href={href}
-      px={8}
-      py={4}
-      fontSize="xl"
+      px={{ base: 10, xl: 8 }}
+      py={{ base: 3, xl: 4 }}
+      fontSize={{ base: 'md', xl: 'xl' }}
       fontWeight="bold"
-      minH={16}
+      minH={{ base: 12, xl: 16 }}
       display="inline-flex"
       justifyContent="center"
       alignItems="center"
