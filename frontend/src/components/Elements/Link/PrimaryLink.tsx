@@ -30,7 +30,13 @@ export const PrimaryLink: VFC<PrimaryLinkProps> = ({
       {...props}
     >
       <Box as="span" position="relative" w="full" px={8}>
-        <Box as="span" position="absolute" right="0">
+        <Box
+          as="span"
+          position="absolute"
+          right="0"
+          top="50%"
+          transform="translateY(-50%)"
+        >
           <FontAwesomeIcon icon={faAngleRight} />
         </Box>
         {children}
