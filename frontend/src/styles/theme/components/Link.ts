@@ -3,6 +3,7 @@ export const Link = {
     display: 'inline-block',
     _hover: {
       textDecoration: 'none',
+      opacity: '0.7',
     },
   },
   variants: {
@@ -11,6 +12,7 @@ export const Link = {
       bg: 'accent.100',
       _hover: {
         bg: 'accent.200',
+        opacity: '1',
       },
     },
     secondary: {
@@ -18,6 +20,7 @@ export const Link = {
       bg: 'sub.100',
       _hover: {
         bg: 'sub.200',
+        opacity: '1',
       },
     },
     tertiary: {
@@ -38,6 +41,7 @@ export const Link = {
         transitionDuration: 'fast',
       },
       _hover: {
+        opacity: '1',
         _before: {
           opacity: '0',
         },
