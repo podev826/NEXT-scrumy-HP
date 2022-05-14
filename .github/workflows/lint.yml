@@ -4,12 +4,6 @@ on:
     branches:
       - main
       - develop
-    paths:
-      - "frontend/**"
-
-defaults:
-  run:
-    working-directory: ./frontend
 
 jobs:
   run-linters:
@@ -19,8 +13,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
         with:
-          node-version: "16"
-          cache: "yarn"
-          cache-dependency-path: frontend/yarn.lock
+          node-version: '16'
+          cache: 'yarn'
       - run: yarn install
       - run: yarn lint
