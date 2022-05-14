@@ -1,6 +1,6 @@
 runtime: nodejs16
 
-service: scrumy-hp
+service: develop
 
 handlers:
   - url: /_next/static

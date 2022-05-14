@@ -1,5 +1,5 @@
 {
-  "name": "scrumy-hp_frontend",
+  "name": "scrumy-hp",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,7 +13,7 @@
     "fix:prettier": "prettier --write .",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "deploy:gae": "yarn build && gcloud app deploy app.yaml --project=scrumy-hp-test"
+    "deploy:gae": "yarn build && gcloud app deploy app.yaml --project=scrumy-hp"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
