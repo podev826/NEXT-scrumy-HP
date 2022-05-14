@@ -12,7 +12,8 @@
     "fix:eslint": "eslint src --ext .js,jsx,.ts,.tsx --fix",
     "fix:prettier": "prettier --write .",
     "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "deploy:gae": "yarn build && gcloud app deploy app.yaml --project=scrumy-hp-test"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
