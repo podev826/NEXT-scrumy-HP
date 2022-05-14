@@ -1,6 +1,6 @@
 import { Box, Flex, Grid, Spacer, Text } from '@chakra-ui/react';
 import { BaseLink } from 'components/Elements';
-import { SECONDARY_NAV } from 'configs';
+import { COMPANY_INFORMATION, SECONDARY_NAV } from 'configs';
 import { FC } from 'react';
 
 import { FooterNavContentPc, FooterNavContentSp } from './FooterNavContent';
@@ -18,19 +18,21 @@ export const Footer: FC = () => {
         <Flex flexDirection={{ base: 'column', md: 'row' }}>
           <Box>
             <Text fontWeight="bold" fontSize={{ base: 'md', xl: 'xl' }}>
-              株式会社Scrumy
+              {COMPANY_INFORMATION.name}
             </Text>
             <Box as="address" fontSize={{ base: 'sm', xl: 'md' }} mt={3}>
-              <Text>&#12306;104-0061</Text>
+              <Text>{COMPANY_INFORMATION.address[0]}</Text>
               <Text>
                 <Box as="span" display={{ base: 'inline-block', xl: 'block' }}>
-                  東京都中央区銀座1丁目
+                  {COMPANY_INFORMATION.address[1]}
                 </Box>
                 <Box as="span" display={{ base: 'inline-block', xl: 'block' }}>
-                  22番地11号2階
+                  {COMPANY_INFORMATION.address[2]}
                 </Box>
               </Text>
-              <Text mt={{ base: 1, xl: '6px' }}>Mail：scrumy&#64;info.com</Text>
+              <Text mt={{ base: 1, xl: '6px' }}>
+                Mail：{COMPANY_INFORMATION.email}
+              </Text>
             </Box>
             <Text
               fontSize="sm"
