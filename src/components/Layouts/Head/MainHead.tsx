@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import { VFC } from 'react';
+import { FC } from 'react';
 
-export const MainHead: VFC = () => {
+export const MainHead: FC = () => {
   return (
     <Head>
       <title>Scrumy</title>

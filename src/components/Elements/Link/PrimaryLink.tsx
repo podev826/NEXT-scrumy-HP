@@ -2,13 +2,13 @@ import { Box, LinkProps as ChakraLinkProps } from '@chakra-ui/react';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LinkProps as NextLinkProps } from 'next/link';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 import { BaseLink } from './BaseLink';
 
 type PrimaryLinkProps = ChakraLinkProps & NextLinkProps;
 
-export const PrimaryLink: VFC<PrimaryLinkProps> = ({
+export const PrimaryLink: FC<PrimaryLinkProps> = ({
   href,
   children,
   ...props

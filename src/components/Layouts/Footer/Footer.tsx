@@ -1,11 +1,11 @@
 import { Box, Flex, Grid, Spacer, Text } from '@chakra-ui/react';
 import { BaseLink } from 'components/Elements';
 import { SECONDARY_NAV } from 'configs';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 import { FooterNavContentPc, FooterNavContentSp } from './FooterNavContent';
 
-export const Footer: VFC = () => {
+export const Footer: FC = () => {
   return (
     <Box as="footer" bg="sub.100" color="base.100">
       <Box

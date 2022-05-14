@@ -1,13 +1,13 @@
 import { Footer } from 'components/Layouts/Footer';
 import { MainHead } from 'components/Layouts/Head';
 import { Header } from 'components/Layouts/Header';
-import { ReactNode, VFC } from 'react';
+import { FC, ReactNode } from 'react';
 
 type MainLayoutProps = {
   children: ReactNode;
 };
 
-export const MainLayout: VFC<MainLayoutProps> = ({ children }) => {
+export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
     <>
       <MainHead />
