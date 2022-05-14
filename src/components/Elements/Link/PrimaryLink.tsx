@@ -1,9 +1,8 @@
 import { Box, LinkProps as ChakraLinkProps } from '@chakra-ui/react';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LinkProps as NextLinkProps } from 'next/link';
 import { FC } from 'react';
 
+import { AngleRightIcon } from '../Icon';
 import { BaseLink } from './BaseLink';
 
 type PrimaryLinkProps = ChakraLinkProps & NextLinkProps;
@@ -37,7 +36,7 @@ export const PrimaryLink: FC<PrimaryLinkProps> = ({
           top="50%"
           transform="translateY(-50%)"
         >
-          <FontAwesomeIcon icon={faAngleRight} />
+          <AngleRightIcon />
         </Box>
         {children}
       </Box>
