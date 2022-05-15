@@ -1,12 +1,12 @@
 import { Box, Flex, Heading, HeadingProps, Text } from '@chakra-ui/react';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 type PrimaryTitleProps = HeadingProps & {
   en: string;
   ja: string;
 };
 
-export const PrimaryTitle: VFC<PrimaryTitleProps> = ({ ja, en, ...props }) => {
+export const PrimaryTitle: FC<PrimaryTitleProps> = ({ ja, en, ...props }) => {
   return (
     <Box>
       <Flex

@@ -1,13 +1,13 @@
 import { Box, Grid, Text } from '@chakra-ui/react';
 import { BaseLink } from 'components/Elements';
 import { SecondaryNavContentProps } from 'configs';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 type FooterNavContentPcProps = {
   content: SecondaryNavContentProps;
 };
 
-export const FooterNavContentPc: VFC<FooterNavContentPcProps> = ({
+export const FooterNavContentPc: FC<FooterNavContentPcProps> = ({
   content,
 }) => {
   return (
@@ -33,7 +33,7 @@ export const FooterNavContentPc: VFC<FooterNavContentPcProps> = ({
   );
 };
 
-export const FooterNavContentSp: VFC<FooterNavContentPcProps> = ({
+export const FooterNavContentSp: FC<FooterNavContentPcProps> = ({
   content,
 }) => {
   return (

@@ -1,14 +1,13 @@
 import { Box, Flex, LinkProps as ChakraLinkProps } from '@chakra-ui/react';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LinkProps as NextLinkProps } from 'next/link';
-import { VFC } from 'react';
+import { FC } from 'react';
 
+import { AngleRightIcon } from '../Icon';
 import { BaseLink } from './BaseLink';
 
 type SecondaryLinkProps = ChakraLinkProps & NextLinkProps;
 
-export const SecondaryLink: VFC<SecondaryLinkProps> = ({
+export const SecondaryLink: FC<SecondaryLinkProps> = ({
   href,
   children,
   ...props
@@ -38,7 +37,7 @@ export const SecondaryLink: VFC<SecondaryLinkProps> = ({
         <Box as="span" mr={4}>
           {children}
         </Box>
-        <FontAwesomeIcon icon={faAngleRight} />
+        <AngleRightIcon />
       </Flex>
     </BaseLink>
   );

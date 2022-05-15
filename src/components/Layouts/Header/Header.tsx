@@ -1,6 +1,6 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 
-export const Header: VFC = () => {
+export const Header: FC = () => {
   return (
     <header>
       <p>header</p>

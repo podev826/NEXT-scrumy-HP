@@ -1,12 +1,12 @@
 import { Box, ContainerProps } from '@chakra-ui/react';
-import { ReactNode, VFC } from 'react';
+import { FC, ReactNode } from 'react';
 
 type ContentWrapperProps = ContainerProps & {
   bgType?: 'gray' | 'white' | 'dotted';
   children: ReactNode;
 };
 
-export const ContentWrapper: VFC<ContentWrapperProps> = ({
+export const ContentWrapper: FC<ContentWrapperProps> = ({
   bgType = 'gray',
   children,
   ...props

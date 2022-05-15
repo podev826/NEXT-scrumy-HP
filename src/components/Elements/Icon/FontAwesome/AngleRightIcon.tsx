@@ -1,0 +1,8 @@
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { FC } from 'react';
+
+import { BaseFontAwesomeIcon } from './BaseFontAwesomeIcon';
+
+export const AngleRightIcon: FC = () => {
+  return <BaseFontAwesomeIcon icon={faAngleRight} />;
+};

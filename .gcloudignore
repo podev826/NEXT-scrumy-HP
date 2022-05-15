@@ -1,0 +1,9 @@
+# ignore all
+/*
+
+# upload
+!/app.yaml
+!/package.json
+!/yarn.lock
+!/public/
+!/.next/
