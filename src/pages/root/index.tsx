@@ -2,15 +2,18 @@ import { Box, Text } from '@chakra-ui/react';
 import {
   BaseLink,
   PrimaryLink,
+  PrimarySubVisual,
   PrimaryTitle,
   SecondaryLink,
 } from 'components/Elements';
 import { ContentWrapper, MainLayout } from 'components/Layouts';
+import { SUB_VISUAL_LIST } from 'configs';
 import type { NextPage } from 'next';
 
 const Root: NextPage = () => {
   return (
     <MainLayout>
+      <PrimarySubVisual content={SUB_VISUAL_LIST.recruit} />
       <ContentWrapper as="section" bgType="dotted">
         <PrimaryTitle ja="注目の記事" en="Pick up" />
         <Box>

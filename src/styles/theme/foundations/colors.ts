@@ -4,6 +4,7 @@ export const colors = {
   },
   main: {
     100: '#FFCC3C',
+    200: '#FFDC5A',
   },
   sub: {
     100: '#1D2828',
