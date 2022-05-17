@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, HeadingProps, Text } from '@chakra-ui/react';
+import { Box, Flex, HeadingProps, Text } from '@chakra-ui/react';
 import { FC } from 'react';
 
 type PrimaryTitleProps = HeadingProps & {
@@ -50,14 +50,16 @@ export const PrimaryTitle: FC<PrimaryTitleProps> = ({ ja, en, ...props }) => {
         </Text>
       </Flex>
       <Box ml={{ base: 9, md: 12, xl: 14 }}>
-        <Heading
+        <Text
+          as="h2"
           fontSize={{ base: 'sm', md: 'md', xl: 'xl' }}
+          fontWeight="bold"
           color="sub.200"
           mt={-1}
           {...props}
         >
           {ja}
-        </Heading>
+        </Text>
       </Box>
     </Box>
   );
