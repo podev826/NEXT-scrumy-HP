@@ -24,6 +24,9 @@ export const styles = {
     small: {
       fontSize: '100%',
     },
+    li: {
+      listStyleType: 'none',
+    },
     '*[lang="en"]': {
       fontFamily: '"Montserrat", "sans-serif"',
     },
