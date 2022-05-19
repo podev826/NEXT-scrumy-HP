@@ -37,14 +37,19 @@ export const AboutSubVisual: FC = () => {
             color="base.100"
             opacity={'0.24'}
           >
-            <Box as="span" display={'block'}>
+            <Text as="span" display={'block'}>
               GovTech&amp;
-              <Box display={{ base: 'block', md: 'inline' }}>PoliTech</Box>
-            </Box>
-            <Box as="span" display={'block'} whiteSpace="nowrap">
+              <Text as="span" display={{ base: 'block', md: 'inline' }}>
+                PoliTech
+              </Text>
+            </Text>
+            <Text as="span" display={'block'} whiteSpace="nowrap">
               Leader for
-              <Box display={{ base: 'block', md: 'inline' }}> Business</Box>
-            </Box>
+              <Text as="span" display={{ base: 'block', md: 'inline' }}>
+                {' '}
+                Business
+              </Text>
+            </Text>
           </Text>
           <Flex
             flexDirection={'column'}
