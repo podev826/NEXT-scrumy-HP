@@ -1,6 +1,11 @@
 import { AboutSubVisual } from 'components/Elements';
 import { MainLayout } from 'components/Layouts';
-import { AboutCompany, AboutInvention, AboutMessage } from 'features/about';
+import {
+  AboutCompany,
+  AboutInvention,
+  AboutMessage,
+  AboutSpacer,
+} from 'features/about';
 import type { NextPage } from 'next';
 
 const About: NextPage = () => {
@@ -9,6 +14,7 @@ const About: NextPage = () => {
       <AboutSubVisual />
       <AboutInvention />
       <AboutMessage />
+      <AboutSpacer />
       <AboutCompany />
     </MainLayout>
   );
