@@ -89,18 +89,7 @@ const AboutInventionScrumQuestion: FC<AboutInventionScrumQuestionProps> = ({
   description,
 }) => {
   return (
-    <Box
-      boxShadow={'secondary'}
-      borderRadius="32px"
-      overflow={'hidden'}
-      cursor="pointer"
-      transitionProperty="all"
-      transitionTimingFunction="ease-out"
-      transitionDuration="fast"
-      _hover={{
-        opacity: 0.7,
-      }}
-    >
+    <Box boxShadow={'secondary'} borderRadius="32px" overflow={'hidden'}>
       <Flex
         as="dt"
         bg="sub.200"
@@ -121,6 +110,13 @@ const AboutInventionScrumQuestion: FC<AboutInventionScrumQuestionProps> = ({
           color="accent.100"
           alignItems={'center'}
           justifyContent={'center'}
+          as="button"
+          transitionProperty="all"
+          transitionTimingFunction="ease-out"
+          transitionDuration="fast"
+          _hover={{
+            opacity: 0.7,
+          }}
         >
           <CircleMinusIcon />
         </Grid>

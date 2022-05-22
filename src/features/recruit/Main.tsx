@@ -65,18 +65,7 @@ export const JobDescriptionContent: FC<JobDescriptionContentProps> = ({
   content,
 }) => {
   return (
-    <Box
-      boxShadow={'secondary'}
-      borderRadius="32px"
-      overflow={'hidden'}
-      cursor="pointer"
-      transitionProperty="all"
-      transitionTimingFunction="ease-out"
-      transitionDuration="fast"
-      _hover={{
-        opacity: 0.7,
-      }}
-    >
+    <Box boxShadow={'secondary'} borderRadius="32px" overflow={'hidden'}>
       <Box
         as="dt"
         bg="sub.200"
@@ -116,6 +105,13 @@ export const JobDescriptionContent: FC<JobDescriptionContentProps> = ({
               color="accent.100"
               alignItems={'center'}
               justifyContent={'center'}
+              as="button"
+              transitionProperty="all"
+              transitionTimingFunction="ease-out"
+              transitionDuration="fast"
+              _hover={{
+                opacity: 0.7,
+              }}
             >
               <CircleMinusIcon />
             </Grid>
