@@ -21,5 +21,6 @@ export const colors = {
   },
   gray: {
     100: '#F8F8F8',
+    200: '#D4D4D4',
   },
 };
