@@ -32,11 +32,13 @@ export const RadioCard: FC<RadioCardProps> = (props) => {
           borderRadius: 'full',
           marginRight: 3,
         }}
-        _focus={{
-          boxShadow: 'tertiary',
+        _checked={{
           _before: {
             backgroundColor: 'main.100',
           },
+        }}
+        _focus={{
+          boxShadow: 'tertiary',
         }}
         _hover={{
           opacity: 0.7,
