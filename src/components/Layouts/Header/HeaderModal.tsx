@@ -20,6 +20,9 @@ export const HeaderModal: FC = () => {
         _hover={{
           opacity: '0.7',
         }}
+        _focusVisible={{
+          outlineColor: 'accent.100',
+        }}
         onClick={toggleHeader}
       >
         <Box
@@ -104,6 +107,9 @@ export const HeaderModal: FC = () => {
             bg="accent.100"
             _hover={{
               opacity: '0.7',
+            }}
+            _focusVisible={{
+              outlineColor: 'accent.100',
             }}
             onClick={toggleHeader}
           >
@@ -222,6 +228,9 @@ export const HeaderModal: FC = () => {
               bg="accent.100"
               _hover={{
                 opacity: '0.7',
+              }}
+              _focusVisible={{
+                outlineColor: 'accent.100',
               }}
               onClick={toggleHeader}
             >
