@@ -13,6 +13,7 @@
 - clsx
 - framer-motion
 - fortawesome
+- react-hook-form
 
 ### other
 
