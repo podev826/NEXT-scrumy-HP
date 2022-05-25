@@ -1,3 +1,4 @@
+export * from './Block';
 export * from './Form';
 export * from './Icon';
 export * from './Image';
