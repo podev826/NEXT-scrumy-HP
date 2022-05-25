@@ -1,11 +1,15 @@
 import { Box, Textarea, TextareaProps } from '@chakra-ui/react';
+import { CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
 
-type ContactDescriptionTextareaProps = TextareaProps;
+type ContactDescriptionTextareaProps = TextareaProps & {
+  error?: any;
+  register?: any;
+};
 
 export const ContactDescriptionTextarea: FC<
   ContactDescriptionTextareaProps
-> = ({ ...props }) => {
+> = ({ error, register, ...props }) => {
   return (
     <Box as="dd" flexGrow={{ xl: 1 }}>
       <Textarea
@@ -24,7 +28,21 @@ export const ContactDescriptionTextarea: FC<
           boxShadow: 'tertiary',
         }}
         resize={'vertical'}
+        {...register}
       />
+      {error ? (
+        <Box
+          ml={{ base: 8, xl: 10 }}
+          mt={'6px'}
+          fontSize="sm"
+          color={'danger.100'}
+        >
+          <CircleExclamation />
+          <Box as="span" ml={1}>
+            {error.message}
+          </Box>
+        </Box>
+      ) : null}
     </Box>
   );
 };

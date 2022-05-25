@@ -1,9 +1,15 @@
 import { Box, Input, InputProps } from '@chakra-ui/react';
+import { CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
 
-type ContactDescriptionInputProps = InputProps;
+type ContactDescriptionInputProps = InputProps & {
+  error?: any;
+  register?: any;
+};
 
 export const ContactDescriptionInput: FC<ContactDescriptionInputProps> = ({
+  error,
+  register,
   ...props
 }) => {
   return (
@@ -26,7 +32,21 @@ export const ContactDescriptionInput: FC<ContactDescriptionInputProps> = ({
           borderColor: 'accent.100',
           boxShadow: 'tertiary',
         }}
+        {...register}
       />
+      {error ? (
+        <Box
+          ml={{ base: 8, xl: 10 }}
+          mt={'6px'}
+          fontSize="sm"
+          color={'danger.100'}
+        >
+          <CircleExclamation />
+          <Box as="span" ml={1}>
+            {error.message}
+          </Box>
+        </Box>
+      ) : null}
     </Box>
   );
 };

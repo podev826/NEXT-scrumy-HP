@@ -1,87 +1,81 @@
-import { Box, RadioProps, useRadio, useRadioGroup } from '@chakra-ui/react';
-import { FC, ReactNode } from 'react';
+import { Box } from '@chakra-ui/react';
+import styled from '@emotion/styled';
+import { CircleExclamation } from 'components/Elements';
+import { FC } from 'react';
 
-type RadioCardProps = RadioProps & {
-  children: ReactNode;
+type ContactDescriptionRadioProps = {
+  register: any;
+  options: string[];
+  error?: any;
 };
 
-export const RadioCard: FC<RadioCardProps> = (props) => {
-  const { getInputProps, getCheckboxProps } = useRadio(props);
-
-  const input = getInputProps();
-  const checkbox = getCheckboxProps();
-
-  return (
-    <Box as="label">
-      <input {...input} />
-      <Box
-        {...checkbox}
-        cursor="pointer"
-        display={'flex'}
-        alignItems="center"
-        fontWeight={'bold'}
-        transitionProperty="all"
-        transitionTimingFunction="ease-out"
-        transitionDuration="fast"
-        _before={{
-          content: '""',
-          width: '16px',
-          height: '16px',
-          backgroundColor: 'sub.200',
-          display: 'block',
-          borderRadius: 'full',
-          marginRight: 3,
-        }}
-        _checked={{
-          _before: {
-            backgroundColor: 'main.100',
-          },
-        }}
-        _focus={{
-          boxShadow: 'tertiary',
-        }}
-        _hover={{
-          opacity: 0.7,
-        }}
-      >
-        {props.children}
-      </Box>
-    </Box>
-  );
-};
-
-export const ContactDescriptionRadio = () => {
-  const options = [
-    'スクラム申請について',
-    'セキュリティ診断について',
-    'セミナーについて',
-    '採用について',
-    'その他お問い合わせ',
-  ];
-
-  const { getRootProps, getRadioProps } = useRadioGroup({
-    name: 'contact_type',
-  });
-
-  const group = getRootProps();
-
+export const ContactDescriptionRadio: FC<ContactDescriptionRadioProps> = ({
+  register,
+  options,
+  error,
+}) => {
   return (
     <Box as="dd" flexGrow={{ xl: 1 }}>
       <Box
-        {...group}
         display={'grid'}
         gridTemplateColumns={{ xl: 'repeat(2, 1fr)' }}
         gap={3}
       >
-        {options.map((value) => {
-          const radio = getRadioProps({ value });
-          return (
-            <RadioCard key={value} {...radio}>
-              {value}
-            </RadioCard>
-          );
-        })}
+        {options.map((value) => (
+          <RadioBox key={value}>
+            <label>
+              <input type="radio" value={value} {...register} />
+              <span>{value}</span>
+            </label>
+          </RadioBox>
+        ))}
       </Box>
+      {error ? (
+        <Box
+          ml={{ base: 8, xl: 10 }}
+          mt={'6px'}
+          fontSize="sm"
+          color={'danger.100'}
+        >
+          <CircleExclamation />
+          <Box as="span" ml={1}>
+            {error.message}
+          </Box>
+        </Box>
+      ) : null}
     </Box>
   );
 };
+
+export const RadioBox = styled(Box)`
+  span {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    transition-duration: 0.15s;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  span:hover {
+    opacity: 0.7;
+  }
+  label > input[type='radio'] {
+    display: none;
+  }
+  label > input[type='radio'] + *::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #7b7b7b;
+    display: block;
+    border-radius: 100%;
+    margin-right: 12px;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  label > input[type='radio']:checked + *::before {
+    background-color: #ffcc3c;
+  }
+`;

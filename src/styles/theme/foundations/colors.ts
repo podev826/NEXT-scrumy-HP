@@ -23,4 +23,7 @@ export const colors = {
     100: '#F8F8F8',
     200: '#D4D4D4',
   },
+  danger: {
+    100: '#B00707',
+  },
 };
