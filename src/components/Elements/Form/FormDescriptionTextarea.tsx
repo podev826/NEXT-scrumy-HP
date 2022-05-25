@@ -2,14 +2,16 @@ import { Box, Textarea, TextareaProps } from '@chakra-ui/react';
 import { CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
 
-type ContactDescriptionTextareaProps = TextareaProps & {
+type FormDescriptionTextareaProps = TextareaProps & {
   error?: any;
   register?: any;
 };
 
-export const ContactDescriptionTextarea: FC<
-  ContactDescriptionTextareaProps
-> = ({ error, register, ...props }) => {
+export const FormDescriptionTextarea: FC<FormDescriptionTextareaProps> = ({
+  error,
+  register,
+  ...props
+}) => {
   return (
     <Box as="dd" flexGrow={{ xl: 1 }}>
       <Textarea

@@ -1,17 +1,16 @@
 import { Box } from '@chakra-ui/react';
+import {
+  FormAgree,
+  FormButton,
+  FormDescriptionInput,
+  FormDescriptionRadio,
+  FormDescriptionTextarea,
+  FormItem,
+  FormTerm,
+} from 'components/Elements';
 import { ContentWrapper } from 'components/Layouts';
 import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
-
-import {
-  ContactAgree,
-  ContactButton,
-  ContactDescriptionInput,
-  ContactDescriptionRadio,
-  ContactDescriptionTextarea,
-  ContactItem,
-  ContactTerm,
-} from './FormParts';
 
 export const ContactMain: FC = () => {
   const [send, setSend] = useState<null | 'success' | 'failed'>(null);
@@ -34,11 +33,11 @@ export const ContactMain: FC = () => {
     <ContentWrapper maxW="calc(820px + (96px * 2))" bgType="white">
       <Box as="form" onSubmit={handleSubmit(onSubmit)}>
         <Box as="dl" display={'grid'} gap={{ base: 9, xl: '44px' }}>
-          <ContactItem>
-            <ContactTerm require={true} htmlFor="contact_type">
+          <FormItem>
+            <FormTerm require={true} htmlFor="contact_type">
               お問い合わせの種類
-            </ContactTerm>
-            <ContactDescriptionRadio
+            </FormTerm>
+            <FormDescriptionRadio
               options={[
                 'スクラム申請について',
                 'セキュリティ診断について',
@@ -51,12 +50,12 @@ export const ContactMain: FC = () => {
                 required: 'お問い合わせの種類は必須項目です。',
               })}
             />
-          </ContactItem>
-          <ContactItem>
-            <ContactTerm require={true} htmlFor="company_name">
+          </FormItem>
+          <FormItem>
+            <FormTerm require={true} htmlFor="company_name">
               貴社名
-            </ContactTerm>
-            <ContactDescriptionInput
+            </FormTerm>
+            <FormDescriptionInput
               id="company_name"
               type="text"
               placeholder="例）株式会社Scrumy"
@@ -65,19 +64,19 @@ export const ContactMain: FC = () => {
                 required: '貴社名は必須項目です。',
               })}
             />
-          </ContactItem>
-          <ContactItem>
-            <ContactTerm htmlFor="person_name">ご担当者様名</ContactTerm>
-            <ContactDescriptionInput
+          </FormItem>
+          <FormItem>
+            <FormTerm htmlFor="person_name">ご担当者様名</FormTerm>
+            <FormDescriptionInput
               id="person_name"
               type="text"
               placeholder="例）山田 花子"
               register={register('person_name')}
             />
-          </ContactItem>
-          <ContactItem>
-            <ContactTerm htmlFor="tel">お電話番号</ContactTerm>
-            <ContactDescriptionInput
+          </FormItem>
+          <FormItem>
+            <FormTerm htmlFor="tel">お電話番号</FormTerm>
+            <FormDescriptionInput
               id="tel"
               type="tel"
               placeholder="例）0120-000-123"
@@ -89,12 +88,12 @@ export const ContactMain: FC = () => {
                 },
               })}
             />
-          </ContactItem>
-          <ContactItem>
-            <ContactTerm htmlFor="email" require={true}>
+          </FormItem>
+          <FormItem>
+            <FormTerm htmlFor="email" require={true}>
               メールアドレス
-            </ContactTerm>
-            <ContactDescriptionInput
+            </FormTerm>
+            <FormDescriptionInput
               id="email"
               type="email"
               placeholder="例）info@scrumy.com"
@@ -108,22 +107,22 @@ export const ContactMain: FC = () => {
                 },
               })}
             />
-          </ContactItem>
-          <ContactItem>
-            <ContactTerm htmlFor="content" require={true}>
+          </FormItem>
+          <FormItem>
+            <FormTerm htmlFor="content" require={true}>
               お問い合わせ内容
-            </ContactTerm>
-            <ContactDescriptionTextarea
+            </FormTerm>
+            <FormDescriptionTextarea
               id="content"
               error={errors.content}
               register={register('content', {
                 required: 'お問い合わせ内容は必須項目です。',
               })}
             />
-          </ContactItem>
+          </FormItem>
         </Box>
         <Box mt={{ base: 14, xl: 16 }}>
-          <ContactAgree
+          <FormAgree
             error={errors.agree}
             register={register('agree', {
               required: 'プライバシーポリシーは必須項目です。',
@@ -131,7 +130,7 @@ export const ContactMain: FC = () => {
           />
         </Box>
         <Box mt={{ base: 14, xl: 16 }}>
-          <ContactButton
+          <FormButton
             isSubmitting={isSubmitting}
             send={send}
             setSend={setSend}

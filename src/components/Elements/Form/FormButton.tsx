@@ -6,13 +6,13 @@ import {
 } from 'components/Elements';
 import { FC } from 'react';
 
-type ContactButtonProps = {
+type FormButtonProps = {
   send: any;
   setSend: any;
   isSubmitting: any;
 };
 
-export const ContactButton: FC<ContactButtonProps> = ({
+export const FormButton: FC<FormButtonProps> = ({
   send,
   setSend,
   isSubmitting,

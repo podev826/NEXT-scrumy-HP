@@ -3,12 +3,12 @@ import styled from '@emotion/styled';
 import { BaseLink, CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
 
-type ContactAgreeProps = {
+type FormAgreeProps = {
   error?: any;
   register?: any;
 };
 
-export const ContactAgree: FC<ContactAgreeProps> = ({ error, register }) => {
+export const FormAgree: FC<FormAgreeProps> = ({ error, register }) => {
   return (
     <Box>
       <Box display={'grid'} justifyContent="center">

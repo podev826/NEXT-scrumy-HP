@@ -1,12 +1,12 @@
 import { Box, FormLabel, FormLabelProps, Text } from '@chakra-ui/react';
 import { FC, ReactNode } from 'react';
 
-type ContactTermProps = FormLabelProps & {
+type FormTermProps = FormLabelProps & {
   children: ReactNode;
   require?: boolean;
 };
 
-export const ContactTerm: FC<ContactTermProps> = ({
+export const FormTerm: FC<FormTermProps> = ({
   children,
   require = false,
   ...props

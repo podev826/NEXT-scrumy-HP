@@ -3,13 +3,13 @@ import styled from '@emotion/styled';
 import { CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
 
-type ContactDescriptionRadioProps = {
+type FormDescriptionRadioProps = {
   register: any;
   options: string[];
   error?: any;
 };
 
-export const ContactDescriptionRadio: FC<ContactDescriptionRadioProps> = ({
+export const FormDescriptionRadio: FC<FormDescriptionRadioProps> = ({
   register,
   options,
   error,

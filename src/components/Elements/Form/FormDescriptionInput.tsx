@@ -2,12 +2,12 @@ import { Box, Input, InputProps } from '@chakra-ui/react';
 import { CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
 
-type ContactDescriptionInputProps = InputProps & {
+type FormDescriptionInputProps = InputProps & {
   error?: any;
   register?: any;
 };
 
-export const ContactDescriptionInput: FC<ContactDescriptionInputProps> = ({
+export const FormDescriptionInput: FC<FormDescriptionInputProps> = ({
   error,
   register,
   ...props

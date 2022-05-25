@@ -1,11 +1,11 @@
 import { FormControl } from '@chakra-ui/react';
 import { FC, ReactNode } from 'react';
 
-type ContactItemProps = {
+type FormItemProps = {
   children: ReactNode;
 };
 
-export const ContactItem: FC<ContactItemProps> = ({ children }) => {
+export const FormItem: FC<FormItemProps> = ({ children }) => {
   return (
     <FormControl
       display={{ base: 'grid', xl: 'flex' }}
