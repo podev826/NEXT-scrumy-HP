@@ -33,6 +33,7 @@ export const AboutMessage: FC = () => {
               </Text>
             </Text>
             <Text
+              as="span"
               display={{ xl: 'inline-block' }}
               px={{ xl: '15px' }}
               py={{ xl: '10px' }}

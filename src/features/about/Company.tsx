@@ -74,14 +74,12 @@ export const AboutCompany: FC = () => {
         mt={{ base: 8, xl: 16 }}
       >
         {COMPANY_INFORMATION.map((item, index) => (
-          <>
-            <AboutCompanyItem
-              key={item.term}
-              term={item.term}
-              description={item.description}
-              last={index + 1 === COMPANY_INFORMATION.length ? true : false}
-            />
-          </>
+          <AboutCompanyItem
+            key={item.term}
+            term={item.term}
+            description={item.description}
+            last={index + 1 === COMPANY_INFORMATION.length ? true : false}
+          />
         ))}
       </Box>
     </ContentWrapper>
