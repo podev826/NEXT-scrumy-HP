@@ -267,7 +267,7 @@ export const AboutInvention: FC = () => {
               </Box>
               <Box mt={{ base: 4, xl: 6 }}>
                 <AboutInventionScrumList
-                  items={ABOUT_INVENTION_SCRUM_FEATURES[1].list}
+                  items={ABOUT_INVENTION_SCRUM_FEATURES[2].list}
                 />
               </Box>
             </GridItem>
