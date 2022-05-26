@@ -1,16 +1,22 @@
-import { Box } from '@chakra-ui/react';
-import { FC, ReactNode } from 'react';
+import { LinkProps as ChakraLinkProps } from '@chakra-ui/react';
+import { LinkProps as NextLinkProps } from 'next/link';
+import { FC } from 'react';
 
-type PrimaryButtonProps = {
-  active?: boolean;
-  children: ReactNode;
-};
+import { BaseLink } from './BaseLink';
 
-export const PrimaryButton: FC<PrimaryButtonProps> = ({ active, children }) => {
+type QuaternaryLinkProps = ChakraLinkProps &
+  NextLinkProps & {
+    active?: boolean;
+  };
+
+export const QuaternaryLink: FC<QuaternaryLinkProps> = ({
+  href,
+  active,
+  children,
+}) => {
   return (
-    <Box
-      as="button"
-      type="button"
+    <BaseLink
+      href={href}
       fontWeight={'bold'}
       color={active ? 'base.100' : 'sub.100'}
       bg={active ? 'sub.100' : 'base.100'}
@@ -19,6 +25,7 @@ export const PrimaryButton: FC<PrimaryButtonProps> = ({ active, children }) => {
       py={2}
       px={6}
       cursor={active ? 'auto' : 'pointer'}
+      pointerEvents={active ? 'none' : 'auto'}
       borderRadius="full"
       transitionProperty="all"
       transitionTimingFunction="ease-out"
@@ -29,6 +36,6 @@ export const PrimaryButton: FC<PrimaryButtonProps> = ({ active, children }) => {
       }}
     >
       {children}
-    </Box>
+    </BaseLink>
   );
 };

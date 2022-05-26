@@ -1,17 +1,33 @@
-import { ContactBlock, PrimarySubVisual } from 'components/Elements';
-import { MainLayout } from 'components/Layouts';
-import { SUB_VISUAL_LIST } from 'configs';
-import { NewsMain } from 'features/news';
-import type { NextPage } from 'next';
+import { NewsAll } from 'features/news/All';
+import { client } from 'libraries/microcms';
+import type { GetStaticProps, NextPage } from 'next';
+import { NewsContentProps, NewsDataProps } from 'types/News';
 
-const News: NextPage = () => {
-  return (
-    <MainLayout>
-      <PrimarySubVisual content={SUB_VISUAL_LIST.news} />
-      <NewsMain />
-      <ContactBlock />
-    </MainLayout>
-  );
+const News: NextPage<NewsDataProps> = ({
+  contents,
+  totalCount,
+  name = 'ALL',
+}) => {
+  return <NewsAll contents={contents} totalCount={totalCount} name={name} />;
+};
+
+export const getStaticProps: GetStaticProps<NewsDataProps> = async () => {
+  const data = await client
+    .getList<NewsContentProps>({
+      endpoint: 'news',
+      queries: { limit: 9999, orders: '-publishedAt' },
+    })
+    .catch(() => null);
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: data,
+  };
 };
 
 export default News;

@@ -1,5 +1,7 @@
+export * from './AngleDownIcon';
 export * from './AngleLeftIcon';
 export * from './AngleRightIcon';
+export * from './AngleUpIcon';
 export * from './BaseFontAwesomeIcon';
 export * from './CircleCheck';
 export * from './CircleExclamation';

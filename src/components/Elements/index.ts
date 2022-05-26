@@ -1,6 +1,5 @@
 export * from './Accordion';
 export * from './Block';
-export * from './Button';
 export * from './Form';
 export * from './Icon';
 export * from './Image';
