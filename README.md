@@ -15,6 +15,7 @@
 - fortawesome
 - react-hook-form
 - microcms-js-sdk
+- dayjs
 
 ### other
 
