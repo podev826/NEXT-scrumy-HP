@@ -14,6 +14,7 @@
 - framer-motion
 - fortawesome
 - react-hook-form
+- microcms-js-sdk
 
 ### other
 
