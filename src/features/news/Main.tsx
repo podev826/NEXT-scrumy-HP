@@ -68,7 +68,7 @@ export const NewsMain: FC<NewsMainProps> = ({ contents, totalCount, name }) => {
           >
             カテゴリから探す
           </Text>
-          <Box mt={4} display={{ xl: 'hidden' }}>
+          <Box mt={4} display={{ xl: 'none' }}>
             <Accordion allowToggle allowMultiple>
               <AccordionItem
                 bg="base.100"
