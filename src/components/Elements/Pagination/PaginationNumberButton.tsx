@@ -1,19 +1,29 @@
 import { Box } from '@chakra-ui/react';
-import { FC, ReactNode } from 'react';
+import { useRouter } from 'next/router';
+import { FC } from 'react';
 
 type PaginationNumberButtonProps = {
-  active?: boolean;
-  children: ReactNode;
+  value: number;
+  activePage: number;
+  setActivePage: (value: number) => void;
 };
 
 export const PaginationNumberButton: FC<PaginationNumberButtonProps> = ({
-  active,
-  children,
+  value,
+  activePage,
+  setActivePage,
 }) => {
+  const router = useRouter();
+  const path = router.asPath.substring(0, router.asPath.indexOf('#'));
+
   return (
     <Box
       as="button"
       type="button"
+      onClick={() => {
+        setActivePage(value);
+        router.push(`${path}#news`);
+      }}
       w={{ base: 12, xl: 14 }}
       h={{ base: 12, xl: 14 }}
       fontSize={{ base: 'xl', xl: '2xl' }}
@@ -21,12 +31,12 @@ export const PaginationNumberButton: FC<PaginationNumberButtonProps> = ({
       display="grid"
       alignItems={'center'}
       justifyContent="center"
-      color={active ? 'base.100' : 'sub.100'}
-      bg={active ? 'sub.100' : 'base.100'}
+      color={activePage === value ? 'base.100' : 'sub.100'}
+      bg={activePage === value ? 'sub.100' : 'base.100'}
       borderStyle="solid"
       borderWidth={{ base: '2px', xl: '4px' }}
       borderColor="sub.100"
-      cursor={active ? 'auto' : 'pointer'}
+      cursor={activePage === value ? 'auto' : 'pointer'}
       borderRadius="full"
       transitionProperty="all"
       transitionTimingFunction="ease-out"
@@ -37,7 +47,7 @@ export const PaginationNumberButton: FC<PaginationNumberButtonProps> = ({
       }}
       lang="en"
     >
-      {children}
+      {value}
     </Box>
   );
 };

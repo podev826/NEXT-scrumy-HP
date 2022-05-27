@@ -1,11 +1,25 @@
 import { Box } from '@chakra-ui/react';
 import { FC } from 'react';
+import { NEWS_PER_PAGE } from 'types';
 
 import { PaginationNextButton } from './PaginationNextButton';
 import { PaginationNumberButton } from './PaginationNumberButton';
 import { PaginationPrevButton } from './PaginationPrevButton';
 
-export const Pagination: FC = () => {
+type PaginationProps = {
+  totalCount: number;
+  activePage: number;
+  delta?: number;
+  setActivePage: (value: number) => void;
+};
+
+export const Pagination: FC<PaginationProps> = ({
+  totalCount,
+  activePage,
+  setActivePage,
+}) => {
+  const lastPage = Math.ceil(totalCount / NEWS_PER_PAGE);
+
   return (
     <Box
       display={'flex'}
@@ -13,18 +27,48 @@ export const Pagination: FC = () => {
       alignItems={'center'}
       gap={12}
     >
-      <PaginationPrevButton />
+      {activePage !== 1 ? (
+        <PaginationPrevButton
+          activePage={activePage}
+          setActivePage={setActivePage}
+        />
+      ) : (
+        <Box></Box>
+      )}
       <Box
         display={'flex'}
         justifyContent="center"
         alignItems={'center'}
         gap={{ base: 7, xl: 12 }}
       >
-        <PaginationNumberButton active={true}>1</PaginationNumberButton>
-        <PaginationNumberButton>2</PaginationNumberButton>
-        <PaginationNumberButton>3</PaginationNumberButton>
+        {activePage !== 1 ? (
+          <PaginationNumberButton
+            value={1}
+            activePage={activePage}
+            setActivePage={setActivePage}
+          />
+        ) : null}
+        <PaginationNumberButton
+          value={activePage}
+          activePage={activePage}
+          setActivePage={setActivePage}
+        />
+        {activePage !== lastPage ? (
+          <PaginationNumberButton
+            value={lastPage}
+            activePage={activePage}
+            setActivePage={setActivePage}
+          />
+        ) : null}
       </Box>
-      <PaginationNextButton />
+      {activePage !== lastPage ? (
+        <PaginationNextButton
+          activePage={activePage}
+          setActivePage={setActivePage}
+        />
+      ) : (
+        <Box></Box>
+      )}
     </Box>
   );
 };

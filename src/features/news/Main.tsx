@@ -16,11 +16,11 @@ import {
   QuaternaryLink,
   SearchBox,
 } from 'components/Elements';
-import { ContentWrapper } from 'components/Layouts';
+import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import dayjs from 'dayjs';
 import { MicroCMSContentId, MicroCMSDate } from 'microcms-js-sdk';
 import { FC, useEffect, useState } from 'react';
-import { NewsContentProps } from 'types';
+import { NEWS_PER_PAGE, NewsContentProps } from 'types';
 
 type NewsMainProps = {
   contents: (NewsContentProps & MicroCMSContentId & MicroCMSDate)[];
@@ -29,7 +29,38 @@ type NewsMainProps = {
 };
 
 export const NewsMain: FC<NewsMainProps> = ({ contents, totalCount, name }) => {
-  const NEWS_PER_PAGE = 5;
+  const category = [
+    {
+      text: 'All',
+      lang: 'en',
+      name: 'all',
+      href: '/news',
+    },
+    {
+      text: 'お知らせ',
+      lang: 'ja',
+      name: 'information',
+      href: '/news/category/information',
+    },
+    {
+      text: 'プレスリリース',
+      lang: 'ja',
+      name: 'press-release',
+      href: '/news/category/press-release',
+    },
+    {
+      text: 'セミナー',
+      lang: 'ja',
+      name: 'seminar',
+      href: '/news/category/seminar',
+    },
+    {
+      text: 'eBOOK',
+      lang: 'en',
+      name: 'e-book',
+      href: '/news/category/e-book',
+    },
+  ];
   const [activePage, setActivePage] = useState(1);
   useEffect(() => {
     setActivePage(1);
@@ -89,81 +120,35 @@ export const NewsMain: FC<NewsMainProps> = ({ contents, totalCount, name }) => {
                       }}
                     >
                       <Box flex="1" textAlign="left" fontWeight={'bold'}>
-                        All
+                        {category.map((item) =>
+                          item.name === name ? item.text : null
+                        )}
                       </Box>
                       <Box>
                         {isExpanded ? <AngleUpIcon /> : <AngleDownIcon />}
                       </Box>
                     </AccordionButton>
                     <AccordionPanel p={0}>
-                      <Box>
-                        <BaseLink
-                          href="/news/category/information"
-                          px={7}
-                          w="full"
-                          minH={12}
-                          display="grid"
-                          alignItems={'center'}
-                          fontWeight="bold"
-                          _hover={{
-                            color: 'base.100',
-                            backgroundColor: 'sub.200',
-                          }}
-                        >
-                          お知らせ
-                        </BaseLink>
-                      </Box>
-                      <Box>
-                        <BaseLink
-                          href="/news/category/press-release"
-                          px={7}
-                          w="full"
-                          minH={12}
-                          display="grid"
-                          alignItems={'center'}
-                          fontWeight="bold"
-                          _hover={{
-                            color: 'base.100',
-                            backgroundColor: 'sub.200',
-                          }}
-                        >
-                          プレスリリース
-                        </BaseLink>
-                      </Box>
-                      <Box>
-                        <BaseLink
-                          href="/news/category/seminar"
-                          px={7}
-                          w="full"
-                          minH={12}
-                          display="grid"
-                          alignItems={'center'}
-                          fontWeight="bold"
-                          _hover={{
-                            color: 'base.100',
-                            backgroundColor: 'sub.200',
-                          }}
-                        >
-                          セミナー
-                        </BaseLink>
-                      </Box>
-                      <Box>
-                        <BaseLink
-                          href="/news/category/e-book"
-                          px={7}
-                          w="full"
-                          minH={12}
-                          display="grid"
-                          alignItems={'center'}
-                          fontWeight="bold"
-                          _hover={{
-                            color: 'base.100',
-                            backgroundColor: 'sub.200',
-                          }}
-                        >
-                          eBOOK
-                        </BaseLink>
-                      </Box>
+                      {category.map((item) => (
+                        <Box key={item.name}>
+                          <BaseLink
+                            href={item.href}
+                            px={7}
+                            w="full"
+                            minH={12}
+                            display="grid"
+                            alignItems={'center'}
+                            fontWeight="bold"
+                            _hover={{
+                              color: 'base.100',
+                              backgroundColor: 'sub.200',
+                            }}
+                            lang={item.lang === 'en' ? 'en' : 'ja'}
+                          >
+                            {item.text}
+                          </BaseLink>
+                        </Box>
+                      ))}
                     </AccordionPanel>
                   </>
                 )}
@@ -177,35 +162,18 @@ export const NewsMain: FC<NewsMainProps> = ({ contents, totalCount, name }) => {
             justifyContent={{ xl: 'space-between' }}
             flexBasis={{ xl: 'calc(100% - 264px)' }}
           >
-            <Box as="li">
-              <QuaternaryLink href="/news" active={true}>
-                <Box as="span" lang="en">
-                  All
-                </Box>
-              </QuaternaryLink>
-            </Box>
-            <Box as="li">
-              <QuaternaryLink href="/news/category/information">
-                <Box as="span">お知らせ</Box>
-              </QuaternaryLink>
-            </Box>
-            <Box as="li">
-              <QuaternaryLink href="/news/category/press-release">
-                <Box as="span">プレスリリース</Box>
-              </QuaternaryLink>
-            </Box>
-            <Box as="li">
-              <QuaternaryLink href="/news/category/seminar">
-                <Box as="span">セミナー</Box>
-              </QuaternaryLink>
-            </Box>
-            <Box as="li">
-              <QuaternaryLink href="/news/category/e-book">
-                <Box as="span" lang="en">
-                  eBOOK
-                </Box>
-              </QuaternaryLink>
-            </Box>
+            {category.map((item) => (
+              <Box as="li" key={item.name}>
+                <QuaternaryLink
+                  href={item.href}
+                  active={item.name === name ? true : false}
+                >
+                  <Box as="span" lang={item.lang === 'en' ? 'en' : 'ja'}>
+                    {item.text}
+                  </Box>
+                </QuaternaryLink>
+              </Box>
+            ))}
           </Box>
         </Box>
         <Box display={{ xl: 'flex' }} alignItems="center">
@@ -222,71 +190,80 @@ export const NewsMain: FC<NewsMainProps> = ({ contents, totalCount, name }) => {
           </Box>
         </Box>
       </Box>
-      <Text
-        as="h2"
-        fontSize={{ base: 'lg', xl: '2xl' }}
-        fontWeight="bold"
-        mt={{ base: 6, xl: 16 }}
-      >
-        「<Text as="span">All</Text>
-        」に関するすべての記事
-      </Text>
-      <Accordion
-        allowToggle
-        allowMultiple
-        display={'grid'}
-        gap={{ base: 8, xl: '60px' }}
-        mt={8}
-      >
-        {contents
-          .slice(NEWS_PER_PAGE * (activePage - 1), NEWS_PER_PAGE * activePage)
-          .map((item) => (
-            <AccordionItem
-              key={item.id}
-              boxShadow={'secondary'}
-              borderRadius="32px"
-              overflow="hidden"
-              border="none"
-              p={0}
-            >
-              {({ isExpanded }) => (
-                <>
-                  <BaseAccordionButton isExpanded={isExpanded}>
-                    <Box display={{ xl: 'flex' }} alignItems={{ xl: 'center' }}>
-                      <Box
-                        fontSize={{ base: 'sm', xl: 'md' }}
-                        display={'flex'}
-                        alignItems={'center'}
-                        mr={{ xl: 16 }}
-                      >
-                        <Box mr={{ base: 5, xl: 10 }} lang="en">
-                          {dayjs(item.publishedAt).format('YYYY.MM.DD')}
-                        </Box>
+      <IdWrapper id="news">
+        <Box pt={{ base: 6, xl: 16 }}>
+          <Text as="h2" fontSize={{ base: 'lg', xl: '2xl' }} fontWeight="bold">
+            「<Text as="span">All</Text>
+            」に関するすべての記事
+          </Text>
+          <Accordion
+            allowToggle
+            allowMultiple
+            display={'grid'}
+            gap={{ base: 8, xl: '60px' }}
+            mt={8}
+          >
+            {contents
+              .slice(
+                NEWS_PER_PAGE * (activePage - 1),
+                NEWS_PER_PAGE * activePage
+              )
+              .map((item) => (
+                <AccordionItem
+                  key={item.id}
+                  boxShadow={'secondary'}
+                  borderRadius="32px"
+                  overflow="hidden"
+                  border="none"
+                  p={0}
+                >
+                  {({ isExpanded }) => (
+                    <>
+                      <BaseAccordionButton isExpanded={isExpanded}>
                         <Box
-                          minW={{ base: 20, xl: '140px' }}
-                          display="inline-block"
-                          bg="main.100"
-                          color="sub.100"
-                          px={2}
-                          textAlign={'center'}
+                          display={{ xl: 'flex' }}
+                          alignItems={{ xl: 'center' }}
                         >
-                          {item.category.name}
+                          <Box
+                            fontSize={{ base: 'sm', xl: 'md' }}
+                            display={'flex'}
+                            alignItems={'center'}
+                            mr={{ xl: 16 }}
+                          >
+                            <Box mr={{ base: 5, xl: 10 }} lang="en">
+                              {dayjs(item.publishedAt).format('YYYY.MM.DD')}
+                            </Box>
+                            <Box
+                              minW={{ base: 20, xl: '140px' }}
+                              display="inline-block"
+                              bg="main.100"
+                              color="sub.100"
+                              px={2}
+                              textAlign={'center'}
+                            >
+                              {item.category.name}
+                            </Box>
+                          </Box>
+                          <Box pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}>
+                            {item.title}
+                          </Box>
                         </Box>
-                      </Box>
-                      <Box pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}>
-                        {item.title}
-                      </Box>
-                    </Box>
-                  </BaseAccordionButton>
-                  <BaseAccordionPanel>{item.content}</BaseAccordionPanel>
-                </>
-              )}
-            </AccordionItem>
-          ))}
-      </Accordion>
-      <Box mt={{ base: 16, xl: 24 }}>
-        <Pagination />
-      </Box>
+                      </BaseAccordionButton>
+                      <BaseAccordionPanel>{item.content}</BaseAccordionPanel>
+                    </>
+                  )}
+                </AccordionItem>
+              ))}
+          </Accordion>
+          <Box mt={{ base: 16, xl: 24 }}>
+            <Pagination
+              activePage={activePage}
+              totalCount={totalCount}
+              setActivePage={setActivePage}
+            />
+          </Box>
+        </Box>
+      </IdWrapper>
     </ContentWrapper>
   );
 };

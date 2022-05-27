@@ -1,5 +1,7 @@
 import { MicroCMSDate, MicroCMSListResponse } from 'microcms-js-sdk';
 
+export const NEWS_PER_PAGE = 5;
+
 export type NewsCategoryProps =
   | 'すべて'
   | 'お知らせ'

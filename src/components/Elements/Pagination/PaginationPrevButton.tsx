@@ -1,9 +1,21 @@
 import { Box } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import React, { FC } from 'react';
 
 import { AngleLeftIcon } from '../Icon';
 
-export const PaginationPrevButton: FC = () => {
+type PaginationPrevButtonProps = {
+  activePage: number;
+  setActivePage: (value: number) => void;
+};
+
+export const PaginationPrevButton: FC<PaginationPrevButtonProps> = ({
+  activePage,
+  setActivePage,
+}) => {
+  const router = useRouter();
+  const path = router.asPath.substring(0, router.asPath.indexOf('#'));
+
   return (
     <Box
       fontSize={{ base: 'lg', xl: '2xl' }}
@@ -13,6 +25,10 @@ export const PaginationPrevButton: FC = () => {
     >
       <Box
         as="button"
+        onClick={() => {
+          setActivePage(activePage - 1);
+          router.push(`${path}#news`);
+        }}
         display={'flex'}
         transitionProperty="all"
         transitionTimingFunction="ease-out"

@@ -6,7 +6,7 @@ import { NewsContentProps, NewsDataProps } from 'types/News';
 const News: NextPage<NewsDataProps> = ({
   contents,
   totalCount,
-  name = 'ALL',
+  name = 'all',
 }) => {
   return <NewsAll contents={contents} totalCount={totalCount} name={name} />;
 };
