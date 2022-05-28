@@ -16,6 +16,7 @@
 - react-hook-form
 - microcms-js-sdk
 - dayjs
+- yakuhanjp
 
 ### other
 

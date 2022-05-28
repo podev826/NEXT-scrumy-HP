@@ -3430,6 +3430,11 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
+yakuhanjp@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/yakuhanjp/-/yakuhanjp-3.4.1.tgz#3aa6fd904f0e36715fa15a203fd2c83990587f54"
+  integrity sha512-k10oh2d6Xh/I3MCZLsvs0w2Vea2DdARip6AI3OPZPPfwPUM8HygxS/SjpEYd70d3ug/xOWTe1rhlT9xttFP9UA==
+
 yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
