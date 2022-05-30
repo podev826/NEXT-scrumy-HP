@@ -6,7 +6,7 @@ import { FC, ReactNode } from 'react';
 import { MetaItemProps } from 'types';
 
 type MainLayoutProps = {
-  meta?: MetaItemProps | null;
+  meta?: MetaItemProps;
   children: ReactNode;
 };
 

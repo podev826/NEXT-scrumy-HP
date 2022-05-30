@@ -12,7 +12,7 @@ type NewsAllProps = {
   contents: (NewsContentProps & MicroCMSContentId & MicroCMSDate)[];
   totalCount: number;
   name: string;
-  meta: MetaItemProps | null;
+  meta: MetaItemProps;
 };
 
 export const NewsAll: FC<NewsAllProps> = ({

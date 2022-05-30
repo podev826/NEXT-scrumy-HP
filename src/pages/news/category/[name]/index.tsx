@@ -22,9 +22,7 @@ const NewsCategory: NextPage<NewsDataProps> = ({
             ? META.news.pressRelease
             : name === 'seminar'
             ? META.news.seminar
-            : name === 'e-book'
-            ? META.news.eBook
-            : null
+            : META.news.eBook
         }
       />
     </>
