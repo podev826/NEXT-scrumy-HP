@@ -1,25 +1,53 @@
-import { Box, Text } from '@chakra-ui/react';
-import { PrimaryLink, PrimaryTitle } from 'components/Elements';
-import { ContentWrapper, MainLayout } from 'components/Layouts';
-import type { NextPage } from 'next';
+import { ContactBlock } from 'components/Elements';
+import { IdWrapper, MainLayout } from 'components/Layouts';
+import {
+  RootHero,
+  RootNews,
+  RootPickup,
+  RootRecruit,
+  RootService,
+} from 'features/root';
+import { client } from 'libraries/microcms';
+import { MicroCMSContentId, MicroCMSDate } from 'microcms-js-sdk';
+import type { GetStaticProps, NextPage } from 'next';
+import { NewsContentProps, NewsDataProps } from 'types';
 
-const Root: NextPage = () => {
+type RootProps = {
+  contents: (NewsContentProps & MicroCMSContentId & MicroCMSDate)[];
+};
+
+const Root: NextPage<RootProps> = ({ contents }) => {
   return (
     <MainLayout>
-      <ContentWrapper as="section" bgType="dotted" h="100vh">
-        <Box pt="120">
-          <PrimaryTitle ja="注目の記事" en="Pick up" />
-          <Box>
-            <Text mt={10}>
-              <PrimaryLink href="/" variant="primary" w="full" maxW="400">
-                問い合わせをする
-              </PrimaryLink>
-            </Text>
-          </Box>
-        </Box>
-      </ContentWrapper>
+      <RootHero />
+      <RootPickup />
+      <RootService />
+      <RootNews contents={contents} />
+      <RootRecruit />
+      <IdWrapper id="contact">
+        <ContactBlock />
+      </IdWrapper>
     </MainLayout>
   );
+};
+
+export const getStaticProps: GetStaticProps<NewsDataProps> = async () => {
+  const data = await client
+    .getList<NewsContentProps>({
+      endpoint: 'news',
+      queries: { limit: 3, orders: '-publishedAt' },
+    })
+    .catch(() => null);
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: data,
+  };
 };
 
 export default Root;

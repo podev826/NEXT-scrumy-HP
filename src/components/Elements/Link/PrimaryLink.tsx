@@ -28,7 +28,7 @@ export const PrimaryLink: FC<PrimaryLinkProps> = ({
       textAlign="center"
       {...props}
     >
-      <Box as="span" position="relative" w="full" px={8}>
+      <Box as="span" position="relative" w="full" px={{ base: 6, xl: 8 }}>
         <Box
           as="span"
           position="absolute"

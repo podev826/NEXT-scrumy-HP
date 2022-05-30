@@ -6,7 +6,7 @@ export const styles = {
     body: {
       fontSize: 'md',
       fontWeight: 'normal',
-      fontFamily: '"Noto Sans JP", "sans-serif"',
+      fontFamily: '"YakuHanJP", "Noto Sans JP", "sans-serif"',
       color: 'sub.100',
       overflowX: 'hidden',
     },
@@ -28,7 +28,7 @@ export const styles = {
       listStyleType: 'none',
     },
     '*[lang="en"]': {
-      fontFamily: '"Montserrat", "sans-serif"',
+      fontFamily: '"YakuHanJP", "Montserrat", "sans-serif"',
     },
   },
 };
