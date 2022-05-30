@@ -1,56 +1,54 @@
-import { Box, Text } from '@chakra-ui/react';
+import { ContactBlock } from 'components/Elements';
+import { IdWrapper, MainLayout } from 'components/Layouts';
+import { META } from 'configs';
 import {
-  BaseLink,
-  PrimaryLink,
-  PrimaryTitle,
-  SecondaryLink,
-} from 'components/Elements';
-import { ContentWrapper, MainLayout } from 'components/Layouts';
-import type { NextPage } from 'next';
+  RootHero,
+  RootNews,
+  RootPickup,
+  RootRecruit,
+  RootService,
+} from 'features/root';
+import { client } from 'libraries/microcms';
+import { MicroCMSContentId, MicroCMSDate } from 'microcms-js-sdk';
+import type { GetStaticProps, NextPage } from 'next';
+import { NewsContentProps, NewsDataProps } from 'types';
 
-const Root: NextPage = () => {
+type RootProps = {
+  contents: (NewsContentProps & MicroCMSContentId & MicroCMSDate)[];
+};
+
+const Root: NextPage<RootProps> = ({ contents }) => {
   return (
-    <MainLayout>
-      <ContentWrapper as="section" bgType="dotted">
-        <PrimaryTitle ja="注目の記事" en="Pick up" />
-        <Box>
-          <Text mt={10}>
-            <BaseLink href="/about">BaseLink</BaseLink>
-          </Text>
-          <Text mt={10}>
-            <PrimaryLink href="/" variant="primary" w="full" maxW="400">
-              問い合わせをする
-            </PrimaryLink>
-          </Text>
-          <Text mt={10}>
-            <PrimaryLink href="/" variant="secondary" w="full" maxW="400">
-              詳しくみる
-            </PrimaryLink>
-          </Text>
-          <Text mt={10}>
-            <PrimaryLink href="/" variant="tertiary" w="full" maxW="400">
-              文字数が多い時のデザインデザインデザイン
-            </PrimaryLink>
-          </Text>
-          <Text mt={10}>
-            <SecondaryLink href="/" variant="tertiary" w="full" maxW="400">
-              問い合わせをする
-            </SecondaryLink>
-          </Text>
-          <Text mt={10}>
-            <SecondaryLink href="/" variant="primary" w="full" maxW="400">
-              詳しくみる
-            </SecondaryLink>
-          </Text>
-          <Text mt={10}>
-            <SecondaryLink href="/" variant="secondary" w="full" maxW="400">
-              文字数が多い時のデザインデザインデザイン
-            </SecondaryLink>
-          </Text>
-        </Box>
-      </ContentWrapper>
+    <MainLayout meta={META.root}>
+      <RootHero />
+      <RootPickup />
+      <RootService />
+      <RootNews contents={contents} />
+      <RootRecruit />
+      <IdWrapper id="contact">
+        <ContactBlock />
+      </IdWrapper>
     </MainLayout>
   );
+};
+
+export const getStaticProps: GetStaticProps<NewsDataProps> = async () => {
+  const data = await client
+    .getList<NewsContentProps>({
+      endpoint: 'news',
+      queries: { limit: 3, orders: '-publishedAt' },
+    })
+    .catch(() => null);
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: data,
+  };
 };
 
 export default Root;

@@ -1,4 +1,4 @@
-# var-hp
+# scrumy-hp
 
 ## 使用技術
 
@@ -13,6 +13,10 @@
 - clsx
 - framer-motion
 - fortawesome
+- react-hook-form
+- microcms-js-sdk
+- dayjs
+- yakuhanjp
 
 ### other
 
