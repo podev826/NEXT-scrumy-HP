@@ -40,6 +40,9 @@ export const RecruitMember: FC = () => {
               key={item.name}
               w={{ base: '240px', xl: 'full' }}
               overflow={'hidden'}
+              _last={{
+                borderBottomWidth: 0,
+              }}
             >
               {({ isExpanded }) => (
                 <Box
