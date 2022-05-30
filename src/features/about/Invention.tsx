@@ -1,7 +1,16 @@
-import { Box, Flex, Grid, GridItem, Text } from '@chakra-ui/react';
 import {
+  Accordion,
+  AccordionItem,
+  Box,
+  Flex,
+  Grid,
+  GridItem,
+  Text,
+} from '@chakra-ui/react';
+import {
+  BaseAccordionButton,
+  BaseAccordionPanel,
   BaseImage,
-  CircleMinusIcon,
   PrimaryLink,
   PrimaryTitle,
 } from 'components/Elements';
@@ -89,47 +98,71 @@ const AboutInventionScrumQuestion: FC<AboutInventionScrumQuestionProps> = ({
   description,
 }) => {
   return (
-    <Box boxShadow={'secondary'} borderRadius="32px" overflow={'hidden'}>
-      <Flex
-        as="dt"
-        bg="sub.200"
-        px={{ base: 7, xl: '72px' }}
-        py={{ base: 8, xl: 9 }}
-        fontSize={{ xl: 'xl' }}
-        color="base.100"
-        fontWeight={'bold'}
-        alignItems="center"
-        justifyContent={'space-between'}
-        gap={{ base: 6, xl: 10 }}
-      >
-        <Text>{term}</Text>
-        <Grid
-          w={{ base: 5, xl: 10 }}
-          h={{ base: 5, xl: 10 }}
-          fontSize={{ base: 'xl', xl: '5xl' }}
-          color="accent.100"
-          alignItems={'center'}
-          justifyContent={'center'}
-          as="button"
-          transitionProperty="all"
-          transitionTimingFunction="ease-out"
-          transitionDuration="fast"
-          _hover={{
-            opacity: 0.7,
-          }}
-        >
-          <CircleMinusIcon />
-        </Grid>
-      </Flex>
-      <Grid
-        as="dd"
-        px={{ base: 7, xl: '72px' }}
-        py={{ base: 8, xl: 16 }}
-        bg="base.100"
-      >
-        {description}
-      </Grid>
-    </Box>
+    <AccordionItem
+      key={term}
+      boxShadow={'secondary'}
+      borderRadius="32px"
+      overflow="hidden"
+      border="none"
+      p={0}
+    >
+      {({ isExpanded }) => (
+        <>
+          <BaseAccordionButton isExpanded={isExpanded}>
+            <Box display={{ xl: 'flex' }} alignItems={{ xl: 'center' }}>
+              <Box as="dt" pr={{ base: 3, xl: 6 }}>
+                {term}
+              </Box>
+            </Box>
+          </BaseAccordionButton>
+          <BaseAccordionPanel>
+            <Box as="dd">{description}</Box>
+          </BaseAccordionPanel>
+        </>
+      )}
+    </AccordionItem>
+
+    // <Box boxShadow={'secondary'} borderRadius="32px" overflow={'hidden'}>
+    //   <Flex
+    //     as="dt"
+    //     bg="sub.200"
+    //     px={{ base: 7, xl: '72px' }}
+    //     py={{ base: 8, xl: 9 }}
+    //     fontSize={{ xl: 'xl' }}
+    //     color="base.100"
+    //     fontWeight={'bold'}
+    //     alignItems="center"
+    //     justifyContent={'space-between'}
+    //     gap={{ base: 6, xl: 10 }}
+    //   >
+    //     <Text>{term}</Text>
+    //     <Grid
+    //       w={{ base: 5, xl: 10 }}
+    //       h={{ base: 5, xl: 10 }}
+    //       fontSize={{ base: 'xl', xl: '5xl' }}
+    //       color="accent.100"
+    //       alignItems={'center'}
+    //       justifyContent={'center'}
+    //       as="button"
+    //       transitionProperty="all"
+    //       transitionTimingFunction="ease-out"
+    //       transitionDuration="fast"
+    //       _hover={{
+    //         opacity: 0.7,
+    //       }}
+    //     >
+    //       <CircleMinusIcon />
+    //     </Grid>
+    //   </Flex>
+    //   <Grid
+    //     as="dd"
+    //     px={{ base: 7, xl: '72px' }}
+    //     py={{ base: 8, xl: 16 }}
+    //     bg="base.100"
+    //   >
+    //     {description}
+    //   </Grid>
+    // </Box>
   );
 };
 
@@ -294,7 +327,13 @@ export const AboutInvention: FC = () => {
           </Text>
         </Box>
         <Box px={{ xl: 14 }} mt={{ base: 6, xl: 10 }}>
-          <Grid as="dl" gap={{ base: 6, xl: 8 }}>
+          <Accordion
+            as="dl"
+            display="grid"
+            gap={{ base: 6, xl: 8 }}
+            allowToggle
+            allowMultiple
+          >
             {ABOUT_INVENTION_SCRUM_QUESTIONS.map((item) => (
               <AboutInventionScrumQuestion
                 key={item.term}
@@ -302,7 +341,7 @@ export const AboutInvention: FC = () => {
                 description={item.description}
               />
             ))}
-          </Grid>
+          </Accordion>
           <Box mt={{ base: 8, xl: 14 }}>
             <PrimaryLink
               href={LINKS.external.scrum}
