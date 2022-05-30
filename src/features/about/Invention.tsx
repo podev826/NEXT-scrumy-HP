@@ -2,7 +2,6 @@ import {
   Accordion,
   AccordionItem,
   Box,
-  Flex,
   Grid,
   GridItem,
   Text,
@@ -14,7 +13,7 @@ import {
   PrimaryLink,
   PrimaryTitle,
 } from 'components/Elements';
-import { ContentWrapper } from 'components/Layouts';
+import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import {
   ABOUT_INVENTION_SCRUM_FEATURES,
   ABOUT_INVENTION_SCRUM_QUESTIONS,
@@ -121,241 +120,205 @@ const AboutInventionScrumQuestion: FC<AboutInventionScrumQuestionProps> = ({
         </>
       )}
     </AccordionItem>
-
-    // <Box boxShadow={'secondary'} borderRadius="32px" overflow={'hidden'}>
-    //   <Flex
-    //     as="dt"
-    //     bg="sub.200"
-    //     px={{ base: 7, xl: '72px' }}
-    //     py={{ base: 8, xl: 9 }}
-    //     fontSize={{ xl: 'xl' }}
-    //     color="base.100"
-    //     fontWeight={'bold'}
-    //     alignItems="center"
-    //     justifyContent={'space-between'}
-    //     gap={{ base: 6, xl: 10 }}
-    //   >
-    //     <Text>{term}</Text>
-    //     <Grid
-    //       w={{ base: 5, xl: 10 }}
-    //       h={{ base: 5, xl: 10 }}
-    //       fontSize={{ base: 'xl', xl: '5xl' }}
-    //       color="accent.100"
-    //       alignItems={'center'}
-    //       justifyContent={'center'}
-    //       as="button"
-    //       transitionProperty="all"
-    //       transitionTimingFunction="ease-out"
-    //       transitionDuration="fast"
-    //       _hover={{
-    //         opacity: 0.7,
-    //       }}
-    //     >
-    //       <CircleMinusIcon />
-    //     </Grid>
-    //   </Flex>
-    //   <Grid
-    //     as="dd"
-    //     px={{ base: 7, xl: '72px' }}
-    //     py={{ base: 8, xl: 16 }}
-    //     bg="base.100"
-    //   >
-    //     {description}
-    //   </Grid>
-    // </Box>
   );
 };
 
 export const AboutInvention: FC = () => {
   return (
-    <ContentWrapper as="section" bgType="gray">
-      <PrimaryTitle ja="当社の開発事例" en="Invention" />
-      <Box mt={{ base: 12, xl: 16 }}>
-        <Box
-          as="section"
-          pl={{ base: 9, xl: 0 }}
-          px={{ xl: 14 }}
-          position="relative"
-          _before={{
-            content: '""',
-            display: 'block',
-            width: 0,
-            height: 0,
-            borderWidth: { base: '28px 24px 0 0', xl: '46px 40px 0 0' },
-            borderColor: '#FFCC3C transparent transparent transparent',
-            position: 'absolute',
-            left: 0,
-            top: '4px',
-          }}
-        >
-          <Text as="h3" fontSize={{ base: 'xl', xl: '2xl' }} fontWeight="bold">
-            スクラム申請
-          </Text>
-          <Text mt={3} fontWeight="bold" fontSize={{ base: 'lg', xl: 'xl' }}>
-            法人設立の最初から最後までの一元管理を実現
-          </Text>
-        </Box>
-        <Box px={{ xl: 14 }} mt={8}>
-          <Grid
+    <IdWrapper id="invention">
+      <ContentWrapper as="section" bgType="gray">
+        <PrimaryTitle ja="当社の開発事例" en="Invention" />
+        <Box mt={{ base: 12, xl: 16 }}>
+          <Box
             as="section"
-            borderRadius={'32px'}
-            px={{ base: 5, xl: 10 }}
-            py={{ base: 8, xl: 14 }}
-            bg="base.100"
-            gridTemplateAreas={{
-              xl: `'number . image' 'content . image'`,
+            pl={{ base: 9, xl: 0 }}
+            px={{ xl: 14 }}
+            position="relative"
+            _before={{
+              content: '""',
+              display: 'block',
+              width: 0,
+              height: 0,
+              borderWidth: { base: '28px 24px 0 0', xl: '46px 40px 0 0' },
+              borderColor: '#FFCC3C transparent transparent transparent',
+              position: 'absolute',
+              left: 0,
+              top: '4px',
             }}
-            gridTemplateColumns={{
-              xl: '1fr 56px 1fr',
-            }}
-            gridTemplateRows={{ xl: 'auto' }}
           >
-            <GridItem gridArea={{ xl: 'number' }}>
-              <AboutInventionScrumNumber order="01" />
-            </GridItem>
-            <GridItem gridArea={{ xl: 'image' }}>
-              <Box
-                fontSize={0}
-                position="relative"
-                mt={4}
-                display={{ base: 'block', xl: 'none' }}
-              >
-                <BaseImage
-                  src="/images/about/about_invention01.jpg"
-                  alt=""
-                  width={992}
-                  height={468}
-                />
-              </Box>
-              <Box
-                fontSize={0}
-                position="relative"
-                w="full"
-                h="full"
-                display={{ base: 'none', xl: 'block' }}
-              >
-                <Image
-                  src="/images/about/about_invention01.jpg"
-                  alt=""
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
-                />
-              </Box>
-            </GridItem>
+            <Text
+              as="h3"
+              fontSize={{ base: 'xl', xl: '2xl' }}
+              fontWeight="bold"
+            >
+              スクラム申請
+            </Text>
+            <Text mt={3} fontWeight="bold" fontSize={{ base: 'lg', xl: 'xl' }}>
+              法人設立の最初から最後までの一元管理を実現
+            </Text>
+          </Box>
+          <Box px={{ xl: 14 }} mt={8}>
+            <Grid
+              as="section"
+              borderRadius={'32px'}
+              px={{ base: 5, xl: 10 }}
+              py={{ base: 8, xl: 14 }}
+              bg="base.100"
+              gridTemplateAreas={{
+                xl: `'number . image' 'content . image'`,
+              }}
+              gridTemplateColumns={{
+                xl: '1fr 56px 1fr',
+              }}
+              gridTemplateRows={{ xl: 'auto' }}
+            >
+              <GridItem gridArea={{ xl: 'number' }}>
+                <AboutInventionScrumNumber order="01" />
+              </GridItem>
+              <GridItem gridArea={{ xl: 'image' }}>
+                <Box
+                  fontSize={0}
+                  position="relative"
+                  mt={4}
+                  display={{ base: 'block', xl: 'none' }}
+                >
+                  <BaseImage
+                    src="/images/about/about_invention01.jpg"
+                    alt=""
+                    width={992}
+                    height={468}
+                  />
+                </Box>
+                <Box
+                  fontSize={0}
+                  position="relative"
+                  w="full"
+                  h="full"
+                  display={{ base: 'none', xl: 'block' }}
+                >
+                  <Image
+                    src="/images/about/about_invention01.jpg"
+                    alt=""
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                  />
+                </Box>
+              </GridItem>
 
-            <GridItem gridArea={{ xl: 'content' }}>
-              <Box mt={{ base: 4, xl: 3 }}>
-                <AboutInventionScrumTitle>
-                  {ABOUT_INVENTION_SCRUM_FEATURES[0].title}
-                </AboutInventionScrumTitle>
-              </Box>
-              <Box mt={{ base: 5, xl: 6 }}>
-                <AboutInventionScrumList
-                  items={ABOUT_INVENTION_SCRUM_FEATURES[0].list}
-                />
-              </Box>
-              <Text
-                mt={5}
-                fontSize={'xl'}
-                fontWeight="bold"
-                display={{ base: 'none', xl: 'block' }}
+              <GridItem gridArea={{ xl: 'content' }}>
+                <Box mt={{ base: 4, xl: 3 }}>
+                  <AboutInventionScrumTitle>
+                    {ABOUT_INVENTION_SCRUM_FEATURES[0].title}
+                  </AboutInventionScrumTitle>
+                </Box>
+                <Box mt={{ base: 5, xl: 6 }}>
+                  <AboutInventionScrumList
+                    items={ABOUT_INVENTION_SCRUM_FEATURES[0].list}
+                  />
+                </Box>
+                <Text
+                  mt={5}
+                  fontSize={'xl'}
+                  fontWeight="bold"
+                  display={{ base: 'none', xl: 'block' }}
+                >
+                  {ABOUT_INVENTION_SCRUM_FEATURES[0].text}
+                </Text>
+              </GridItem>
+            </Grid>
+            <Grid gap={6} templateColumns={{ xl: 'repeat(2, 1fr)' }} mt={6}>
+              <GridItem
+                as="section"
+                px={{ base: 5, xl: 10 }}
+                py={{ base: 8, xl: 14 }}
+                bg="base.100"
+                borderRadius={'32px'}
               >
-                {ABOUT_INVENTION_SCRUM_FEATURES[0].text}
-              </Text>
-            </GridItem>
-          </Grid>
-          <Grid gap={6} templateColumns={{ xl: 'repeat(2, 1fr)' }} mt={6}>
-            <GridItem
-              as="section"
-              px={{ base: 5, xl: 10 }}
-              py={{ base: 8, xl: 14 }}
-              bg="base.100"
-              borderRadius={'32px'}
-            >
-              <AboutInventionScrumNumber order="02" />
-              <Box mt={{ base: 2, xl: 3 }}>
-                <AboutInventionScrumTitle>
-                  {ABOUT_INVENTION_SCRUM_FEATURES[1].title}
-                </AboutInventionScrumTitle>
-              </Box>
-              <Box mt={{ base: 4, xl: 6 }}>
-                <AboutInventionScrumList
-                  items={ABOUT_INVENTION_SCRUM_FEATURES[1].list}
-                />
-              </Box>
-            </GridItem>
-            <GridItem
-              as="section"
-              px={{ base: 5, xl: 10 }}
-              py={{ base: 8, xl: 14 }}
-              bg="base.100"
-              borderRadius={'32px'}
-            >
-              <AboutInventionScrumNumber order="03" />
-              <Box mt={{ base: 2, xl: 3 }}>
-                <AboutInventionScrumTitle>
-                  {ABOUT_INVENTION_SCRUM_FEATURES[2].title}
-                </AboutInventionScrumTitle>
-              </Box>
-              <Box mt={{ base: 4, xl: 6 }}>
-                <AboutInventionScrumList
-                  items={ABOUT_INVENTION_SCRUM_FEATURES[2].list}
-                />
-              </Box>
-            </GridItem>
-          </Grid>
-        </Box>
-        <Box
-          mt={{ base: 12, xl: 16 }}
-          px={{ base: 9, xl: 14 }}
-          position="relative"
-          _before={{
-            content: '""',
-            display: 'block',
-            width: { base: '20px', xl: '40px' },
-            height: '8px',
-            backgroundColor: '#FFCC3C',
-            position: 'absolute',
-            left: 0,
-            top: '50%',
-            transform: 'translateY(-50%)',
-          }}
-        >
-          <Text fontWeight="bold" fontSize={{ base: 'xl', xl: '2xl' }}>
-            よくある質問
-          </Text>
-        </Box>
-        <Box px={{ xl: 14 }} mt={{ base: 6, xl: 10 }}>
-          <Accordion
-            as="dl"
-            display="grid"
-            gap={{ base: 6, xl: 8 }}
-            allowToggle
-            allowMultiple
+                <AboutInventionScrumNumber order="02" />
+                <Box mt={{ base: 2, xl: 3 }}>
+                  <AboutInventionScrumTitle>
+                    {ABOUT_INVENTION_SCRUM_FEATURES[1].title}
+                  </AboutInventionScrumTitle>
+                </Box>
+                <Box mt={{ base: 4, xl: 6 }}>
+                  <AboutInventionScrumList
+                    items={ABOUT_INVENTION_SCRUM_FEATURES[1].list}
+                  />
+                </Box>
+              </GridItem>
+              <GridItem
+                as="section"
+                px={{ base: 5, xl: 10 }}
+                py={{ base: 8, xl: 14 }}
+                bg="base.100"
+                borderRadius={'32px'}
+              >
+                <AboutInventionScrumNumber order="03" />
+                <Box mt={{ base: 2, xl: 3 }}>
+                  <AboutInventionScrumTitle>
+                    {ABOUT_INVENTION_SCRUM_FEATURES[2].title}
+                  </AboutInventionScrumTitle>
+                </Box>
+                <Box mt={{ base: 4, xl: 6 }}>
+                  <AboutInventionScrumList
+                    items={ABOUT_INVENTION_SCRUM_FEATURES[2].list}
+                  />
+                </Box>
+              </GridItem>
+            </Grid>
+          </Box>
+          <Box
+            mt={{ base: 12, xl: 16 }}
+            px={{ base: 9, xl: 14 }}
+            position="relative"
+            _before={{
+              content: '""',
+              display: 'block',
+              width: { base: '20px', xl: '40px' },
+              height: '8px',
+              backgroundColor: '#FFCC3C',
+              position: 'absolute',
+              left: 0,
+              top: '50%',
+              transform: 'translateY(-50%)',
+            }}
           >
-            {ABOUT_INVENTION_SCRUM_QUESTIONS.map((item) => (
-              <AboutInventionScrumQuestion
-                key={item.term}
-                term={item.term}
-                description={item.description}
-              />
-            ))}
-          </Accordion>
-          <Box mt={{ base: 8, xl: 14 }}>
-            <PrimaryLink
-              href={LINKS.external.scrum}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="secondary"
-              w="full"
-              maxW={{ base: '280px', xl: '284px' }}
+            <Text fontWeight="bold" fontSize={{ base: 'xl', xl: '2xl' }}>
+              よくある質問
+            </Text>
+          </Box>
+          <Box px={{ xl: 14 }} mt={{ base: 6, xl: 10 }}>
+            <Accordion
+              as="dl"
+              display="grid"
+              gap={{ base: 6, xl: 8 }}
+              allowToggle
+              allowMultiple
             >
-              詳しくみる
-            </PrimaryLink>
+              {ABOUT_INVENTION_SCRUM_QUESTIONS.map((item) => (
+                <AboutInventionScrumQuestion
+                  key={item.term}
+                  term={item.term}
+                  description={item.description}
+                />
+              ))}
+            </Accordion>
+            <Box mt={{ base: 8, xl: 14 }}>
+              <PrimaryLink
+                href={LINKS.external.scrum}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="secondary"
+                w="full"
+                maxW={{ base: '280px', xl: '284px' }}
+              >
+                詳しくみる
+              </PrimaryLink>
+            </Box>
           </Box>
         </Box>
-      </Box>
-    </ContentWrapper>
+      </ContentWrapper>
+    </IdWrapper>
   );
 };

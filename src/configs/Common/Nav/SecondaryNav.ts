@@ -65,16 +65,15 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     list: [
       {
         text: 'スクラム申請',
-        href: 'https://shinsei.scrumy.co.jp/',
-        blank: true,
+        href: '/#service01',
       },
       {
         text: '医療情報セキュリティ診断',
-        href: '#',
+        href: '/#service02',
       },
       {
         text: '教育DXプロジェクト推進コンサル',
-        href: '#',
+        href: '/#service03',
       },
     ],
   },

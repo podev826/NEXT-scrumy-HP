@@ -174,6 +174,7 @@ export const HeaderModal: FC = () => {
             minH={12}
             py={2}
             fontWeight="extrabold"
+            onClick={closeHeader}
           >
             <Box as="span" lang="en">
               Contact
@@ -207,7 +208,7 @@ export const HeaderModal: FC = () => {
           minW="720px"
         >
           <Flex>
-            <BaseLink href="/">
+            <BaseLink href="/" onClick={closeHeader}>
               <BaseImage
                 src="/images/common/common_logo.svg"
                 width={180}
@@ -304,6 +305,7 @@ export const HeaderModal: FC = () => {
                 borderBottomWidth="1px"
                 borderBottomColor="sub.100"
                 pb={1}
+                onClick={closeHeader}
               >
                 privacy-policy
               </BaseLink>

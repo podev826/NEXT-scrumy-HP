@@ -5,7 +5,7 @@ import {
   PrimaryLink,
   PrimaryTitle,
 } from 'components/Elements';
-import { ContentWrapper } from 'components/Layouts';
+import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import { JOB_DESCRIPTION, JobDescriptionContentProps } from 'configs/Recruit';
 import { FC } from 'react';
 
@@ -111,35 +111,37 @@ export const JobDescriptionContent: FC<JobDescriptionContentProps> = ({
 
 export const RecruitMain: FC = () => {
   return (
-    <ContentWrapper bgType="gray">
-      <PrimaryTitle ja="募集要項" en="Recruit" />
-      <Box mt={{ base: 8, md: 12, xl: 16 }} pl={{ xl: 14 }}>
-        <Accordion
-          as="dl"
-          allowToggle
-          allowMultiple
-          display={'grid'}
-          gap={{ base: 5, xl: 8 }}
-        >
-          {JOB_DESCRIPTION.map((item) => (
-            <JobDescriptionContent
-              key={item.title}
-              title={item.title}
-              content={item.content}
-            />
-          ))}
-        </Accordion>
-        <Box mt={{ base: 8, xl: 10 }}>
-          <PrimaryLink
-            href="/contact"
-            variant="secondary"
-            w="full"
-            maxW={{ base: '280px', xl: '284px' }}
+    <IdWrapper id="recruit">
+      <ContentWrapper bgType="gray">
+        <PrimaryTitle ja="募集要項" en="Recruit" />
+        <Box mt={{ base: 8, md: 12, xl: 16 }} pl={{ xl: 14 }}>
+          <Accordion
+            as="dl"
+            allowToggle
+            allowMultiple
+            display={'grid'}
+            gap={{ base: 5, xl: 8 }}
           >
-            詳しくみる
-          </PrimaryLink>
+            {JOB_DESCRIPTION.map((item) => (
+              <JobDescriptionContent
+                key={item.title}
+                title={item.title}
+                content={item.content}
+              />
+            ))}
+          </Accordion>
+          <Box mt={{ base: 8, xl: 10 }}>
+            <PrimaryLink
+              href="/contact"
+              variant="secondary"
+              w="full"
+              maxW={{ base: '280px', xl: '284px' }}
+            >
+              詳しくみる
+            </PrimaryLink>
+          </Box>
         </Box>
-      </Box>
-    </ContentWrapper>
+      </ContentWrapper>
+    </IdWrapper>
   );
 };
