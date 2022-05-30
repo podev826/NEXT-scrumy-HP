@@ -9,7 +9,7 @@ export const RootService: FC = () => {
       <ContentWrapper bgType="gray">
         <PrimaryTitle ja="わたしたちができること" en="Service" />
         <Box mt={{ base: 12, xl: 16 }} display="grid" gap={{ base: 6, xl: 10 }}>
-          <IdWrapper id="service01">
+          <IdWrapper id="service01" h="full">
             <Box
               as="section"
               bg="base.100"
@@ -18,6 +18,7 @@ export const RootService: FC = () => {
               py={{ base: 9, xl: 16 }}
               display={{ xl: 'flex' }}
               alignItems={{ xl: 'center' }}
+              h="full"
               gap={{ xl: 6 }}
             >
               <Box
@@ -113,11 +114,12 @@ export const RootService: FC = () => {
           <Box
             display={'grid'}
             gap={{ base: 6, xl: 10 }}
-            gridTemplateColumns={{ xl: 'repeat(2, 1fr)' }}
+            gridTemplateColumns={{ md: 'repeat(2, 1fr)' }}
           >
-            <IdWrapper id="service02">
+            <IdWrapper id="service02" h="full">
               <Box
                 as="section"
+                h="full"
                 bg="base.100"
                 borderRadius={'32px'}
                 px={{ base: 4, xl: 10 }}
@@ -140,7 +142,7 @@ export const RootService: FC = () => {
                   >
                     <Box
                       w={{ base: '53px', xl: '98px' }}
-                      mr={{ base: 4, xl: 1 }}
+                      mr={{ base: 4, md: 2, xl: 1 }}
                     >
                       <BaseImage
                         src="/images/root/root_service_number02.png"
@@ -150,7 +152,7 @@ export const RootService: FC = () => {
                       />
                     </Box>
                     <Text
-                      fontSize={{ base: '3.73vw', md: 'xl' }}
+                      fontSize={{ base: '3.73vw', md: 'md', xl: 'xl' }}
                       fontWeight="bold"
                       letterSpacing={0}
                       bg="base.100"
@@ -169,7 +171,7 @@ export const RootService: FC = () => {
                     <Text
                       as="h3"
                       bg="main.100"
-                      fontSize={{ base: '4.8vw', md: '2xl' }}
+                      fontSize={{ base: '4.8vw', md: 'lg', xl: '2xl' }}
                       fontWeight="bold"
                       letterSpacing={0}
                       textAlign="center"
@@ -195,9 +197,10 @@ export const RootService: FC = () => {
                 </Box>
               </Box>
             </IdWrapper>
-            <IdWrapper id="service03">
+            <IdWrapper id="service03" h="full">
               <Box
                 as="section"
+                h="full"
                 bg="base.100"
                 borderRadius={'32px'}
                 px={{ base: 4, xl: 10 }}
@@ -220,7 +223,7 @@ export const RootService: FC = () => {
                   >
                     <Box
                       w={{ base: '53px', xl: '98px' }}
-                      mr={{ base: 4, xl: 1 }}
+                      mr={{ base: 4, md: 2, xl: 1 }}
                     >
                       <BaseImage
                         src="/images/root/root_service_number03.png"
@@ -230,7 +233,7 @@ export const RootService: FC = () => {
                       />
                     </Box>
                     <Text
-                      fontSize={{ base: '3.73vw', md: 'xl' }}
+                      fontSize={{ base: '3.73vw', md: 'md', xl: 'xl' }}
                       fontWeight="bold"
                       letterSpacing={0}
                       bg="base.100"
@@ -245,11 +248,11 @@ export const RootService: FC = () => {
                       height={610}
                     />
                   </Box>
-                  <Box mt={{ base: 4 }}>
+                  <Box mt={{ base: 4, md: 0, xl: 4 }}>
                     <Text
                       as="h3"
                       bg="main.100"
-                      fontSize={{ base: '4.8vw', md: '2xl' }}
+                      fontSize={{ base: '4.8vw', md: 'lg', xl: '2xl' }}
                       fontWeight="bold"
                       letterSpacing={0}
                       textAlign="center"

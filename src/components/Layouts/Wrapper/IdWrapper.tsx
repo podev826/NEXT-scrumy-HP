@@ -1,12 +1,12 @@
-import { Box } from '@chakra-ui/react';
+import { Box, BoxProps } from '@chakra-ui/react';
 import { FC, ReactNode } from 'react';
 
-type IdWrapperProps = {
+type IdWrapperProps = BoxProps & {
   id: string;
   children: ReactNode;
 };
 
-export const IdWrapper: FC<IdWrapperProps> = ({ id, children }) => {
+export const IdWrapper: FC<IdWrapperProps> = ({ id, children, ...props }) => {
   return (
     <Box position="relative">
       <Box
@@ -14,7 +14,7 @@ export const IdWrapper: FC<IdWrapperProps> = ({ id, children }) => {
         position="absolute"
         top={{ base: '-80px', md: '-104px', xl: '-123px' }}
       ></Box>
-      <Box>{children}</Box>
+      <Box {...props}>{children}</Box>
     </Box>
   );
 };
