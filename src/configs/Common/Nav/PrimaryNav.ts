@@ -11,7 +11,7 @@ export const PRIMARY_NAV: PrimaryNavProps = [
     text: 'About us',
   },
   {
-    href: '/service',
+    href: '/#service',
     text: 'Service',
   },
   {
