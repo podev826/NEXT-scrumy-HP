@@ -1,5 +1,6 @@
 import { AboutSubVisual } from 'components/Elements';
 import { MainLayout } from 'components/Layouts';
+import { META } from 'configs';
 import {
   AboutCompany,
   AboutInvention,
@@ -10,7 +11,7 @@ import type { NextPage } from 'next';
 
 const About: NextPage = () => {
   return (
-    <MainLayout>
+    <MainLayout meta={META.about}>
       <AboutSubVisual />
       <AboutInvention />
       <AboutMessage />

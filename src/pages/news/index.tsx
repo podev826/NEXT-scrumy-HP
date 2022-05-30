@@ -1,3 +1,4 @@
+import { META } from 'configs';
 import { NewsAll } from 'features/news/All';
 import { client } from 'libraries/microcms';
 import type { GetStaticProps, NextPage } from 'next';
@@ -8,7 +9,14 @@ const News: NextPage<NewsDataProps> = ({
   totalCount,
   name = 'all',
 }) => {
-  return <NewsAll contents={contents} totalCount={totalCount} name={name} />;
+  return (
+    <NewsAll
+      contents={contents}
+      totalCount={totalCount}
+      name={name}
+      meta={META.news.all}
+    />
+  );
 };
 
 export const getStaticProps: GetStaticProps<NewsDataProps> = async () => {

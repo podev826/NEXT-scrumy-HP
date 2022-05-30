@@ -1,3 +1,4 @@
+import { META } from 'configs';
 import { NewsAll } from 'features/news/All';
 import { client } from 'libraries/microcms';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
@@ -10,7 +11,22 @@ const NewsCategory: NextPage<NewsDataProps> = ({
 }) => {
   return (
     <>
-      <NewsAll contents={contents} totalCount={totalCount} name={name} />
+      <NewsAll
+        contents={contents}
+        totalCount={totalCount}
+        name={name}
+        meta={
+          name === 'information'
+            ? META.news.information
+            : name === 'press-release'
+            ? META.news.pressRelease
+            : name === 'seminar'
+            ? META.news.seminar
+            : name === 'e-book'
+            ? META.news.eBook
+            : null
+        }
+      />
     </>
   );
 };

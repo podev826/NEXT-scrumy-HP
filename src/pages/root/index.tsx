@@ -1,5 +1,6 @@
 import { ContactBlock } from 'components/Elements';
 import { IdWrapper, MainLayout } from 'components/Layouts';
+import { META } from 'configs';
 import {
   RootHero,
   RootNews,
@@ -18,7 +19,7 @@ type RootProps = {
 
 const Root: NextPage<RootProps> = ({ contents }) => {
   return (
-    <MainLayout>
+    <MainLayout meta={META.root}>
       <RootHero />
       <RootPickup />
       <RootService />
