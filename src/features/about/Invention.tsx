@@ -115,7 +115,11 @@ const AboutInventionScrumQuestion: FC<AboutInventionScrumQuestionProps> = ({
             </Box>
           </BaseAccordionButton>
           <BaseAccordionPanel>
-            <Box as="dd">{description}</Box>
+            <Box as="dd">
+              {description.map((item) => (
+                <Text key={item}>{item}</Text>
+              ))}
+            </Box>
           </BaseAccordionPanel>
         </>
       )}
