@@ -31,12 +31,7 @@ export const FormDescriptionRadio: FC<FormDescriptionRadioProps> = ({
         ))}
       </Box>
       {error ? (
-        <Box
-          ml={{ base: 8, xl: 10 }}
-          mt={'6px'}
-          fontSize="sm"
-          color={'danger.100'}
-        >
+        <Box mt={'6px'} fontSize="sm" color={'danger.100'}>
           <CircleExclamation />
           <Box as="span" ml={1}>
             {error.message}
