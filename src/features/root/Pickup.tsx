@@ -31,6 +31,12 @@ export const RootPickup: FC = () => {
                   bg="base.100"
                   borderRadius={'32px'}
                   boxShadow={'secondary'}
+                  transitionProperty="all"
+                  transitionTimingFunction="ease-out"
+                  transitionDuration="fast"
+                  _hover={{
+                    boxShadow: 'transparent',
+                  }}
                   h={'full'}
                 >
                   <BaseLink

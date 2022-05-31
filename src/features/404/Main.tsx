@@ -61,7 +61,11 @@ export const NotFoundMain: FC = () => {
           transitionProperty="all"
           transitionTimingFunction="ease-out"
           transitionDuration="fast"
-          _hover={{ boxShadow: 'none', backgroundColor: 'sub.200', opacity: 1 }}
+          _hover={{
+            boxShadow: 'transparent',
+            backgroundColor: 'sub.200',
+            opacity: 1,
+          }}
           borderRadius="full"
           fontSize={{ md: 'xl' }}
           fontWeight={'bold'}

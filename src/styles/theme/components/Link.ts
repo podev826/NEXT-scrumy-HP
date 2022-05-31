@@ -14,12 +14,12 @@ export const Link = {
       color: 'base.100',
       bg: 'accent.100',
       _hover: {
-        boxShadow: 'none',
+        boxShadow: 'transparent',
         bg: 'accent.200',
         opacity: '1',
       },
       _focus: {
-        boxShadow: 'none',
+        boxShadow: 'transparent',
         bg: 'accent.200',
         opacity: '1',
       },
@@ -28,12 +28,12 @@ export const Link = {
       color: 'base.100',
       bg: 'sub.100',
       _hover: {
-        boxShadow: 'none',
+        boxShadow: 'transparent',
         bg: 'sub.200',
         opacity: '1',
       },
       _focus: {
-        boxShadow: 'none',
+        boxShadow: 'transparent',
         bg: 'sub.200',
         opacity: '1',
       },
@@ -57,14 +57,14 @@ export const Link = {
       },
       _hover: {
         opacity: '1',
-        boxShadow: 'none',
+        boxShadow: 'transparent',
         _before: {
           opacity: '0',
         },
       },
       _focus: {
         opacity: '1',
-        boxShadow: 'none',
+        boxShadow: 'transparent',
         _before: {
           opacity: '0',
         },

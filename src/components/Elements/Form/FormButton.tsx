@@ -53,13 +53,14 @@ export const FormButton: FC<FormButtonProps> = ({
         }}
         _hover={{
           opacity: '1',
+          boxShadow: 'transparent',
           _before: {
             opacity: '0',
           },
         }}
         _focus={{
           opacity: '1',
-          boxShadow: 'none',
+          boxShadow: 'transparent',
           _before: {
             opacity: '0',
           },

@@ -65,7 +65,7 @@ export const RootHero: FC = () => {
             transitionDuration="fast"
             boxShadow={'primary'}
             _hover={{
-              boxShadow: 'none',
+              boxShadow: 'transparent',
               backgroundColor: 'sub.200',
               opacity: 1,
             }}
