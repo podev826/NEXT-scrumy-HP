@@ -31,7 +31,7 @@ export const ContactBlock: FC = () => {
           こちらからお問い合わせください。
         </Text>
       </Text>
-      <Box mt={5} mx="auto" maxW={'820px'}>
+      <Box mt={5} mx="auto" maxW={'536px'}>
         <SecondaryLink href="/contact" w="full" variant={'tertiary'}>
           お問い合わせはこちら
         </SecondaryLink>
