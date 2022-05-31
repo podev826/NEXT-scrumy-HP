@@ -63,7 +63,12 @@ export const RootHero: FC = () => {
             transitionProperty="all"
             transitionTimingFunction="ease-out"
             transitionDuration="fast"
-            _hover={{ backgroundColor: 'sub.200', opacity: 1 }}
+            boxShadow={'primary'}
+            _hover={{
+              boxShadow: 'none',
+              backgroundColor: 'sub.200',
+              opacity: 1,
+            }}
             borderRadius="full"
             fontSize={{ base: '4.267vw', sm: '2.344vw', xl: '1.389vw' }}
             fontWeight={'bold'}
