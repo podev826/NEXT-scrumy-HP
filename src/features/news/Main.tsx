@@ -164,10 +164,6 @@ export const NewsMain: FC<NewsMainProps> = ({ contents, totalCount, name }) => {
           </Box>
         </Box>
         <Box pt={{ base: 6, xl: 16 }}>
-          <Text as="h2" fontSize={{ base: 'lg', xl: '2xl' }} fontWeight="bold">
-            「<Text as="span">All</Text>
-            」に関するすべての記事
-          </Text>
           <Accordion
             allowToggle
             allowMultiple
