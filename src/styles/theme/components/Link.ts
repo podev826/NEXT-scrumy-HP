@@ -14,6 +14,7 @@ export const Link = {
       color: 'base.100',
       bg: 'accent.100',
       _hover: {
+        boxShadow: 'none',
         bg: 'accent.200',
         opacity: '1',
       },
@@ -27,6 +28,7 @@ export const Link = {
       color: 'base.100',
       bg: 'sub.100',
       _hover: {
+        boxShadow: 'none',
         bg: 'sub.200',
         opacity: '1',
       },
@@ -55,6 +57,7 @@ export const Link = {
       },
       _hover: {
         opacity: '1',
+        boxShadow: 'none',
         _before: {
           opacity: '0',
         },
