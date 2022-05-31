@@ -137,7 +137,7 @@ export const RecruitMain: FC = () => {
               w="full"
               maxW={{ base: '280px', xl: '284px' }}
             >
-              詳しくみる
+              応募する
             </PrimaryLink>
           </Box>
         </Box>
