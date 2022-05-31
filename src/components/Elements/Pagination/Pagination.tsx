@@ -28,10 +28,7 @@ export const Pagination: FC<PaginationProps> = ({
       gap={12}
     >
       {activePage !== 1 ? (
-        <PaginationPrevButton
-          activePage={activePage}
-          setActivePage={setActivePage}
-        />
+        <PaginationPrevButton setActivePage={setActivePage} />
       ) : (
         <Box></Box>
       )}
@@ -43,7 +40,7 @@ export const Pagination: FC<PaginationProps> = ({
       >
         {activePage !== 1 ? (
           <PaginationNumberButton
-            value={1}
+            value={activePage - 1}
             activePage={activePage}
             setActivePage={setActivePage}
           />
@@ -55,7 +52,7 @@ export const Pagination: FC<PaginationProps> = ({
         />
         {activePage !== lastPage ? (
           <PaginationNumberButton
-            value={lastPage}
+            value={activePage + 1}
             activePage={activePage}
             setActivePage={setActivePage}
           />
@@ -63,7 +60,7 @@ export const Pagination: FC<PaginationProps> = ({
       </Box>
       {activePage !== lastPage ? (
         <PaginationNextButton
-          activePage={activePage}
+          lastPage={lastPage}
           setActivePage={setActivePage}
         />
       ) : (

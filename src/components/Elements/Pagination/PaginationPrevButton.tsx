@@ -5,12 +5,10 @@ import React, { FC } from 'react';
 import { AngleLeftIcon } from '../Icon';
 
 type PaginationPrevButtonProps = {
-  activePage: number;
   setActivePage: (value: number) => void;
 };
 
 export const PaginationPrevButton: FC<PaginationPrevButtonProps> = ({
-  activePage,
   setActivePage,
 }) => {
   const router = useRouter();
@@ -26,7 +24,7 @@ export const PaginationPrevButton: FC<PaginationPrevButtonProps> = ({
       <Box
         as="button"
         onClick={() => {
-          setActivePage(activePage - 1);
+          setActivePage(1);
           router.push(`${path}#news`);
         }}
         display={'flex'}
