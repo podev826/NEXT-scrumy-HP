@@ -6,7 +6,7 @@ import {
   PrimaryTitle,
 } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
-import { JOB_DESCRIPTION, JobDescriptionContentProps } from 'configs/Recruit';
+import { JOB_DESCRIPTION, JobDescriptionContentProps } from 'configs';
 import { FC } from 'react';
 
 type JobDescriptionDetailProps = {

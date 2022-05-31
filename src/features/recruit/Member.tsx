@@ -13,7 +13,7 @@ import {
   PrimaryTitle,
 } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
-import { MEMBER_LIST } from 'configs/Recruit';
+import { MEMBER_LIST } from 'configs';
 import { FC } from 'react';
 
 export const RecruitMember: FC = () => {

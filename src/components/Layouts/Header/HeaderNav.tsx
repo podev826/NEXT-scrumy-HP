@@ -1,6 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { BaseLink, TertiaryLink } from 'components/Elements';
-import { PRIMARY_NAV } from 'configs/Common/Nav/PrimaryNav';
+import { PRIMARY_NAV } from 'configs';
 import { FC } from 'react';
 
 export const HeaderNav: FC = () => {
