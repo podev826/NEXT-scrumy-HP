@@ -30,7 +30,7 @@ export const Footer: FC = () => {
                   22番地11号2階
                 </Box>
               </Text>
-              <Text mt={{ base: 1, xl: '6px' }}>Mail：info@scrumy.com</Text>
+              <Text mt={{ base: 1, xl: '6px' }}>Mail：info@scrumy.co.jp</Text>
             </Box>
             <Text
               fontSize="sm"

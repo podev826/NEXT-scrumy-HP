@@ -96,7 +96,7 @@ export const ContactMain: FC = () => {
             <FormDescriptionInput
               id="email"
               type="email"
-              placeholder="例）info@scrumy.com"
+              placeholder="例）info@scrumy.co.jp"
               error={errors.email}
               register={register('email', {
                 required: 'メールアドレスは必須項目です。',
