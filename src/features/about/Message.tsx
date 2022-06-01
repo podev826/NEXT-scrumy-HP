@@ -27,8 +27,8 @@ export const AboutMessage: FC = () => {
                   as="span"
                   display="inline-block"
                   bg="main.100"
-                  px={{ base: '10px', xl: '15px' }}
-                  py={{ base: '5px', xl: '10px' }}
+                  px={{ base: 2, xl: 3 }}
+                  py={{ base: 1, xl: 2 }}
                 >
                   法人手続をデジタル化し、
                 </Text>
@@ -36,8 +36,8 @@ export const AboutMessage: FC = () => {
               <Text
                 as="span"
                 display={{ xl: 'inline-block' }}
-                px={{ xl: '15px' }}
-                py={{ xl: '10px' }}
+                px={{ xl: 3 }}
+                py={{ xl: 2 }}
                 bg={{ xl: 'main.100' }}
                 mt={{ xl: 6 }}
               >
@@ -46,8 +46,8 @@ export const AboutMessage: FC = () => {
                     as="span"
                     display="inline-block"
                     bg="main.100"
-                    px={{ base: '10px', xl: 0 }}
-                    py={{ base: '5px', xl: 0 }}
+                    px={{ base: 2, xl: 0 }}
+                    py={{ base: 1, xl: 0 }}
                     mt={{ base: 2, xl: 0 }}
                   >
                     データサイエンスで
@@ -58,8 +58,8 @@ export const AboutMessage: FC = () => {
                     as="span"
                     display="inline-block"
                     bg="main.100"
-                    px={{ base: '10px', xl: 0 }}
-                    py={{ base: '5px', xl: 0 }}
+                    px={{ base: 2, xl: 0 }}
+                    py={{ base: 1, xl: 0 }}
                     mt={{ base: 2, xl: 0 }}
                   >
                     「新たな経営基盤」を作り出す
