@@ -129,11 +129,7 @@ export const ContactMain: FC = () => {
             })}
           />
         </Box>
-        <Box
-          mt={{ base: 14, xl: 16 }}
-          maxW={{ base: '324px', xl: '368px' }}
-          mx="auto"
-        >
+        <Box mt={{ base: 14, xl: 16 }}>
           <FormButton
             isSubmitting={isSubmitting}
             send={send}
