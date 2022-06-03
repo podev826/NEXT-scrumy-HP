@@ -31,6 +31,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "algoliasearch": "^4.13.1",
     "dayjs": "^1.11.2",
     "framer-motion": "^6",
     "microcms-js-sdk": "^2.0.0",
@@ -38,6 +39,8 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-hook-form": "^7.31.2",
+    "react-instantsearch-core": "^6.26.0",
+    "react-instantsearch-dom": "^6.26.0",
     "yakuhanjp": "^3.4.1"
   },
   "devDependencies": {

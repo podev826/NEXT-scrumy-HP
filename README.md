@@ -17,6 +17,10 @@
 - microcms-js-sdk
 - dayjs
 - yakuhanjp
+- Algolia
+  - algoliasearch
+  - react-instantsearch-dom
+  - react-instantsearch-core
 
 ### other
 
