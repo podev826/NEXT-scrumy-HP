@@ -12,36 +12,10 @@ export const META = {
       '株式会社ScrumyのAbout usページです。株式会社Scrumyは、情報ガバナンスや情報セキュリティにおける革新的プラットフォームを提供する行政手続DXの会社です。',
   },
   news: {
-    all: {
-      href: '/news/',
-      title: 'News | 株式会社Scrumy',
-      description:
-        '株式会社ScrumyのNewsページです。株式会社Scrumyは、情報ガバナンスや情報セキュリティにおける革新的プラットフォームを提供する行政手続DXの会社です。',
-    },
-    information: {
-      href: '/news/category/information/',
-      title: '企業情報 | News | 株式会社Scrumy',
-      description:
-        '株式会社Scrumyのお知らせについてのNewsページです。株式会社Scrumyは、情報ガバナンスや情報セキュリティにおける革新的プラットフォームを提供する行政手続DXの会社です。',
-    },
-    pressRelease: {
-      href: '/news/category/press-release/',
-      title: 'プレスリリース | News | 株式会社Scrumy',
-      description:
-        '株式会社ScrumyのプレスリリースについてのNewsページです。株式会社Scrumyは、情報ガバナンスや情報セキュリティにおける革新的プラットフォームを提供する行政手続DXの会社です。',
-    },
-    seminar: {
-      href: '/news/category/seminar/',
-      title: 'セミナー | News | 株式会社Scrumy',
-      description:
-        '株式会社ScrumyのセミナーについてのNewsページです。株式会社Scrumyは、情報ガバナンスや情報セキュリティにおける革新的プラットフォームを提供する行政手続DXの会社です。',
-    },
-    eBook: {
-      href: '/news/category/e-book/',
-      title: 'eBOOK | News | 株式会社Scrumy',
-      description:
-        '株式会社ScrumyのeBOOKについてのNewsページです。株式会社Scrumyは、情報ガバナンスや情報セキュリティにおける革新的プラットフォームを提供する行政手続DXの会社です。',
-    },
+    href: '/news/',
+    title: 'News | 株式会社Scrumy',
+    description:
+      '株式会社ScrumyのNewsページです。株式会社Scrumyは、情報ガバナンスや情報セキュリティにおける革新的プラットフォームを提供する行政手続DXの会社です。',
   },
   recruit: {
     href: '/recruit/',

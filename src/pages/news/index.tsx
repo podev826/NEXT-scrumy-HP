@@ -1,40 +1,24 @@
-import { META } from 'configs';
-import { NewsAll } from 'features/news/All';
-import { client } from 'libraries/microcms';
-import type { GetStaticProps, NextPage } from 'next';
-import { NewsContentProps, NewsDataProps } from 'types/News';
+import { ContactBlock, PrimarySubVisual } from 'components/Elements';
+import { MainLayout } from 'components/Layouts';
+import { META, SUB_VISUAL_LIST } from 'configs';
+import { NewsMain } from 'features/news';
+import { generateIndex } from 'libraries/algolia';
+import type { NextPage } from 'next';
 
-const News: NextPage<NewsDataProps> = ({
-  contents,
-  totalCount,
-  name = 'all',
-}) => {
+const News: NextPage = () => {
   return (
-    <NewsAll
-      contents={contents}
-      totalCount={totalCount}
-      name={name}
-      meta={META.news.all}
-    />
+    <MainLayout meta={META.news}>
+      <PrimarySubVisual content={SUB_VISUAL_LIST.news} />
+      <NewsMain />
+      <ContactBlock />
+    </MainLayout>
   );
 };
 
-export const getStaticProps: GetStaticProps<NewsDataProps> = async () => {
-  const data = await client
-    .getList<NewsContentProps>({
-      endpoint: 'news',
-      queries: { limit: 9999, orders: '-publishedAt' },
-    })
-    .catch(() => null);
-
-  if (!data) {
-    return {
-      notFound: true,
-    };
-  }
-
+export const getStaticProps = async () => {
+  await generateIndex();
   return {
-    props: data,
+    props: {},
   };
 };
 
