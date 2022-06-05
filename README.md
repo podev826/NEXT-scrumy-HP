@@ -19,8 +19,7 @@
 - yakuhanjp
 - Algolia
   - algoliasearch
-  - react-instantsearch-dom
-  - react-instantsearch-core
+  - react-instantsearch-hooks-web
 
 ### other
 

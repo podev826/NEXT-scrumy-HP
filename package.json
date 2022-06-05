@@ -39,8 +39,7 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-hook-form": "^7.31.2",
-    "react-instantsearch-core": "^6.26.0",
-    "react-instantsearch-dom": "^6.26.0",
+    "react-instantsearch-hooks-web": "^6.26.0",
     "yakuhanjp": "^3.4.1"
   },
   "devDependencies": {
