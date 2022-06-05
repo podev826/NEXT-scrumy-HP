@@ -1,12 +1,16 @@
 import { Accordion, AccordionItem, Box, Text } from '@chakra-ui/react';
+import { NEWS_CATEGORIES } from 'configs';
 import dayjs from 'dayjs';
-import React from 'react';
-import { useHits, UseHitsProps } from 'react-instantsearch-hooks-web';
-import { NEWS_CATEGORY_CHANGE_JA } from 'types';
+import React, { FC } from 'react';
+import { HitsProps, useHits } from 'react-instantsearch-hooks-web';
 
 import { BaseAccordionButton, BaseAccordionPanel } from '../Accordion';
 
-export const CustomHits = (props: UseHitsProps<any>) => {
+export const CustomHits: FC<
+  HitsProps<{
+    [x: string]: string;
+  }>
+> = (props) => {
   const { hits } = useHits(props);
 
   if (!hits?.length) {
@@ -51,7 +55,17 @@ export const CustomHits = (props: UseHitsProps<any>) => {
                       px={2}
                       textAlign={'center'}
                     >
-                      {NEWS_CATEGORY_CHANGE_JA[hit.category]}
+                      {hit.category === NEWS_CATEGORIES.all.slug
+                        ? NEWS_CATEGORIES.all.text
+                        : hit.category === NEWS_CATEGORIES.information.slug
+                        ? NEWS_CATEGORIES.information.text
+                        : hit.category === NEWS_CATEGORIES.pressRelease.slug
+                        ? NEWS_CATEGORIES.pressRelease.text
+                        : hit.category === NEWS_CATEGORIES.seminar.slug
+                        ? NEWS_CATEGORIES.seminar.text
+                        : hit.category === NEWS_CATEGORIES.eBook.slug
+                        ? NEWS_CATEGORIES.eBook.text
+                        : null}
                     </Box>
                   </Box>
                   <Box pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}>

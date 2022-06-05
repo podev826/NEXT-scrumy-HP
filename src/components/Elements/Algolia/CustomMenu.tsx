@@ -6,10 +6,81 @@ import {
   Box,
 } from '@chakra-ui/react';
 import { AngleDownIcon, AngleUpIcon } from 'components/Elements';
-import { useState } from 'react';
-import { useMenu } from 'react-instantsearch-hooks-web';
+import { NEWS_CATEGORIES, NewsCategoryProps } from 'configs';
+import { FC, useState } from 'react';
+import { MenuProps, useMenu } from 'react-instantsearch-hooks-web';
 
-export const CustomMenu = (props: any) => {
+type CustomMenuItemPcProps = {
+  category: NewsCategoryProps;
+  handleClick: (value: string) => void;
+  active: boolean;
+};
+
+const CustomMenuItemPc: FC<CustomMenuItemPcProps> = ({
+  category,
+  handleClick,
+  active,
+}) => {
+  return (
+    <Box as="li">
+      <Box
+        as="button"
+        onClick={() => handleClick(category.slug)}
+        fontWeight={'bold'}
+        color={active ? 'base.100' : 'sub.100'}
+        bg={active ? 'sub.100' : 'base.100'}
+        border="3px solid"
+        borderColor={'sub.100'}
+        py={2}
+        px={6}
+        cursor={active ? 'auto' : 'pointer'}
+        pointerEvents={active ? 'none' : 'auto'}
+        borderRadius="full"
+        transitionProperty="all"
+        transitionTimingFunction="ease-out"
+        transitionDuration="fast"
+        _hover={{
+          color: 'base.100',
+          bg: 'sub.100',
+        }}
+      >
+        {category.text}
+      </Box>
+    </Box>
+  );
+};
+
+type CustomMenuItemSpProps = {
+  category: NewsCategoryProps;
+  handleClick: (value: string) => void;
+};
+
+const CustomMenuItemSp: FC<CustomMenuItemSpProps> = ({
+  category,
+  handleClick,
+}) => {
+  return (
+    <Box
+      as="button"
+      onClick={() => handleClick(category.slug)}
+      px={7}
+      w="full"
+      minH={12}
+      display="grid"
+      alignItems={'center'}
+      fontWeight="bold"
+      textAlign={'left'}
+      _hover={{
+        color: 'base.100',
+        backgroundColor: 'sub.200',
+      }}
+    >
+      {category.text}
+    </Box>
+  );
+};
+
+export const CustomMenu: FC<MenuProps> = (props) => {
   const { refine } = useMenu(props);
 
   const [activeCategory, setActiveCategory] = useState('');
@@ -41,115 +112,50 @@ export const CustomMenu = (props: any) => {
                   }}
                 >
                   <Box flex="1" textAlign="left" fontWeight={'bold'}>
-                    {activeCategory === ''
-                      ? 'All'
-                      : activeCategory === 'information'
-                      ? 'お知らせ'
-                      : activeCategory === 'press-release'
-                      ? 'プレスリリース'
-                      : activeCategory === 'seminar'
-                      ? 'セミナー'
-                      : activeCategory === 'e-book'
-                      ? 'eBOOK'
+                    {activeCategory === NEWS_CATEGORIES.all.slug
+                      ? NEWS_CATEGORIES.all.text
+                      : activeCategory === NEWS_CATEGORIES.information.slug
+                      ? NEWS_CATEGORIES.information.text
+                      : activeCategory === NEWS_CATEGORIES.pressRelease.slug
+                      ? NEWS_CATEGORIES.pressRelease.text
+                      : activeCategory === NEWS_CATEGORIES.seminar.slug
+                      ? NEWS_CATEGORIES.seminar.text
+                      : activeCategory === NEWS_CATEGORIES.eBook.slug
+                      ? NEWS_CATEGORIES.eBook.text
                       : null}
                   </Box>
                   <Box>{isExpanded ? <AngleUpIcon /> : <AngleDownIcon />}</Box>
                 </AccordionButton>
                 <AccordionPanel p={0}>
-                  {activeCategory !== '' ? (
-                    <Box
-                      as="button"
-                      onClick={() => handleClick('')}
-                      px={7}
-                      w="full"
-                      minH={12}
-                      display="grid"
-                      alignItems={'center'}
-                      fontWeight="bold"
-                      textAlign={'left'}
-                      _hover={{
-                        color: 'base.100',
-                        backgroundColor: 'sub.200',
-                      }}
-                    >
-                      All
-                    </Box>
+                  {activeCategory !== NEWS_CATEGORIES.all.slug ? (
+                    <CustomMenuItemSp
+                      handleClick={handleClick}
+                      category={NEWS_CATEGORIES.all}
+                    />
                   ) : null}
-                  {activeCategory !== 'information' ? (
-                    <Box
-                      as="button"
-                      onClick={() => handleClick('information')}
-                      px={7}
-                      w="full"
-                      minH={12}
-                      display="grid"
-                      alignItems={'center'}
-                      fontWeight="bold"
-                      textAlign={'left'}
-                      _hover={{
-                        color: 'base.100',
-                        backgroundColor: 'sub.200',
-                      }}
-                    >
-                      お知らせ
-                    </Box>
+                  {activeCategory !== NEWS_CATEGORIES.information.slug ? (
+                    <CustomMenuItemSp
+                      handleClick={handleClick}
+                      category={NEWS_CATEGORIES.information}
+                    />
                   ) : null}
-                  {activeCategory !== 'press-release' ? (
-                    <Box
-                      as="button"
-                      onClick={() => handleClick('press-release')}
-                      px={7}
-                      w="full"
-                      minH={12}
-                      display="grid"
-                      alignItems={'center'}
-                      fontWeight="bold"
-                      textAlign={'left'}
-                      _hover={{
-                        color: 'base.100',
-                        backgroundColor: 'sub.200',
-                      }}
-                    >
-                      プレスリリース
-                    </Box>
+                  {activeCategory !== NEWS_CATEGORIES.pressRelease.slug ? (
+                    <CustomMenuItemSp
+                      handleClick={handleClick}
+                      category={NEWS_CATEGORIES.pressRelease}
+                    />
                   ) : null}
-                  {activeCategory !== 'seminar' ? (
-                    <Box
-                      as="button"
-                      onClick={() => handleClick('seminar')}
-                      px={7}
-                      w="full"
-                      minH={12}
-                      display="grid"
-                      alignItems={'center'}
-                      fontWeight="bold"
-                      textAlign={'left'}
-                      _hover={{
-                        color: 'base.100',
-                        backgroundColor: 'sub.200',
-                      }}
-                    >
-                      セミナー
-                    </Box>
+                  {activeCategory !== NEWS_CATEGORIES.seminar.slug ? (
+                    <CustomMenuItemSp
+                      handleClick={handleClick}
+                      category={NEWS_CATEGORIES.seminar}
+                    />
                   ) : null}
-                  {activeCategory !== 'e-book' ? (
-                    <Box
-                      as="button"
-                      onClick={() => handleClick('e-book')}
-                      px={7}
-                      w="full"
-                      minH={12}
-                      display="grid"
-                      alignItems={'center'}
-                      fontWeight="bold"
-                      textAlign={'left'}
-                      _hover={{
-                        color: 'base.100',
-                        backgroundColor: 'sub.200',
-                      }}
-                    >
-                      eBOOK
-                    </Box>
+                  {activeCategory !== NEWS_CATEGORIES.eBook.slug ? (
+                    <CustomMenuItemSp
+                      handleClick={handleClick}
+                      category={NEWS_CATEGORIES.eBook}
+                    />
                   ) : null}
                 </AccordionPanel>
               </>
@@ -164,131 +170,31 @@ export const CustomMenu = (props: any) => {
         justifyContent={{ xl: 'space-between' }}
         flexBasis={{ xl: 'calc(100% - 264px)' }}
       >
-        <Box as="li">
-          <Box
-            as="button"
-            onClick={() => handleClick('')}
-            fontWeight={'bold'}
-            color={activeCategory === '' ? 'base.100' : 'sub.100'}
-            bg={activeCategory === '' ? 'sub.100' : 'base.100'}
-            border="3px solid"
-            borderColor={'sub.100'}
-            py={2}
-            px={6}
-            cursor={activeCategory === '' ? 'auto' : 'pointer'}
-            pointerEvents={activeCategory === '' ? 'none' : 'auto'}
-            borderRadius="full"
-            transitionProperty="all"
-            transitionTimingFunction="ease-out"
-            transitionDuration="fast"
-            _hover={{
-              color: 'base.100',
-              bg: 'sub.100',
-            }}
-          >
-            All
-          </Box>
-        </Box>
-        <Box as="li">
-          <Box
-            as="button"
-            onClick={() => handleClick('information')}
-            fontWeight={'bold'}
-            color={activeCategory === 'information' ? 'base.100' : 'sub.100'}
-            bg={activeCategory === 'information' ? 'sub.100' : 'base.100'}
-            border="3px solid"
-            borderColor={'sub.100'}
-            py={2}
-            px={6}
-            cursor={activeCategory === 'information' ? 'auto' : 'pointer'}
-            pointerEvents={activeCategory === 'information' ? 'none' : 'auto'}
-            borderRadius="full"
-            transitionProperty="all"
-            transitionTimingFunction="ease-out"
-            transitionDuration="fast"
-            _hover={{
-              color: 'base.100',
-              bg: 'sub.100',
-            }}
-          >
-            お知らせ
-          </Box>
-        </Box>
-        <Box as="li">
-          <Box
-            as="button"
-            onClick={() => handleClick('press-release')}
-            fontWeight={'bold'}
-            color={activeCategory === 'press-release' ? 'base.100' : 'sub.100'}
-            bg={activeCategory === 'press-release' ? 'sub.100' : 'base.100'}
-            border="3px solid"
-            borderColor={'sub.100'}
-            py={2}
-            px={6}
-            cursor={activeCategory === 'press-release' ? 'auto' : 'pointer'}
-            pointerEvents={activeCategory === 'press-release' ? 'none' : 'auto'}
-            borderRadius="full"
-            transitionProperty="all"
-            transitionTimingFunction="ease-out"
-            transitionDuration="fast"
-            _hover={{
-              color: 'base.100',
-              bg: 'sub.100',
-            }}
-          >
-            プレスリリース
-          </Box>
-        </Box>
-        <Box as="li">
-          <Box
-            as="button"
-            onClick={() => handleClick('seminar')}
-            fontWeight={'bold'}
-            color={activeCategory === 'seminar' ? 'base.100' : 'sub.100'}
-            bg={activeCategory === 'seminar' ? 'sub.100' : 'base.100'}
-            border="3px solid"
-            borderColor={'sub.100'}
-            py={2}
-            px={6}
-            cursor={activeCategory === 'seminar' ? 'auto' : 'pointer'}
-            pointerEvents={activeCategory === 'seminar' ? 'none' : 'auto'}
-            borderRadius="full"
-            transitionProperty="all"
-            transitionTimingFunction="ease-out"
-            transitionDuration="fast"
-            _hover={{
-              color: 'base.100',
-              bg: 'sub.100',
-            }}
-          >
-            セミナー
-          </Box>
-        </Box>
-        <Box as="li">
-          <Box
-            as="button"
-            onClick={() => handleClick('e-book')}
-            fontWeight={'bold'}
-            color={activeCategory === 'e-book' ? 'base.100' : 'sub.100'}
-            bg={activeCategory === 'e-book' ? 'sub.100' : 'base.100'}
-            border="3px solid"
-            borderColor={'sub.100'}
-            py={2}
-            px={6}
-            cursor={activeCategory === 'e-book' ? 'auto' : 'pointer'}
-            pointerEvents={activeCategory === 'e-book' ? 'none' : 'auto'}
-            borderRadius="full"
-            transitionProperty="all"
-            transitionTimingFunction="ease-out"
-            transitionDuration="fast"
-            _hover={{
-              color: 'base.100',
-              bg: 'sub.100',
-            }}
-          >
-            eBOOK
-          </Box>
-        </Box>
+        <CustomMenuItemPc
+          handleClick={handleClick}
+          category={NEWS_CATEGORIES.all}
+          active={activeCategory === NEWS_CATEGORIES.all.slug}
+        />
+        <CustomMenuItemPc
+          handleClick={handleClick}
+          category={NEWS_CATEGORIES.information}
+          active={activeCategory === NEWS_CATEGORIES.information.slug}
+        />
+        <CustomMenuItemPc
+          handleClick={handleClick}
+          category={NEWS_CATEGORIES.pressRelease}
+          active={activeCategory === NEWS_CATEGORIES.pressRelease.slug}
+        />
+        <CustomMenuItemPc
+          handleClick={handleClick}
+          category={NEWS_CATEGORIES.seminar}
+          active={activeCategory === NEWS_CATEGORIES.seminar.slug}
+        />
+        <CustomMenuItemPc
+          handleClick={handleClick}
+          category={NEWS_CATEGORIES.eBook}
+          active={activeCategory === NEWS_CATEGORIES.eBook.slug}
+        />
       </Box>
     </>
   );

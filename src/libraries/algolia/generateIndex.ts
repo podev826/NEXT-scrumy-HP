@@ -1,20 +1,21 @@
 import algoliasearch from 'algoliasearch';
 import { getAllContents } from 'libraries/microcms';
+import { NewsContentProps } from 'types';
 
 export const generateIndex = async (): Promise<void> => {
   const client = algoliasearch(
     process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID as string,
     process.env.ALGOLIA_ADMIN_API_KEY as string
   );
-  const posts = await getAllContents();
+  const items = await getAllContents();
 
-  const objects = posts.map((post: any) => {
+  const objects = items.map((item: NewsContentProps) => {
     return {
-      objectID: post.id,
-      publishedAt: post.publishedAt,
-      title: post.title,
-      category: post.category.id,
-      content: post.content,
+      objectID: item.id,
+      publishedAt: item.publishedAt,
+      title: item.title,
+      category: item.category.id,
+      content: item.content,
     };
   });
 

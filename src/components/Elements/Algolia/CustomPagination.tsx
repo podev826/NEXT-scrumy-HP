@@ -1,10 +1,10 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import { usePagination } from 'react-instantsearch-hooks-web';
+import { PaginationProps, usePagination } from 'react-instantsearch-hooks-web';
 
 import { AngleLeftIcon, AngleRightIcon } from '../Icon';
 
-export const CustomPagination = (props: any) => {
+export const CustomPagination = (props: PaginationProps) => {
   const { currentRefinement, nbPages, isFirstPage, isLastPage, refine } =
     usePagination(props);
 
@@ -18,13 +18,13 @@ export const CustomPagination = (props: any) => {
       alignItems={'center'}
       gap={12}
     >
-      {!isFirstPage ? (
-        <Box
-          fontSize={{ base: 'lg', xl: '2xl' }}
-          display="grid"
-          alignItems={'center'}
-          justifyContent="center"
-        >
+      <Box
+        fontSize={{ base: 'lg', xl: '2xl' }}
+        display="grid"
+        alignItems={'center'}
+        justifyContent="center"
+      >
+        {!isFirstPage ? (
           <Box
             as="button"
             onClick={() => {
@@ -40,10 +40,8 @@ export const CustomPagination = (props: any) => {
             <AngleLeftIcon />
             <AngleLeftIcon />
           </Box>
-        </Box>
-      ) : (
-        <Box></Box>
-      )}
+        ) : null}
+      </Box>
       <Box
         display={'flex'}
         justifyContent="center"
@@ -141,13 +139,13 @@ export const CustomPagination = (props: any) => {
           </Box>
         ) : null}
       </Box>
-      {!isLastPage ? (
-        <Box
-          fontSize={{ base: 'lg', xl: '2xl' }}
-          display="grid"
-          alignItems={'center'}
-          justifyContent="center"
-        >
+      <Box
+        fontSize={{ base: 'lg', xl: '2xl' }}
+        display="grid"
+        alignItems={'center'}
+        justifyContent="center"
+      >
+        {!isLastPage ? (
           <Box
             as="button"
             onClick={() => {
@@ -163,10 +161,8 @@ export const CustomPagination = (props: any) => {
             <AngleRightIcon />
             <AngleRightIcon />
           </Box>
-        </Box>
-      ) : (
-        <Box></Box>
-      )}
+        ) : null}
+      </Box>
     </Box>
   );
 };

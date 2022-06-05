@@ -7,12 +7,11 @@ import {
 } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import dayjs from 'dayjs';
-import { MicroCMSContentId, MicroCMSDate } from 'microcms-js-sdk';
 import React, { FC } from 'react';
 import { NewsContentProps } from 'types';
 
 type RootNewsProps = {
-  contents: (NewsContentProps & MicroCMSContentId & MicroCMSDate)[];
+  contents: NewsContentProps[];
 };
 
 export const RootNews: FC<RootNewsProps> = ({ contents }) => {

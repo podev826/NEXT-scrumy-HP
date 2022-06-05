@@ -1,9 +1,9 @@
 import { Box, Input } from '@chakra-ui/react';
 import { MagnifyingGlass } from 'components/Elements';
 import { useForm } from 'react-hook-form';
-import { useSearchBox } from 'react-instantsearch-hooks-web';
+import { SearchBoxProps, useSearchBox } from 'react-instantsearch-hooks-web';
 
-export const CustomSearchBox = (props: any) => {
+export const CustomSearchBox = (props: SearchBoxProps) => {
   const { refine } = useSearchBox(props);
   const { register, handleSubmit } = useForm<{ q: string }>();
 

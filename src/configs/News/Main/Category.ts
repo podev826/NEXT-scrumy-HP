@@ -1,41 +1,31 @@
-type NewsCategoryProps = {
-  text: 'All' | 'お知らせ' | 'プレスリリース' | 'セミナー' | 'eBOOK';
-  lang: 'ja' | 'en';
-  name: string;
-  href: string;
+export type NewsCategoryProps = {
+  text: string;
+  slug: string;
 };
 
-type NewsCategoriesProps = NewsCategoryProps[];
+type NewsCategoriesProps = {
+  [key: string]: NewsCategoryProps;
+};
 
-export const NEWS_CATEGORIES: NewsCategoriesProps = [
-  {
+export const NEWS_CATEGORIES: NewsCategoriesProps = {
+  all: {
     text: 'All',
-    lang: 'en',
-    name: 'all',
-    href: '/news#news',
+    slug: '',
   },
-  {
+  information: {
     text: 'お知らせ',
-    lang: 'ja',
-    name: 'information',
-    href: '/news/category/information#news',
+    slug: 'information',
   },
-  {
+  pressRelease: {
     text: 'プレスリリース',
-    lang: 'ja',
-    name: 'press-release',
-    href: '/news/category/press-release#news',
+    slug: 'press-release',
   },
-  {
+  seminar: {
     text: 'セミナー',
-    lang: 'ja',
-    name: 'seminar',
-    href: '/news/category/seminar#news',
+    slug: 'seminar',
   },
-  {
+  eBook: {
     text: 'eBOOK',
-    lang: 'en',
-    name: 'e-book',
-    href: '/news/category/e-book#news',
+    slug: 'e-book',
   },
-];
+};
