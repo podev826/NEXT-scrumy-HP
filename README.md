@@ -20,6 +20,8 @@
 - Algolia
   - algoliasearch
   - react-instantsearch-hooks-web
+- SendGrid
+  - @sendgrid/mail
 
 ### other
 
