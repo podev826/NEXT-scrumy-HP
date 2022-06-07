@@ -2,8 +2,8 @@ import { ContactBlock, PrimarySubVisual } from 'components/Elements';
 import { MainLayout } from 'components/Layouts';
 import { META, SUB_VISUAL_LIST } from 'configs';
 import { NewsMain } from 'features/news';
-import { generateIndex } from 'libraries/algolia';
 import type { NextPage } from 'next';
+import { generateIndex } from 'pages/api/algolia/generateIndex';
 
 const News: NextPage = () => {
   return (

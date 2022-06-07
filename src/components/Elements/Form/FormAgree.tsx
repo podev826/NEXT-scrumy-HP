@@ -2,10 +2,11 @@ import { Box } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import { BaseLink, CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
 type FormAgreeProps = {
-  error?: any;
-  register?: any;
+  error?: FieldError | undefined;
+  register?: Partial<UseFormRegisterReturn>;
 };
 
 export const FormAgree: FC<FormAgreeProps> = ({ error, register }) => {

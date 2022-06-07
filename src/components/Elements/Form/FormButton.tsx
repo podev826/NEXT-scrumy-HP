@@ -4,12 +4,12 @@ import {
   CircleCheck,
   CircleExclamation,
 } from 'components/Elements';
-import { FC } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 
 type FormButtonProps = {
-  send: any;
-  setSend: any;
-  isSubmitting: any;
+  send: 'success' | 'failed' | null;
+  setSend: Dispatch<SetStateAction<'success' | 'failed' | null>>;
+  isSubmitting: boolean;
 };
 
 export const FormButton: FC<FormButtonProps> = ({

@@ -1,10 +1,11 @@
 import { Box, Textarea, TextareaProps } from '@chakra-ui/react';
 import { CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
 type FormDescriptionTextareaProps = TextareaProps & {
-  error?: any;
-  register?: any;
+  error?: FieldError | undefined;
+  register?: Partial<UseFormRegisterReturn>;
 };
 
 export const FormDescriptionTextarea: FC<FormDescriptionTextareaProps> = ({

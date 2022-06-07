@@ -2,11 +2,12 @@ import { Box } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import { CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
 type FormDescriptionRadioProps = {
-  register: any;
+  error?: FieldError | undefined;
+  register?: Partial<UseFormRegisterReturn>;
   options: string[];
-  error?: any;
 };
 
 export const FormDescriptionRadio: FC<FormDescriptionRadioProps> = ({

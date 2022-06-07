@@ -1,10 +1,11 @@
 import { Box, Input, InputProps } from '@chakra-ui/react';
 import { CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
 type FormDescriptionInputProps = InputProps & {
-  error?: any;
-  register?: any;
+  error?: FieldError | undefined;
+  register?: Partial<UseFormRegisterReturn>;
 };
 
 export const FormDescriptionInput: FC<FormDescriptionInputProps> = ({

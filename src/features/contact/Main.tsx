@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react';
+import axios from 'axios';
 import {
   FormAgree,
   FormButton,
@@ -12,6 +13,16 @@ import { ContentWrapper } from 'components/Layouts';
 import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+type FormProps = {
+  contact_type: string;
+  company_name: string;
+  person_name: string;
+  tel: string;
+  email: string;
+  content: string;
+  agree: boolean;
+};
+
 export const ContactMain: FC = () => {
   const [send, setSend] = useState<null | 'success' | 'failed'>(null);
   const {
@@ -19,14 +30,20 @@ export const ContactMain: FC = () => {
     handleSubmit,
     formState: { isSubmitting, errors },
     reset,
-  } = useForm();
+  } = useForm<FormProps>();
 
-  const onSubmit = async (values: any) => {
-    const sleep = (waitTime: number) =>
-      new Promise((resolve) => setTimeout(resolve, waitTime));
-    await sleep(3000);
-    await setSend('success');
-    await reset();
+  const onSubmit = async (data: FormProps) => {
+    await axios
+      .post('/api/sendgrid/sendEmail', data)
+      .then(() => {
+        setSend('success');
+      })
+      .catch(() => {
+        setSend('failed');
+      })
+      .finally(() => {
+        reset();
+      });
   };
 
   return (
