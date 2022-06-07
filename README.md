@@ -17,6 +17,7 @@
 - microcms-js-sdk
 - dayjs
 - yakuhanjp
+- axios
 - Algolia
   - algoliasearch
   - react-instantsearch-hooks-web
