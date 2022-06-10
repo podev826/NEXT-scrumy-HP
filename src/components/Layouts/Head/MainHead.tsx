@@ -1,3 +1,4 @@
+import { SITE_URL } from 'configs';
 import Head from 'next/head';
 import { FC } from 'react';
 import { MetaItemProps } from 'types';
@@ -7,7 +8,7 @@ type MainHeadProps = {
 };
 
 export const MainHead: FC<MainHeadProps> = ({ meta }) => {
-  const baseURL = process.env.NEXT_PUBLIC_DOMAIN;
+  const baseURL = SITE_URL;
   return (
     <Head>
       <title>{meta.title}</title>
