@@ -25,7 +25,7 @@ export const CustomSearchBox = (props: SearchBoxProps) => {
           borderWidth={'2px'}
           placeholder="キーワードを入力してください。"
           transitionProperty="all"
-          transitionTimingFunction="ease-out"
+          transitionTimingFunction="linear"
           transitionDuration="fast"
           _hover={{
             borderColor: 'sub.100',

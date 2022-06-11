@@ -33,7 +33,7 @@ export const CustomPagination = (props: PaginationProps) => {
             }}
             display={'flex'}
             transitionProperty="all"
-            transitionTimingFunction="ease-out"
+            transitionTimingFunction="linear"
             transitionDuration="fast"
             _hover={{ opacity: 0.7 }}
           >
@@ -71,7 +71,7 @@ export const CustomPagination = (props: PaginationProps) => {
             cursor={'pointer'}
             borderRadius="full"
             transitionProperty="all"
-            transitionTimingFunction="ease-out"
+            transitionTimingFunction="linear"
             transitionDuration="fast"
             _hover={{
               color: 'base.100',
@@ -98,7 +98,7 @@ export const CustomPagination = (props: PaginationProps) => {
           borderColor="sub.100"
           borderRadius="full"
           transitionProperty="all"
-          transitionTimingFunction="ease-out"
+          transitionTimingFunction="linear"
           transitionDuration="fast"
           lang="en"
         >
@@ -127,7 +127,7 @@ export const CustomPagination = (props: PaginationProps) => {
             cursor={'pointer'}
             borderRadius="full"
             transitionProperty="all"
-            transitionTimingFunction="ease-out"
+            transitionTimingFunction="linear"
             transitionDuration="fast"
             _hover={{
               color: 'base.100',
@@ -154,7 +154,7 @@ export const CustomPagination = (props: PaginationProps) => {
             }}
             display={'flex'}
             transitionProperty="all"
-            transitionTimingFunction="ease-out"
+            transitionTimingFunction="linear"
             transitionDuration="fast"
             _hover={{ opacity: 0.7 }}
           >

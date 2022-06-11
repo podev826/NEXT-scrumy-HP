@@ -59,7 +59,7 @@ export const NotFoundMain: FC = () => {
           bg="sub.100"
           boxShadow={'primary'}
           transitionProperty="all"
-          transitionTimingFunction="ease-out"
+          transitionTimingFunction="linear"
           transitionDuration="fast"
           _hover={{
             boxShadow: 'transparent',

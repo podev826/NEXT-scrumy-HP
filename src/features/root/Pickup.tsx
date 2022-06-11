@@ -38,7 +38,7 @@ export const RootPickup: FC = () => {
                     borderRadius={'32px'}
                     boxShadow={'secondary'}
                     transitionProperty="all"
-                    transitionTimingFunction="ease-out"
+                    transitionTimingFunction="linear"
                     transitionDuration="fast"
                     _hover={{
                       boxShadow: 'transparent',
@@ -50,6 +50,9 @@ export const RootPickup: FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       h="full"
+                      _hover={{
+                        opacity: 1,
+                      }}
                     >
                       <Box px={8} py={{ base: 7, lg: 10 }}>
                         <BaseImage

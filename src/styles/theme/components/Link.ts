@@ -1,6 +1,8 @@
 export const Link = {
   baseStyle: {
     display: 'inline-block',
+    transitionDuration: 'fast',
+    transitionTimingFunction: 'linear',
     _hover: {
       textDecoration: 'none',
       opacity: '0.7',
@@ -52,7 +54,7 @@ export const Link = {
         right: '0',
         bgGradient: 'linear(to-r,accent.200,accent.100,accent.300)',
         transitionProperty: 'common',
-        transitionTimingFunction: 'ease-out',
+        transitionTimingFunction: 'linear',
         transitionDuration: 'fast',
       },
       _hover: {

@@ -67,7 +67,7 @@ export const RootHero: FC = () => {
               color="base.100"
               bg="sub.100"
               transitionProperty="all"
-              transitionTimingFunction="ease-out"
+              transitionTimingFunction="linear"
               transitionDuration="fast"
               boxShadow={'primary'}
               _hover={{

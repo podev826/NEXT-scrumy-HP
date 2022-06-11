@@ -49,7 +49,7 @@ export const FormButton: FC<FormButtonProps> = ({
             right: '0',
             bgGradient: 'linear(to-r,accent.200,accent.100,accent.300)',
             transitionProperty: 'common',
-            transitionTimingFunction: 'ease-out',
+            transitionTimingFunction: 'linear',
             transitionDuration: 'fast',
           }}
           _hover={{

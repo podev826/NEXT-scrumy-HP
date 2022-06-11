@@ -49,7 +49,7 @@ export const RadioBox = styled(Box)`
     display: inline-flex;
     align-items: center;
     font-weight: bold;
-    transition-duration: 0.15s;
+    transition-duration: 0.2s;
     transition-property: opacity;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
@@ -67,7 +67,7 @@ export const RadioBox = styled(Box)`
     display: block;
     border-radius: 100%;
     margin-right: 12px;
-    transition-duration: 0.15s;
+    transition-duration: 0.2s;
     transition-property: background-color;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }

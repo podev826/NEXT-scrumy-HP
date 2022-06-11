@@ -52,7 +52,7 @@ export const CheckBox = styled(Box)`
     align-items: center;
     font-size: 18px;
     font-weight: bold;
-    transition-duration: 0.15s;
+    transition-duration: 0.2s;
     transition-property: opacity;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     @media (min-width: 1280px) {
@@ -74,7 +74,7 @@ export const CheckBox = styled(Box)`
     align-items: center;
     justify-content: center;
     margin-right: 8px;
-    transition-duration: 0.15s;
+    transition-duration: 0.2s;
     transition-property: background-color;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     @media (min-width: 1280px) {

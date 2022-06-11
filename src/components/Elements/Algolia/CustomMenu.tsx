@@ -37,7 +37,7 @@ const CustomMenuItemPc: FC<CustomMenuItemPcProps> = ({
         pointerEvents={active ? 'none' : 'auto'}
         borderRadius="full"
         transitionProperty="all"
-        transitionTimingFunction="ease-out"
+        transitionTimingFunction="linear"
         transitionDuration="fast"
         _hover={{
           color: 'base.100',

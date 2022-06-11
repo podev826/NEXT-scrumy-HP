@@ -37,7 +37,7 @@ export const HeaderModal: FC = () => {
           w="full"
           bg="sub.100"
           transitionProperty="all"
-          transitionTimingFunction="ease-out"
+          transitionTimingFunction="linear"
           transitionDuration="fast"
           _before={{
             content: '""',
@@ -48,7 +48,7 @@ export const HeaderModal: FC = () => {
             bg: 'sub.100',
             top: { base: '8px', md: '12px', xl: '16px' },
             transitionProperty: 'all',
-            transitionTimingFunction: 'ease-out',
+            transitionTimingFunction: 'linear',
             transitionDuration: 'fast',
           }}
           _after={{
@@ -60,7 +60,7 @@ export const HeaderModal: FC = () => {
             bg: 'sub.100',
             top: { base: '-8px', md: '-12px', xl: '-16px' },
             transitionProperty: 'all',
-            transitionTimingFunction: 'ease-out',
+            transitionTimingFunction: 'linear',
             transitionDuration: 'fast',
           }}
         >
@@ -81,7 +81,7 @@ export const HeaderModal: FC = () => {
         visibility={headerIsActive ? 'visible' : 'hidden'}
         opacity={headerIsActive ? '1' : '0'}
         transitionProperty="all"
-        transitionTimingFunction="ease-out"
+        transitionTimingFunction="linear"
         transitionDuration="fast"
       >
         <Flex justifyContent="space-between">
@@ -102,7 +102,7 @@ export const HeaderModal: FC = () => {
             borderRadius="full"
             position="relative"
             transitionProperty="all"
-            transitionTimingFunction="ease-out"
+            transitionTimingFunction="linear"
             transitionDuration="fast"
             bg="accent.100"
             _hover={{
@@ -125,7 +125,7 @@ export const HeaderModal: FC = () => {
               w={4}
               bg="base.100"
               transitionProperty="all"
-              transitionTimingFunction="ease-out"
+              transitionTimingFunction="linear"
               transitionDuration="fast"
               _before={{
                 content: '""',
@@ -137,7 +137,7 @@ export const HeaderModal: FC = () => {
                 top: '0',
                 zIndex: '-1',
                 transitionProperty: 'all',
-                transitionTimingFunction: 'ease-out',
+                transitionTimingFunction: 'linear',
                 transitionDuration: 'fast',
               }}
               _after={{
@@ -150,7 +150,7 @@ export const HeaderModal: FC = () => {
                 top: '0',
                 zIndex: '-1',
                 transitionProperty: 'all',
-                transitionTimingFunction: 'ease-out',
+                transitionTimingFunction: 'linear',
                 transitionDuration: 'fast',
               }}
             >
@@ -196,7 +196,7 @@ export const HeaderModal: FC = () => {
         visibility={headerIsActive ? 'visible' : 'hidden'}
         opacity={headerIsActive ? '1' : '0'}
         transitionProperty="all"
-        transitionTimingFunction="ease-out"
+        transitionTimingFunction="linear"
         transitionDuration="fast"
       >
         <Box
@@ -224,7 +224,7 @@ export const HeaderModal: FC = () => {
               borderRadius="full"
               position="relative"
               transitionProperty="all"
-              transitionTimingFunction="ease-out"
+              transitionTimingFunction="linear"
               transitionDuration="fast"
               bg="accent.100"
               _hover={{
@@ -247,7 +247,7 @@ export const HeaderModal: FC = () => {
                 w="50%"
                 bg="base.100"
                 transitionProperty="all"
-                transitionTimingFunction="ease-out"
+                transitionTimingFunction="linear"
                 transitionDuration="fast"
                 _before={{
                   content: '""',
@@ -259,7 +259,7 @@ export const HeaderModal: FC = () => {
                   top: '0',
                   zIndex: '-1',
                   transitionProperty: 'all',
-                  transitionTimingFunction: 'ease-out',
+                  transitionTimingFunction: 'linear',
                   transitionDuration: 'fast',
                 }}
                 _after={{
@@ -272,7 +272,7 @@ export const HeaderModal: FC = () => {
                   top: '0',
                   zIndex: '-1',
                   transitionProperty: 'all',
-                  transitionTimingFunction: 'ease-out',
+                  transitionTimingFunction: 'linear',
                   transitionDuration: 'fast',
                 }}
               >

@@ -101,7 +101,7 @@ export const RecruitMember: FC = () => {
                                 display="flex"
                                 alignItems={'flex-end'}
                                 transitionProperty="all"
-                                transitionTimingFunction="ease-out"
+                                transitionTimingFunction="linear"
                                 transitionDuration="fast"
                                 _hover={{
                                   opacity: 0.7,
