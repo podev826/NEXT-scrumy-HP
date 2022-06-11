@@ -1,5 +1,6 @@
 export * from './Accordion';
 export * from './Algolia';
+export * from './Animations';
 export * from './Block';
 export * from './Form';
 export * from './Icon';

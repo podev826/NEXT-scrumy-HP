@@ -1,6 +1,8 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { FC } from 'react';
 
+import { FadeInAnimation } from '../Animations';
+
 export const PrivacyPolicySubVisual: FC = () => {
   return (
     <Box
@@ -28,40 +30,42 @@ export const PrivacyPolicySubVisual: FC = () => {
           display="grid"
           alignItems="stretch"
         >
-          <Flex
-            justifyContent={{ base: 'flex-start', md: 'flex-end' }}
-            py={{ md: '8.333vw', '2xl': '120px' }}
-            px={{ md: '5.833vw', '2xl': '84px' }}
-            mx="auto"
-            w="full"
-          >
-            <Box
-              px={{ base: '13.867vw', md: '0' }}
-              w={{
-                md: 'calc((580 / 1080) * 100%)',
-              }}
+          <FadeInAnimation>
+            <Flex
+              justifyContent={{ base: 'flex-start', md: 'flex-end' }}
+              py={{ md: '8.333vw', '2xl': '120px' }}
+              px={{ md: '5.833vw', '2xl': '84px' }}
+              mx="auto"
+              w="full"
             >
-              <Text
-                as="h1"
-                fontSize={{ base: '12.8vw', md: '6.111vw', '2xl': '9xl' }}
-                fontStyle="italic"
-                lang="en"
-                lineHeight="1.12"
+              <Box
+                px={{ base: '13.867vw', md: '0' }}
+                w={{
+                  md: 'calc((580 / 1080) * 100%)',
+                }}
               >
-                <Box as="span" display="block">
-                  Privacy
-                </Box>
-                <Box
-                  as="span"
-                  display="block"
-                  ml={{ md: '13.056vw', '2xl': '188px' }}
-                  mt={{ md: '0.83vw', '2xl': '12px' }}
+                <Text
+                  as="h1"
+                  fontSize={{ base: '12.8vw', md: '6.111vw', '2xl': '9xl' }}
+                  fontStyle="italic"
+                  lang="en"
+                  lineHeight="1.12"
                 >
-                  Policy
-                </Box>
-              </Text>
-            </Box>
-          </Flex>
+                  <Box as="span" display="block">
+                    Privacy
+                  </Box>
+                  <Box
+                    as="span"
+                    display="block"
+                    ml={{ md: '13.056vw', '2xl': '188px' }}
+                    mt={{ md: '0.83vw', '2xl': '12px' }}
+                  >
+                    Policy
+                  </Box>
+                </Text>
+              </Box>
+            </Flex>
+          </FadeInAnimation>
         </Box>
       </Box>
     </Box>

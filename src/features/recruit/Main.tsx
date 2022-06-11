@@ -2,6 +2,7 @@ import { Accordion, AccordionItem, Box, Grid, Text } from '@chakra-ui/react';
 import {
   BaseAccordionButton,
   BaseAccordionPanel,
+  FadeInAnimation,
   PrimaryLink,
   PrimaryTitle,
 } from 'components/Elements';
@@ -113,34 +114,36 @@ export const RecruitMain: FC = () => {
   return (
     <IdWrapper id="recruit">
       <ContentWrapper bgType="gray">
-        <PrimaryTitle ja="募集要項" en="Recruit" />
-        <Box mt={{ base: 8, md: 12, xl: 16 }} pl={{ xl: 14 }}>
-          <Accordion
-            as="dl"
-            allowToggle
-            allowMultiple
-            display={'grid'}
-            gap={{ base: 5, xl: 8 }}
-          >
-            {JOB_DESCRIPTION.map((item) => (
-              <JobDescriptionContent
-                key={item.title}
-                title={item.title}
-                content={item.content}
-              />
-            ))}
-          </Accordion>
-          <Box mt={{ base: 8, xl: 10 }}>
-            <PrimaryLink
-              href="/contact"
-              variant="secondary"
-              w="full"
-              maxW={{ base: '280px', xl: '284px' }}
+        <FadeInAnimation>
+          <PrimaryTitle ja="募集要項" en="Recruit" />
+          <Box mt={{ base: 8, md: 12, xl: 16 }} pl={{ xl: 14 }}>
+            <Accordion
+              as="dl"
+              allowToggle
+              allowMultiple
+              display={'grid'}
+              gap={{ base: 5, xl: 8 }}
             >
-              応募する
-            </PrimaryLink>
+              {JOB_DESCRIPTION.map((item) => (
+                <JobDescriptionContent
+                  key={item.title}
+                  title={item.title}
+                  content={item.content}
+                />
+              ))}
+            </Accordion>
+            <Box mt={{ base: 8, xl: 10 }}>
+              <PrimaryLink
+                href="/contact"
+                variant="secondary"
+                w="full"
+                maxW={{ base: '280px', xl: '284px' }}
+              >
+                応募する
+              </PrimaryLink>
+            </Box>
           </Box>
-        </Box>
+        </FadeInAnimation>
       </ContentWrapper>
     </IdWrapper>
   );
