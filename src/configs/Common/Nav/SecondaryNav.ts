@@ -64,7 +64,7 @@ export const SECONDARY_NAV: SecondaryNavProps = {
         href: '/#service01',
       },
       {
-        text: '医療情報セキュリティ診断',
+        text: '情報セキュリティ診断',
         href: '/#service02',
       },
       {
