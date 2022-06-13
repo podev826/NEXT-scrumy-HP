@@ -157,14 +157,14 @@ export const AboutInvention: FC = () => {
                 fontSize={{ base: 'xl', xl: '2xl' }}
                 fontWeight="bold"
               >
-                スクラム申請
+                法人書類管理サービス「Scrumy」
               </Text>
               <Text
                 mt={3}
                 fontWeight="bold"
                 fontSize={{ base: 'lg', xl: 'xl' }}
               >
-                法人設立の最初から最後までの一元管理を実現
+                法人にまつわる書類管理をスムーズにします。追加コストなしで登記変更も自由自在に。
               </Text>
             </Box>
             <Box px={{ xl: 14 }} mt={8}>

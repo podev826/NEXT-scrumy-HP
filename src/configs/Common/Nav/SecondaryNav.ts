@@ -60,7 +60,7 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     href: '/#service',
     list: [
       {
-        text: 'スクラム申請',
+        text: 'Scrumy',
         href: '/#service01',
       },
       {
