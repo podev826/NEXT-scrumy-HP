@@ -42,7 +42,7 @@ export const JOB_DESCRIPTION: JobDescriptionProps = [
     content: [
       {
         term: '求める人物像',
-        description: 'Go言語、ソフトウェア開発に堪能であること',
+        description: 'Go言語、ソフトウェア開発に堪能であること。',
       },
       {
         term: '給与',
