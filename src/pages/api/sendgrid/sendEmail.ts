@@ -1,5 +1,4 @@
 import sgMail from '@sendgrid/mail';
-import { SEND_GRID } from 'configs';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 type sendEmailResponseProps = {
@@ -22,7 +21,7 @@ const sendEmail = (
     const data = {
       from: {
         name: '株式会社Scrumy',
-        email: SEND_GRID.fromEmailAddress,
+        email: process.env.SENDGRID_FROM_EMAIL_ADDRESS,
       },
       personalizations: [
         {
@@ -40,7 +39,7 @@ const sendEmail = (
           },
         },
       ],
-      templateId: 'd-c1ac08115803404885cb28eaa9052d5e',
+      templateId: process.env.SENDGRID_TEMPLATE_ID,
     };
 
     (async () => {
