@@ -8,5 +8,6 @@ declare namespace NodeJS {
     readonly SENDGRID_TEMPLATE_ID: string;
     readonly NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN: string;
     readonly NEXT_PUBLIC_MICROCMS_API_KEY: string;
+    readonly SLACK_WEBHOOK_URL: string;
   }
 }
