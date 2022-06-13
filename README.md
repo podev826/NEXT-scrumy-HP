@@ -18,11 +18,10 @@
 - dayjs
 - yakuhanjp
 - axios
-- Algolia
-  - algoliasearch
-  - react-instantsearch-hooks-web
-- SendGrid
-  - @sendgrid/mail
+- algoliasearch
+- react-instantsearch-hooks-web
+- @sendgrid/mail
+- @slack/webhook
 
 ### other
 

@@ -1032,6 +1032,20 @@
     "@sendgrid/client" "^7.7.0"
     "@sendgrid/helpers" "^7.7.0"
 
+"@slack/types@^1.2.1":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@slack/types/-/types-1.10.0.tgz#cbf7d83e1027f4cbfd13d6b429f120c7fb09127a"
+  integrity sha512-tA7GG7Tj479vojfV3AoxbckalA48aK6giGjNtgH6ihpLwTyHE3fIgRrvt8TWfLwW8X8dyu7vgmAsGLRG7hWWOg==
+
+"@slack/webhook@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@slack/webhook/-/webhook-6.1.0.tgz#ac9c8add919f0f5ab9440a24e76b2f83adcc0f2c"
+  integrity sha512-7AYNISyAjn/lA/VDwZ307K5ft5DojXgBd3DRrGoFN8XxIwIyRALdFhxBiMgAqeJH8eWoktvNwLK24R9hREEqpA==
+  dependencies:
+    "@slack/types" "^1.2.1"
+    "@types/node" ">=12.0.0"
+    axios "^0.21.4"
+
 "@types/google.maps@^3.45.3":
   version "3.49.2"
   resolved "https://registry.yarnpkg.com/@types/google.maps/-/google.maps-3.49.2.tgz#9640491ec3aa96c9de1466894117ce81c02588df"
@@ -1068,6 +1082,11 @@
   version "17.0.33"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.33.tgz#3c1879b276dc63e73030bb91165e62a4509cd506"
   integrity sha512-miWq2m2FiQZmaHfdZNcbpp9PuXg34W5JZ5CrJ/BaS70VuhoJENBEQybeiYSaPBRNq6KQGnjfEnc/F3PN++D+XQ==
+
+"@types/node@>=12.0.0":
+  version "17.0.42"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.42.tgz#d7e8f22700efc94d125103075c074396b5f41f9b"
+  integrity sha512-Q5BPGyGKcvQgAMbsr7qEGN/kIPN6zZecYYABeTDBizOsau+2NMdSVTar9UQw21A2+JyA2KRNDYaYrPB0Rpk2oQ==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -1356,6 +1375,13 @@ axe-core@^4.3.5:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.4.2.tgz#dcf7fb6dea866166c3eab33d68208afe4d5f670c"
   integrity sha512-LVAaGp/wkkgYJcjmHsoKx4juT1aQvJyPcW09MLCjVTh3V2cc6PnyempiLMNH5iMdfIX/zdbjUx2KDjMLCTdPeA==
+
+axios@^0.21.4:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
+  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
+  dependencies:
+    follow-redirects "^1.14.0"
 
 axios@^0.26.0:
   version "0.26.1"
@@ -2069,7 +2095,7 @@ focus-lock@^0.9.1:
   dependencies:
     tslib "^2.0.3"
 
-follow-redirects@^1.14.8, follow-redirects@^1.14.9:
+follow-redirects@^1.14.0, follow-redirects@^1.14.8, follow-redirects@^1.14.9:
   version "1.15.1"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.1.tgz#0ca6a452306c9b276e4d3127483e29575e207ad5"
   integrity sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==
