@@ -1,6 +1,8 @@
 export const Link = {
   baseStyle: {
     display: 'inline-block',
+    transitionDuration: 'fast',
+    transitionTimingFunction: 'linear',
     _hover: {
       textDecoration: 'none',
       opacity: '0.7',
@@ -14,11 +16,12 @@ export const Link = {
       color: 'base.100',
       bg: 'accent.100',
       _hover: {
+        boxShadow: 'transparent',
         bg: 'accent.200',
         opacity: '1',
       },
       _focus: {
-        boxShadow: 'none',
+        boxShadow: 'transparent',
         bg: 'accent.200',
         opacity: '1',
       },
@@ -27,11 +30,12 @@ export const Link = {
       color: 'base.100',
       bg: 'sub.100',
       _hover: {
+        boxShadow: 'transparent',
         bg: 'sub.200',
         opacity: '1',
       },
       _focus: {
-        boxShadow: 'none',
+        boxShadow: 'transparent',
         bg: 'sub.200',
         opacity: '1',
       },
@@ -50,18 +54,19 @@ export const Link = {
         right: '0',
         bgGradient: 'linear(to-r,accent.200,accent.100,accent.300)',
         transitionProperty: 'common',
-        transitionTimingFunction: 'ease-out',
+        transitionTimingFunction: 'linear',
         transitionDuration: 'fast',
       },
       _hover: {
         opacity: '1',
+        boxShadow: 'transparent',
         _before: {
           opacity: '0',
         },
       },
       _focus: {
         opacity: '1',
-        boxShadow: 'none',
+        boxShadow: 'transparent',
         _before: {
           opacity: '0',
         },

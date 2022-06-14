@@ -20,10 +20,6 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     href: '/',
     list: [
       {
-        text: '私たちについて',
-        href: '/#pickup',
-      },
-      {
         text: '事業について',
         href: '/#service',
       },
@@ -64,11 +60,11 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     href: '/#service',
     list: [
       {
-        text: 'スクラム申請',
+        text: 'Scrumy',
         href: '/#service01',
       },
       {
-        text: '医療情報セキュリティ診断',
+        text: '情報セキュリティ診断',
         href: '/#service02',
       },
       {

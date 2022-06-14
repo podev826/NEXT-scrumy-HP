@@ -1,4 +1,5 @@
-export * from './Links';
+export * from './Animations';
 export * from './Meta';
 export * from './Nav';
+export * from './Others';
 export * from './SubVisual';

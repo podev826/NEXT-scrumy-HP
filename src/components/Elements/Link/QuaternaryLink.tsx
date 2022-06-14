@@ -28,7 +28,7 @@ export const QuaternaryLink: FC<QuaternaryLinkProps> = ({
       pointerEvents={active ? 'none' : 'auto'}
       borderRadius="full"
       transitionProperty="all"
-      transitionTimingFunction="ease-out"
+      transitionTimingFunction="linear"
       transitionDuration="fast"
       _hover={{
         color: 'base.100',

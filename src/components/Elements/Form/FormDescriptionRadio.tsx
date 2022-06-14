@@ -2,11 +2,12 @@ import { Box } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import { CircleExclamation } from 'components/Elements';
 import { FC } from 'react';
+import { FieldError, UseFormRegisterReturn } from 'react-hook-form';
 
 type FormDescriptionRadioProps = {
-  register: any;
+  error?: FieldError | undefined;
+  register?: Partial<UseFormRegisterReturn>;
   options: string[];
-  error?: any;
 };
 
 export const FormDescriptionRadio: FC<FormDescriptionRadioProps> = ({
@@ -31,12 +32,7 @@ export const FormDescriptionRadio: FC<FormDescriptionRadioProps> = ({
         ))}
       </Box>
       {error ? (
-        <Box
-          ml={{ base: 8, xl: 10 }}
-          mt={'6px'}
-          fontSize="sm"
-          color={'danger.100'}
-        >
+        <Box mt={'6px'} fontSize="sm" color={'danger.100'}>
           <CircleExclamation />
           <Box as="span" ml={1}>
             {error.message}
@@ -53,7 +49,7 @@ export const RadioBox = styled(Box)`
     display: inline-flex;
     align-items: center;
     font-weight: bold;
-    transition-duration: 0.15s;
+    transition-duration: 0.2s;
     transition-property: opacity;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
@@ -71,7 +67,7 @@ export const RadioBox = styled(Box)`
     display: block;
     border-radius: 100%;
     margin-right: 12px;
-    transition-duration: 0.15s;
+    transition-duration: 0.2s;
     transition-property: background-color;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }

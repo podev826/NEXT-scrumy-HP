@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react';
-import { PrimaryTitle } from 'components/Elements';
+import { FadeInAnimation, PrimaryTitle } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import { COMPANY_INFORMATION } from 'configs';
 import { FC } from 'react';
@@ -61,28 +61,30 @@ export const AboutCompany: FC = () => {
   return (
     <IdWrapper id="company">
       <ContentWrapper as="section" bgType="gray">
-        <PrimaryTitle ja="企業情報" en="Company" />
-        <Box
-          as="dl"
-          ml="auto"
-          w={{ base: 'calc(100% - 36px)', xl: '100%' }}
-          maxW="844px"
-          display="grid"
-          gap={{ base: 4, xl: 6 }}
-          bg="base.100"
-          px={{ base: 5, xl: '72px' }}
-          py={{ base: 6, xl: 12 }}
-          mt={{ base: 8, xl: 16 }}
-        >
-          {COMPANY_INFORMATION.map((item, index) => (
-            <AboutCompanyItem
-              key={item.term}
-              term={item.term}
-              description={item.description}
-              last={index + 1 === COMPANY_INFORMATION.length ? true : false}
-            />
-          ))}
-        </Box>
+        <FadeInAnimation>
+          <PrimaryTitle ja="企業情報" en="Company" />
+          <Box
+            as="dl"
+            ml="auto"
+            w={{ base: 'calc(100% - 36px)', xl: '100%' }}
+            maxW="844px"
+            display="grid"
+            gap={{ base: 4, xl: 6 }}
+            bg="base.100"
+            px={{ base: 5, xl: '72px' }}
+            py={{ base: 6, xl: 12 }}
+            mt={{ base: 8, xl: 16 }}
+          >
+            {COMPANY_INFORMATION.map((item, index) => (
+              <AboutCompanyItem
+                key={item.term}
+                term={item.term}
+                description={item.description}
+                last={index + 1 === COMPANY_INFORMATION.length ? true : false}
+              />
+            ))}
+          </Box>
+        </FadeInAnimation>
       </ContentWrapper>
     </IdWrapper>
   );

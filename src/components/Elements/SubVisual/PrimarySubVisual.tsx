@@ -2,6 +2,8 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import { SubVisualItemProps } from 'configs';
 import { FC } from 'react';
 
+import { FadeInAnimation } from '../Animations';
+
 type PrimarySubVisualProps = {
   content: SubVisualItemProps;
 };
@@ -33,37 +35,39 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
           display="grid"
           alignItems="stretch"
         >
-          <Flex
-            justifyContent="flex-end"
-            py={{ md: '8.333vw', '2xl': '120px' }}
-            px={{ md: '5.833vw', '2xl': '84px' }}
-            mx="auto"
-            w="full"
-          >
-            <Box
-              px={{ base: '13.867vw', md: '0' }}
-              w={{
-                md: 'calc((580 / 1080) * 100%)',
-              }}
+          <FadeInAnimation>
+            <Flex
+              justifyContent="flex-end"
+              py={{ md: '8.333vw', '2xl': '120px' }}
+              px={{ md: '5.833vw', '2xl': '84px' }}
+              mx="auto"
+              w="full"
             >
-              <Text
-                as="h1"
-                fontSize={{ base: '12.8vw', md: '6.111vw', '2xl': '9xl' }}
-                fontStyle="italic"
-                lang="en"
+              <Box
+                px={{ base: '13.867vw', md: '0' }}
+                w={{
+                  md: 'calc((580 / 1080) * 100%)',
+                }}
               >
-                {content.title}
-              </Text>
-              <Text
-                fontSize={{ base: '5.333vw', md: '1.667vw', '2xl': '2xl' }}
-                fontWeight="bold"
-                lineHeight="1.667"
-                mt={{ base: 4, md: 1 }}
-              >
-                {content.text}
-              </Text>
-            </Box>
-          </Flex>
+                <Text
+                  as="h1"
+                  fontSize={{ base: '12.8vw', md: '6.111vw', '2xl': '9xl' }}
+                  fontStyle="italic"
+                  lang="en"
+                >
+                  {content.title}
+                </Text>
+                <Text
+                  fontSize={{ base: '5.333vw', md: '1.667vw', '2xl': '2xl' }}
+                  fontWeight="bold"
+                  lineHeight="1.667"
+                  mt={{ base: 4, md: 1 }}
+                >
+                  {content.text}
+                </Text>
+              </Box>
+            </Flex>
+          </FadeInAnimation>
         </Box>
       </Box>
     </Box>

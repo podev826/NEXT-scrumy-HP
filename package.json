@@ -12,8 +12,7 @@
     "fix:eslint": "eslint src --ext .js,jsx,.ts,.tsx --fix",
     "fix:prettier": "prettier --write .",
     "prepare": "husky install",
-    "lint-staged": "lint-staged",
-    "deploy:gae": "yarn build && gcloud app deploy app.yaml --project=scrumy-hp"
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -31,6 +30,10 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "@sendgrid/mail": "^7.7.0",
+    "@slack/webhook": "^6.1.0",
+    "algoliasearch": "^4.13.1",
+    "axios": "^0.27.2",
     "dayjs": "^1.11.2",
     "framer-motion": "^6",
     "microcms-js-sdk": "^2.0.0",
@@ -38,6 +41,7 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-hook-form": "^7.31.2",
+    "react-instantsearch-hooks-web": "^6.26.0",
     "yakuhanjp": "^3.4.1"
   },
   "devDependencies": {
