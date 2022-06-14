@@ -17,10 +17,4 @@ steps:
       - 'SLACK_WEBHOOK_URL=${_SLACK_WEBHOOK_URL}'
   - name: gcr.io/cloud-builders/gcloud
     args:
-      [
-        'app',
-        'deploy',
-        '$BRANCH_NAME.yml',
-        '--project=scrumy-hp-test',
-        '--quiet',
-      ]
+      ['app', 'deploy', '$BRANCH_NAME.yml', '--project=scrumy-hp', '--quiet']
