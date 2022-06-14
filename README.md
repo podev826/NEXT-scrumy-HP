@@ -29,3 +29,8 @@
 - Prettier
 - Husky
 - lint-staged
+
+## CD
+
+GitHub の main, develop に push された際に build が走るようになっている。
+環境変数は CloudBuild 上で管理している。
