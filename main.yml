@@ -1,5 +1,7 @@
 runtime: nodejs16
 
+instance_class: F4
+
 service: main
 
 handlers:
@@ -14,3 +16,5 @@ handlers:
     script: auto
     secure: always
     redirect_http_response_code: 301
+
+default_expiration: '24h'
