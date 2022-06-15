@@ -41,7 +41,8 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                   {({ isExpanded }) => (
                     <>
                       <BaseAccordionButton isExpanded={isExpanded}>
-                        <Box
+                        <p>click!</p>
+                        {/* <Box
                           display={{ xl: 'flex' }}
                           alignItems={{ xl: 'center' }}
                         >
@@ -68,9 +69,9 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                           <Text pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}>
                             {item.title}
                           </Text>
-                        </Box>
+                        </Box> */}
                       </BaseAccordionButton>
-                      {/* <BaseAccordionPanel>{item.content}</BaseAccordionPanel> */}
+                      <BaseAccordionPanel>{item.content}</BaseAccordionPanel>
                     </>
                   )}
                 </AccordionItem>
