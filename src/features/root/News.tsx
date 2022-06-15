@@ -22,7 +22,8 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
         <FadeInAnimation>
           <PrimaryTitle ja="お知らせ" en="News" />
           <Box mt={{ base: 12, xl: 16 }} px={{ xl: 14 }}>
-            <Accordion
+            <p>アコーディオンが入ります</p>
+            {/* <Accordion
               allowToggle
               allowMultiple
               display={'grid'}
@@ -75,7 +76,7 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                   )}
                 </AccordionItem>
               ))}
-            </Accordion>
+            </Accordion> */}
             <Box
               mt={{ base: 9, xl: 10 }}
               mx={{ base: 'auto', md: 0 }}
