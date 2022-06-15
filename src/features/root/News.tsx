@@ -52,8 +52,7 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                             mr={{ xl: 16 }}
                           >
                             <Text mr={{ base: 5, xl: 10 }} lang="en">
-                              {/* {dayjs(item.publishedAt).format('YYYY.MM.DD')} */}
-                              date
+                              {dayjs(item.publishedAt).format('YYYY.MM.DD')}
                             </Text>
                             <Text
                               minW={{ base: 20, xl: '140px' }}
@@ -63,13 +62,11 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                               px={2}
                               textAlign={'center'}
                             >
-                              {/* {item.category.name} */}
-                              category
+                              {item.category.name}
                             </Text>
                           </Box>
                           <Text pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}>
-                            {/* {item.title} */}
-                            title
+                            {item.title}
                           </Text>
                         </Box>
                       </BaseAccordionButton>
