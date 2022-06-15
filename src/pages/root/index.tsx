@@ -22,7 +22,7 @@ const Root: NextPage<RootProps> = ({ contents }) => {
       <RootHero />
       <RootPickup />
       <RootService />
-      <RootNews contents={contents} />
+      {/* <RootNews contents={contents} /> */}
       <RootRecruit />
       <IdWrapper id="contact">
         <ContactBlock />
