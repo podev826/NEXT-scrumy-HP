@@ -14,7 +14,7 @@ export const FormDescriptionInput: FC<FormDescriptionInputProps> = ({
   ...props
 }) => {
   return (
-    <Box as="dd" flexGrow={{ xl: 1 }}>
+    <Box flexGrow={{ xl: 1 }}>
       <Input
         {...props}
         bg={'gray.100'}

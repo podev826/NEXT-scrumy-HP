@@ -51,7 +51,7 @@ export const ContactMain: FC = () => {
     <ContentWrapper maxW="calc(820px + (96px * 2))" bgType="white">
       <FadeInAnimation>
         <Box as="form" onSubmit={handleSubmit(onSubmit)}>
-          <Box as="dl" display={'grid'} gap={{ base: 9, xl: '44px' }}>
+          <Box display={'grid'} gap={{ base: 9, xl: '44px' }}>
             <FormItem>
               <FormTerm require={true} htmlFor="contact_type">
                 お問い合わせの種類

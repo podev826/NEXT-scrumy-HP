@@ -13,7 +13,6 @@ export const FormTerm: FC<FormTermProps> = ({
 }) => {
   return (
     <Box
-      as="dt"
       display={'flex'}
       flexBasis={{ xl: '240px' }}
       alignItems="flex-start"
