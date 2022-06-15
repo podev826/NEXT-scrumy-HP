@@ -52,8 +52,7 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                             mr={{ xl: 16 }}
                           >
                             <Text mr={{ base: 5, xl: 10 }} lang="en">
-                              days
-                              {/* {dayjs(item.publishedAt).format('YYYY.MM.DD')} */}
+                              {dayjs(item.publishedAt).format('YYYY.MM.DD')}
                             </Text>
                             <Text
                               minW={{ base: 20, xl: '140px' }}
