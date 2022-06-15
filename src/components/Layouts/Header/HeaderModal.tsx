@@ -301,7 +301,7 @@ export const HeaderModal: FC = () => {
             <Box>
               <BaseLink
                 fontWeight="bold"
-                href="privacy-policy"
+                href="/privacy-policy"
                 borderBottomWidth="1px"
                 borderBottomColor="sub.100"
                 pb={1}

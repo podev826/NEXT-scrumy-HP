@@ -39,7 +39,7 @@ export const Footer: FC = () => {
               display={{ base: 'none', xl: 'block' }}
               lang="en"
             >
-              <BaseLink href="privacy-policy">privacy policy</BaseLink>
+              <BaseLink href="/privacy-policy">privacy policy</BaseLink>
             </Text>
           </Box>
           <Spacer />
