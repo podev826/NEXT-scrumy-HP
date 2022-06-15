@@ -41,8 +41,7 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                   {({ isExpanded }) => (
                     <>
                       <BaseAccordionButton isExpanded={isExpanded}>
-                        <p>click!</p>
-                        {/* <Box
+                        <Box
                           display={{ xl: 'flex' }}
                           alignItems={{ xl: 'center' }}
                         >
@@ -53,7 +52,8 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                             mr={{ xl: 16 }}
                           >
                             <Text mr={{ base: 5, xl: 10 }} lang="en">
-                              {dayjs(item.publishedAt).format('YYYY.MM.DD')}
+                              {/* {dayjs(item.publishedAt).format('YYYY.MM.DD')} */}
+                              date
                             </Text>
                             <Text
                               minW={{ base: 20, xl: '140px' }}
@@ -63,13 +63,15 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                               px={2}
                               textAlign={'center'}
                             >
-                              {item.category.name}
+                              {/* {item.category.name} */}
+                              category
                             </Text>
                           </Box>
                           <Text pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}>
-                            {item.title}
+                            {/* {item.title} */}
+                            title
                           </Text>
-                        </Box> */}
+                        </Box>
                       </BaseAccordionButton>
                       <BaseAccordionPanel>{item.content}</BaseAccordionPanel>
                     </>
