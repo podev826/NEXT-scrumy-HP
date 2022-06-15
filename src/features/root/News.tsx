@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, Box } from '@chakra-ui/react';
+import { Accordion, AccordionItem, Box, Text } from '@chakra-ui/react';
 import {
   BaseAccordionButton,
   BaseAccordionPanel,
@@ -22,8 +22,7 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
         <FadeInAnimation>
           <PrimaryTitle ja="お知らせ" en="News" />
           <Box mt={{ base: 12, xl: 16 }} px={{ xl: 14 }}>
-            <p>アコーディオン</p>
-            {/* <Accordion
+            <Accordion
               allowToggle
               allowMultiple
               display={'grid'}
@@ -52,10 +51,10 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                             alignItems={'center'}
                             mr={{ xl: 16 }}
                           >
-                            <Box mr={{ base: 5, xl: 10 }} lang="en">
+                            <Text mr={{ base: 5, xl: 10 }} lang="en">
                               {dayjs(item.publishedAt).format('YYYY.MM.DD')}
-                            </Box>
-                            <Box
+                            </Text>
+                            <Text
                               minW={{ base: 20, xl: '140px' }}
                               display="inline-block"
                               bg="main.100"
@@ -64,19 +63,19 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                               textAlign={'center'}
                             >
                               {item.category.name}
-                            </Box>
+                            </Text>
                           </Box>
-                          <Box pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}>
+                          <Text pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}>
                             {item.title}
-                          </Box>
+                          </Text>
                         </Box>
                       </BaseAccordionButton>
-                      <BaseAccordionPanel>{item.content}</BaseAccordionPanel>
+                      {/* <BaseAccordionPanel>{item.content}</BaseAccordionPanel> */}
                     </>
                   )}
                 </AccordionItem>
               ))}
-            </Accordion> */}
+            </Accordion>
             <Box
               mt={{ base: 9, xl: 10 }}
               mx={{ base: 'auto', md: 0 }}
