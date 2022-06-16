@@ -110,17 +110,13 @@ const AboutInventionScrumQuestion: FC<AboutInventionScrumQuestionProps> = ({
         <>
           <BaseAccordionButton isExpanded={isExpanded}>
             <Box display={{ xl: 'flex' }} alignItems={{ xl: 'center' }}>
-              <Box as="dt" pr={{ base: 3, xl: 6 }}>
-                {term}
-              </Box>
+              <Box pr={{ base: 3, xl: 6 }}>{term}</Box>
             </Box>
           </BaseAccordionButton>
           <BaseAccordionPanel>
-            <Box as="dd">
-              {description.map((item) => (
-                <Text key={item}>{item}</Text>
-              ))}
-            </Box>
+            {description.map((item) => (
+              <Text key={item}>{item}</Text>
+            ))}
           </BaseAccordionPanel>
         </>
       )}
@@ -300,7 +296,6 @@ export const AboutInvention: FC = () => {
             </Box>
             <Box px={{ xl: 14 }} mt={{ base: 6, xl: 10 }}>
               <Accordion
-                as="dl"
                 display="grid"
                 gap={{ base: 6, xl: 8 }}
                 allowToggle

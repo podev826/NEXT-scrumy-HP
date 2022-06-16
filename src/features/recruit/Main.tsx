@@ -118,7 +118,6 @@ export const RecruitMain: FC = () => {
           <PrimaryTitle ja="募集要項" en="Recruit" />
           <Box mt={{ base: 8, md: 12, xl: 16 }} pl={{ xl: 14 }}>
             <Accordion
-              as="dl"
               allowToggle
               allowMultiple
               display={'grid'}

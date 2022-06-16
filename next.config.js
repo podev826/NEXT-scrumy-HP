@@ -3,6 +3,9 @@ const nextConfig = {
   rewrites: async () => {
     return [{ source: '/', destination: '/root' }];
   },
+  images: {
+    domains: ['images.microcms-assets.io'],
+  },
   reactStrictMode: true,
 };
 

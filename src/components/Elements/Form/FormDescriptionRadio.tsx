@@ -16,7 +16,7 @@ export const FormDescriptionRadio: FC<FormDescriptionRadioProps> = ({
   error,
 }) => {
   return (
-    <Box as="dd" flexGrow={{ xl: 1 }}>
+    <Box flexGrow={{ xl: 1 }}>
       <Box
         display={'grid'}
         gridTemplateColumns={{ xl: 'repeat(2, 1fr)' }}

@@ -14,7 +14,7 @@ export const FormDescriptionTextarea: FC<FormDescriptionTextareaProps> = ({
   ...props
 }) => {
   return (
-    <Box as="dd" flexGrow={{ xl: 1 }}>
+    <Box flexGrow={{ xl: 1 }}>
       <Textarea
         {...props}
         bg={'gray.100'}
