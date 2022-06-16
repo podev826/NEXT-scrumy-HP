@@ -26,7 +26,7 @@ export const RecruitMember: FC = () => {
           <Box
             mt={{ base: 8, md: 12, xl: 16 }}
             pl={{ xl: 14 }}
-            overflowX={{ base: 'scroll' }}
+            overflowX={{ base: 'scroll', xl: 'visible' }}
           >
             <Accordion
               allowToggle
@@ -36,7 +36,7 @@ export const RecruitMember: FC = () => {
               gridTemplateColumns={{ xl: 'repeat(3, 1fr)' }}
               rowGap={{ base: 3, md: 4, xl: 14 }}
               columnGap={{ base: 3, md: 4, xl: '52px' }}
-              overflowX={{ base: 'scroll' }}
+              overflowX={{ base: 'scroll', xl: 'visible' }}
             >
               {MEMBER_LIST.map((item) => (
                 <AccordionItem

@@ -12,15 +12,12 @@ export const styles = {
     },
     '*': {
       letterSpacing: '0.08em',
-      borderColor: 'transparent',
     },
     '*::before': {
       letterSpacing: '0.08em',
-      borderColor: 'transparent',
     },
     '*::after': {
       letterSpacing: '0.08em',
-      borderColor: 'transparent',
     },
     img: {
       maxWidth: '100%',
