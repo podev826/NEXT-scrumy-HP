@@ -4,10 +4,7 @@ const nextConfig = {
     return [{ source: '/', destination: '/root' }];
   },
   images: {
-    domains: [
-      'images.microcms-assets.io',
-      'develop-dot-scrumy-hp.an.r.appspot.com',
-    ],
+    domains: ['images.microcms-assets.io'],
   },
   reactStrictMode: true,
 };
