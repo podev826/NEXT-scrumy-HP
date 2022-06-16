@@ -56,6 +56,7 @@ export const Link = {
         transitionProperty: 'common',
         transitionTimingFunction: 'linear',
         transitionDuration: 'fast',
+        borderRadius: 'full',
       },
       _hover: {
         opacity: '1',
