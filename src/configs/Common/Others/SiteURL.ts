@@ -1,1 +1,1 @@
-export const SITE_URL = 'https://develop-dot-scrumy-hp.an.r.appspot.com';
+export const SITE_URL = 'https://www.scrumy.co.jp';
