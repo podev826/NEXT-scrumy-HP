@@ -51,7 +51,11 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                             alignItems={'center'}
                             mr={{ xl: 16 }}
                           >
-                            <Text mr={{ base: 5, xl: 10 }} lang="en">
+                            <Text
+                              mr={{ base: 5, xl: 10 }}
+                              lang="en"
+                              suppressHydrationWarning
+                            >
                               {dayjs(item.publishedAt).format('YYYY.MM.DD')}
                             </Text>
                             <Text
