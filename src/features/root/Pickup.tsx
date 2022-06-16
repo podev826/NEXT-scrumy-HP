@@ -6,10 +6,14 @@ import {
   PrimaryTitle,
 } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
-import { PICKUP_LIST } from 'configs';
 import React, { FC } from 'react';
+import { PickupContentProps } from 'types';
 
-export const RootPickup: FC = () => {
+type RootPickupProps = {
+  contents: PickupContentProps[];
+};
+
+export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
   return (
     <IdWrapper id="pickup">
       <ContentWrapper bgType="dotted" py={{ base: 7, xl: 14 }}>
@@ -26,7 +30,7 @@ export const RootPickup: FC = () => {
               gap={{ base: 4, lg: 7 }}
               gridTemplateColumns="repeat(3, 1fr)"
             >
-              {PICKUP_LIST.map((item) => (
+              {contents.map((item) => (
                 <Box
                   key={item.href}
                   w={{ base: 'calc(264px + 12px)', lg: 'full' }}
@@ -56,9 +60,9 @@ export const RootPickup: FC = () => {
                     >
                       <Box px={8} py={{ base: 7, lg: 10 }}>
                         <BaseImage
-                          src={item.image}
-                          width={682}
-                          height={336}
+                          src={item.image.url}
+                          width={item.image.width}
+                          height={item.image.height}
                           alt=""
                         />
                         <Text
@@ -77,7 +81,7 @@ export const RootPickup: FC = () => {
                           Topics
                         </Text>
                         <Text fontWeight={'bold'} mt={{ base: 3 }}>
-                          {item.text}
+                          {item.title}
                         </Text>
                       </Box>
                     </BaseLink>
