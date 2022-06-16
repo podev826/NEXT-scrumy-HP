@@ -26,7 +26,7 @@ export const RecruitMember: FC = () => {
           <Box
             mt={{ base: 8, md: 12, xl: 16 }}
             pl={{ xl: 14 }}
-            overflowX={{ base: 'scroll' }}
+            overflowX={{ base: 'scroll', xl: 'visible' }}
           >
             <Accordion
               allowToggle
