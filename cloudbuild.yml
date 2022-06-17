@@ -15,6 +15,10 @@ steps:
       - 'NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN=${_NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN}'
       - 'NEXT_PUBLIC_MICROCMS_API_KEY=${_NEXT_PUBLIC_MICROCMS_API_KEY}'
       - 'SLACK_WEBHOOK_URL=${_SLACK_WEBHOOK_URL}'
+  - name: 'bash'
+    args: ['echo', SENDGRID_API_KEY]
+    env:
+      - 'SENDGRID_API_KEY=${_SENDGRID_API_KEY}'
   - name: gcr.io/cloud-builders/gcloud
     args:
       ['app', 'deploy', '$BRANCH_NAME.yml', '--project=scrumy-hp', '--quiet']
