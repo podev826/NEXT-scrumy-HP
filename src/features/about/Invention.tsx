@@ -153,14 +153,16 @@ export const AboutInvention: FC = () => {
                 fontSize={{ base: 'xl', xl: '2xl' }}
                 fontWeight="bold"
               >
-                法人書類管理サービス「Scrumy」
+                会社設立サポート「スクラム申請」
               </Text>
               <Text
                 mt={3}
                 fontWeight="bold"
                 fontSize={{ base: 'lg', xl: 'xl' }}
               >
-                法人にまつわる書類管理をスムーズにします。追加コストなしで登記変更も自由自在に。
+                マイナポータルとの連携を前提とした本人申請を徹底的にサポートすることで、コストと時間を1/10に削減することができます。
+                <br />
+                ※起業家様向け
               </Text>
             </Box>
             <Box px={{ xl: 14 }} mt={8}>
