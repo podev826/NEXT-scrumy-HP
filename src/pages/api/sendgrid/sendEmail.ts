@@ -10,9 +10,6 @@ const sendEmail = (
   req: NextApiRequest,
   res: NextApiResponse<sendEmailResponseProps>
 ) => {
-  /* eslint no-console: 0 */
-  console.log(process.env.SENDGRID_API_KEY as string);
-
   if (req.method === 'POST') {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
