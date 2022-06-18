@@ -6,9 +6,15 @@ steps:
       - |
         cat << EOF > secret.yml
         env_variables:
+          NEXT_PUBLIC_ALGOLIA_APPLICATION_ID=${_NEXT_PUBLIC_ALGOLIA_APPLICATION_ID}
+          NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY=${_NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY}
+          ALGOLIA_ADMIN_API_KEY=${_ALGOLIA_ADMIN_API_KEY}
           SENDGRID_API_KEY=${_SENDGRID_API_KEY}
           SENDGRID_FROM_EMAIL_ADDRESS=${_SENDGRID_FROM_EMAIL_ADDRESS}
           SENDGRID_TEMPLATE_ID=${_SENDGRID_TEMPLATE_ID}
+          NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN=${_NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN}
+          NEXT_PUBLIC_MICROCMS_API_KEY=${_NEXT_PUBLIC_MICROCMS_API_KEY}
+          SLACK_WEBHOOK_URL=${_SLACK_WEBHOOK_URL}
         EOF
   - name: node:16
     entrypoint: yarn
@@ -16,16 +22,12 @@ steps:
   - name: node:16
     entrypoint: yarn
     args: ['build']
-    env:
-      - 'NEXT_PUBLIC_ALGOLIA_APPLICATION_ID=${_NEXT_PUBLIC_ALGOLIA_APPLICATION_ID}'
-      - 'NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY=${_NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY}'
-      - 'ALGOLIA_ADMIN_API_KEY=${_ALGOLIA_ADMIN_API_KEY}'
-      - 'SENDGRID_API_KEY=${_SENDGRID_API_KEY}'
-      - 'SENDGRID_FROM_EMAIL_ADDRESS=${_SENDGRID_FROM_EMAIL_ADDRESS}'
-      - 'SENDGRID_TEMPLATE_ID=${_SENDGRID_TEMPLATE_ID}'
-      - 'NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN=${_NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN}'
-      - 'NEXT_PUBLIC_MICROCMS_API_KEY=${_NEXT_PUBLIC_MICROCMS_API_KEY}'
-      - 'SLACK_WEBHOOK_URL=${_SLACK_WEBHOOK_URL}'
   - name: gcr.io/cloud-builders/gcloud
     args:
-      ['app', 'deploy', '$BRANCH_NAME.yml', '--project=scrumy-hp', '--quiet']
+      [
+        'app',
+        'deploy',
+        'app.$BRANCH_NAME.yml',
+        '--project=scrumy-hp',
+        '--quiet',
+      ]
