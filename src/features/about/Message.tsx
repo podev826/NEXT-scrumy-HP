@@ -116,11 +116,9 @@ export const AboutMessage: FC = () => {
                     {({ isExpanded }) => (
                       <>
                         <AccordionPanel pt={0} px={0} pb={5}>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Ipsum, quidem. Eum nesciunt quaerat eveniet,
-                          dolor quibusdam aperiam animi deleniti accusamus
-                          voluptatum, labore temporibus explicabo neque cum
-                          officiis harum, fuga voluptates!
+                          今日「21世紀の石油」とも言われるようになった「データ」。
+                          何をするにもデータの利活用が叫ばれるようになり、SaaSサービス導入によって大量のデータが流通するようになりました。しかしこれによって年々サイバー攻撃などのセキュリティリスクが増加していることも否めません。
+                          このような状況を打破すべく、弊社は力強く研究および開発を続けてまいります。
                         </AccordionPanel>
                         <AccordionButton
                           display={'flex'}
