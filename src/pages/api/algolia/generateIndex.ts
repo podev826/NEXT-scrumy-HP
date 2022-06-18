@@ -20,6 +20,7 @@ export const generateIndex = async (): Promise<void> => {
   });
 
   const index = client.initIndex('news');
+  process.env.NODE_ENV === 'production' && (await index.clearObjects());
   process.env.NODE_ENV === 'production' &&
     (await index.saveObjects(objects, {
       autoGenerateObjectIDIfNotExist: true,
