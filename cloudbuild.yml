@@ -6,9 +6,9 @@ steps:
       - |
         cat << EOF > secret.yml
         env_variables:
-          SENDGRID_API_KEY=${_SENDGRID_API_KEY}
-          SENDGRID_FROM_EMAIL_ADDRESS=${_SENDGRID_FROM_EMAIL_ADDRESS}
-          SENDGRID_TEMPLATE_ID=${_SENDGRID_TEMPLATE_ID}
+          SENDGRID_API_KEY: ${_SENDGRID_API_KEY}
+          SENDGRID_FROM_EMAIL_ADDRESS: ${_SENDGRID_FROM_EMAIL_ADDRESS}
+          SENDGRID_TEMPLATE_ID: ${_SENDGRID_TEMPLATE_ID}
         EOF
   - name: node:16
     entrypoint: yarn
