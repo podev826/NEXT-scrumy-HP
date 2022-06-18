@@ -11,10 +11,8 @@ import {
 import { client } from 'libraries/microcms';
 import type { GetStaticProps, NextPage } from 'next';
 import {
-  NewsContentProps,
   NewsDataProps,
   NewsItemProps,
-  PickupContentProps,
   PickupDataProps,
   PickupItemProps,
 } from 'types';

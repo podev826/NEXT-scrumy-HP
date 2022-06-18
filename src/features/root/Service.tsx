@@ -49,7 +49,7 @@ export const RootService: FC = () => {
                     fontWeight="bold"
                     letterSpacing={0}
                   >
-                    格安・時短な会社設立をサポート
+                    経営情報の管理も共有もこれ一つ
                   </Text>
                 </Box>
                 <Box>
@@ -84,7 +84,7 @@ export const RootService: FC = () => {
                       letterSpacing={0}
                       bg="base.100"
                     >
-                      格安・時短な会社設立をサポート
+                      経営情報の管理も共有もこれ一つ
                     </Text>
                   </Box>
                   <Box pl={{ xl: '70px' }} mt={{ xl: 4 }}>
@@ -100,24 +100,20 @@ export const RootService: FC = () => {
                       pl={{ base: '4px', xl: 4 }}
                       pr={{ xl: 2 }}
                     >
-                      法人書類管理サービス「Scrumy」
+                      経営情報データベース「Scrumy」
                     </Text>
                     <Text mt={{ base: 4 }}>
-                      法人にまつわる書類管理をスムーズにします。追加コストなしで登記変更も自由自在に。
+                      書類管理と権限管理を自動化することで、登記変更や株主総会の際に必要な情報共有をスムーズにセキュアに行うことができます。
+                      <br />
+                      ※中小～大企業様向け
                     </Text>
                     <Text
-                      maxW={{ base: '280px', xl: '284px' }}
+                      maxW={{ base: '280px', xl: '364px' }}
                       mx={{ base: 'auto', xl: 0 }}
                       mt={{ base: 5, xl: 7 }}
                     >
-                      <PrimaryLink
-                        href="https://shinsei.scrumy.co.jp/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        variant={'primary'}
-                        w="full"
-                      >
-                        詳しくみる
+                      <PrimaryLink href="/contact" variant={'primary'} w="full">
+                        問い合わせをする
                       </PrimaryLink>
                     </Text>
                   </Box>
@@ -170,7 +166,7 @@ export const RootService: FC = () => {
                         letterSpacing={0}
                         bg="base.100"
                       >
-                        サイバー攻撃からお守りします。
+                        格安・時短で会社設立が可能に
                       </Text>
                     </Box>
                     <Box order={{ xl: '-1' }}>
@@ -191,23 +187,26 @@ export const RootService: FC = () => {
                         py={{ base: '6px' }}
                         pl={{ base: '4px' }}
                       >
-                        情報セキュリティ診断
+                        会社設立サポート「スクラム申請」
                       </Text>
                       <Text mt={{ base: 4, xl: 5 }}>
-                        当社エンジニアが貴社のシステムにおける、脆弱性を診断。
-                        サイバー攻撃に対する対策等をご提供いたします。
+                        マイナポータルとの連携を前提とした本人申請を徹底的にサポートすることで、コストと時間を1/10に削減することができます。
+                        <br />
+                        ※起業家様向け
                       </Text>
                       <Text
-                        maxW={{ base: '280px', xl: '364px' }}
+                        maxW={{ base: '280px', xl: '284px' }}
                         mx={{ base: 'auto' }}
                         mt={{ base: 5, xl: 7 }}
                       >
                         <PrimaryLink
-                          href="/contact"
+                          href="https://shinsei.scrumy.co.jp/"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           variant={'primary'}
                           w="full"
                         >
-                          問い合わせをする
+                          詳しくみる
                         </PrimaryLink>
                       </Text>
                     </Box>
@@ -234,13 +233,14 @@ export const RootService: FC = () => {
                       display="flex"
                       alignItems={{ base: 'center', xl: 'flex-end' }}
                       justifyContent={{ base: 'center', xl: 'flex-start' }}
-                      mt={{ xl: '-104px' }}
+                      mt={{ xl: '-120px' }}
                       position="relative"
                       zIndex={'2'}
                     >
                       <Box
                         w={{ base: '53px', xl: '98px' }}
                         mr={{ base: 4, md: 2, xl: 1 }}
+                        mb={{ xl: 8 }}
                       >
                         <BaseImage
                           src="/images/root/root_service_number03.png"
@@ -255,7 +255,7 @@ export const RootService: FC = () => {
                         letterSpacing={0}
                         bg="base.100"
                       >
-                        セミナーやコンサルも承ります。
+                        現状把握からセキュリティ対策を明らかに
                       </Text>
                     </Box>
                     <Box order={{ xl: '-1' }}>
@@ -265,7 +265,11 @@ export const RootService: FC = () => {
                         height={610}
                       />
                     </Box>
-                    <Box mt={{ base: 4, md: 0, xl: 4 }}>
+                    <Box
+                      mt={{ base: 4, md: 0, xl: 4 }}
+                      position="relative"
+                      zIndex={2}
+                    >
                       <Text
                         as="h3"
                         bg="main.100"
@@ -274,12 +278,13 @@ export const RootService: FC = () => {
                         letterSpacing={0}
                         textAlign="center"
                         py={{ base: '6px' }}
-                        pl={{ base: '4px' }}
                       >
-                        教育DXプロジェクト推進コンサル
+                        情報セキュリティ診断サービス
                       </Text>
                       <Text mt={{ base: 4, xl: 5 }}>
-                        教育関係者の方々向けに、教育DXプロジェクト推進セミナー（ウェビナー）やコンサルティングサービスを行なっております。
+                        DXの第一ステップとして、情報セキュリティ診断サービスやコンサルティングサービス（ウェビナー含む）を行なっています。
+                        <br />
+                        ※中小～大企業様向け
                       </Text>
                       <Text
                         maxW={{ base: '280px', xl: '364px' }}

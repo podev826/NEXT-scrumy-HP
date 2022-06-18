@@ -16,5 +16,7 @@ handlers:
     script: auto
     secure: always
     redirect_http_response_code: 301
+# default_expiration: '24h'
 
-default_expiration: '24h'
+includes:
+  - secret.yml
