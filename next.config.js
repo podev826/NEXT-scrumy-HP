@@ -9,7 +9,7 @@ const nextConfig = {
   headers() {
     return [
       {
-        source: '/images/:path*',
+        source: '/images/(.*)',
         headers: [
           {
             key: 'Cache-Control',
