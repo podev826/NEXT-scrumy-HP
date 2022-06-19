@@ -23,6 +23,7 @@
 - microcms-js-sdk
 - dayjs
 - yakuhanjp
+- react-scroll
 - axios
 - algoliasearch
 - react-instantsearch-hooks-web
