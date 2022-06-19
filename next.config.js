@@ -6,6 +6,19 @@ const nextConfig = {
   images: {
     domains: ['images.microcms-assets.io'],
   },
+  headers() {
+    return [
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=2592000, stale-while-revalidate=86400',
+          },
+        ],
+      },
+    ];
+  },
   reactStrictMode: true,
 };
 
