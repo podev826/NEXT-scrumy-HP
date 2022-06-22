@@ -1,6 +1,7 @@
 export type PrimaryNavContentProps = {
   href: string;
   text: string;
+  scroll?: string;
 };
 
 export type PrimaryNavProps = PrimaryNavContentProps[];
@@ -13,6 +14,7 @@ export const PRIMARY_NAV: PrimaryNavProps = [
   {
     href: '/#service',
     text: 'Service',
+    scroll: 'service',
   },
   {
     href: '/news',
