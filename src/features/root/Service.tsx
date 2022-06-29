@@ -100,7 +100,7 @@ export const RootService: FC = () => {
                       pl={{ base: '4px', xl: 4 }}
                       pr={{ xl: 2 }}
                     >
-                      経営情報データベース「Scrumy」
+                      法人データストレージ「Scrumy」
                     </Text>
                     <Text mt={{ base: 4 }}>
                       書類管理と権限管理を自動化することで、登記変更や株主総会の際に必要な情報共有をスムーズにセキュアに行うことができます。
