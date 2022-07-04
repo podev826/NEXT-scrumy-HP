@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "lint": "run-p -c lint:*",
     "lint:eslint": "eslint src --ext .js,jsx,.ts,.tsx",
     "lint:prettier": "prettier --check .",
