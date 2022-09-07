@@ -9,5 +9,7 @@ declare namespace NodeJS {
     readonly NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN: string;
     readonly NEXT_PUBLIC_MICROCMS_API_KEY: string;
     readonly SLACK_WEBHOOK_URL: string;
+    readonly NEXT_PUBLIC_GOOGLE_ANALYTICS_ID_PRIMARY: string;
+    readonly NEXT_PUBLIC_GOOGLE_ANALYTICS_ID_SECONDARY: string;
   }
 }
