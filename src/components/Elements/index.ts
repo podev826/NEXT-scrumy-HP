@@ -3,6 +3,7 @@ export * from './Algolia';
 export * from './Animations';
 export * from './Block';
 export * from './Form';
+export * from './GoogleAnalytics';
 export * from './Icon';
 export * from './Image';
 export * from './Link';

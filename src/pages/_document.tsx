@@ -1,3 +1,10 @@
+import { GoogleAnalytics } from 'components/Elements';
+import {
+  existsGaIdPrimary,
+  existsGaIdSecondary,
+  GA_ID_PRIMARY,
+  GA_ID_SECONDARY,
+} from 'configs/Common/GoogleAnalytics';
 import { Head, Html, Main, NextScript } from 'next/document';
 
 const Document = () => {
@@ -19,6 +26,11 @@ const Document = () => {
           href="/favicons/apple-touch-icon-180x180.png"
         />
         <link rel="icon" type="image/png" href="/favicons/icon-192x192.png" />
+        <GoogleAnalytics existsGaId={existsGaIdPrimary} GA_ID={GA_ID_PRIMARY} />
+        <GoogleAnalytics
+          existsGaId={existsGaIdSecondary}
+          GA_ID={GA_ID_SECONDARY}
+        />
       </Head>
       <body>
         <Main />

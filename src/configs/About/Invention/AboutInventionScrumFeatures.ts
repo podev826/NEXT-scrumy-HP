@@ -16,7 +16,7 @@ export const ABOUT_INVENTION_SCRUM_FEATURES: AboutInventionScrumFeaturesProps =
     },
     {
       title: 'スピードは10倍に、コストは1/10に',
-      list: ['最短1日で手続き完了！', '費用は10,000円〜利用可能。'],
+      list: ['最短3日で手続き完了！', '費用は30,000円〜利用可能。'],
     },
     {
       title: '圧倒的な操作のしやすさ',
