@@ -22,9 +22,9 @@ export const RootRecruit: FC = () => {
             alignItems={'flex-end'}
             gap={{ base: 6, xl: 10 }}
           >
-            <Box w={{ xl: 'calc(100% - 57.117%)' }} mt={{ xl: 16 }}>
+            <Box w={{ xl: 'calc(100% - 57.117%)' }} mt={{ xl: 16 }} mx="auto">
               <Text fontWeight={'bold'} fontSize={{ xl: '2xl' }}>
-                私たちと一緒に行政サービスと法人様の懸け橋となる情報インフラを作り上げてくれる仲間を募集しております。
+                私たちと一緒にSDGs時代の経営基盤を作り上げてくれる仲間を募集しております。
               </Text>
               <Text mt={{ base: 6, xl: 8 }}>
                 <PrimaryLink href="/recruit" variant={'secondary'} w="full">

@@ -8,26 +8,27 @@ export const RecruitTop: FC = () => {
     <ContentWrapper bgType="dotted" py="0" pt={{ base: 16, md: 20, xl: 24 }}>
       <FadeInAnimation>
         <Box
-          fontSize={{ base: '7.466vw', md: '6.111vw', '2xl': '9xl' }}
+          fontSize={{ base: '7.466vw', md: '6.111vw', xl: '7xl', '2xl': '8xl' }}
           fontStyle="italic"
           fontWeight={'bold'}
           lang="en"
           textAlign={{ md: 'center' }}
         >
-          <Text display={{ md: 'inline-block' }}>
+          <Text display={{ md: 'inline-block' }} letterSpacing={'0.04em'}>
             <Text as="span" color="accent.100">
               Be
             </Text>
-            &nbsp;Sincere,&nbsp;
+            &nbsp;Smart,&nbsp;
           </Text>
           <Text
+            letterSpacing={'0.04em'}
             textAlign={{ base: 'right', md: 'left' }}
             display={{ md: 'inline-block' }}
           >
             <Text as="span" color="accent.100">
               Be
             </Text>
-            &nbsp;Greedy.
+            &nbsp;Sustainable.
           </Text>
         </Box>
         <Box mt={{ base: 8, md: 12, xl: 16 }}>

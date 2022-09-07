@@ -30,13 +30,30 @@ export const RootHero: FC = () => {
           pb={{ base: '12.8vw', sm: '5.2vw', xl: '2.222vw' }}
           px={{ base: '6.4vw', sm: 0 }}
         >
-          <Box width={{ base: 'full', sm: '48vw', xl: '39.93vw' }} mx="auto">
-            <BaseImage
-              src="/images/root/root_hero_text.jpg"
-              width={1150}
-              height={142}
-              alt="法人手続を感動体験に。"
-            />
+          <Box fontWeight="bold">
+            <Box display={'flex'} justifyContent="center">
+              <Text
+                as="p"
+                fontSize={{ base: '7.46vw', sm: '4.17vw', xl: '3.33vw' }}
+                bg="white"
+                px={{ base: '3.2vw', md: '1.56vw', xl: '0.83vw' }}
+                display="inline-block"
+              >
+                SDGs時代の
+              </Text>
+            </Box>
+            <Box display={'flex'} justifyContent="center">
+              <Text
+                as="p"
+                fontSize={{ base: '7.46vw', sm: '4.17vw', xl: '3.33vw' }}
+                bg="white"
+                mt={{ base: '3.2vw', md: '1.56vw', xl: '0.83vw' }}
+                px={{ base: '3.2vw', md: '1.56vw', xl: '0.83vw' }}
+                display="inline-block"
+              >
+                経営戦略に最適解を
+              </Text>
+            </Box>
           </Box>
           <Text
             fontSize={{ base: '4.8vw', sm: '2.344vw', xl: '1.667vw' }}
@@ -45,13 +62,10 @@ export const RootHero: FC = () => {
             mt={{ base: '8.53vw', sm: '4.167vw', xl: '2.5vw' }}
           >
             <Text as="span" display={{ sm: 'block' }}>
-              情報ガバナンスや情報セキュリティにおける
+              サステイナブル経営のための
             </Text>
             <Text as="span" display={{ sm: 'block' }}>
-              革新的プラットフォームを提供する
-            </Text>
-            <Text as="span" display={{ sm: 'block' }}>
-              行政手続DXの会社です。
+              ESG情報開示戦略をサポートします。
             </Text>
           </Text>
           <Box

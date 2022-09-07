@@ -60,16 +60,12 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     href: '/#service',
     list: [
       {
-        text: '法人データストレージ「Scrumy」',
+        text: 'ESG情報開示戦略コンサル「Scrumy」',
         href: '/#service01',
       },
       {
         text: '会社設立サポート「スクラム申請」',
         href: '/#service02',
-      },
-      {
-        text: '情報セキュリティ診断サービス',
-        href: '/#service03',
       },
     ],
   },

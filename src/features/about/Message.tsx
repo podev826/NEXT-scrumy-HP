@@ -35,15 +35,37 @@ export const AboutMessage: FC = () => {
           >
             <Box gridArea={{ xl: 'title' }}>
               <Text fontSize={{ base: 'xl', '2xl': '2xl' }} fontWeight="bold">
-                <Text as="span" display={'block'}>
-                  <Text
-                    as="span"
-                    display="inline-block"
-                    bg="main.100"
-                    px={{ base: 2, xl: 3 }}
-                    py={{ base: 1, xl: 2 }}
-                  >
-                    法人手続をデジタル化し、
+                <Text
+                  as="span"
+                  display={{ xl: 'inline-block' }}
+                  px={{ xl: 3 }}
+                  py={{ xl: 2 }}
+                  bg={{ xl: 'main.100' }}
+                  mt={{ xl: 6 }}
+                >
+                  <Text as="span" display={{ base: 'block', xl: 'inline' }}>
+                    <Text
+                      as="span"
+                      display="inline-block"
+                      bg="main.100"
+                      px={{ base: 2, xl: 0 }}
+                      py={{ base: 1, xl: 0 }}
+                      mt={{ base: 2, xl: 0 }}
+                    >
+                      サステイナブル経営の
+                    </Text>
+                  </Text>
+                  <Text as="span" display={{ base: 'block', xl: 'inline' }}>
+                    <Text
+                      as="span"
+                      display="inline-block"
+                      bg="main.100"
+                      px={{ base: 2, xl: 0 }}
+                      py={{ base: 1, xl: 0 }}
+                      mt={{ base: 2, xl: 0 }}
+                    >
+                      スペシャリストとして
+                    </Text>
                   </Text>
                 </Text>
                 <Text
@@ -63,7 +85,7 @@ export const AboutMessage: FC = () => {
                       py={{ base: 1, xl: 0 }}
                       mt={{ base: 2, xl: 0 }}
                     >
-                      データサイエンスで
+                      SDGs時代の
                     </Text>
                   </Text>
                   <Text as="span" display={{ base: 'block', xl: 'inline' }}>
@@ -71,6 +93,7 @@ export const AboutMessage: FC = () => {
                       as="span"
                       display="inline-block"
                       bg="main.100"
+                      letterSpacing={{ base: '0.02em', md: '0.04em' }}
                       px={{ base: 2, xl: 0 }}
                       py={{ base: 1, xl: 0 }}
                       mt={{ base: 2, xl: 0 }}
@@ -99,15 +122,11 @@ export const AboutMessage: FC = () => {
             </Box>
             <Box mt={{ base: 5, xl: 6 }} gridArea={{ xl: 'content' }}>
               <Text>
-                弊社は行政サービスと民間企業を結びつけるための基盤である「情報ガバナンス」に力を入れております。無意味な大量の「データ」を意味のある「インフォメーション」に。それを知恵や文化のレベルにまで高められた「ナレッジ」へと変換。更には循環させていく仕組みをデザインしていくことで、行政サービスと法人様の懸け橋となる情報インフラを構築していく。という確固たる哲学を持って事業に取り組んでおります。
+                私たちScrumyは、GaaS（サービスとしてのガバナンス）を提供するゼブラ企業（Zebras）として、資本主義のSX（サステナビリティ・トランスフォーメーション）を推進しています。企業におけるESG情報（非財務情報）開示戦略をサポートすることで、多種多様なステークホルダーと協働するためのSDGs時代の「新たな経営基盤」を作り出してまいります。
               </Text>
               <Box display={{ base: 'none', md: 'block' }}>
                 <Text mt={6}>
-                  今日「21世紀の石油」とも言われるようになった「データ」。
-                  <br />
-                  何をするにもデータの利活用が叫ばれるようになり、SaaSサービス導入によって大量のデータが流通するようになりました。しかしこれによって年々サイバー攻撃などのセキュリティリスクが増加していることも否めません。
-                  <br />
-                  このような状況を打破すべく、弊社は力強く研究および開発を続けてまいります。
+                  ガバナンスは、多くの場合、企業の事業推進や利益とはかけ離れた、乗り越えるための面倒な負担やハードルと見なされています。しかし、私たちはそのようには考えません。ガバナンスは、持続可能な企業経営の提供にとって不可欠であるにもかかわらず一見相対するように思える「ESG情報開示の強化」と「企業価値の最大化」を両立させる経営デザインとして、再構築できると考えています。
                 </Text>
               </Box>
               <Box display={{ md: 'none' }}>
@@ -116,9 +135,7 @@ export const AboutMessage: FC = () => {
                     {({ isExpanded }) => (
                       <>
                         <AccordionPanel pt={0} px={0} pb={5}>
-                          今日「21世紀の石油」とも言われるようになった「データ」。
-                          何をするにもデータの利活用が叫ばれるようになり、SaaSサービス導入によって大量のデータが流通するようになりました。しかしこれによって年々サイバー攻撃などのセキュリティリスクが増加していることも否めません。
-                          このような状況を打破すべく、弊社は力強く研究および開発を続けてまいります。
+                          ガバナンスは、多くの場合、企業の事業推進や利益とはかけ離れた、乗り越えるための面倒な負担やハードルと見なされています。しかし、私たちはそのようには考えません。ガバナンスは、持続可能な企業経営の提供にとって不可欠であるにもかかわらず一見相対するように思える「ESG情報開示の強化」と「企業価値の最大化」を両立させる経営デザインとして、再構築できると考えています。
                         </AccordionPanel>
                         <AccordionButton
                           display={'flex'}

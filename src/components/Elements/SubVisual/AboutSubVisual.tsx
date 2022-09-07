@@ -32,7 +32,7 @@ export const AboutSubVisual: FC = () => {
               position="absolute"
               left={'50%'}
               transform="translateX(-50%)"
-              top={{ base: '-13.333vw', md: '3.611vw', '2xl': '52px' }}
+              top={{ base: '-10vw', md: '6.67vw', '2xl': '96px' }}
               fontSize={{ base: '12.8vw', md: '6.111vw', '2xl': '88px' }}
               fontWeight="bold"
               textAlign={'center'}
@@ -40,17 +40,16 @@ export const AboutSubVisual: FC = () => {
               color="base.100"
               opacity={'0.24'}
             >
-              <Text as="span" display={'block'}>
-                GovTech&amp;
-                <Text as="span" display={{ base: 'block', md: 'inline' }}>
-                  PoliTech
-                </Text>
-              </Text>
               <Text as="span" display={'block'} whiteSpace="nowrap">
-                Leader for
+                <Text as="span" display={{ base: 'block', md: 'inline' }}>
+                  Unicorn
+                </Text>
                 <Text as="span" display={{ base: 'block', md: 'inline' }}>
                   {' '}
-                  Business
+                  &amp;{' '}
+                </Text>
+                <Text as="span" display={{ base: 'block', md: 'inline' }}>
+                  Zebras
                 </Text>
               </Text>
             </Text>
@@ -72,13 +71,10 @@ export const AboutSubVisual: FC = () => {
                 lineHeight={{ base: '1.32', md: '1.5' }}
               >
                 <Box as="span" display="block">
-                  目指すは法人特化の
+                  目指すは日本一の
                 </Box>
                 <Box as="span" display="block">
-                  GovTech&amp;PoliTech
-                  <Box as="span" display={{ base: 'block', md: 'inline' }}>
-                    リーダー
-                  </Box>
+                  ゼブラ企業 (Zebras)
                 </Box>
               </Text>
               <Text
@@ -89,13 +85,10 @@ export const AboutSubVisual: FC = () => {
                 mt={{ base: '14.933vw', md: '1.667vw', xl: 6 }}
               >
                 <Box as="span" display={{ md: 'block' }}>
-                  当社は法人手続での摩擦を解消することにより、
+                  当社は「サステイナブル経営」を世界に発信し、
                 </Box>
                 <Box as="span" display={{ md: 'block' }}>
-                  Web3.0時代における法人特化の
-                </Box>
-                <Box as="span" display={{ md: 'block' }}>
-                  GovTechインフラの実現を目指します。
+                  社会的インパクトに向けたインフラを創出します。
                 </Box>
               </Text>
             </Flex>

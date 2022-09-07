@@ -22,7 +22,7 @@ export const SUB_VISUAL_LIST: SubVisualListProps = {
   },
   recruit: {
     title: 'Recruit',
-    text: '行政サービスと法人様の懸け橋となる情報インフラを作り上げてくれる仲間を募集しております。',
+    text: '「変わっててようこそ」をモットーに、SDGs時代の社会基盤を作り上げてくれる仲間を募集しております。',
     image: {
       pc: '/images/recruit/recruit_sub-visual_pc.jpg',
       sp: '/images/recruit/recruit_sub-visual_sp.jpg',
