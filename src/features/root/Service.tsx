@@ -6,6 +6,7 @@ import {
   PrimaryTitle,
 } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
+import { LINKS } from 'configs';
 import React, { FC } from 'react';
 
 export const RootService: FC = () => {
@@ -219,8 +220,14 @@ export const RootService: FC = () => {
                       mx={{ base: 'auto', xl: 0 }}
                       mt={{ base: 5, xl: 7 }}
                     >
-                      <PrimaryLink href="/contact" variant={'primary'} w="full">
-                        問い合わせをする
+                      <PrimaryLink
+                        href={LINKS.external.scrum}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant={'primary'}
+                        w="full"
+                      >
+                        詳しくみる
                       </PrimaryLink>
                     </Text>
                   </Box>
