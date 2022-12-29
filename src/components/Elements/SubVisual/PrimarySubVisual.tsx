@@ -11,7 +11,7 @@ type PrimarySubVisualProps = {
 export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
   return (
     <Box
-      bg="main.200"
+      bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
       pt={{ base: '175px', md: '104px', xl: '120px' }}
       pb={{ base: '44px', md: '0' }}
     >
@@ -25,10 +25,6 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
         alignItems="stretch"
       >
         <Box
-          backgroundImage={{
-            base: `url("${content.image.sp}")`,
-            md: `url("${content.image.pc}")`,
-          }}
           backgroundSize="contain"
           backgroundPosition="bottom"
           backgroundRepeat="no-repeat"
@@ -37,7 +33,6 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
         >
           <FadeInAnimation>
             <Flex
-              justifyContent="flex-end"
               py={{ md: '8.333vw', '2xl': '120px' }}
               px={{ md: '5.833vw', '2xl': '84px' }}
               mx="auto"
@@ -54,6 +49,7 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
                   fontSize={{ base: '12.8vw', md: '6.111vw', '2xl': '9xl' }}
                   fontStyle="italic"
                   lang="en"
+                  color="white"
                 >
                   {content.title}
                 </Text>
@@ -62,6 +58,7 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
                   fontWeight="bold"
                   lineHeight="1.667"
                   mt={{ base: 4, md: 1 }}
+                  color="white"
                 >
                   {content.text}
                 </Text>

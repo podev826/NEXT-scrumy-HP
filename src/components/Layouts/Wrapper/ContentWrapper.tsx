@@ -7,7 +7,7 @@ type ContentWrapperProps = ContainerProps & {
 };
 
 export const ContentWrapper: FC<ContentWrapperProps> = ({
-  bgType = 'gray',
+  bgType = 'white',
   children,
   ...props
 }) => {
