@@ -19,53 +19,43 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     title: 'Top',
     href: '/',
     list: [
-      {
-        text: '事業について',
-        href: '/#service',
-      },
-      {
-        text: 'お知らせ',
+     {
+        text: 'Partnership',
         href: '/#news',
       },
       {
-        text: '採用について',
-        href: '/#recruit',
+        text: 'News',
+        href: '/#news',
       },
       {
-        text: 'お問い合わせ',
+        text: 'Message',
+        href: '/#news',
+      },
+      {
+        text: 'Media',
+        href: '/#news',
+      },
+      {
+        text: 'Contact',
         href: '/#contact',
       },
     ],
   },
-  about: {
+ about: {
     title: 'About us',
     href: '/about',
     list: [
       {
-        text: '開発事例',
+        text: 'Business',
         href: '/about/#invention',
       },
       {
-        text: '代表メッセージ',
+        text: 'Member',
         href: '/about/#message',
       },
       {
-        text: '企業情報',
+        text: 'Company',
         href: '/about/#company',
-      },
-    ],
-  },
-  service: {
-    title: 'Service',
-    href: '/#service',
-    list: [
-      {
-        text: 'ESG情報開示戦略コンサル「Scrumy」',
-        href: '/#service01',
-      },
-      {
-        text: '会社設立サポート「スクラム申請」',
-        href: '/#service02',
       },
     ],
   },
@@ -74,7 +64,7 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     href: '/news',
     list: [
       {
-        text: 'お知らせ',
+        text: 'Press',
         href: '/news/#news',
       },
     ],
@@ -84,12 +74,8 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     href: '/recruit',
     list: [
       {
-        text: '募集要項',
+        text: 'Recruit',
         href: '/recruit/#recruit',
-      },
-      {
-        text: 'メンバー',
-        href: '/recruit/#member',
       },
     ],
   },
