@@ -24,7 +24,7 @@ export const Footer: FC = () => {
               <Text>〒104-0061</Text>
               <Text>
                 <Box as="span" display={{ base: 'inline-block', xl: 'block' }}>
-                  東京都
+                  東京都中央区銀座1丁目
                 </Box>
                 <Box as="span" display={{ base: 'inline-block', xl: 'block' }}>
                   22番地11号2階
