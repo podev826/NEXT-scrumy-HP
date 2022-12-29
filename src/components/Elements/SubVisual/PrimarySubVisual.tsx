@@ -24,48 +24,40 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
         display="grid"
         alignItems="stretch"
       >
-        <Box
-          backgroundSize="contain"
-          backgroundPosition="bottom"
-          backgroundRepeat="no-repeat"
-          display="grid"
-          alignItems="stretch"
-        >
-          <FadeInAnimation>
-            <Flex
-              py={{ md: '8.333vw', '2xl': '120px' }}
-              px={{ md: '5.833vw', '2xl': '84px' }}
-              mx="auto"
-              w="full"
+        <FadeInAnimation>
+          <Flex
+            py={{ md: '8.333vw', '2xl': '120px' }}
+            px={{ md: '5.833vw', '2xl': '84px' }}
+            mx="auto"
+            w="full"
+          >
+            <Box
+              px={{ base: '13.867vw', md: '0' }}
+              w={{
+                md: 'calc((580 / 1080) * 100%)',
+              }}
             >
-              <Box
-                px={{ base: '13.867vw', md: '0' }}
-                w={{
-                  md: 'calc((580 / 1080) * 100%)',
-                }}
+              <Text
+                as="h1"
+                fontSize={{ base: '12.8vw', md: '6.111vw', '2xl': '9xl' }}
+                fontStyle="italic"
+                lang="en"
+                color="white"
               >
-                <Text
-                  as="h1"
-                  fontSize={{ base: '12.8vw', md: '6.111vw', '2xl': '9xl' }}
-                  fontStyle="italic"
-                  lang="en"
-                  color="white"
-                >
-                  {content.title}
-                </Text>
-                <Text
-                  fontSize={{ base: '5.333vw', md: '1.667vw', '2xl': '2xl' }}
-                  fontWeight="bold"
-                  lineHeight="1.667"
-                  mt={{ base: 4, md: 1 }}
-                  color="white"
-                >
-                  {content.text}
-                </Text>
-              </Box>
-            </Flex>
-          </FadeInAnimation>
-        </Box>
+                {content.title}
+              </Text>
+              <Text
+                fontSize={{ base: '5.333vw', md: '1.667vw', '2xl': '2xl' }}
+                fontWeight="bold"
+                lineHeight="1.667"
+                mt={{ base: 4, md: 1 }}
+                color="white"
+              >
+                {content.text}
+              </Text>
+            </Box>
+          </Flex>
+        </FadeInAnimation>
       </Box>
     </Box>
   );
