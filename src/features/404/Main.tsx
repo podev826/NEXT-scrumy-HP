@@ -7,7 +7,6 @@ export const NotFoundMain: FC = () => {
     <Box
       pt={{ base: '117px', md: '224px' }}
       pb={{ base: 16, md: 24 }}
-      bg="main.200"
       px={6}
       textAlign={'center'}
     >
@@ -56,7 +55,7 @@ export const NotFoundMain: FC = () => {
           px={{ base: 4, md: 6 }}
           w="full"
           color="base.100"
-          bg="sub.100"
+          bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
           boxShadow={'primary'}
           transitionProperty="all"
           transitionTimingFunction="linear"
