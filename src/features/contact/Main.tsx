@@ -58,9 +58,9 @@ export const ContactMain: FC = () => {
               </FormTerm>
               <FormDescriptionRadio
                 options={[
-                  'Scrumyについて',
-                  'セキュリティ診断について',
-                  'セミナーについて',
+                  'Scrumy-Supportについて',
+                  'Scrumy-Codeについて',
+                  'メディア・取材について',
                   '採用について',
                   'その他お問い合わせ',
                 ]}
