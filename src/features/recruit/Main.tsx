@@ -113,9 +113,9 @@ export const JobDescriptionContent: FC<JobDescriptionContentProps> = ({
 export const RecruitMain: FC = () => {
   return (
     <IdWrapper id="recruit">
-      <ContentWrapper bgType="gray">
+      <ContentWrapper bgType="white">
         <FadeInAnimation>
-          <PrimaryTitle ja="募集要項" en="Recruit" />
+          <PrimaryTitle en="Requirements" />
           <Box mt={{ base: 8, md: 12, xl: 16 }} pl={{ xl: 14 }}>
             <Accordion
               allowToggle
@@ -134,9 +134,10 @@ export const RecruitMain: FC = () => {
             <Box mt={{ base: 8, xl: 10 }}>
               <PrimaryLink
                 href="/contact"
-                variant="secondary"
+                bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
                 w="full"
                 maxW={{ base: '280px', xl: '284px' }}
+                color="white"
               >
                 応募する
               </PrimaryLink>
