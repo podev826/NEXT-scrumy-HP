@@ -19,7 +19,7 @@ export const FormButton: FC<FormButtonProps> = ({
 }) => {
   return (
     <>
-      <Box maxW={{ base: '324px', xl: '368px' }} mx="auto">
+      <Box maxW={{ base: 'full', xl: 'full' }} mx="auto">
         <Box
           as="button"
           disabled={isSubmitting}
