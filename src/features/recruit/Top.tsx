@@ -1,11 +1,11 @@
 import { Box, Text } from '@chakra-ui/react';
-import { BaseImage, FadeInAnimation } from 'components/Elements';
+import { FadeInAnimation } from 'components/Elements';
 import { ContentWrapper } from 'components/Layouts';
 import { FC } from 'react';
 
 export const RecruitTop: FC = () => {
   return (
-    <ContentWrapper bgType="dotted" py="0" pt={{ base: 16, md: 20, xl: 24 }}>
+    <ContentWrapper py="0" pt={{ base: 16, md: 20, xl: 24 }}>
       <FadeInAnimation>
         <Box
           fontSize={{ base: '7.466vw', md: '6.111vw', xl: '7xl', '2xl': '8xl' }}
@@ -39,39 +39,21 @@ export const RecruitTop: FC = () => {
             lineHeight={{ base: '2', md: '2.2', xl: '2.4' }}
           >
             <Text as="span" display={{ lg: 'block' }}>
-              当社は行政手続DXの会社として、実社会及びメタバースにおける
+              「スマート」は、決してクールさやスタイリッシュさのみを意味するわけではありません。
             </Text>
             <Text as="span" display={{ lg: 'block' }}>
-              情報ガバナンスや情報セキュリティの整備と強化に取り組んでいます。
+              より客観的に、次元を上げて、思考し行動に移すサイクルが実現された状態を指します。
             </Text>
             <Text as="span" display={{ lg: 'block' }}>
-              Withコロナ時代のいまこそGaaSのデファクトスタンダードを
+              「サステナブル」は、決して自然環境と経済に対象が限定されているわけではありません
             </Text>
             <Text as="span" display={{ lg: 'block' }}>
-              日本から世界へ発信するときです。私たちとともに働きやすい開発環境
+              よりマクロに、「スマート」な状態を継続し、目指す未来へ向かい続けることを指します。
             </Text>
             <Text as="span" display={{ lg: 'block' }}>
-              を作ることで、新たな開発文化を創造しませんか？
+              我々は、常に「スマートであるか」「サステナブルであるか」を日々問い続けています。
             </Text>
           </Text>
-        </Box>
-        <Box mt={{ base: 8, xl: 12 }}>
-          <Box display={{ md: 'none' }}>
-            <BaseImage
-              src="/images/recruit/recruit_main01_sp.png"
-              width={1184}
-              height={247}
-              alt=""
-            />
-          </Box>
-          <Box display={{ base: 'none', md: 'block' }}>
-            <BaseImage
-              src="/images/recruit/recruit_main01_pc.png"
-              width={2496}
-              height={424}
-              alt=""
-            />
-          </Box>
         </Box>
       </FadeInAnimation>
     </ContentWrapper>
