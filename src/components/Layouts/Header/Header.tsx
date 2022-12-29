@@ -20,6 +20,7 @@ export const Header: FC = () => {
           <Flex
             bg="base.100"
             color="sub.100"
+            shadow="md"
             px={{ base: 7, md: 10, xl: 14 }}
             py={{ base: 2, md: 3, xl: '14px' }}
             borderRadius="16"
