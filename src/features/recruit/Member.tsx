@@ -20,9 +20,9 @@ import { FC } from 'react';
 export const RecruitMember: FC = () => {
   return (
     <IdWrapper id="member">
-      <ContentWrapper bgType="gray">
+      <ContentWrapper bgType="white">
         <FadeInAnimation>
-          <PrimaryTitle ja="メンバー" en="Member" />
+          <PrimaryTitle en="Member" />
           <Box
             mt={{ base: 8, md: 12, xl: 16 }}
             pl={{ xl: 14 }}
