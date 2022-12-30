@@ -38,19 +38,19 @@ export const RecruitTop: FC = () => {
             textAlign={'center'}
             lineHeight={{ base: '2', md: '2.2', xl: '2.4' }}
           >
-            <Text as="span" display={{ lg: 'block' }}>
+            <Text as="span" display={{ md: 'block' }}>
               「スマート」は、決してクールさやスタイリッシュさのみを意味するわけではありません。
             </Text>
-            <Text as="span" display={{ lg: 'block' }}>
+            <Text as="span" display={{ md: 'block' }}>
               より客観的に、次元を上げて、思考し行動に移すサイクルが実現された状態を指します。
             </Text>
-            <Text as="span" display={{ lg: 'block' }}>
+            <Text as="span" display={{ md: 'block' }}>
               「サステナブル」は、決して自然環境と経済に対象が限定されているわけではありません
             </Text>
-            <Text as="span" display={{ lg: 'block' }}>
+            <Text as="span" display={{ md: 'block' }}>
               よりマクロに、「スマート」な状態を継続し、目指す未来へ向かい続けることを指します。
             </Text>
-            <Text as="span" display={{ lg: 'block' }}>
+            <Text as="span" display={{ md: 'block' }}>
               我々は、常に「スマートであるか」「サステナブルであるか」を日々問い続けています。
             </Text>
           </Text>
