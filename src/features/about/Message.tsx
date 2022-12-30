@@ -40,7 +40,6 @@ export const AboutMessage: FC = () => {
               mt={{ base: 5, xl: 0 }}
               gridArea={{ xl: 'image' }}
             >
-              {/* todo:画像の変更 */}
               <Image
                 src="/images/about/about_message01.jpg"
                 alt=""
