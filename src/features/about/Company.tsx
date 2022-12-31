@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import { FadeInAnimation, PrimaryTitle } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import { COMPANY_INFORMATION } from 'configs';
@@ -60,12 +60,36 @@ const AboutCompanyItem: FC<AboutCompanyItemProps> = ({
 export const AboutCompany: FC = () => {
   return (
     <IdWrapper id="company">
-      <ContentWrapper as="section" bgType="gray">
+      <ContentWrapper as="section" bgType="white">
         <FadeInAnimation>
-          <PrimaryTitle ja="企業情報" en="Company" />
+          <PrimaryTitle en="Company" />
+          <Box mt={{ base: 8, xl: 16 }}>
+            <Text
+              fontSize={{ base: 'lg', md: 'lg', xl: 'xl' }}
+              fontWeight="medium"
+              lineHeight="1.667"
+              w={{ md: '80vw', sm: 'full' }}
+            >
+              <Text as="span" display="block">
+                株式会社Scrumy
+                (スクラミー)はサステナブルファイナンスサービスを提供する会社として2021年4月に創業しました。2021年11月にEastVentures、慶應義塾大学元常任理事の國領二郎博士をはじめ個人投資家5名からシードラウンドで約4,500万円の資金調達を実施しました。
+              </Text>
+              <br />
+              <Text as="span" display="block">
+                国内で有数のベンチャーキャピタルであるIncubate
+                Fundが主催するピッチコンテストで優勝、グロービス経営大学院が主催するG-STARTUPにおいて100名を超える投資家から選ばれてベストオーディエンス賞を受賞するなど多くのビジネスコンテストで国内外から高い評価をいただき、20社以上のベンチャーキャピタルから出資のオファーをいただいています。
+              </Text>
+              <br />
+              <Text as="span" display="block">
+                2022年9月、国連投資責任原則（PRI）の署名機関として認定されました。
+                「新しい資本主義」を掲げるゼブラベンチャーとして内閣府、日本経済新聞をはじめとした各種メディアに取り上げていただいており、大学や自治体などでの講演会も多数お受けしています。さらに、政治家や
+                官僚にも興味を持っていただき、国連委員会への出席や衆議院議員会館での勉強会などを通し、政策提言によるルールメイキングを進めています。
+              </Text>
+            </Text>
+          </Box>
           <Box
             as="dl"
-            ml="auto"
+            mx="auto"
             w={{ base: 'calc(100% - 36px)', xl: '100%' }}
             maxW="844px"
             display="grid"
