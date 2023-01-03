@@ -7,18 +7,19 @@ type ContentWrapperProps = ContainerProps & {
 };
 
 export const ContentWrapper: FC<ContentWrapperProps> = ({
-  bgType = 'gray',
+  bgType = 'white',
   children,
   ...props
 }) => {
   return (
     <Box
-      bg={bgType === 'white' ? 'base.100' : 'gray.100'}
-      backgroundImage={
-        bgType === 'dotted'
-          ? "url('/images/common/common_bg_dotted.png')"
-          : undefined
-      }
+      // bg={bgType === 'white' ? 'base.100' : 'gray.100'}
+      // backgroundImage={
+      //   bgType === 'dotted'
+      //     ? "url('/images/common/common_bg_dotted.png')"
+      //     : undefined
+      // }
+      bg="white"
     >
       <Box
         maxW={1440}

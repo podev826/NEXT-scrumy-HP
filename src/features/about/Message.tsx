@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Flex,
   Text,
 } from '@chakra-ui/react';
 import {
@@ -13,120 +14,40 @@ import {
   PrimaryTitle,
 } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
-import Image from 'next/image';
+import { RecruitCEO } from 'features/recruit/CEO';
 import { FC } from 'react';
 
 export const AboutMessage: FC = () => {
   return (
     <IdWrapper id="message">
-      <ContentWrapper as="section" bgType="dotted">
+      <ContentWrapper as="section">
         <FadeInAnimation>
-          <PrimaryTitle ja="代表メッセージ" en="Message" />
-          <Box
-            mt={{ base: 8, xl: 16 }}
-            display={{ xl: 'grid' }}
-            gridTemplateAreas={{
-              xl: `'. title . image' '. content . image'`,
-            }}
-            gridTemplateColumns={{
-              xl: '56px calc((100% - 104px) * 628/1144) 48px calc((100% - 104px) * 516/1144)',
-            }}
-            gridTemplateRows={{ xl: 'auto' }}
+          <PrimaryTitle en="Message" />
+          <Flex
+            direction="row-reverse"
+            display={{ lg: 'flex', md: 'block' }}
+            mt={{ base: 5, xl: 6 }}
           >
-            <Box gridArea={{ xl: 'title' }}>
-              <Text fontSize={{ base: 'xl', '2xl': '2xl' }} fontWeight="bold">
-                <Text
-                  as="span"
-                  display={{ xl: 'inline-block' }}
-                  px={{ xl: 3 }}
-                  py={{ xl: 2 }}
-                  bg={{ xl: 'main.100' }}
-                  mt={{ xl: 6 }}
-                >
-                  <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-                    <Text
-                      as="span"
-                      display="inline-block"
-                      bg="main.100"
-                      px={{ base: 2, xl: 0 }}
-                      py={{ base: 1, xl: 0 }}
-                      mt={{ base: 2, xl: 0 }}
-                    >
-                      サステイナブル経営の
-                    </Text>
-                  </Text>
-                  <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-                    <Text
-                      as="span"
-                      display="inline-block"
-                      bg="main.100"
-                      px={{ base: 2, xl: 0 }}
-                      py={{ base: 1, xl: 0 }}
-                      mt={{ base: 2, xl: 0 }}
-                    >
-                      スペシャリストとして
-                    </Text>
-                  </Text>
-                </Text>
-                <Text
-                  as="span"
-                  display={{ xl: 'inline-block' }}
-                  px={{ xl: 3 }}
-                  py={{ xl: 2 }}
-                  bg={{ xl: 'main.100' }}
-                  mt={{ xl: 6 }}
-                >
-                  <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-                    <Text
-                      as="span"
-                      display="inline-block"
-                      bg="main.100"
-                      px={{ base: 2, xl: 0 }}
-                      py={{ base: 1, xl: 0 }}
-                      mt={{ base: 2, xl: 0 }}
-                    >
-                      SDGs時代の
-                    </Text>
-                  </Text>
-                  <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-                    <Text
-                      as="span"
-                      display="inline-block"
-                      bg="main.100"
-                      letterSpacing={{ base: '0.02em', md: '0.04em' }}
-                      px={{ base: 2, xl: 0 }}
-                      py={{ base: 1, xl: 0 }}
-                      mt={{ base: 2, xl: 0 }}
-                    >
-                      「新たな経営基盤」を作り出す
-                    </Text>
-                  </Text>
-                </Text>
-              </Text>
+            <Box fontSize={0} position="relative" mt={{ base: 5, xl: 0 }}>
+              <RecruitCEO />
             </Box>
-            <Box
-              fontSize={0}
-              position="relative"
-              w="full"
-              pt="75%"
-              mt={{ base: 5, xl: 0 }}
-              gridArea={{ xl: 'image' }}
-            >
-              <Image
-                src="/images/about/about_message01.jpg"
-                alt=""
-                layout="fill"
-                objectFit="cover"
-                objectPosition="top"
-              />
-            </Box>
-            <Box mt={{ base: 5, xl: 6 }} gridArea={{ xl: 'content' }}>
+            <Box mt={{ base: 5, xl: 0 }}>
               <Text>
-                私たちScrumyは、GaaS（サービスとしてのガバナンス）を提供するゼブラ企業（Zebras）として、資本主義のSX（サステナビリティ・トランスフォーメーション）を推進しています。企業におけるESG情報（非財務情報）開示戦略をサポートすることで、多種多様なステークホルダーと協働するためのSDGs時代の「新たな経営基盤」を作り出してまいります。
+                弊社では弁護士、会計士、産業医、証券アナリスト、サステナビリティ学者など多種多様な分野の研究と実務に通じたメンバーが集い、科学的手法に基づいたデータドリブンな情報基盤をご提供いたします。
               </Text>
               <Box display={{ base: 'none', md: 'block' }}>
                 <Text mt={6}>
-                  ガバナンスは、多くの場合、企業の事業推進や利益とはかけ離れた、乗り越えるための面倒な負担やハードルと見なされています。しかし、私たちはそのようには考えません。ガバナンスは、持続可能な企業経営の提供にとって不可欠であるにもかかわらず一見相対するように思える「ESG情報開示の強化」と「企業価値の最大化」を両立させる経営デザインとして、再構築できると考えています。
+                  Scrumyでは、一人ひとりが企画部長であり、発案者であり、代表者であるという誇りを持ちながら、日々壮大な事業にコミットしています。
+                </Text>
+              </Box>
+              <Box display={{ base: 'none', md: 'block' }}>
+                <Text mt={6}>
+                  日本や世界が抱える社会課題に真摯に向き合い、どうすれば乗り越えられるのか。いつも問い続け、考え続け、語り続け、動き続ける。どんな領域でも役立つ、社会課題解決に向けて徹底的にやり抜くための「真の哲学力」が自然と身につくことが、当社ならではの魅力です。
+                </Text>
+              </Box>
+              <Box display={{ base: 'none', md: 'block' }}>
+                <Text mt={6}>
+                  Scrumyの思想や哲学にビビッと共感した人、多種多様な分野を代表する素敵なメンバーと仕事をしてみたい人、高いスキルを貪欲に求める人のジョインを、メンバー一同心からお待ち申し上げております。
                 </Text>
               </Box>
               <Box display={{ md: 'none' }}>
@@ -135,7 +56,13 @@ export const AboutMessage: FC = () => {
                     {({ isExpanded }) => (
                       <>
                         <AccordionPanel pt={0} px={0} pb={5}>
-                          ガバナンスは、多くの場合、企業の事業推進や利益とはかけ離れた、乗り越えるための面倒な負担やハードルと見なされています。しかし、私たちはそのようには考えません。ガバナンスは、持続可能な企業経営の提供にとって不可欠であるにもかかわらず一見相対するように思える「ESG情報開示の強化」と「企業価値の最大化」を両立させる経営デザインとして、再構築できると考えています。
+                          Scrumyでは、一人ひとりが企画部長であり、発案者であり、代表者であるという誇りを持ちながら、日々壮大な事業にコミットしています。
+                        </AccordionPanel>
+                        <AccordionPanel pt={0} px={0} pb={5}>
+                          日本や世界が抱える社会課題に真摯に向き合い、どうすれば乗り越えられるのか。いつも問い続け、考え続け、語り続け、動き続ける。どんな領域でも役立つ、社会課題解決に向けて徹底的にやり抜くための「真の哲学力」が自然と身につくことが、当社ならではの魅力です。
+                        </AccordionPanel>
+                        <AccordionPanel pt={0} px={0} pb={5}>
+                          Scrumyの思想や哲学にビビッと共感した人、多種多様な分野を代表する素敵なメンバーと仕事をしてみたい人、高いスキルを貪欲に求める人のジョインを、メンバー一同心からお待ち申し上げております。
                         </AccordionPanel>
                         <AccordionButton
                           display={'flex'}
@@ -204,7 +131,7 @@ export const AboutMessage: FC = () => {
                 </Text>
               </Text>
             </Box>
-          </Box>
+          </Flex>
         </FadeInAnimation>
       </ContentWrapper>
     </IdWrapper>

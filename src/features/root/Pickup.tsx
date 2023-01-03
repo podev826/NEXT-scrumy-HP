@@ -3,6 +3,7 @@ import {
   BaseImage,
   BaseLink,
   FadeInAnimation,
+  PrimaryLink,
   PrimaryTitle,
 } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
@@ -15,10 +16,10 @@ type RootPickupProps = {
 
 export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
   return (
-    <IdWrapper id="pickup">
-      <ContentWrapper bgType="dotted" py={{ base: 7, xl: 14 }}>
+    <IdWrapper id="media">
+      <ContentWrapper bg="white" py={{ base: 7, xl: 14 }}>
         <FadeInAnimation>
-          <PrimaryTitle ja="注目の記事" en="Pick up" />
+          <PrimaryTitle en="Media" />
           <Box
             mt={8}
             overflowX={{ base: 'scroll', lg: 'visible' }}
@@ -90,6 +91,15 @@ export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
               ))}
             </Box>
           </Box>
+          <Text
+            maxW={{ base: '280px', xl: '364px' }}
+            mx={{ base: 'auto', xl: 0 }}
+            mt={{ base: 5, xl: 7 }}
+          >
+            <PrimaryLink href="/contact" variant={'primary'} w="full">
+              詳しく見る
+            </PrimaryLink>
+          </Text>  
         </FadeInAnimation>
       </ContentWrapper>
     </IdWrapper>
