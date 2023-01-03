@@ -34,7 +34,7 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
             <Box
               px={{ base: '13.867vw', md: '0' }}
               w={{
-                md: 'calc((580 / 1080) * 100%)',
+                md: '40vw',
               }}
             >
               <Text
