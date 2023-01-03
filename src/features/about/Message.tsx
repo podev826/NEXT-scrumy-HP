@@ -23,6 +23,7 @@ export const AboutMessage: FC = () => {
       <ContentWrapper as="section">
         <FadeInAnimation>
           <PrimaryTitle en="Message" />
+
           <Flex
             direction="row-reverse"
             display={{ lg: 'flex', md: 'block' }}

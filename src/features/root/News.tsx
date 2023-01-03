@@ -18,9 +18,9 @@ type RootNewsProps = {
 export const RootNews: FC<RootNewsProps> = ({ contents }) => {
   return (
     <IdWrapper id="news">
-      <ContentWrapper bgType="dotted">
+      <ContentWrapper bg="white">
         <FadeInAnimation>
-          <PrimaryTitle ja="お知らせ" en="News" />
+          <PrimaryTitle en="News" />
           <Box mt={{ base: 12, xl: 16 }} px={{ xl: 14 }}>
             <Accordion
               allowToggle

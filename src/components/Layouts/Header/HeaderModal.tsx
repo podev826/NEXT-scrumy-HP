@@ -161,7 +161,6 @@ export const HeaderModal: FC = () => {
         <Grid gap="28px" mt={10}>
           <HeaderModalListSp content={SECONDARY_NAV.top} />
           <HeaderModalListSp content={SECONDARY_NAV.about} />
-          <HeaderModalListSp content={SECONDARY_NAV.service} />
           <HeaderModalListSp content={SECONDARY_NAV.news} />
           <HeaderModalListSp content={SECONDARY_NAV.recruit} />
           <HeaderModalListSp content={SECONDARY_NAV.privacyPolicy} />
@@ -293,7 +292,6 @@ export const HeaderModal: FC = () => {
                 <HeaderModalListPc content={SECONDARY_NAV.about} />
               </Grid>
               <Grid gap={10}>
-                <HeaderModalListPc content={SECONDARY_NAV.service} />
                 <HeaderModalListPc content={SECONDARY_NAV.news} />
                 <HeaderModalListPc content={SECONDARY_NAV.recruit} />
               </Grid>

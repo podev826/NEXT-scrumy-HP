@@ -45,7 +45,7 @@ export const PrivacyPolicySubVisual: FC = () => {
                 <Box
                   as="span"
                   display="block"
-                  ml={{ md: '13.056vw', '2xl': '188px' }}
+                  ml={{ md: '13.056vw', '2xl': '0px' }}
                   mt={{ md: '0.83vw', '2xl': '12px' }}
                   color="white"
                 >

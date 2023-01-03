@@ -13,7 +13,7 @@ export const RootRecruit: FC = () => {
     <IdWrapper id="recruit">
       <ContentWrapper bgType="gray">
         <FadeInAnimation>
-          <PrimaryTitle ja="採用情報" en="Join us" />
+          <PrimaryTitle en="Join us" />
           <Box
             mt={{ base: 10, xl: 0 }}
             px={{ xl: 14 }}
@@ -27,7 +27,7 @@ export const RootRecruit: FC = () => {
                 私たちと一緒にSDGs時代の経営基盤を作り上げてくれる仲間を募集しております。
               </Text>
               <Text mt={{ base: 6, xl: 8 }}>
-                <PrimaryLink href="/recruit" variant={'secondary'} w="full">
+                <PrimaryLink href="/recruit" variant={'primary'} w="full">
                   採用についてはこちら
                 </PrimaryLink>
               </Text>

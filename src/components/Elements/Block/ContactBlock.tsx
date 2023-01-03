@@ -15,21 +15,13 @@ export const ContactBlock: FC = () => {
           >
             Contact
           </Text>
-          <Text
-            as="h2"
-            fontSize={{ base: 'sm', xl: 'xl' }}
-            fontWeight="bold"
-            color="sub.200"
-          >
-            お問い合わせ
-          </Text>
         </Box>
         <Text textAlign={'center'} fontWeight="bold" mt={{ base: 8, xl: 14 }}>
           <Text as="span" display={{ base: 'block', xl: 'inline' }}>
             各種お問い合わせにつきましては
           </Text>
           <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-            こちらからお問い合わせください。
+            こちらからお願いいたします。
           </Text>
         </Text>
         <Box mt={5} mx="auto" maxW={'536px'}>

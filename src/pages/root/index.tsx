@@ -3,9 +3,9 @@ import { IdWrapper, MainLayout } from 'components/Layouts';
 import { META } from 'configs';
 import {
   RootHero,
+  RootMessage,
   RootNews,
   RootPickup,
-  RootRecruit,
   RootService,
 } from 'features/root';
 import { client } from 'libraries/microcms';
@@ -26,10 +26,10 @@ const Root: NextPage<RootProps> = ({ news, pickup }) => {
   return (
     <MainLayout meta={META.root}>
       <RootHero />
-      <RootPickup contents={pickup.contents} />
       <RootService />
       <RootNews contents={news.contents} />
-      <RootRecruit />
+      <RootMessage />
+      <RootPickup contents={pickup.contents} />
       <IdWrapper id="contact">
         <ContactBlock />
       </IdWrapper>

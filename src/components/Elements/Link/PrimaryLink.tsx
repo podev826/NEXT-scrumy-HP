@@ -14,6 +14,7 @@ export const PrimaryLink: FC<PrimaryLinkProps> = ({
 }) => {
   return (
     <BaseLink
+      bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
       href={href}
       px={{ base: 10, xl: 8 }}
       py={{ base: 3, xl: 4 }}

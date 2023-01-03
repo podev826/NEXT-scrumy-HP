@@ -99,7 +99,7 @@ export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
             <PrimaryLink href="/contact" variant={'primary'} w="full">
               詳しく見る
             </PrimaryLink>
-          </Text>  
+          </Text>
         </FadeInAnimation>
       </ContentWrapper>
     </IdWrapper>

@@ -1,239 +1,138 @@
-import { Box, Text } from '@chakra-ui/react';
-import {
-  BaseImage,
-  FadeInAnimation,
-  PrimaryLink,
-  PrimaryTitle,
-} from 'components/Elements';
+import { Box, Stack, Text } from '@chakra-ui/react';
+import { BaseImage, FadeInAnimation, PrimaryTitle } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
-import { LINKS } from 'configs';
 import React, { FC } from 'react';
 
 export const RootService: FC = () => {
   return (
     <IdWrapper id="service">
-      <ContentWrapper bgType="gray">
+      <ContentWrapper bg="white">
         <FadeInAnimation>
-          <PrimaryTitle ja="わたしたちができること" en="Service" />
+          <PrimaryTitle en="Service" />
           <Box
             mt={{ base: 12, xl: 16 }}
             display="grid"
             gap={{ base: 6, xl: 10 }}
           >
-            <IdWrapper id="service01" h="full">
-              <Box
-                as="section"
-                bg="base.100"
-                borderRadius={'32px'}
-                px={{ base: 4, xl: 14 }}
-                py={{ base: 9, xl: 16 }}
-                display={{ xl: 'flex' }}
-                alignItems={{ xl: 'center' }}
-                h="full"
-                gap={{ xl: 6 }}
-              >
+            <Stack
+              justifyContent="space-around"
+              spacing="10"
+              direction={{ base: 'column', sm: 'row' }}
+            >
+              <IdWrapper id="service01" h="full">
                 <Box
-                  display={{ base: 'flex', xl: 'none' }}
-                  alignItems={{ base: 'center' }}
-                  justifyContent={{ base: 'center' }}
-                >
-                  <Box w={{ base: '53px' }} mr={{ base: 4 }}>
-                    <BaseImage
-                      src="/images/root/root_service_number01.png"
-                      width={196}
-                      height={186}
-                      alt="Service 01"
-                    />
-                  </Box>
-                  <Text
-                    fontSize={{ base: '3.73vw', md: 'xl' }}
-                    fontWeight="bold"
-                    letterSpacing={0}
-                  >
-                    SDGs時代の情報開示に最適解を
-                  </Text>
-                </Box>
-                <Box>
-                  <BaseImage
-                    src="/images/root/root_service_image01.png"
-                    width={1272}
-                    height={666}
-                  />
-                </Box>
-                <Box
-                  mt={{ base: 4, xl: 0 }}
-                  flexGrow={{ xl: 1 }}
-                  maxW={{ xl: '512px' }}
+                  as="section"
+                  borderRadius={'32px'}
+                  px={{ base: 4, xl: 14 }}
+                  py={{ base: 9, xl: 16 }}
+                  display={{ xl: 'block' }}
+                  alignItems={{ xl: 'center' }}
+                  h="full"
+                  width="80%"
+                  gap={{ xl: 6 }}
+                  shadow="md"
                 >
                   <Box
-                    display={{ base: 'none', xl: 'flex' }}
-                    alignItems={{ base: 'center', xl: 'flex-end' }}
-                    justifyContent={{ base: 'center', xl: 'flex-start' }}
-                    position="relative"
-                    zIndex={'2'}
+                    mt={{ base: 4, xl: 0 }}
+                    flexGrow={{ xl: 1 }}
+                    maxW={{ xl: '512px' }}
+                    justifyContent="center"
                   >
-                    <Box
-                      w={{ base: '53px', xl: '98px' }}
-                      mr={{ base: 4, xl: 1 }}
-                    >
-                      <BaseImage
-                        src="/images/root/root_service_number01.png"
-                        width={196}
-                        height={186}
-                        alt="Service 01"
-                      />
-                    </Box>
-                    <Text
-                      fontSize={{ base: '3.73vw', md: 'xl' }}
-                      fontWeight="bold"
-                      letterSpacing={0}
-                      bg="base.100"
-                    >
-                      SDGs時代の情報開示に最適解を
-                    </Text>
-                  </Box>
-                  <Box pl={{ xl: '70px' }} mt={{ xl: 4 }}>
-                    <Text
-                      as="h3"
-                      bg="main.100"
-                      fontSize={{ base: '4.2vw', md: '2xl' }}
-                      fontWeight="bold"
-                      letterSpacing={0}
-                      textAlign="center"
-                      whiteSpace={'nowrap'}
-                      py={{ base: '6px' }}
-                      pl={{ base: '4px', xl: 4 }}
-                      pr={{ xl: 2 }}
-                    >
-                      ESG情報開示戦略コンサル「Scrumy」
-                    </Text>
-                    <Text mt={{ base: 4 }}>
-                      加速するESG投資への注目を背景として、企業のIR報告書等におけるESG情報（非財務情報）の重要性は日々高まっています。「Scrumy」では、国際基準であるGRIやSASBに準拠したESG情報開示戦略を一気通貫してサポートします。それにより機関投資家からのESGやSDGsに関する情報開示要求に対応でき、企業価値を高めることができます。
-                    </Text>
-                    <Text
-                      maxW={{ base: '280px', xl: '364px' }}
-                      mx={{ base: 'auto', xl: 0 }}
-                      mt={{ base: 5, xl: 7 }}
-                    >
-                      <PrimaryLink href="/contact" variant={'primary'} w="full">
-                        問い合わせをする
-                      </PrimaryLink>
-                    </Text>
-                  </Box>
-                </Box>
-              </Box>
-            </IdWrapper>
-            <IdWrapper id="service02" h="full">
-              <Box
-                as="section"
-                bg="base.100"
-                borderRadius={'32px'}
-                px={{ base: 4, xl: 14 }}
-                py={{ base: 9, xl: 16 }}
-                display={{ xl: 'flex' }}
-                alignItems={{ xl: 'center' }}
-                h="full"
-                gap={{ xl: 6 }}
-              >
-                <Box
-                  display={{ base: 'flex', xl: 'none' }}
-                  alignItems={{ base: 'center' }}
-                  justifyContent={{ base: 'center' }}
-                >
-                  <Box w={{ base: '53px' }} mr={{ base: 4 }}>
                     <BaseImage
-                      src="/images/root/root_service_number02.png"
-                      width={196}
-                      height={186}
-                      alt="Service 02"
+                      src="/images/root/root_service_image01.png" //ここを新しいものに差し替える
+                      width={1272}
+                      height={666}
                     />
-                  </Box>
-                  <Text
-                    fontSize={{ base: '3.73vw', md: 'xl' }}
-                    fontWeight="bold"
-                    letterSpacing={0}
-                  >
-                    格安・時短で会社設立が可能に
-                  </Text>
-                </Box>
-                <Box>
-                  <BaseImage
-                    src="/images/root/root_service_image02-a.png"
-                    width={1272}
-                    height={666}
-                  />
-                </Box>
-                <Box
-                  mt={{ base: 4, xl: 0 }}
-                  flexGrow={{ xl: 1 }}
-                  maxW={{ xl: '512px' }}
-                >
-                  <Box
-                    display={{ base: 'none', xl: 'flex' }}
-                    alignItems={{ base: 'center', xl: 'flex-end' }}
-                    justifyContent={{ base: 'center', xl: 'flex-start' }}
-                    position="relative"
-                    zIndex={'2'}
-                  >
                     <Box
-                      w={{ base: '53px', xl: '98px' }}
-                      mr={{ base: 4, xl: 1 }}
+                      display={{ base: 'grid', xl: 'flex' }}
+                      alignItems={{ base: 'center', xl: 'flex-end' }}
+                      justifyContent={{ base: 'center', xl: 'flex-start' }}
+                      position="relative"
+                      zIndex={'2'}
                     >
-                      <BaseImage
-                        src="/images/root/root_service_number02.png"
-                        width={196}
-                        height={186}
-                        alt="Service 02"
-                      />
+                      <Box
+                        w={{ base: '53px', xl: '98px' }}
+                        mr={{ base: 4, xl: 1 }}
+                      ></Box>
                     </Box>
-                    <Text
-                      fontSize={{ base: '3.73vw', md: 'xl' }}
-                      fontWeight="bold"
-                      letterSpacing={0}
-                      bg="base.100"
-                    >
-                      格安・時短で会社設立が可能に
-                    </Text>
-                  </Box>
-                  <Box pl={{ xl: '70px' }} mt={{ xl: 4 }}>
-                    <Text
-                      as="h3"
-                      bg="main.100"
-                      fontSize={{ base: '4.2vw', md: '2xl' }}
-                      fontWeight="bold"
-                      letterSpacing={0}
-                      textAlign="center"
-                      whiteSpace={'nowrap'}
-                      py={{ base: '6px' }}
-                      pl={{ base: '4px', xl: 4 }}
-                      pr={{ xl: 2 }}
-                    >
-                      会社設立サポート「スクラム申請」
-                    </Text>
-                    <Text mt={{ base: 4 }}>
-                      マイナポータルとの連携を前提とした本人申請を徹底的にサポートすることで、コストと時間を1/10に削減することができます。
-                      <br />
-                      ※起業家様向け
-                    </Text>
-                    <Text
-                      maxW={{ base: '280px', xl: '364px' }}
-                      mx={{ base: 'auto', xl: 0 }}
-                      mt={{ base: 5, xl: 7 }}
-                    >
-                      <PrimaryLink
-                        href={LINKS.external.scrum}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        variant={'primary'}
-                        w="full"
+                    <Box mt={{ xl: 4 }}>
+                      <Text
+                        as="h3"
+                        bg="main.100"
+                        color="white"
+                        fontSize={{ base: '4.2vw', md: '2xl' }}
+                        fontWeight="bold"
+                        letterSpacing={0}
+                        textAlign="center"
+                        whiteSpace={'nowrap'}
+                        py={{ base: '6px' }}
+                        pl={{ base: '4px', xl: 4 }}
+                        pr={{ xl: 2 }}
                       >
-                        詳しくみる
-                      </PrimaryLink>
-                    </Text>
+                        サステナビリティ経営戦略支援
+                      </Text>
+                      <Text mt={{ base: 4 }}>
+                        Scrumyにはサステナビリティ学者をはじめとした各種専門人材が在籍しており、最新のエビデンスや知見に基づいたESGコンサルティングを提供いたします。
+                      </Text>
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
-            </IdWrapper>
+              </IdWrapper>
+              <IdWrapper id="service02" h="full">
+                <Box
+                  as="section"
+                  bg="base.100"
+                  borderRadius={'32px'}
+                  px={{ base: 4, xl: 14 }}
+                  py={{ base: 9, xl: 16 }}
+                  display={{ xl: 'block' }}
+                  alignItems={{ xl: 'center' }}
+                  h="full"
+                  width="80%"
+                  gap={{ xl: 6 }}
+                  shadow="md"
+                >
+                  <Box
+                    mt={{ base: 4, xl: 0 }}
+                    flexGrow={{ xl: 1 }}
+                    maxW={{ xl: '512px' }}
+                  >
+                    <BaseImage
+                      src="/images/root/root_service_image02-a.png" //ここを新しいものに差し替える
+                      width={1272}
+                      height={666}
+                    />
+                    <Box
+                      display={{ base: 'none', xl: 'flex' }}
+                      alignItems={{ base: 'center', xl: 'flex-end' }}
+                      justifyContent={{ base: 'center', xl: 'flex-start' }}
+                      position="relative"
+                      zIndex={'2'}
+                    ></Box>
+                    <Box mt={{ xl: 4 }}>
+                      <Text
+                        as="h3"
+                        bg="main.100"
+                        color="white"
+                        fontSize={{ base: '4.2vw', md: '2xl' }}
+                        fontWeight="bold"
+                        letterSpacing={0}
+                        textAlign="center"
+                        whiteSpace={'nowrap'}
+                        py={{ base: '6px' }}
+                        pl={{ base: '4px', xl: 4 }}
+                        pr={{ xl: 2 }}
+                      >
+                        サステナブルファイナンスDB
+                      </Text>
+                      <Text mt={{ base: 4 }}>
+                        サステナビリティ会計基準「SASB/ISSB」に準拠し、財務情報と紐づくサステナビリティ情報を可視化することで、企業と投資家のエンゲージメントを実現するため情報基盤を提供します。
+                      </Text>
+                    </Box>
+                  </Box>
+                </Box>
+              </IdWrapper>
+            </Stack>
           </Box>
         </FadeInAnimation>
       </ContentWrapper>
