@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Flex,
   Text,
 } from '@chakra-ui/react';
 import {
@@ -13,7 +14,7 @@ import {
   PrimaryTitle,
 } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
-import Image from 'next/image';
+import { RecruitCEO } from 'features/recruit/CEO';
 import { FC } from 'react';
 
 export const AboutMessage: FC = () => {
@@ -22,39 +23,21 @@ export const AboutMessage: FC = () => {
       <ContentWrapper as="section">
         <FadeInAnimation>
           <PrimaryTitle en="Message" />
-          <Box
-            mt={{ base: 8, xl: 16 }}
-            display={{ xl: 'grid' }}
-            gridTemplateAreas={{
-              xl: `'. title . image' '. content . image'`,
-            }}
-            gridTemplateColumns={{
-              xl: '56px calc((100% - 104px) * 628/1144) 48px calc((100% - 104px) * 516/1144)',
-            }}
-            gridTemplateRows={{ xl: 'auto' }}
+          <Flex
+            direction="row-reverse"
+            display={{ lg: 'flex', md: 'block' }}
+            mt={{ base: 5, xl: 6 }}
           >
-            <Box
-              fontSize={0}
-              position="relative"
-              w="full"
-              mt={{ base: 5, xl: 0 }}
-              gridArea={{ xl: 'image' }}
-            >
-              <Image
-                src="/images/about/about_message01.jpg"
-                alt=""
-                layout="fill"
-                objectFit="cover"
-                objectPosition="top"
-              />
+            <Box fontSize={0} position="relative" mt={{ base: 5, xl: 0 }}>
+              <RecruitCEO />
             </Box>
-            <Box mt={{ base: 5, xl: 6 }} gridArea={{ xl: 'content' }}>
+            <Box mt={{ base: 5, xl: 0 }}>
               <Text>
                 弊社では弁護士、会計士、産業医、証券アナリスト、サステナビリティ学者など多種多様な分野の研究と実務に通じたメンバーが集い、科学的手法に基づいたデータドリブンな情報基盤をご提供いたします。
               </Text>
               <Box display={{ base: 'none', md: 'block' }}>
                 <Text mt={6}>
-                  Scrumyでは、一人ひとりが企画部長であり、発案者であり、代表者であるという誇りを持ちながら、日々壮大な事業にコミットしています
+                  Scrumyでは、一人ひとりが企画部長であり、発案者であり、代表者であるという誇りを持ちながら、日々壮大な事業にコミットしています。
                 </Text>
               </Box>
               <Box display={{ base: 'none', md: 'block' }}>
@@ -73,7 +56,7 @@ export const AboutMessage: FC = () => {
                     {({ isExpanded }) => (
                       <>
                         <AccordionPanel pt={0} px={0} pb={5}>
-                          Scrumyでは、一人ひとりが企画部長であり、発案者であり、代表者であるという誇りを持ちながら、日々壮大な事業にコミットしています
+                          Scrumyでは、一人ひとりが企画部長であり、発案者であり、代表者であるという誇りを持ちながら、日々壮大な事業にコミットしています。
                         </AccordionPanel>
                         <AccordionPanel pt={0} px={0} pb={5}>
                           日本や世界が抱える社会課題に真摯に向き合い、どうすれば乗り越えられるのか。いつも問い続け、考え続け、語り続け、動き続ける。どんな領域でも役立つ、社会課題解決に向けて徹底的にやり抜くための「真の哲学力」が自然と身につくことが、当社ならではの魅力です。
@@ -148,7 +131,7 @@ export const AboutMessage: FC = () => {
                 </Text>
               </Text>
             </Box>
-          </Box>
+          </Flex>
         </FadeInAnimation>
       </ContentWrapper>
     </IdWrapper>
