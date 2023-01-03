@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Image, Stack, Text } from '@chakra-ui/react';
 import {
   AngleRightIcon,
   BaseImage,
@@ -9,29 +9,23 @@ import React, { FC } from 'react';
 
 export const RootHero: FC = () => {
   return (
-    <Box
-      w="100vw"
-      h={{ base: '100vh', sm: 'calc(104px + 56.25vw)', xl: '100vh' }}
-      pt={{ sm: '104px', xl: 0 }}
-      bg="main.200"
-      backgroundImage={{
-        base: "url('/images/root/root_hero_image01_sp.jpg')",
-        sm: "url('/images/root/root_hero_image01_pc.jpg')",
-      }}
-      backgroundSize={{ base: 'contain', sm: 'cover' }}
-      bgPosition="bottom"
-      bgRepeat={'no-repeat'}
-      display={'grid'}
-      alignItems="center"
-      justifyContent={'center'}
-    >
-      <FadeInAnimation>
+    <FadeInAnimation>
+      <Stack
+        spacing="10"
+        w="100vw"
+        h={{ base: '120vh', sm: 'calc(1px + 70vw)', xl: '80vh' }}
+        pt={{ base: '60px', sm: '130px', xl: '180px' }}
+        pl={{ base: 0, sm: 5, xl: 0 }}
+        justifyContent="center"
+        direction={{ base: 'column', sm: 'row' }}
+      >
         <Box
           pb={{ base: '12.8vw', sm: '5.2vw', xl: '2.222vw' }}
           px={{ base: '6.4vw', sm: 0 }}
+          justifyContent="left"
         >
           <Box fontWeight="bold">
-            <Box display={'flex'} justifyContent="center">
+            <Box display={'flex'}>
               <Text
                 as="p"
                 fontSize={{ base: '7.46vw', sm: '4.17vw', xl: '3.33vw' }}
@@ -39,10 +33,10 @@ export const RootHero: FC = () => {
                 px={{ base: '3.2vw', md: '1.56vw', xl: '0.83vw' }}
                 display="inline-block"
               >
-                SDGs時代の
+                No Sustainability
               </Text>
             </Box>
-            <Box display={'flex'} justifyContent="center">
+            <Box display={'flex'}>
               <Text
                 as="p"
                 fontSize={{ base: '7.46vw', sm: '4.17vw', xl: '3.33vw' }}
@@ -51,27 +45,27 @@ export const RootHero: FC = () => {
                 px={{ base: '3.2vw', md: '1.56vw', xl: '0.83vw' }}
                 display="inline-block"
               >
-                経営戦略に最適解を
+                No Grouth
               </Text>
             </Box>
           </Box>
           <Text
-            fontSize={{ base: '4.8vw', sm: '2.344vw', xl: '1.667vw' }}
+            fontSize={{ base: '4.0vw', sm: '2.0vw', xl: '1.5vw' }}
             textAlign="center"
             fontWeight={'medium'}
             mt={{ base: '8.53vw', sm: '4.167vw', xl: '2.5vw' }}
           >
             <Text as="span" display={{ sm: 'block' }}>
-              サステイナブル経営のための
+              財務会計だけで企業価値が決まらない時代を目指して
             </Text>
             <Text as="span" display={{ sm: 'block' }}>
-              ESG情報開示戦略をサポートします。
+              「サステナブルファイナンス」領域を創造します
             </Text>
           </Text>
           <Box
             maxW={{ base: '64vw', sm: 'full', xl: '30.278vw' }}
             mx="auto"
-            mt={{ base: 6, sm: '3.333vw' }}
+            mt={{ base: 6, sm: '5vw' }}
           >
             <BaseLink
               href="/about"
@@ -79,7 +73,7 @@ export const RootHero: FC = () => {
               px={{ base: 4, sm: 6 }}
               w="full"
               color="base.100"
-              bg="sub.100"
+              bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
               transitionProperty="all"
               transitionTimingFunction="linear"
               transitionDuration="fast"
@@ -108,7 +102,20 @@ export const RootHero: FC = () => {
             </BaseLink>
           </Box>
         </Box>
-      </FadeInAnimation>
-    </Box>
+        <Box
+          pb={{ base: '12.8vw', sm: '5.2vw', xl: '2.222vw' }}
+          px={{ base: '6.4vw', sm: 0 }}
+          display={'flex'}
+          justifyContent="center"
+        >
+          <Image
+            src={'/images/root/root_hero.png'}
+            width={{ base: 500, sm: 400, xl: 500 }}
+            height={{ base: 500, sm: 400, xl: 500 }}
+            alt=""
+          />
+        </Box>
+      </Stack>
+    </FadeInAnimation>
   );
 };
