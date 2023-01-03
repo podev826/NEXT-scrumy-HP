@@ -8,7 +8,7 @@ export const RecruitTop: FC = () => {
     <ContentWrapper py="0" pt={{ base: 16, md: 20, xl: 24 }}>
       <FadeInAnimation>
         <Box
-          fontSize={{ base: '7.466vw', md: '6.111vw', xl: '7xl', '2xl': '8xl' }}
+          fontSize={{ base: '7.466vw', md: '5.111vw', xl: '7xl', '2xl': '8xl' }}
           fontStyle="italic"
           fontWeight={'bold'}
           lang="en"
@@ -31,26 +31,26 @@ export const RecruitTop: FC = () => {
             &nbsp;Sustainable.
           </Text>
         </Box>
-        <Box mt={{ base: 8, md: 12, xl: 16 }}>
+        <Box mt={{ base: 8, md: 12, xl: 16 }} w="90vw">
           <Text
             fontSize={{ base: 'lg', md: 'xl', xl: '2xl' }}
             fontWeight="bold"
             textAlign={'center'}
             lineHeight={{ base: '2', md: '2.2', xl: '2.4' }}
           >
-            <Text as="span" display={{ md: 'block' }}>
+            <Text as="span" display={{ lg: 'block' }}>
               「スマート」は、決してクールさやスタイリッシュさのみを意味するわけではありません。
             </Text>
-            <Text as="span" display={{ md: 'block' }}>
+            <Text as="span" display={{ lg: 'block' }}>
               より客観的に、次元を上げて、思考し行動に移すサイクルが実現された状態を指します。
             </Text>
-            <Text as="span" display={{ md: 'block' }}>
+            <Text as="span" display={{ lg: 'block' }}>
               「サステナブル」は、決して自然環境と経済に対象が限定されているわけではありません
             </Text>
-            <Text as="span" display={{ md: 'block' }}>
+            <Text as="span" display={{ lg: 'block' }}>
               よりマクロに、「スマート」な状態を継続し、目指す未来へ向かい続けることを指します。
             </Text>
-            <Text as="span" display={{ md: 'block' }}>
+            <Text as="span" display={{ lg: 'block' }}>
               我々は、常に「スマートであるか」「サステナブルであるか」を日々問い続けています。
             </Text>
           </Text>
