@@ -19,21 +19,17 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     title: 'Top',
     href: '/',
     list: [
-     {
-        text: 'Partnership',
-        href: '/#news',
-      },
       {
         text: 'News',
         href: '/#news',
       },
       {
         text: 'Message',
-        href: '/#news',
+        href: '/#message',
       },
       {
         text: 'Media',
-        href: '/#news',
+        href: '/#media',
       },
       {
         text: 'Contact',
