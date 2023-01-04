@@ -1,10 +1,5 @@
 import { Box, Image, Stack, Text } from '@chakra-ui/react';
-import {
-  AngleRightIcon,
-  BaseImage,
-  BaseLink,
-  FadeInAnimation,
-} from 'components/Elements';
+import { AngleRightIcon, BaseLink, FadeInAnimation } from 'components/Elements';
 import React, { FC } from 'react';
 
 export const RootHero: FC = () => {
@@ -13,11 +8,9 @@ export const RootHero: FC = () => {
       <Stack
         spacing="10"
         w="100vw"
-        h={{ base: '120vh', sm: 'calc(1px + 70vw)', xl: '80vh' }}
-        pt={{ base: '60px', sm: '130px', xl: '180px' }}
-        pl={{ base: 0, sm: 5, xl: 0 }}
+        pt={{ base: '60px', sm: '130px', lg: '180px', xl: '230px' }}
         justifyContent="center"
-        direction={{ base: 'column', sm: 'row' }}
+        direction={{ base: 'column', lg: 'row' }}
       >
         <Box
           pb={{ base: '12.8vw', sm: '5.2vw', xl: '2.222vw' }}
@@ -25,23 +18,39 @@ export const RootHero: FC = () => {
           justifyContent="left"
         >
           <Box fontWeight="bold">
-            <Box display={'flex'}>
+            <Box
+              display={'flex'}
+              justifyContent={{ sm: 'center', lg: 'normal' }}
+            >
               <Text
                 as="p"
-                fontSize={{ base: '7.46vw', sm: '4.17vw', xl: '3.33vw' }}
+                fontSize={{
+                  base: '7.46vw',
+                  sm: '5.17vw',
+                  lg: '4.5vw',
+                  xl: '3.33vw',
+                }}
                 bg="white"
-                px={{ base: '3.2vw', md: '1.56vw', xl: '0.83vw' }}
+                px={{ base: '3.2vw', md: '0', xl: '0.83vw' }}
                 display="inline-block"
               >
                 No Sustainability
               </Text>
             </Box>
-            <Box display={'flex'}>
+            <Box
+              display={'flex'}
+              justifyContent={{ sm: 'center', lg: 'normal' }}
+            >
               <Text
                 as="p"
-                fontSize={{ base: '7.46vw', sm: '4.17vw', xl: '3.33vw' }}
+                fontSize={{
+                  base: '7.46vw',
+                  sm: '5.17vw',
+                  lg: '4.5vw',
+                  xl: '3.33vw',
+                }}
                 bg="white"
-                mt={{ base: '3.2vw', md: '1.56vw', xl: '0.83vw' }}
+                mt={{ base: '3.2vw', md: '0', xl: '0.83vw' }}
                 px={{ base: '3.2vw', md: '1.56vw', xl: '0.83vw' }}
                 display="inline-block"
               >
@@ -49,8 +58,21 @@ export const RootHero: FC = () => {
               </Text>
             </Box>
           </Box>
+          <Box
+            py={{ base: '12.8vw', sm: '2.2vw' }}
+            px={{ base: '6.4vw', sm: 0 }}
+            display={{ sm: 'flex', lg: 'none' }}
+            justifyContent="center"
+          >
+            <Image
+              src={'/images/root/mainImage.png'}
+              width={{ base: 500, sm: 370 }}
+              height={{ base: 500, sm: 370 }}
+              alt=""
+            />
+          </Box>
           <Text
-            fontSize={{ base: '4.0vw', sm: '2.0vw', xl: '1.5vw' }}
+            fontSize={{ base: '4.0vw', sm: '2.3vw', lg: '1.5vw' }}
             textAlign="center"
             fontWeight={'medium'}
             mt={{ base: '8.53vw', sm: '4.167vw', xl: '2.5vw' }}
@@ -63,13 +85,13 @@ export const RootHero: FC = () => {
             </Text>
           </Text>
           <Box
-            maxW={{ base: '64vw', sm: 'full', xl: '30.278vw' }}
+            maxW={{ base: '64vw', sm: '40vw', xl: '30.278vw' }}
             mx="auto"
-            mt={{ base: 6, sm: '5vw' }}
+            mt={{ base: 6, sm: '3vh', lg: '5vh', xl: '7vh' }}
           >
             <BaseLink
               href="/about"
-              py={{ base: '3.2vw', xl: '1.528vw' }}
+              py={{ base: '1.5vw', xl: '1.528vw' }}
               px={{ base: 4, sm: 6 }}
               w="full"
               color="base.100"
@@ -105,13 +127,13 @@ export const RootHero: FC = () => {
         <Box
           pb={{ base: '12.8vw', sm: '5.2vw', xl: '2.222vw' }}
           px={{ base: '6.4vw', sm: 0 }}
-          display={'flex'}
+          display={{ base: 'none', lg: 'flex' }}
           justifyContent="center"
         >
           <Image
-            src={'/images/root/root_hero.png'}
-            width={{ base: 500, sm: 400, xl: 500 }}
-            height={{ base: 500, sm: 400, xl: 500 }}
+            src={'/images/root/mainImage.png'}
+            width={{ base: 500, sm: 420, xl: 500 }}
+            height={{ base: 500, sm: 420, xl: 500 }}
             alt=""
           />
         </Box>
