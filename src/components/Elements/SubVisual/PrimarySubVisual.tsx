@@ -46,6 +46,7 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
               >
                 {content.title}
               </Text>
+
               <Text
                 fontSize={{ base: '5.333vw', md: '1.667vw', '2xl': '2xl' }}
                 fontWeight="bold"
@@ -53,7 +54,25 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
                 mt={{ base: 4, md: 1 }}
                 color="white"
               >
-                {content.text}
+                {content.text1}
+              </Text>
+              <Text
+                fontSize={{ base: '5.333vw', md: '1.667vw', '2xl': '2xl' }}
+                fontWeight="bold"
+                lineHeight="1.667"
+                mt={{ base: 4, md: 1 }}
+                color="white"
+              >
+                {content.text2}
+              </Text>
+              <Text
+                fontSize={{ base: '5.333vw', md: '1.667vw', '2xl': '2xl' }}
+                fontWeight="bold"
+                lineHeight="1.667"
+                mt={{ base: 4, md: 1 }}
+                color="white"
+              >
+                {content.text3}
               </Text>
             </Box>
           </Flex>
