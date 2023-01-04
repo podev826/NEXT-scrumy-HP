@@ -78,9 +78,14 @@ export const Footer: FC = () => {
             </Flex>
           </Box>
           <Spacer />
-          <Flex flexDirection={{ base: 'row', md: 'column' }}>
+          <Flex
+            justifyContent="center"
+            flexDirection={{ base: 'row', md: 'column' }}
+            gap={10}
+            display={'flex'}
+          >
             <BaseImage src="/images/common/pri.png" width={250} height={94} />
-            <Spacer />
+
             <BaseImage src="/images/common/sasb.png" width={250} height={94} />
           </Flex>
         </Flex>
