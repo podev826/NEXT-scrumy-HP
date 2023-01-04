@@ -24,6 +24,7 @@ export const RootService: FC = () => {
                 h="full"
                 width={{ sm: '80vw', md: '40vw', '2xl': '600px' }}
                 shadow="md"
+                mx="auto"
               >
                 <Box mt={{ base: 4, xl: 0 }} maxW={{ xl: '512px' }}>
                   <BaseImage
@@ -63,6 +64,7 @@ export const RootService: FC = () => {
                 h="full"
                 width={{ sm: '80vw', md: '40vw', '2xl': '600px' }}
                 shadow="md"
+                mx="auto"
               >
                 <Box
                   mt={{ base: 4, xl: 0 }}
