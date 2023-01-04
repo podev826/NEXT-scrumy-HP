@@ -1,21 +1,7 @@
-import {
-  Accordion,
-  AccordionButton,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-  Flex,
-  Text,
-} from '@chakra-ui/react';
-import {
-  CircleMinusIcon,
-  CirclePlusIcon,
-  FadeInAnimation,
-  PrimaryTitle,
-} from 'components/Elements';
+import { Box, Flex, Text } from '@chakra-ui/react';
+import { FadeInAnimation, PrimaryTitle } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import { RecruitCEO } from 'features/recruit/CEO';
-import Image from 'next/image';
 import { FC } from 'react';
 
 export const RootMessage: FC = () => {
@@ -30,13 +16,7 @@ export const RootMessage: FC = () => {
             display={{ lg: 'flex', md: 'block' }}
             mt={{ base: 5, xl: 6 }}
           >
-            <Box
-              fontSize={0}
-              position="relative"
-              mt={{ base: 5, xl: 0 }}
-              shadow="md"
-              borderRadius="32px"
-            >
+            <Box fontSize={0} position="relative" mt={{ base: 5, xl: 0 }}>
               <RecruitCEO />
             </Box>
 
@@ -83,38 +63,38 @@ export const RootMessage: FC = () => {
                 <Text>
                   Scrumyは「利益追求」と「幸福追求」を両立できる社会の実現を目指しています。
                 </Text>
-                <Box display={{ base: 'none', md: 'block' }}>
+                <Box display={{ md: 'block' }}>
                   <Text mt={6}>
                     ミッションは、世界一のゼブラ企業にとして「資本主義経済システム」と「民主政治システム」の「API連携」を行うことです。そのためのキーワードとして「サステナビリティ」を中心に据えています。
                   </Text>
                 </Box>
-                <Box display={{ base: 'none', md: 'block' }}>
+                <Box display={{ md: 'block' }}>
                   <Text mt={6}>
                     おかげさまで、弁護士、会計士、産業医、証券アナリスト、サステナビリティ学者など多種多様な分野の研究と実務に通じたメンバーが集い、科学的手法に基づいたデータドリブンな情報基盤をご提供いたします。
                   </Text>
                 </Box>
-                <Text
-                  mt={{ base: 5, xl: 7 }}
-                  fontWeight="bold"
-                  fontSize={{ xl: 'xl' }}
-                  textAlign={{ xl: 'right' }}
-                >
-                  <Text
-                    as="span"
-                    display={{ base: 'block', xl: 'inline' }}
-                    mr={{ xl: 4 }}
-                  >
-                    株式会社Scrumy 代表取締役
-                  </Text>
-                  <Text
-                    as="span"
-                    display={{ base: 'block', xl: 'inline' }}
-                    mt={{ base: 1, xl: 0 }}
-                  >
-                    笹埜 健斗
-                  </Text>
-                </Text>
               </Box>
+              <Text
+                mt={{ base: 5, xl: 7 }}
+                fontWeight="bold"
+                fontSize={{ xl: 'xl' }}
+                textAlign={{ xl: 'right' }}
+              >
+                <Text
+                  as="span"
+                  display={{ base: 'block', xl: 'inline' }}
+                  mr={{ xl: 4 }}
+                >
+                  株式会社Scrumy 代表取締役
+                </Text>
+                <Text
+                  as="span"
+                  display={{ base: 'block', xl: 'inline' }}
+                  mt={{ base: 1, xl: 0 }}
+                >
+                  笹埜 健斗
+                </Text>
+              </Text>
             </Box>
           </Flex>
         </FadeInAnimation>
