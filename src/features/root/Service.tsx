@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import { BaseImage, FadeInAnimation, PrimaryTitle } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import React, { FC } from 'react';
@@ -9,7 +9,7 @@ export const RootService: FC = () => {
       <ContentWrapper bg="white">
         <FadeInAnimation>
           <PrimaryTitle en="Service" />
-          <Box
+          <Flex
             mt={{ base: 12, xl: 16 }}
             display={{ md: 'flex' }}
             justifyContent="space-around"
@@ -99,7 +99,7 @@ export const RootService: FC = () => {
                 </Box>
               </Box>
             </IdWrapper>
-          </Box>
+          </Flex>
         </FadeInAnimation>
       </ContentWrapper>
     </IdWrapper>
