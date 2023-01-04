@@ -64,16 +64,13 @@ build をしたタイミングで、
 GitHub の main, develop に push された際に build が走るようになっている。
 環境変数は CloudBuild 上で管理している。
 
-
-
-
 ##renewal
 
-public:主に画像データ。imagesの画像を新しいものに変更、古いものを削除する
+public:主に画像データ。images の画像を新しいものに変更、古いものを削除する
 
 src:
-  components
-    element：各ページのコンポーネント
-    layout:ヘッダーやフッター
-    
-  pages:基本的にここをいじる？コンポーネント化されているので、src/components/elementにある各ページで使用されているコンポーネントを編集する。
+components
+element：各ページのコンポーネント
+layout:ヘッダーやフッター
+
+pages:基本的にここをいじる？コンポーネント化されているので、src/components/element にある各ページで使用されているコンポーネントを編集する。
