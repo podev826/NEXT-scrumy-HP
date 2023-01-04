@@ -16,7 +16,7 @@ export const MEMBER_LIST = [
   {
     name: '並木 健剛',
     image: '/images/about/Kengo Namiki 1.png',
-    position: 'CEO',
+    position: 'CRO',
     description:
       '神奈川県出身。慶應義塾大学経済学部卒。株式会社三井住友銀行にて財務や営業に従事。現在はD2Cブランド制作を支援する株式会社Far East InnovatorsではCOOとして全社統括しており、M&Aに向けて挑戦中。',
   },
