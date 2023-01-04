@@ -37,7 +37,7 @@ export const SECONDARY_NAV: SecondaryNavProps = {
       },
     ],
   },
- about: {
+  about: {
     title: 'About us',
     href: '/about',
     list: [
