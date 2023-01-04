@@ -87,7 +87,7 @@ export const RootHero: FC = () => {
           <Box
             maxW={{ base: '64vw', sm: '40vw', xl: '30.278vw' }}
             mx="auto"
-            mt={{ base: 6, sm: '3vh', lg: '5vh', xl: '7vh' }}
+            mt={{ base: 6, sm: '3vh', lg: '4vh', xl: '7vh' }}
           >
             <BaseLink
               href="/about"
@@ -132,8 +132,8 @@ export const RootHero: FC = () => {
         >
           <Image
             src={'/images/root/mainImage.png'}
-            width={{ base: 500, sm: 420, xl: 500 }}
-            height={{ base: 500, sm: 420, xl: 500 }}
+            width={{ lg: '35vw' }}
+            height={{ lg: '35vw' }}
             alt=""
           />
         </Box>
