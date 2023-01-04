@@ -22,15 +22,10 @@ export const RootService: FC = () => {
                 display={{ xl: 'block' }}
                 alignItems={{ xl: 'center' }}
                 h="full"
-                width={{ sm: '80vw', md: '42vw' }}
+                width={{ sm: '80vw', md: '40vw', '2xl': '600px' }}
                 shadow="md"
-                mx="auto"
               >
-                <Box
-                  mt={{ base: 4, xl: 0 }}
-                  maxW={{ xl: '512px' }}
-                  justifyContent="center"
-                >
+                <Box mt={{ base: 4, xl: 0 }} maxW={{ xl: '512px' }}>
                   <BaseImage
                     src="/images/root/root_service_image01.png" //ここを新しいものに差し替える
                     width={1272}
@@ -65,11 +60,9 @@ export const RootService: FC = () => {
                 px={{ base: 4, xl: 14 }}
                 py={{ base: 9, xl: 16 }}
                 display={{ xl: 'block' }}
-                alignItems={{ xl: 'center' }}
                 h="full"
-                width={{ sm: '80vw', md: '42vw' }}
+                width={{ sm: '80vw', md: '40vw', '2xl': '600px' }}
                 shadow="md"
-                mx="auto"
               >
                 <Box
                   mt={{ base: 4, xl: 0 }}
