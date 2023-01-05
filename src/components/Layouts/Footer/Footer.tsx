@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Spacer, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, Image, Spacer, Text } from '@chakra-ui/react';
 import { BaseImage, BaseLink } from 'components/Elements';
 import { SECONDARY_NAV } from 'configs';
 import { FC } from 'react';
@@ -46,13 +46,14 @@ export const Footer: FC = () => {
           <Box
             display={{ base: 'flex', xl: 'none' }}
             flexDirection="column"
-            justifyContent="flex-end"
+            justifyContent="cent"
+            mt={{ md: 2 }}
           >
             <Flex
               fontSize="sm"
               fontWeight="bold"
               flexWrap="wrap"
-              columnGap={8}
+              columnGap={{ base: 8, sm: 5 }}
               rowGap={3}
               mt={{ base: 8, md: 0 }}
             >
@@ -79,14 +80,23 @@ export const Footer: FC = () => {
           </Box>
           <Spacer />
           <Flex
-            justifyContent="center"
+            justifyContent="space-around"
             flexDirection={{ base: 'row', md: 'column' }}
-            gap={10}
+            gap={{ base: 10, md: 3, xl: 10 }}
             display={'flex'}
+            mt={{ base: 8, md: 0 }}
           >
-            <BaseImage src="/images/common/pri.png" width={250} height={94} />
+            <Image
+              src="/images/common/pri.png"
+              width={{ base: 150, xl: 250 }}
+              height={{ base: 57, xl: 94 }}
+            />
 
-            <BaseImage src="/images/common/sasb.png" width={250} height={94} />
+            <Image
+              src="/images/common/sasb.png"
+              width={{ base: 150, xl: 250 }}
+              height={{ base: 57, xl: 94 }}
+            />
           </Flex>
         </Flex>
         <Text
