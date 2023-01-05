@@ -19,7 +19,7 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
         w="full"
         mx="auto"
         maxW={1440}
-        minH={{ base: '109.333vw', md: '35.556vw', '2xl': '512px' }}
+        minH={{ base: '69.333vw', md: '35.556vw', '2xl': '512px' }}
         px={{ md: 10, lg: 16, xl: 24 }}
         display="grid"
         alignItems="stretch"
