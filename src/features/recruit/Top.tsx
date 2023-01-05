@@ -31,14 +31,14 @@ export const RecruitTop: FC = () => {
             &nbsp;Sustainable.
           </Text>
         </Box>
-        <Box mt={{ base: 8, md: 12, xl: 16 }} w="90vw">
+        <Box mt={{ base: 8, md: 12, xl: 16 }}>
           <Text
             fontSize={{ base: 'lg', md: 'xl', xl: '2xl' }}
             fontWeight="bold"
             textAlign={'center'}
             lineHeight={{ base: '2', md: '2.2', xl: '2.4' }}
           >
-            <Text as="span" display={{ lg: 'block' }}>
+            <Text as="span" margin={{ lg: 'auto' }}>
               「スマート」は、決してクールさやスタイリッシュさのみを意味するわけではありません。
             </Text>
             <Text as="span" display={{ lg: 'block' }}>
