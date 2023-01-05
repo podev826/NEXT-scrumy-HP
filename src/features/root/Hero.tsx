@@ -86,7 +86,7 @@ export const RootHero: FC = () => {
           <Box
             maxW={{ base: '64vw', sm: '40vw', xl: '30.278vw' }}
             mx="auto"
-            mt={{ base: 6, sm: '2vh', lg: '4vh', xl: '7vh' }}
+            mt={{ base: 6, sm: '2vh', lg: '7vh', xl: '7vh' }}
           >
             <BaseLink
               href="/about"
@@ -105,7 +105,7 @@ export const RootHero: FC = () => {
                 opacity: 1,
               }}
               borderRadius="full"
-              fontSize={{ base: '4.267vw', sm: '2.344vw', xl: '1.389vw' }}
+              fontSize={{ base: '4.267vw', sm: '2.344vw', lg: '1.389vw' }}
               fontWeight={'bold'}
               position="relative"
             >
