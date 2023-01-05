@@ -46,27 +46,30 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
               >
                 {content.title}
               </Text>
-
-              <Text
-                fontSize={{ base: '5.333vw', md: '1.667vw', '2xl': '2xl' }}
-                fontWeight="bold"
-                lineHeight="1.667"
-                mt={{ base: 4, md: 1 }}
-                color="white"
-              >
-                {content.text1}
+              <Text as="span" display={{ base: 'block', xl: 'inline' }}>
+                <Text
+                  fontSize={{ base: '4.5vw', md: '1.667vw', '2xl': '2xl' }}
+                  fontWeight="bold"
+                  lineHeight="1.667"
+                  display="inline-block"
+                  mt={{ base: 4, md: 1 }}
+                  color="white"
+                >
+                  {content.text1}
+                </Text>
+                <Text
+                  fontSize={{ base: '4.5vw', md: '1.667vw', '2xl': '2xl' }}
+                  fontWeight="bold"
+                  lineHeight="1.667"
+                  display="inline-block"
+                  mt={{ base: 4, md: 1 }}
+                  color="white"
+                >
+                  {content.text2}
+                </Text>
               </Text>
               <Text
-                fontSize={{ base: '5.333vw', md: '1.667vw', '2xl': '2xl' }}
-                fontWeight="bold"
-                lineHeight="1.667"
-                mt={{ base: 4, md: 1 }}
-                color="white"
-              >
-                {content.text2}
-              </Text>
-              <Text
-                fontSize={{ base: '5.333vw', md: '1.667vw', '2xl': '2xl' }}
+                fontSize={{ base: '4.5vw', md: '1.667vw', '2xl': '2xl' }}
                 fontWeight="bold"
                 lineHeight="1.667"
                 mt={{ base: 4, md: 1 }}
