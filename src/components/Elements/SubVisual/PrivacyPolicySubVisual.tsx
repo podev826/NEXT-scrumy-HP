@@ -14,7 +14,7 @@ export const PrivacyPolicySubVisual: FC = () => {
         w="full"
         mx="auto"
         maxW={1440}
-        minH={{ base: '109.333vw', md: '35.556vw', '2xl': '512px' }}
+        minH={{ base: '49.333vw', md: '35.556vw', '2xl': '512px' }}
         px={{ md: 10, lg: 16, xl: 24 }}
         display="grid"
         alignItems="stretch"
@@ -45,7 +45,7 @@ export const PrivacyPolicySubVisual: FC = () => {
                 <Box
                   as="span"
                   display="block"
-                  ml={{ md: '13.056vw', '2xl': '0px' }}
+                  ml={{ md: '13.056vw', '2xl': '13.056vw' }}
                   mt={{ md: '0.83vw', '2xl': '12px' }}
                   color="white"
                 >
