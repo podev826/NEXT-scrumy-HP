@@ -8,7 +8,7 @@ export const RootHero: FC = () => {
       <Stack
         spacing="10"
         w="100vw"
-        pt={{ base: '60px', sm: '130px', lg: '180px', xl: '230px' }}
+        pt={{ base: '120px', sm: '120px', lg: '180px', xl: '230px' }}
         justifyContent="center"
         direction={{ base: 'column', lg: 'row' }}
       >
@@ -20,15 +20,14 @@ export const RootHero: FC = () => {
           <Box fontWeight="bold">
             <Box
               display={'flex'}
-              justifyContent={{ sm: 'center', lg: 'normal' }}
+              justifyContent={{ base: 'center', sm: 'center', lg: 'normal' }}
             >
               <Text
                 as="p"
                 fontSize={{
-                  base: '7.46vw',
-                  sm: '5.17vw',
-                  lg: '4.5vw',
-                  xl: '3.33vw',
+                  base: '6.46vw',
+                  sm: '4.5vw',
+                  lg: '3.33vw',
                 }}
                 bg="white"
                 px={{ base: '3.2vw', md: '0', xl: '0.83vw' }}
@@ -39,19 +38,18 @@ export const RootHero: FC = () => {
             </Box>
             <Box
               display={'flex'}
-              justifyContent={{ sm: 'center', lg: 'normal' }}
+              justifyContent={{ base: 'center', sm: 'center', lg: 'normal' }}
             >
               <Text
                 as="p"
                 fontSize={{
-                  base: '7.46vw',
-                  sm: '5.17vw',
-                  lg: '4.5vw',
-                  xl: '3.33vw',
+                  base: '6.46vw',
+                  sm: '4.5vw',
+                  lg: '3.33vw',
                 }}
                 bg="white"
-                mt={{ base: '3.2vw', md: '0', xl: '0.83vw' }}
-                px={{ base: '3.2vw', md: '1.56vw', xl: '0.83vw' }}
+                mt={{ base: '1.2vw', md: '0', xl: '0.83vw' }}
+                px={{ base: '3.2vw', md: '0', xl: '0.83vw' }}
                 display="inline-block"
               >
                 No Grouth
@@ -59,20 +57,21 @@ export const RootHero: FC = () => {
             </Box>
           </Box>
           <Box
-            py={{ base: '12.8vw', sm: '2.2vw' }}
+            py={{ base: '4.8vw', sm: '1vw' }}
             px={{ base: '6.4vw', sm: 0 }}
             display={{ sm: 'flex', lg: 'none' }}
             justifyContent="center"
           >
             <Image
               src={'/images/root/mainImage.png'}
-              width={{ base: 500, sm: 370 }}
-              height={{ base: 500, sm: 370 }}
+              width={{ base: '60vw', sm: 300 }}
+              height={{ base: '60vw', sm: 300 }}
+              mx="auto"
               alt=""
             />
           </Box>
           <Text
-            fontSize={{ base: '4.0vw', sm: '2.3vw', lg: '1.5vw' }}
+            fontSize={{ base: '3.85vw', sm: '2.3vw', lg: '1.5vw' }}
             textAlign="center"
             fontWeight={'medium'}
             mt={{ base: '8.53vw', sm: '4.167vw', xl: '2.5vw' }}
@@ -87,7 +86,7 @@ export const RootHero: FC = () => {
           <Box
             maxW={{ base: '64vw', sm: '40vw', xl: '30.278vw' }}
             mx="auto"
-            mt={{ base: 6, sm: '3vh', lg: '4vh', xl: '7vh' }}
+            mt={{ base: 6, sm: '2vh', lg: '4vh', xl: '7vh' }}
           >
             <BaseLink
               href="/about"
