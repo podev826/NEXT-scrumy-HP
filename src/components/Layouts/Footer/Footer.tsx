@@ -1,5 +1,5 @@
 import { Box, Flex, Grid, Image, Spacer, Text } from '@chakra-ui/react';
-import { BaseImage, BaseLink } from 'components/Elements';
+import { BaseLink } from 'components/Elements';
 import { SECONDARY_NAV } from 'configs';
 import { FC } from 'react';
 
@@ -90,12 +90,14 @@ export const Footer: FC = () => {
               src="/images/common/pri.png"
               width={{ base: 150, xl: 250 }}
               height={{ base: 57, xl: 94 }}
+              alt=""
             />
 
             <Image
               src="/images/common/sasb.png"
               width={{ base: 150, xl: 250 }}
               height={{ base: 57, xl: 94 }}
+              alt=""
             />
           </Flex>
         </Flex>
