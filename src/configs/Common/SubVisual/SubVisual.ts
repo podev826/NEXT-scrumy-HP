@@ -37,8 +37,8 @@ export const SUB_VISUAL_LIST: SubVisualListProps = {
   contact: {
     title: 'Contact',
     text1: '株式会社Scrumyやサービスに',
-    text2: '関するお問い合わせは',
-    text3: '以下のフォームよりお願いいたします。',
+    text2: '関するお問い合わせは、以下の',
+    text3: 'フォームよりお願いいたします。',
     image: {
       pc: '/images/contact/contact_sub-visual_pc.jpg',
       sp: '/images/contact/contact_sub-visual_sp.jpg',
