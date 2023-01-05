@@ -93,8 +93,8 @@ export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
           </Box>
           <Text
             maxW={{ base: '280px', xl: '364px' }}
-            mx={{ base: 'auto', xl: 0 }}
-            mt={{ base: 5, xl: 7 }}
+            mx={{ base: '0', lg: 'auto' }}
+            mt={{ base: 10, xl: 10 }}
           >
             <PrimaryLink href="/contact" variant={'primary'} w="full">
               詳しく見る
