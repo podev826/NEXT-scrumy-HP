@@ -28,9 +28,9 @@ export const RootService: FC = () => {
               >
                 <Box mt={{ base: 4, xl: 0 }} maxW={{ xl: '512px' }}>
                   <BaseImage
-                    src="/images/root/root_service_image01.png" //ここを新しいものに差し替える
-                    width={1272}
-                    height={666}
+                    src="/images/root/root_service_image01.png"
+                    width={1080}
+                    height={1080}
                   />
                   <Box mt={{ xl: 4 }}>
                     <Text
@@ -72,9 +72,9 @@ export const RootService: FC = () => {
                   justifyContent="center"
                 >
                   <BaseImage
-                    src="/images/root/root_service_image01.png" //ここを新しいものに差し替える
-                    width={1272}
-                    height={666}
+                    src="/images/root/root_service_image02.png"
+                    width={1080}
+                    height={1080}
                   />
                   <Box mt={{ xl: 4 }}>
                     <Text
