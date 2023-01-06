@@ -86,7 +86,7 @@ export const RootHero: FC = () => {
           <Box
             maxW={{ base: '64vw', sm: '40vw', xl: '30.278vw' }}
             mx="auto"
-            mt={{ base: 6, sm: '2vh', lg: '7vh', xl: '7vh' }}
+            mt={{ base: 6, sm: '2vh', lg: '9vh', xl: '14vh' }}
           >
             <BaseLink
               href="/about"
