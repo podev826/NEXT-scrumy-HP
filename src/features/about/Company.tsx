@@ -68,7 +68,8 @@ export const AboutCompany: FC = () => {
               fontSize={{ base: 'lg', md: 'lg', xl: 'xl' }}
               fontWeight="medium"
               lineHeight="1.667"
-              w={{ md: '80vw', sm: 'full' }}
+              // w={{ md: 'full', sm: 'full' }}
+              w="full"
             >
               <Text as="span" display="block">
                 株式会社Scrumy
