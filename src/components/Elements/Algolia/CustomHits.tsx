@@ -47,6 +47,16 @@ export const CustomHits: FC<
                     <Box mr={{ base: 5, xl: 10 }} lang="en">
                       {dayjs(hit.publishedAt).format('YYYY.MM.DD')}
                     </Box>
+                    <Text
+                      minW={{ base: 20, xl: '140px' }}
+                      display="inline-block"
+                      bg="main.100"
+                      color="sub.100"
+                      px={2}
+                      textAlign={'center'}
+                    >
+                      {hit.category} {/* ここを変更する */}
+                    </Text>
                     <Box
                       minW={{ base: 20, xl: '140px' }}
                       display="inline-block"
