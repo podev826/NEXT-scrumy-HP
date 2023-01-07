@@ -46,7 +46,7 @@ export const RootService: FC = () => {
                       pl={{ base: '4px', xl: 4 }}
                       pr={{ xl: 2 }}
                     >
-                      サステナビリティ経営戦略支援
+                      Scrumy-Support
                     </Text>
                     <Text mt={{ base: 4 }}>
                       Scrumyにはサステナビリティ学者をはじめとした各種専門人材が在籍しており、最新のエビデンスや知見に基づいたESGコンサルティングを提供いたします。
@@ -90,7 +90,7 @@ export const RootService: FC = () => {
                       pl={{ base: '4px', xl: 4 }}
                       pr={{ xl: 2 }}
                     >
-                      サステナブルファイナンスDB
+                      Scrumy-Code
                     </Text>
                     <Text mt={{ base: 4 }}>
                       サステナビリティ会計基準「SASB/ISSB」に準拠し、財務情報と紐づくサステナビリティ情報を可視化することで、企業と投資家のエンゲージメントを実現するため情報基盤を提供します。
