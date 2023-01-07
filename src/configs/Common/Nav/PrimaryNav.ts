@@ -19,4 +19,8 @@ export const PRIMARY_NAV: PrimaryNavProps = [
     href: '/recruit',
     text: 'Join us',
   },
+  {
+    href: '/media',
+    text: 'Media',
+  },
 ];
