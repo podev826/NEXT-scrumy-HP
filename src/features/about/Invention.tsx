@@ -129,7 +129,7 @@ export const AboutInvention: FC = () => {
     <IdWrapper id="invention">
       <ContentWrapper as="section" bgType="gray">
         <FadeInAnimation>
-          <PrimaryTitle ja="当社の開発事例" en="Invention" />
+          <PrimaryTitle en="Invention" />
           <Box mt={{ base: 12, xl: 16 }}>
             <Box
               as="section"
