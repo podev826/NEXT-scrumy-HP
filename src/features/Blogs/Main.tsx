@@ -1,7 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import {
-  CustomHits,
-  CustomMenu,
+  CustomBlogsHits,
+  CustomBlogsMenu,
   CustomPagination,
   CustomSearchBox,
   FadeInAnimation,
@@ -49,17 +49,6 @@ export const BlogsMain: FC = () => {
                   flexBasis={{ xl: '264px' }}
                   pr={{ xl: 6 }}
                 >
-                  カテゴリから探す
-                </Text>
-                <CustomMenu attribute="category" />
-              </Box>
-              <Box display={{ xl: 'flex' }} alignItems="center">
-                <Text
-                  fontSize={{ base: 'xl', xl: '2xl' }}
-                  fontWeight="bold"
-                  flexBasis={{ xl: '264px' }}
-                  pr={{ xl: 6 }}
-                >
                   キーワードから探す
                 </Text>
                 <Box
@@ -69,11 +58,22 @@ export const BlogsMain: FC = () => {
                   <CustomSearchBox />
                 </Box>
               </Box>
+              <Box display={{ xl: 'flex' }} alignItems="center">
+                <Text
+                  fontSize={{ base: 'xl', xl: '2xl' }}
+                  fontWeight="bold"
+                  flexBasis={{ xl: '264px' }}
+                  pr={{ xl: 6 }}
+                >
+                  カテゴリから探す
+                </Text>
+                <CustomBlogsMenu attribute="category" />
+              </Box>
             </Box>
           </FadeInAnimation>
           <FadeInAnimation>
             <Box pt={{ base: 6, xl: 16 }}>
-              <CustomHits />
+              <CustomBlogsHits />
               <Box mt={{ base: 16, xl: 24 }}>
                 <CustomPagination />
               </Box>
