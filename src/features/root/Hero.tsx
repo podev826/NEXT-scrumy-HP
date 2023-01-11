@@ -52,7 +52,7 @@ export const RootHero: FC = () => {
                 px={{ base: '3.2vw', md: '0', xl: '0.83vw' }}
                 display="inline-block"
               >
-                No Grouth
+                No Growth
               </Text>
             </Box>
           </Box>
