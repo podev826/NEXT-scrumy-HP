@@ -6,15 +6,16 @@ import { FadeInAnimation } from '../Animations';
 export const AboutSubVisual: FC = () => {
   return (
     <Box
+      // smサイズの時のheightを修正
       backgroundImage={{
         base: "url('/images/about/about_sub-visual_bg.png')",
-        sm: "url('/images/about/about_sub-visual_bg.png')",
       }}
-      backgroundSize="cover"
+      backgroundSize={{ sm: 'cover', md: 'cover' }}
       bgPosition="center"
       bgRepeat={'no-repeat'}
       alignItems="center"
       pt={{ base: '33px', md: '18px', xl: '20px' }}
+      pb={{ base: '0', md: '17vh', xl: '20vh' }}
       mt={{ base: '100px', md: '110px', xl: '130px' }}
     >
       <Box
@@ -39,7 +40,7 @@ export const AboutSubVisual: FC = () => {
           >
             <Text
               as="h1"
-              mt={{ md: '4.444vw', '2xl': '64px' }}
+              mt={{ md: '7.444vw', xl: '104px' }}
               fontSize={{ base: '6.467vw', md: '3.333vw', '2xl': '6xl' }}
               fontWeight="bold"
               lineHeight={{ base: '1.32', md: '1.5' }}
@@ -56,7 +57,7 @@ export const AboutSubVisual: FC = () => {
               fontSize={{ base: '3.8vw', md: '1.767vw' }}
               fontWeight="medium"
               lineHeight="1.667"
-              mt={{ base: '30vw', md: '10vw' }}
+              mt={{ base: '15vw', md: '13vw' }}
             >
               <Box as="span" display={{ base: 'none', md: 'block' }}>
                 「サステナビリティ」をブームで終わらせず、経営戦略に革命を起こすために、
