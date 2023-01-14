@@ -24,7 +24,7 @@ export const COMPANY_INFORMATION: CompanyInformationProps = [
   },
   {
     term: '事業内容',
-    description: '情報セキュリティガバナンスSaaS「Scrumy」の開発・運用',
+    description: 'サステナブルファイナンスサービス「Scrumy」の開発・運用',
   },
   {
     term: '資本金',
