@@ -12,19 +12,19 @@ type JobDescriptionProps = JobDescriptionContentProps[];
 
 export const JOB_DESCRIPTION: JobDescriptionProps = [
   {
-    title: 'フロントエンドエンジニア',
+    title: 'バックエンドエンジニア',
     content: [
       {
         term: '求める人物像',
-        description: 'React.js/Next.js、Typescriptに堪能であること。',
+        description: 'ソフトウェア開発設計思想に堪能である方',
       },
       {
         term: '給与',
-        description: '200,000円〜',
+        description: '応談',
       },
       {
         term: '勤務地',
-        description: 'フルリモート',
+        description: '東京(フルリモートの相談も可)',
       },
       {
         term: '勤務時間',
@@ -38,28 +38,27 @@ export const JOB_DESCRIPTION: JobDescriptionProps = [
     ],
   },
   {
-    title: 'バックエンドエンジニア',
+    title: 'ビジネスインターン',
     content: [
       {
         term: '求める人物像',
-        description: 'Go言語、ソフトウェア開発に堪能であること。',
+        description: '弊社の目指す思想に共感しており、かつ向上心がある方',
       },
       {
         term: '給与',
-        description: '200,000円〜',
+        description: '応談',
       },
       {
         term: '勤務地',
-        description: 'フルリモート',
+        description: '東京(フルリモートの相談も可)',
       },
       {
         term: '勤務時間',
-        description:
-          '9:00-18:00 ※フレックス制度を導入しているため前後する可能性があります。',
+        description: '応談',
       },
       {
         term: '加入保険	',
-        description: '社会保険',
+        description: 'なし',
       },
     ],
   },
