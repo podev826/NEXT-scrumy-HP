@@ -22,7 +22,7 @@ export const AboutMember: FC = () => {
     <IdWrapper id="member">
       <ContentWrapper bgType="white">
         <FadeInAnimation>
-          <PrimaryTitle en="Member" />
+          <PrimaryTitle en="Team" />
           <Box
             mt={{ base: 8, md: 12, xl: 16 }}
             pl={{ xl: 14 }}
