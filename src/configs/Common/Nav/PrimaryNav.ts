@@ -20,7 +20,7 @@ export const PRIMARY_NAV: PrimaryNavProps = [
     text: 'Join us',
   },
   {
-    href: '/media',
+    href: '/blogs',
     text: 'Media',
   },
 ];

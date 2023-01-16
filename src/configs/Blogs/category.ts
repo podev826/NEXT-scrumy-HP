@@ -1,13 +1,13 @@
-export type BlogsCategoryProps = {
+export type BlogCategoryProps = {
   text: string;
   slug: string;
 };
 
-type BlogsCategoriesProps = {
-  [key: string]: BlogsCategoryProps;
+type BlogCategoriesProps = {
+  [key: string]: BlogCategoryProps;
 };
 
-export const BLOGS_CATEGORIES: BlogsCategoriesProps = {
+export const BLOG_CATEGORIES: BlogCategoriesProps = {
   all: {
     text: 'All',
     slug: '',

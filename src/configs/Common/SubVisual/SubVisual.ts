@@ -28,7 +28,7 @@ export const SUB_VISUAL_LIST: SubVisualListProps = {
     text2: '関するお問い合わせは、以下の',
     text3: 'フォームよりお願いいたします。',
   },
-  media: {
+  blog: {
     title: 'Scrumy Media',
     text1: '',
     text2: '',

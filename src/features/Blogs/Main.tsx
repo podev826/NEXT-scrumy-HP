@@ -10,19 +10,90 @@ import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import { searchClient } from 'libraries/algolia';
 import { FC } from 'react';
 import { Configure, InstantSearch } from 'react-instantsearch-hooks-web';
-import { NEWS_PER_PAGE } from 'types';
+import { BLOG_PER_PAGE } from 'types';
 
-export const BlogsMain: FC = () => {
+// export const BlogMain: FC<BlogsProps> = ({ contents }) => {
+//   return (
+//     <IdWrapper id="blog">
+//       <ContentWrapper bg="white">
+//         <FadeInAnimation>
+//           <Box mt={{ base: 12, xl: 16 }} px={{ xl: 14 }}>
+//             <Accordion
+//               allowToggle
+//               allowMultiple
+//               display={'grid'}
+//               gap={{ base: 5, xl: 8 }}
+//               mt={8}
+//             >
+//               {contents.map((item) => (
+//                 <AccordionItem
+//                   key={item.id}
+//                   boxShadow={'secondary'}
+//                   borderRadius="32px"
+//                   overflow="hidden"
+//                   border="none"
+//                   p={0}
+//                 >
+//                   {({ isExpanded }) => (
+//                     <>
+//                       <BaseAccordionButton isExpanded={isExpanded}>
+//                         <Box
+//                           display={{ xl: 'flex' }}
+//                           alignItems={{ xl: 'center' }}
+//                         >
+//                           <Box
+//                             fontSize={{ base: 'sm', xl: 'md' }}
+//                             display={'flex'}
+//                             alignItems={'center'}
+//                             mr={{ xl: 16 }}
+//                           >
+//                             <Text
+//                               mr={{ base: 5, xl: 10 }}
+//                               lang="en"
+//                               suppressHydrationWarning
+//                             >
+//                               {dayjs(item.publishedAt).format('YYYY.MM.DD')}
+//                             </Text>
+//                             <Text
+//                               minW={{ base: 20, xl: '140px' }}
+//                               display="inline-block"
+//                               bg="main.100"
+//                               color="sub.100"
+//                               px={2}
+//                               textAlign={'center'}
+//                             >
+//                               {item.category.name}
+//                             </Text>
+//                           </Box>
+//                           <Text pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}>
+//                             {item.title}
+//                           </Text>
+//                         </Box>
+//                       </BaseAccordionButton>
+//                       <BaseAccordionPanel>{item.content}</BaseAccordionPanel>
+//                     </>
+//                   )}
+//                 </AccordionItem>
+//               ))}
+//             </Accordion>
+//           </Box>
+//         </FadeInAnimation>
+//       </ContentWrapper>
+//     </IdWrapper>
+//   );
+// };
+
+export const BlogMain: FC = () => {
   return (
-    <IdWrapper id="blogs">
+    <IdWrapper id="blog">
       <ContentWrapper
         bgType="gray"
         as="section"
         maxW={'calc(1080px + (96px * 2))'}
       >
-        <InstantSearch searchClient={searchClient} indexName="news">
+        <InstantSearch searchClient={searchClient} indexName="blog">
           <FadeInAnimation>
-            <Configure hitsPerPage={NEWS_PER_PAGE} />
+            <Configure hitsPerPage={BLOG_PER_PAGE} />
             <Box
               pr={{ xl: 16 }}
               pb={{ base: 16, xl: 24 }}
