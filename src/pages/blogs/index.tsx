@@ -1,24 +1,36 @@
 import { PrimarySubVisual } from 'components/Elements';
 import { MainLayout } from 'components/Layouts';
 import { META, SUB_VISUAL_LIST } from 'configs';
-import { BlogsMain } from 'features/Blogs';
+import { BlogMain, BlogsWriter } from 'features/Blogs';
 import type { NextPage } from 'next';
-import { generateIndex } from 'pages/api/algolia/generateIndex';
+import { generateBlogIndex } from 'pages/api/algolia/generateIndex';
 
-const Media: NextPage = () => {
+const Blog: NextPage = () => {
   return (
     <MainLayout meta={META.news}>
-      <PrimarySubVisual content={SUB_VISUAL_LIST.media} />
-      <BlogsMain />
+      <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
+      <BlogMain />
+      <BlogsWriter />
     </MainLayout>
   );
 };
 
 export const getStaticProps = async () => {
-  await generateIndex();
+  await generateBlogIndex();
   return {
     props: {},
   };
 };
 
-export default Media;
+// export const getBlogStaticProps: GetStaticProps<RootProps> = async () => {
+//   const blog = await Blogclient.getList<BlogItemProps>({
+//     endpoint: 'blogs',
+//     queries: { limit: 5, orders: '-publishedAt' },
+//   }).catch(() => null);
+
+//   return {
+//     props: blog,
+//   };
+// };
+
+export default Blog;

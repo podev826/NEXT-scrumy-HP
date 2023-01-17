@@ -13,19 +13,19 @@ export const NEWS_CATEGORIES: NewsCategoriesProps = {
     slug: '',
   },
   information: {
-    text: 'お知らせ',
-    slug: 'information',
+    text: 'ピッチ・メディア',
+    slug: 'pitch_media',
   },
   pressRelease: {
-    text: 'プレスリリース',
-    slug: 'press-release',
+    text: '資金調達',
+    slug: 'fundraising',
   },
   seminar: {
-    text: 'セミナー',
-    slug: 'seminar',
+    text: 'セミナー・教育',
+    slug: 'seminar_edu',
   },
   eBook: {
-    text: 'eBOOK',
-    slug: 'e-book',
+    text: '研究・政策提言',
+    slug: 'research_pp',
   },
 };

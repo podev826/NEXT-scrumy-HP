@@ -6,17 +6,17 @@ import {
   Box,
 } from '@chakra-ui/react';
 import { AngleDownIcon, AngleUpIcon } from 'components/Elements';
-import { BLOGS_CATEGORIES, BlogsCategoryProps } from 'configs';
+import { BLOG_CATEGORIES, BlogCategoryProps } from 'configs';
 import { FC, useState } from 'react';
 import { MenuProps, useMenu } from 'react-instantsearch-hooks-web';
 
-type CustomBlogsMenuItemPcProps = {
-  category: BlogsCategoryProps;
+type CustomBlogMenuItemPcProps = {
+  category: BlogCategoryProps;
   handleClick: (value: string) => void;
   active: boolean;
 };
 
-const CustomBlogsMenuItemPc: FC<CustomBlogsMenuItemPcProps> = ({
+const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
   category,
   handleClick,
   active,
@@ -50,12 +50,12 @@ const CustomBlogsMenuItemPc: FC<CustomBlogsMenuItemPcProps> = ({
   );
 };
 
-type CustomBlogsMenuItemSpProps = {
-  category: BlogsCategoryProps;
+type CustomBlogMenuItemSpProps = {
+  category: BlogCategoryProps;
   handleClick: (value: string) => void;
 };
 
-const CustomBlogsMenuItemSp: FC<CustomBlogsMenuItemSpProps> = ({
+const CustomBlogMenuItemSp: FC<CustomBlogMenuItemSpProps> = ({
   category,
   handleClick,
 }) => {
@@ -112,41 +112,41 @@ export const CustomBlogsMenu: FC<MenuProps> = (props) => {
                   }}
                 >
                   <Box flex="1" textAlign="left" fontWeight={'bold'}>
-                    {activeCategory === BLOGS_CATEGORIES.all.slug
-                      ? BLOGS_CATEGORIES.all.text
-                      : activeCategory === BLOGS_CATEGORIES.esgsdgs.slug
-                      ? BLOGS_CATEGORIES.esgsdgs.text
-                      : activeCategory === BLOGS_CATEGORIES.sustainable.slug
-                      ? BLOGS_CATEGORIES.sustainable.text
-                      : activeCategory === BLOGS_CATEGORIES.esginvestment.slug
-                      ? BLOGS_CATEGORIES.esginvestment.text
+                    {activeCategory === BLOG_CATEGORIES.all.slug
+                      ? BLOG_CATEGORIES.all.text
+                      : activeCategory === BLOG_CATEGORIES.esgsdgs.slug
+                      ? BLOG_CATEGORIES.esgsdgs.text
+                      : activeCategory === BLOG_CATEGORIES.sustainable.slug
+                      ? BLOG_CATEGORIES.sustainable.text
+                      : activeCategory === BLOG_CATEGORIES.esginvestment.slug
+                      ? BLOG_CATEGORIES.esginvestment.text
                       : null}
                   </Box>
                   <Box>{isExpanded ? <AngleUpIcon /> : <AngleDownIcon />}</Box>
                 </AccordionButton>
                 <AccordionPanel p={0}>
-                  {activeCategory !== BLOGS_CATEGORIES.all.slug ? (
-                    <CustomBlogsMenuItemSp
+                  {activeCategory !== BLOG_CATEGORIES.all.slug ? (
+                    <CustomBlogMenuItemSp
                       handleClick={handleClick}
-                      category={BLOGS_CATEGORIES.all}
+                      category={BLOG_CATEGORIES.all}
                     />
                   ) : null}
-                  {activeCategory !== BLOGS_CATEGORIES.esgsdgs.slug ? (
-                    <CustomBlogsMenuItemSp
+                  {activeCategory !== BLOG_CATEGORIES.esgsdgs.slug ? (
+                    <CustomBlogMenuItemSp
                       handleClick={handleClick}
-                      category={BLOGS_CATEGORIES.esgsdgs}
+                      category={BLOG_CATEGORIES.esgsdgs}
                     />
                   ) : null}
-                  {activeCategory !== BLOGS_CATEGORIES.sustainable.slug ? (
-                    <CustomBlogsMenuItemSp
+                  {activeCategory !== BLOG_CATEGORIES.sustainable.slug ? (
+                    <CustomBlogMenuItemSp
                       handleClick={handleClick}
-                      category={BLOGS_CATEGORIES.sustainable}
+                      category={BLOG_CATEGORIES.sustainable}
                     />
                   ) : null}
-                  {activeCategory !== BLOGS_CATEGORIES.esginvestment.slug ? (
-                    <CustomBlogsMenuItemSp
+                  {activeCategory !== BLOG_CATEGORIES.esginvestment.slug ? (
+                    <CustomBlogMenuItemSp
                       handleClick={handleClick}
-                      category={BLOGS_CATEGORIES.esginvestment}
+                      category={BLOG_CATEGORIES.esginvestment}
                     />
                   ) : null}
                 </AccordionPanel>
@@ -162,25 +162,25 @@ export const CustomBlogsMenu: FC<MenuProps> = (props) => {
         justifyContent={{ xl: 'space-between' }}
         flexBasis={{ xl: 'calc(100% - 264px)' }}
       >
-        <CustomBlogsMenuItemPc
+        <CustomBlogMenuItemPc
           handleClick={handleClick}
-          category={BLOGS_CATEGORIES.all}
-          active={activeCategory === BLOGS_CATEGORIES.all.slug}
+          category={BLOG_CATEGORIES.all}
+          active={activeCategory === BLOG_CATEGORIES.all.slug}
         />
-        <CustomBlogsMenuItemPc
+        <CustomBlogMenuItemPc
           handleClick={handleClick}
-          category={BLOGS_CATEGORIES.esgsdgs}
-          active={activeCategory === BLOGS_CATEGORIES.esgsdgs.slug}
+          category={BLOG_CATEGORIES.esgsdgs}
+          active={activeCategory === BLOG_CATEGORIES.esgsdgs.slug}
         />
-        <CustomBlogsMenuItemPc
+        <CustomBlogMenuItemPc
           handleClick={handleClick}
-          category={BLOGS_CATEGORIES.sustainable}
-          active={activeCategory === BLOGS_CATEGORIES.sustainable.slug}
+          category={BLOG_CATEGORIES.sustainable}
+          active={activeCategory === BLOG_CATEGORIES.sustainable.slug}
         />
-        <CustomBlogsMenuItemPc
+        <CustomBlogMenuItemPc
           handleClick={handleClick}
-          category={BLOGS_CATEGORIES.esginvestment}
-          active={activeCategory === BLOGS_CATEGORIES.esginvestment.slug}
+          category={BLOG_CATEGORIES.esginvestment}
+          active={activeCategory === BLOG_CATEGORIES.esginvestment.slug}
         />
       </Box>
     </>

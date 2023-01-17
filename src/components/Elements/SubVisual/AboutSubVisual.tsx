@@ -17,6 +17,14 @@ export const AboutSubVisual: FC = () => {
       pt={{ base: '33px', md: '18px', xl: '20px' }}
       pb={{ base: '0', md: '17vh', xl: '20vh' }}
       mt={{ base: '100px', md: '110px', xl: '130px' }}
+      h={{
+        base: '60vh',
+        sm: '65vh',
+        md: '55vh',
+        lg: '65vh',
+        xl: '75vh',
+        '2xl': '85vh',
+      }}
     >
       <Box
         w="full"
@@ -41,7 +49,12 @@ export const AboutSubVisual: FC = () => {
             <Text
               as="h1"
               mt={{ md: '7.444vw', xl: '104px' }}
-              fontSize={{ base: '6.467vw', md: '3.333vw', '2xl': '6xl' }}
+              fontSize={{
+                base: '6.467vw',
+                sm: '5vw',
+                md: '3.333vw',
+                '2xl': '6xl',
+              }}
               fontWeight="bold"
               lineHeight={{ base: '1.32', md: '1.5' }}
             >

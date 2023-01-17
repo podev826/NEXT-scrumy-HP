@@ -8,7 +8,7 @@ import {
   RootPickup,
   RootService,
 } from 'features/root';
-import { client } from 'libraries/microcms';
+import { Newsclient } from 'libraries/microcms';
 import type { GetStaticProps, NextPage } from 'next';
 import {
   NewsDataProps,
@@ -38,19 +38,15 @@ const Root: NextPage<RootProps> = ({ news, pickup }) => {
 };
 
 export const getStaticProps: GetStaticProps<RootProps> = async () => {
-  const news = await client
-    .getList<NewsItemProps>({
-      endpoint: 'news',
-      queries: { limit: 3, orders: '-publishedAt' },
-    })
-    .catch(() => null);
+  const news = await Newsclient.getList<NewsItemProps>({
+    endpoint: 'news',
+    queries: { limit: 3, orders: '-publishedAt' },
+  }).catch(() => null);
 
-  const pickup = await client
-    .getList<PickupItemProps>({
-      endpoint: 'pickup',
-      queries: { limit: 3, orders: '-publishedAt' },
-    })
-    .catch(() => null);
+  const pickup = await Newsclient.getList<PickupItemProps>({
+    endpoint: 'pickup',
+    queries: { limit: 3, orders: '-publishedAt' },
+  }).catch(() => null);
 
   if (!news || !pickup) {
     return {

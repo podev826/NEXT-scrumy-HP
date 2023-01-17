@@ -4,10 +4,10 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Image,
   Text,
 } from '@chakra-ui/react';
 import {
-  BaseImage,
   CircleMinusIcon,
   CirclePlusIcon,
   FadeInAnimation,
@@ -43,19 +43,14 @@ export const AboutMember: FC = () => {
                   key={item.name}
                   w={{ base: '240px', xl: 'full' }}
                   overflow={'hidden'}
-                  border="1px"
+                  shadow="md"
                   borderRadius="30px"
                 >
                   {({ isExpanded }) => (
                     <Box>
                       <Box w="full" display={{ base: '', xl: 'flex' }}>
                         <Box>
-                          <BaseImage
-                            src={item.image}
-                            width="300px"
-                            height="300px"
-                            alt=""
-                          />
+                          <Image src={item.image} width="300px" alt="" />
                         </Box>
                         <AccordionButton
                           p={0}
