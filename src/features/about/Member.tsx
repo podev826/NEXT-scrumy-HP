@@ -39,92 +39,97 @@ export const AboutMember: FC = () => {
               overflowX={{ base: 'scroll', xl: 'visible' }}
             >
               {MEMBER_LIST.map((item) => (
-                <AccordionItem
-                  key={item.name}
-                  w={{ base: '240px', xl: 'full' }}
-                  overflow={'hidden'}
-                  shadow="lg"
-                  borderRadius="30px"
-                  mb={{ base: 'auto', xl: 'auto' }}
-                >
-                  {({ isExpanded }) => (
-                    <Box>
-                      <Box w="full" display={{ base: '', xl: 'flex' }}>
-                        <Box>
-                          <Image src={item.image} width="300px" alt="" />
-                        </Box>
-                        <AccordionButton
-                          p={0}
-                          _hover={{ bg: 'base.100' }}
-                          _focus={{ outline: 'none' }}
-                        >
-                          <Box px={{ base: 4, xl: 4 }} w="full">
-                            <Box
-                              py={{ base: 6, xl: 5 }}
-                              display={{ base: 'flex' }}
-                              flexDirection="column"
-                              alignItems={'flex-start'}
-                            >
-                              <Box display={'inline-block'}>
-                                <Text
-                                  fontWeight="bold"
-                                  fontSize={{ base: 'sm', xl: 'md' }}
-                                >
-                                  {item.position}
-                                </Text>
-                              </Box>
-                              <Box display={'inline-block'} mt={3}>
-                                <Text
-                                  fontWeight="bold"
-                                  fontSize={{ base: 'sm', lg: 'xl', xl: '2vw' }}
-                                >
-                                  {item.name_en}
-                                </Text>
-                              </Box>
+                <Box key={item.name} mb="1px">
+                  <AccordionItem
+                    w={{ base: '240px', xl: 'full' }}
+                    overflow={'hidden'}
+                    shadow="lg"
+                    borderRadius="30px"
+                    mb={{ base: 'auto', xl: 'auto' }}
+                  >
+                    {({ isExpanded }) => (
+                      <Box>
+                        <Box w="full" display={{ base: '', xl: 'flex' }}>
+                          <Box>
+                            <Image src={item.image} width="300px" alt="" />
+                          </Box>
+                          <AccordionButton
+                            p={0}
+                            _hover={{ bg: 'base.100' }}
+                            _focus={{ outline: 'none' }}
+                          >
+                            <Box px={{ base: 4, xl: 4 }} w="full">
                               <Box
-                                w="full"
+                                py={{ base: 6, xl: 5 }}
                                 display={{ base: 'flex' }}
-                                justifyContent={{ base: 'space-between' }}
-                                alignItems={{ base: 'flex-end' }}
-                                flexGrow={{ xl: 1 }}
-                                mt={{ base: 3 }}
+                                flexDirection="column"
+                                alignItems={'flex-start'}
                               >
-                                <Text
-                                  fontSize={{ base: 'lg', xl: 'xl' }}
-                                  fontWeight="bold"
-                                >
-                                  {item.name}
-                                </Text>
+                                <Box display={'inline-block'}>
+                                  <Text
+                                    fontWeight="bold"
+                                    fontSize={{ base: 'sm', xl: 'md' }}
+                                  >
+                                    {item.position}
+                                  </Text>
+                                </Box>
+                                <Box display={'inline-block'} mt={3}>
+                                  <Text
+                                    fontWeight="bold"
+                                    fontSize={{
+                                      base: 'sm',
+                                      lg: 'xl',
+                                      xl: '2vw',
+                                    }}
+                                  >
+                                    {item.name_en}
+                                  </Text>
+                                </Box>
                                 <Box
-                                  fontSize={{ base: 'xl', xl: '2xl' }}
-                                  color={'accent.100'}
-                                  position="relative"
-                                  top="5"
-                                  left="1"
-                                  transitionProperty="all"
-                                  transitionTimingFunction="linear"
-                                  transitionDuration="fast"
-                                  _hover={{
-                                    opacity: 0.7,
-                                  }}
+                                  w="full"
+                                  display={{ base: 'flex' }}
+                                  justifyContent={{ base: 'space-between' }}
+                                  alignItems={{ base: 'flex-end' }}
+                                  flexGrow={{ xl: 1 }}
+                                  mt={{ base: 3 }}
                                 >
-                                  {isExpanded ? (
-                                    <CircleMinusIcon />
-                                  ) : (
-                                    <CirclePlusIcon />
-                                  )}
+                                  <Text
+                                    fontSize={{ base: 'lg', xl: 'xl' }}
+                                    fontWeight="bold"
+                                  >
+                                    {item.name}
+                                  </Text>
+                                  <Box
+                                    fontSize={{ base: 'xl', xl: '2xl' }}
+                                    color={'accent.100'}
+                                    position="relative"
+                                    top="5"
+                                    left="1"
+                                    transitionProperty="all"
+                                    transitionTimingFunction="linear"
+                                    transitionDuration="fast"
+                                    _hover={{
+                                      opacity: 0.7,
+                                    }}
+                                  >
+                                    {isExpanded ? (
+                                      <CircleMinusIcon />
+                                    ) : (
+                                      <CirclePlusIcon />
+                                    )}
+                                  </Box>
                                 </Box>
                               </Box>
                             </Box>
-                          </Box>
-                        </AccordionButton>
+                          </AccordionButton>
+                        </Box>
+                        <AccordionPanel pb={8} px={{ base: 7, xl: 8 }}>
+                          <Text>{item.description}</Text>
+                        </AccordionPanel>
                       </Box>
-                      <AccordionPanel pb={8} px={{ base: 7, xl: 8 }}>
-                        <Text>{item.description}</Text>
-                      </AccordionPanel>
-                    </Box>
-                  )}
-                </AccordionItem>
+                    )}
+                  </AccordionItem>
+                </Box>
               ))}
             </Accordion>
           </Box>
