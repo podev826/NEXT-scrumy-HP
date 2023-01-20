@@ -28,9 +28,11 @@ export const HeaderModalListPc: FC<HeaderModalListProps> = ({ content }) => {
   const { closeHeader } = useHeader();
   return (
     <Box>
-      <Text fontWeight="extrabold" lang="en">
-        {content.title}
-      </Text>
+      <BaseLink href={content.href}>
+        <Text fontWeight="extrabold" lang="en">
+          {content.title}
+        </Text>
+      </BaseLink>
       <Grid as="ul" mt={2} gap={1}>
         {content.list.map((item) => (
           <GridItem as="li" key={item.text}>
