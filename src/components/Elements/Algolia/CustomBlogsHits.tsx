@@ -1,5 +1,5 @@
 import { Accordion, AccordionItem, Box, Text } from '@chakra-ui/react';
-import { BLOGS_CATEGORIES } from 'configs';
+import { BLOG_CATEGORIES } from 'configs';
 import dayjs from 'dayjs';
 import React, { FC } from 'react';
 import { HitsProps, useHits } from 'react-instantsearch-hooks-web';
@@ -65,14 +65,14 @@ export const CustomBlogsHits: FC<
                       px={2}
                       textAlign={'center'}
                     >
-                      {hit.category === BLOGS_CATEGORIES.all.slug
-                        ? BLOGS_CATEGORIES.all.text
-                        : hit.category === BLOGS_CATEGORIES.esgsdgs.slug
-                        ? BLOGS_CATEGORIES.esgsdgs.text
-                        : hit.category === BLOGS_CATEGORIES.sustainable.slug
-                        ? BLOGS_CATEGORIES.sustainable.text
-                        : hit.category === BLOGS_CATEGORIES.esginvestment.slug
-                        ? BLOGS_CATEGORIES.esginvestment.text
+                      {hit.category === BLOG_CATEGORIES.all.slug
+                        ? BLOG_CATEGORIES.all.text
+                        : hit.category === BLOG_CATEGORIES.esgsdgs.slug
+                        ? BLOG_CATEGORIES.esgsdgs.text
+                        : hit.category === BLOG_CATEGORIES.sustainable.slug
+                        ? BLOG_CATEGORIES.sustainable.text
+                        : hit.category === BLOG_CATEGORIES.esginvestment.slug
+                        ? BLOG_CATEGORIES.esginvestment.text
                         : null}
                     </Box>
                   </Box>
