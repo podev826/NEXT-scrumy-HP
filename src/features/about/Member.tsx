@@ -43,8 +43,9 @@ export const AboutMember: FC = () => {
                   key={item.name}
                   w={{ base: '240px', xl: 'full' }}
                   overflow={'hidden'}
-                  shadow="md"
+                  shadow="lg"
                   borderRadius="30px"
+                  mb={{ base: 'auto', xl: 'auto' }}
                 >
                   {({ isExpanded }) => (
                     <Box>
