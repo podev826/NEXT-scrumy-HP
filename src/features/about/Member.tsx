@@ -43,6 +43,7 @@ export const AboutMember: FC = () => {
                 <AccordionItem
                   key={item.name}
                   w={{ base: '240px', xl: 'full' }}
+                  _expanded={{ h: '500' }}
                   overflow={'hidden'}
                   shadow="lg"
                   borderRadius="30px"
@@ -50,7 +51,12 @@ export const AboutMember: FC = () => {
                 >
                   {({ isExpanded }) => (
                     <Box>
-                      <Box w="full" display={{ base: '', xl: 'flex' }}>
+                      <Box
+                        w="full"
+                        display={{ base: '', xl: 'flex' }}
+                        alignContent={'center'}
+                        borderRadius={{ base: '0', md: '30px' }}
+                      >
                         <Box>
                           <Image src={item.image} width="300px" alt="" />
                         </Box>
@@ -77,10 +83,7 @@ export const AboutMember: FC = () => {
                               <Box display={'inline-block'} mt={3}>
                                 <Text
                                   fontWeight="bold"
-                                  fontSize={{
-                                    base: 'xl',
-                                    xl: '2vw',
-                                  }}
+                                  fontSize={{ base: 'sm', lg: '26px' }}
                                 >
                                   {item.name_en}
                                 </Text>
@@ -123,7 +126,11 @@ export const AboutMember: FC = () => {
                           </Box>
                         </AccordionButton>
                       </Box>
-                      <AccordionPanel pb={8} px={{ base: 7, xl: 8 }}>
+                      <AccordionPanel
+                        pb={8}
+                        px={{ base: 7, xl: 8 }}
+                        shadow="md"
+                      >
                         <Text>{item.description}</Text>
                       </AccordionPanel>
                     </Box>

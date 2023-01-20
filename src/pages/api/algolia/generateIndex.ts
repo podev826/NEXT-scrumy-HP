@@ -14,7 +14,7 @@ export const generateNewsIndex = async (): Promise<void> => {
       objectID: item.id,
       publishedAt: item.publishedAt,
       title: item.title,
-      category: item.category,
+      category: item.category, //categoryもしくはcategory.name
       content: item.content,
     };
   });
