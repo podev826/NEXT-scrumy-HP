@@ -20,6 +20,10 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     href: '/',
     list: [
       {
+        text: 'Service',
+        href: '/#service',
+      },
+      {
         text: 'News',
         href: '/#news',
       },
@@ -58,20 +62,19 @@ export const SECONDARY_NAV: SecondaryNavProps = {
   news: {
     title: 'News',
     href: '/news',
-    list: [
-      {
-        text: 'Press',
-        href: '/news/#news',
-      },
-    ],
+    list: [],
   },
   recruit: {
-    title: 'Join us',
+    title: 'Recruit',
     href: '/recruit',
     list: [
       {
-        text: 'Recruit',
-        href: '/recruit/#recruit',
+        text: 'Message',
+        href: '/recruit/#message',
+      },
+      {
+        text: 'Requirements',
+        href: '/recruit/#requirements',
       },
     ],
   },
