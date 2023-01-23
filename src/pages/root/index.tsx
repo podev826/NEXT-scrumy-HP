@@ -2,10 +2,10 @@ import { ContactBlock } from 'components/Elements';
 import { IdWrapper, MainLayout } from 'components/Layouts';
 import { META } from 'configs';
 import {
+  RootBlog,
   RootHero,
   RootMessage,
   RootNews,
-  RootPickup,
   RootService,
 } from 'features/root';
 import { Newsclient } from 'libraries/microcms';
@@ -22,14 +22,14 @@ type RootProps = {
   pickup: PickupDataProps;
 };
 
-const Root: NextPage<RootProps> = ({ news, pickup }) => {
+const Root: NextPage<RootProps> = ({ news }) => {
   return (
     <MainLayout meta={META.root}>
       <RootHero />
       <RootService />
       <RootNews contents={news.contents} />
       <RootMessage />
-      <RootPickup contents={pickup.contents} />
+      <RootBlog />
       <IdWrapper id="contact">
         <ContactBlock />
       </IdWrapper>
