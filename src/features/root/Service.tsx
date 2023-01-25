@@ -1,6 +1,7 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
-import { BaseImage, FadeInAnimation, PrimaryTitle } from 'components/Elements';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { FadeInAnimation, PrimaryTitle } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
+import { SERVICE_LIST } from 'configs';
 import React, { FC } from 'react';
 
 export const RootService: FC = () => {
@@ -11,94 +12,103 @@ export const RootService: FC = () => {
           <PrimaryTitle en="Service" />
           <Flex
             mt={{ base: 12, xl: 16 }}
-            display={{ md: 'flex' }}
+            display={'flex'}
+            flexWrap={{ base: 'wrap', md: 'wrap' }}
             justifyContent="space-around"
+            rowGap="5vh"
           >
-            <IdWrapper id="service01" h="full">
-              <Box
-                borderRadius={'32px'}
-                px={{ base: 4, xl: 14 }}
-                py={{ base: 9, xl: 16 }}
-                display={{ xl: 'block' }}
-                alignItems={{ xl: 'center' }}
-                h="full"
-                width={{ sm: '80vw', md: '40vw', '2xl': '600px' }}
-                shadow="md"
-                mx="auto"
-              >
-                <Box mt={{ base: 4, xl: 0 }} maxW={{ xl: '512px' }}>
-                  <BaseImage
-                    src="/images/root/root_service_image01.png"
-                    width={1080}
-                    height={1080}
-                  />
-                  <Box mt={{ xl: 4 }}>
-                    <Text
-                      as="h3"
-                      bg="main.100"
-                      color="white"
-                      fontSize={{ base: '4.2vw', md: 'xl', lg: '2xl' }}
-                      fontWeight="bold"
-                      letterSpacing={0}
-                      textAlign="center"
-                      whiteSpace={'nowrap'}
-                      py={{ base: '6px' }}
-                      pl={{ base: '4px', xl: 4 }}
-                      pr={{ xl: 2 }}
-                    >
-                      Scrumy-Support
-                    </Text>
-                    <Text mt={{ base: 4 }}>
-                      Scrumyにはサステナビリティ学者をはじめとした各種専門人材が在籍しており、最新のエビデンスや知見に基づいたESGコンサルティングを提供いたします。
-                    </Text>
-                  </Box>
-                </Box>
-              </Box>
-            </IdWrapper>
-            <IdWrapper id="service02" h="full">
-              <Box
-                borderRadius={'32px'}
-                px={{ base: 4, xl: 14 }}
-                py={{ base: 9, xl: 16 }}
-                display={{ xl: 'block' }}
-                h="full"
-                width={{ sm: '80vw', md: '40vw', '2xl': '600px' }}
-                shadow="md"
-                mx="auto"
-              >
+            {SERVICE_LIST.map((item) => (
+              <IdWrapper id="service01" key={item.title} h="full">
                 <Box
-                  mt={{ base: 4, xl: 0 }}
-                  maxW={{ xl: '512px' }}
-                  justifyContent="center"
+                  borderRadius={'32px'}
+                  border="1px"
+                  borderColor="gray.100"
+                  px={{ base: 4, md: 7 }}
+                  py={{ base: 0, md: 6 }}
+                  pb={{ base: 5, md: '' }}
+                  display={{ xl: 'block' }}
+                  alignItems={{ xl: 'center' }}
+                  h="full"
+                  width={'80vw'}
+                  shadow="lg"
+                  mx="auto"
                 >
-                  <BaseImage
-                    src="/images/root/root_service_image02.png"
-                    width={1080}
-                    height={1080}
-                  />
-                  <Box mt={{ xl: 4 }}>
-                    <Text
-                      as="h3"
-                      bg="main.100"
-                      color="white"
-                      fontSize={{ base: '4.2vw', md: 'xl', lg: '2xl' }}
-                      fontWeight="bold"
-                      letterSpacing={0}
-                      textAlign="center"
-                      whiteSpace={'nowrap'}
-                      py={{ base: '6px' }}
-                      pl={{ base: '4px', xl: 4 }}
-                      pr={{ xl: 2 }}
-                    >
-                      Scrumy-Code
-                    </Text>
-                    <Text mt={{ base: 4 }}>
-                      サステナビリティ会計基準「SASB/ISSB」に準拠し、財務情報と紐づくサステナビリティ情報を可視化することで、企業と投資家のエンゲージメントを実現するため情報基盤を提供します。
-                    </Text>
+                  <Box
+                    mt={{ base: 4, xl: 0 }}
+                    display={{ base: '', md: 'flex' }}
+                  >
+                    <Image
+                      src={item.image}
+                      width={{ base: '40vw', md: '23vw', xl: '300' }}
+                      height={{ base: '40vw', md: '23vw', xl: '300' }}
+                      alt=""
+                      mr={{ md: '2vw' }}
+                      mx="auto"
+                      my="auto"
+                    />
+                    <Box mt={{ xl: 4 }}>
+                      <Text
+                        as="h3"
+                        bg="main.100"
+                        color="white"
+                        fontSize={'2vw'}
+                        fontWeight="bold"
+                        letterSpacing={0}
+                        textAlign="center"
+                        whiteSpace={'nowrap'}
+                        py={{ base: '6px' }}
+                        pl={{ base: '4px', xl: 4 }}
+                        pr={{ xl: 2 }}
+                        display={{ base: 'none', md: 'block' }}
+                      >
+                        {item.title}
+                      </Text>
+                      <Text
+                        as="h3"
+                        bg="main.100"
+                        color="white"
+                        fontSize={'2.5vw'}
+                        fontWeight="bold"
+                        letterSpacing={0}
+                        textAlign="center"
+                        whiteSpace={'nowrap'}
+                        py={{ base: '6px' }}
+                        pl={{ base: '4px', xl: 4 }}
+                        pr={{ xl: 2 }}
+                        display={{ base: 'block', md: 'none' }}
+                      >
+                        {item.title_ja}
+                      </Text>
+                      <Text
+                        as="h3"
+                        bg="main.100"
+                        color="white"
+                        fontSize={'2.5vw'}
+                        fontWeight="bold"
+                        letterSpacing={0}
+                        textAlign="center"
+                        whiteSpace={'nowrap'}
+                        py={{ base: '6px' }}
+                        pl={{ base: '4px', xl: 4 }}
+                        pr={{ xl: 2 }}
+                        display={{ base: 'block', md: 'none' }}
+                        mt="2"
+                      >
+                        {item.title_en}
+                      </Text>
+                      <Text
+                        mt={{ base: 4 }}
+                        fontSize={{ base: '2vw', md: '1.5vw', xl: '1.4vw' }}
+                      >
+                        {item.text1}
+                        <br />
+                        {item.text2}
+                      </Text>
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
-            </IdWrapper>
+              </IdWrapper>
+            ))}
           </Flex>
         </FadeInAnimation>
       </ContentWrapper>
