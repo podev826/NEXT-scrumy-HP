@@ -79,7 +79,8 @@ export const AboutMember: FC = () => {
                                   fontWeight="bold"
                                   fontSize={{
                                     base: 'xl',
-                                    xl: '26px',
+                                    xl: '2vw',
+                                    '2xl': '29px',
                                   }}
                                 >
                                   {item.name_en}
