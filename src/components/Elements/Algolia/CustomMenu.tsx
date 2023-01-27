@@ -25,7 +25,7 @@ const CustomMenuItemPc: FC<CustomMenuItemPcProps> = ({
     <Box as="li">
       <Box
         as="button"
-        onClick={() => handleClick(category.slug)}
+        onClick={() => handleClick(category.text)}
         fontWeight={'bold'}
         color={active ? 'base.100' : 'sub.100'}
         bg={active ? 'sub.100' : 'base.100'}
@@ -62,7 +62,7 @@ const CustomMenuItemSp: FC<CustomMenuItemSpProps> = ({
   return (
     <Box
       as="button"
-      onClick={() => handleClick(category.slug)}
+      onClick={() => handleClick(category.text)}
       px={7}
       w="full"
       minH={12}
@@ -112,49 +112,49 @@ export const CustomMenu: FC<MenuProps> = (props) => {
                   }}
                 >
                   <Box flex="1" textAlign="left" fontWeight={'bold'}>
-                    {activeCategory === NEWS_CATEGORIES.all.slug
+                    {activeCategory === NEWS_CATEGORIES.all.text
                       ? NEWS_CATEGORIES.all.text
-                      : activeCategory === NEWS_CATEGORIES.information.slug
-                      ? NEWS_CATEGORIES.information.text
-                      : activeCategory === NEWS_CATEGORIES.pressRelease.slug
-                      ? NEWS_CATEGORIES.pressRelease.text
-                      : activeCategory === NEWS_CATEGORIES.seminar.slug
-                      ? NEWS_CATEGORIES.seminar.text
-                      : activeCategory === NEWS_CATEGORIES.eBook.slug
-                      ? NEWS_CATEGORIES.eBook.text
+                      : activeCategory === NEWS_CATEGORIES.pitch_media.text
+                      ? NEWS_CATEGORIES.pitch_media.text
+                      : activeCategory === NEWS_CATEGORIES.fundraising.text
+                      ? NEWS_CATEGORIES.fundraising.text
+                      : activeCategory === NEWS_CATEGORIES.seminar_edu.text
+                      ? NEWS_CATEGORIES.seminar_edu.text
+                      : activeCategory === NEWS_CATEGORIES.research_pp.text
+                      ? NEWS_CATEGORIES.research_pp.text
                       : null}
                   </Box>
                   <Box>{isExpanded ? <AngleUpIcon /> : <AngleDownIcon />}</Box>
                 </AccordionButton>
                 <AccordionPanel p={0}>
-                  {activeCategory !== NEWS_CATEGORIES.all.slug ? (
+                  {activeCategory !== NEWS_CATEGORIES.all.text ? (
                     <CustomMenuItemSp
                       handleClick={handleClick}
                       category={NEWS_CATEGORIES.all}
                     />
                   ) : null}
-                  {activeCategory !== NEWS_CATEGORIES.information.slug ? (
+                  {activeCategory !== NEWS_CATEGORIES.pitch_media.text ? (
                     <CustomMenuItemSp
                       handleClick={handleClick}
-                      category={NEWS_CATEGORIES.information}
+                      category={NEWS_CATEGORIES.pitch_media}
                     />
                   ) : null}
-                  {activeCategory !== NEWS_CATEGORIES.pressRelease.slug ? (
+                  {activeCategory !== NEWS_CATEGORIES.fundraising.text ? (
                     <CustomMenuItemSp
                       handleClick={handleClick}
-                      category={NEWS_CATEGORIES.pressRelease}
+                      category={NEWS_CATEGORIES.fundraising}
                     />
                   ) : null}
-                  {activeCategory !== NEWS_CATEGORIES.seminar.slug ? (
+                  {activeCategory !== NEWS_CATEGORIES.seminar_edu.text ? (
                     <CustomMenuItemSp
                       handleClick={handleClick}
-                      category={NEWS_CATEGORIES.seminar}
+                      category={NEWS_CATEGORIES.seminar_edu}
                     />
                   ) : null}
-                  {activeCategory !== NEWS_CATEGORIES.eBook.slug ? (
+                  {activeCategory !== NEWS_CATEGORIES.research_pp.text ? (
                     <CustomMenuItemSp
                       handleClick={handleClick}
-                      category={NEWS_CATEGORIES.eBook}
+                      category={NEWS_CATEGORIES.research_pp}
                     />
                   ) : null}
                 </AccordionPanel>
@@ -177,23 +177,23 @@ export const CustomMenu: FC<MenuProps> = (props) => {
         />
         <CustomMenuItemPc
           handleClick={handleClick}
-          category={NEWS_CATEGORIES.information}
-          active={activeCategory === NEWS_CATEGORIES.information.slug}
+          category={NEWS_CATEGORIES.pitch_media}
+          active={activeCategory === NEWS_CATEGORIES.pitch_media.slug}
         />
         <CustomMenuItemPc
           handleClick={handleClick}
-          category={NEWS_CATEGORIES.pressRelease}
-          active={activeCategory === NEWS_CATEGORIES.pressRelease.slug}
+          category={NEWS_CATEGORIES.fundraising}
+          active={activeCategory === NEWS_CATEGORIES.fundraising.slug}
         />
         <CustomMenuItemPc
           handleClick={handleClick}
-          category={NEWS_CATEGORIES.seminar}
-          active={activeCategory === NEWS_CATEGORIES.seminar.slug}
+          category={NEWS_CATEGORIES.seminar_edu}
+          active={activeCategory === NEWS_CATEGORIES.seminar_edu.slug}
         />
         <CustomMenuItemPc
           handleClick={handleClick}
-          category={NEWS_CATEGORIES.eBook}
-          active={activeCategory === NEWS_CATEGORIES.eBook.slug}
+          category={NEWS_CATEGORIES.research_pp}
+          active={activeCategory === NEWS_CATEGORIES.research_pp.slug}
         />
       </Box>
     </>

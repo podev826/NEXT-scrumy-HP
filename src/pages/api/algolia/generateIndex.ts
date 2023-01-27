@@ -14,7 +14,8 @@ export const generateNewsIndex = async (): Promise<void> => {
       objectID: item.id,
       publishedAt: item.publishedAt,
       title: item.title,
-      category: item.category, //categoryもしくはcategory.name
+      category: item.category.name,
+      slug: item.category.id,
       content: item.content,
     };
   });
@@ -26,6 +27,8 @@ export const generateNewsIndex = async (): Promise<void> => {
       autoGenerateObjectIDIfNotExist: true,
     }));
 };
+
+generateNewsIndex();
 
 export const generateBlogIndex = async (): Promise<void> => {
   const client = algoliasearch(

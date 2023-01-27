@@ -12,20 +12,20 @@ export const NEWS_CATEGORIES: NewsCategoriesProps = {
     text: 'All',
     slug: '',
   },
-  information: {
+  pitch_media: {
     text: 'ピッチ・メディア',
-    slug: 'pitch_media',
+    slug: '7hi9h4pyw',
   },
-  pressRelease: {
+  fundraising: {
     text: '資金調達',
-    slug: 'fundraising',
+    slug: 'rp-ptmn4vb',
   },
-  seminar: {
+  seminar_edu: {
     text: 'セミナー・教育',
-    slug: 'seminar_edu',
+    slug: 'y5vc_5ldu',
   },
-  eBook: {
+  research_pp: {
     text: '研究・政策提言',
-    slug: 'research_pp',
+    slug: 'z6i3xhl24ew3',
   },
 };
