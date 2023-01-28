@@ -1,5 +1,6 @@
 export type NewsCategoryProps = {
   text: string;
+  name: string;
   slug: string;
 };
 
@@ -9,23 +10,28 @@ type NewsCategoriesProps = {
 
 export const NEWS_CATEGORIES: NewsCategoriesProps = {
   all: {
-    text: 'All',
+    text: '',
+    name: 'All',
     slug: '',
   },
-  information: {
+  pitch_media: {
     text: 'ピッチ・メディア',
-    slug: 'pitch_media',
+    name: 'ピッチ・メディア',
+    slug: '7hi9h4pyw',
   },
-  pressRelease: {
+  fundraising: {
     text: '資金調達',
-    slug: 'fundraising',
+    name: '資金調達',
+    slug: 'rp-ptmn4vb',
   },
-  seminar: {
+  seminar_edu: {
     text: 'セミナー・教育',
-    slug: 'seminar_edu',
+    name: 'セミナー・教育',
+    slug: 'y5vc_5ldu',
   },
-  eBook: {
+  research_pp: {
     text: '研究・政策提言',
-    slug: 'research_pp',
+    name: '研究・政策提言',
+    slug: 'z6i3xhl24ew3',
   },
 };
