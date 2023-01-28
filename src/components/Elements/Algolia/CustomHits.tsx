@@ -53,6 +53,7 @@ export const CustomHits: FC<
                       color="sub.100"
                       px={2}
                       textAlign={'center'}
+                      fontSize={{ base: '', xl: '14px' }}
                     >
                       {hit.category}
                     </Text>
