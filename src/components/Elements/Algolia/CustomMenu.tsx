@@ -44,7 +44,7 @@ const CustomMenuItemPc: FC<CustomMenuItemPcProps> = ({
           bg: 'sub.100',
         }}
       >
-        {category.text}
+        {category.name}
       </Box>
     </Box>
   );
@@ -75,7 +75,7 @@ const CustomMenuItemSp: FC<CustomMenuItemSpProps> = ({
         backgroundColor: 'sub.200',
       }}
     >
-      {category.text}
+      {category.name}
     </Box>
   );
 };
@@ -113,15 +113,15 @@ export const CustomMenu: FC<MenuProps> = (props) => {
                 >
                   <Box flex="1" textAlign="left" fontWeight={'bold'}>
                     {activeCategory === NEWS_CATEGORIES.all.text
-                      ? NEWS_CATEGORIES.all.text
+                      ? NEWS_CATEGORIES.all.name
                       : activeCategory === NEWS_CATEGORIES.pitch_media.text
-                      ? NEWS_CATEGORIES.pitch_media.text
+                      ? NEWS_CATEGORIES.pitch_media.name
                       : activeCategory === NEWS_CATEGORIES.fundraising.text
-                      ? NEWS_CATEGORIES.fundraising.text
+                      ? NEWS_CATEGORIES.fundraising.name
                       : activeCategory === NEWS_CATEGORIES.seminar_edu.text
-                      ? NEWS_CATEGORIES.seminar_edu.text
+                      ? NEWS_CATEGORIES.seminar_edu.name
                       : activeCategory === NEWS_CATEGORIES.research_pp.text
-                      ? NEWS_CATEGORIES.research_pp.text
+                      ? NEWS_CATEGORIES.research_pp.name
                       : null}
                   </Box>
                   <Box>{isExpanded ? <AngleUpIcon /> : <AngleDownIcon />}</Box>
@@ -173,27 +173,27 @@ export const CustomMenu: FC<MenuProps> = (props) => {
         <CustomMenuItemPc
           handleClick={handleClick}
           category={NEWS_CATEGORIES.all}
-          active={activeCategory === NEWS_CATEGORIES.all.slug}
+          active={activeCategory === NEWS_CATEGORIES.all.text}
         />
         <CustomMenuItemPc
           handleClick={handleClick}
           category={NEWS_CATEGORIES.pitch_media}
-          active={activeCategory === NEWS_CATEGORIES.pitch_media.slug}
+          active={activeCategory === NEWS_CATEGORIES.pitch_media.text}
         />
         <CustomMenuItemPc
           handleClick={handleClick}
           category={NEWS_CATEGORIES.fundraising}
-          active={activeCategory === NEWS_CATEGORIES.fundraising.slug}
+          active={activeCategory === NEWS_CATEGORIES.fundraising.text}
         />
         <CustomMenuItemPc
           handleClick={handleClick}
           category={NEWS_CATEGORIES.seminar_edu}
-          active={activeCategory === NEWS_CATEGORIES.seminar_edu.slug}
+          active={activeCategory === NEWS_CATEGORIES.seminar_edu.text}
         />
         <CustomMenuItemPc
           handleClick={handleClick}
           category={NEWS_CATEGORIES.research_pp}
-          active={activeCategory === NEWS_CATEGORIES.research_pp.slug}
+          active={activeCategory === NEWS_CATEGORIES.research_pp.text}
         />
       </Box>
     </>

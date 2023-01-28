@@ -1,5 +1,4 @@
 import { Accordion, AccordionItem, Box, Text } from '@chakra-ui/react';
-import { NEWS_CATEGORIES } from 'configs';
 import dayjs from 'dayjs';
 import React, { FC } from 'react';
 import { HitsProps, useHits } from 'react-instantsearch-hooks-web';
