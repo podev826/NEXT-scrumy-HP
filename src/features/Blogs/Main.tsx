@@ -86,11 +86,7 @@ import { BLOG_PER_PAGE } from 'types';
 export const BlogMain: FC = () => {
   return (
     <IdWrapper id="blog">
-      <ContentWrapper
-        bgType="gray"
-        as="section"
-        maxW={'calc(1080px + (96px * 2))'}
-      >
+      <ContentWrapper as="section" maxW={'calc(1080px + (96px * 2))'}>
         <InstantSearch searchClient={searchClient} indexName="blog">
           <FadeInAnimation>
             <Configure hitsPerPage={BLOG_PER_PAGE} />

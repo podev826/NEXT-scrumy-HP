@@ -6,7 +6,7 @@ import { FC } from 'react';
 
 export const PrivacyPolicyMain: FC = () => {
   return (
-    <ContentWrapper bgType="white">
+    <ContentWrapper>
       <FadeInAnimation>
         <Box>
           <Text fontSize={{ base: 'xl', xl: '2xl' }} fontWeight="bold">

@@ -20,7 +20,7 @@ import { FC } from 'react';
 export const AboutMember: FC = () => {
   return (
     <IdWrapper id="member">
-      <ContentWrapper bgType="white">
+      <ContentWrapper>
         <FadeInAnimation>
           <PrimaryTitle en="Team" />
           <Box

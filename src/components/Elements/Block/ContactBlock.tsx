@@ -5,7 +5,7 @@ import { FC } from 'react';
 
 export const ContactBlock: FC = () => {
   return (
-    <ContentWrapper bgType="white" as="section">
+    <ContentWrapper as="section">
       <FadeInAnimation>
         <Box textAlign={'center'}>
           <Text
