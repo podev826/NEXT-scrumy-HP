@@ -33,29 +33,9 @@ export const RootHero: FC = () => {
                 px={{ base: '3.2vw', md: '0', xl: '0.83vw' }}
                 display="inline-block"
               >
-                No Sustainability
+                未来を見据えた第一歩
               </Text>
             </Box>
-            <Box
-              display={'flex'}
-              justifyContent={{ base: 'center', sm: 'center', lg: 'normal' }}
-            >
-              <Text
-                as="p"
-                fontSize={{
-                  base: '6.46vw',
-                  sm: '4.5vw',
-                  lg: '3.33vw',
-                }}
-                bg="white"
-                mt={{ base: '1.2vw', md: '0', xl: '0.83vw' }}
-                px={{ base: '3.2vw', md: '0', xl: '0.83vw' }}
-                display="inline-block"
-              >
-                No Growth
-              </Text>
-            </Box>
-          </Box>
           <Box
             py={{ base: '4.8vw', sm: '1vw' }}
             px={{ base: '6.4vw', sm: 0 }}
@@ -77,10 +57,10 @@ export const RootHero: FC = () => {
             mt={{ base: '8.53vw', sm: '4.167vw', xl: '2.5vw' }}
           >
             <Text as="span" display={{ sm: 'block' }}>
-              財務会計だけで企業価値が決まらない時代を目指して
+              競争と共創を両立できる時代
             </Text>
             <Text as="span" display={{ sm: 'block' }}>
-              「サステナブルファイナンス」領域を創造します
+              サステナブルファイナンスで金融資本市場の懸け橋となる
             </Text>
           </Text>
           <Box
