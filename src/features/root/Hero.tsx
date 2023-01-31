@@ -8,7 +8,7 @@ export const RootHero: FC = () => {
       <Stack
         spacing="10"
         w="100vw"
-        pt={{ base: '120px', sm: '120px', lg: '180px', xl: '230px' }}
+        pt={{ base: '120px', sm: '130px', lg: '180px', xl: '230px' }}
         justifyContent="center"
         direction={{ base: 'column', lg: 'row' }}
       >
@@ -26,7 +26,7 @@ export const RootHero: FC = () => {
                 as="p"
                 fontSize={{
                   base: '6.46vw',
-                  sm: '4.5vw',
+                  sm: '4.7vw',
                   lg: '3.33vw',
                 }}
                 bg="white"
