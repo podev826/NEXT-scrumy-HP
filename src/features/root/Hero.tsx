@@ -36,6 +36,7 @@ export const RootHero: FC = () => {
                 未来を見据えた第一歩
               </Text>
             </Box>
+          </Box>
           <Box
             py={{ base: '4.8vw', sm: '1vw' }}
             px={{ base: '6.4vw', sm: 0 }}

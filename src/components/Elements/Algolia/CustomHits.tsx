@@ -39,7 +39,7 @@ export const CustomHits: FC<
               <BaseAccordionButton isExpanded={isExpanded}>
                 <Box display={{ xl: 'flex' }} alignItems={{ xl: 'center' }}>
                   <Box
-                    fontSize={{ base: 'sm', xl: 'md' }}
+                    fontSize={{ base: 'sm', xl: '14' }}
                     display={'flex'}
                     alignItems={'center'}
                     mr={{ xl: 16 }}
@@ -55,7 +55,7 @@ export const CustomHits: FC<
                       px={2}
                       textAlign={'center'}
                     >
-                      {hit.category} {/* ここを変更する */}
+                      {hit.category}
                     </Text>
                     <Box
                       minW={{ base: 20, xl: '140px' }}
