@@ -53,15 +53,15 @@ export const RootHero: FC = () => {
             />
           </Box>
           <Text
-            fontSize={{ base: '3.85vw', sm: '2.3vw', lg: '1.5vw' }}
+            fontSize={{ base: '3.95vw', sm: '2.3vw', lg: '1.5vw' }}
             textAlign="center"
             fontWeight={'medium'}
             mt={{ base: '8.53vw', sm: '4.167vw', xl: '2.5vw' }}
           >
-            <Text as="span" display={{ sm: 'block' }}>
+            <Text as="span" display={'block'}>
               競争と共創を両立できる時代
             </Text>
-            <Text as="span" display={{ sm: 'block' }}>
+            <Text as="span" display={'block'}>
               サステナブルファイナンスで金融資本市場の懸け橋となる
             </Text>
           </Text>
