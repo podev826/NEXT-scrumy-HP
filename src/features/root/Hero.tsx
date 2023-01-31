@@ -40,6 +40,7 @@ export const RootHero: FC = () => {
           <Box
             py={{ base: '4.8vw', sm: '1vw' }}
             px={{ base: '6.4vw', sm: 0 }}
+            mt={{ base: '5', lg: '0' }}
             display={{ sm: 'flex', lg: 'none' }}
             justifyContent="center"
           >
