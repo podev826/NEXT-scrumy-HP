@@ -19,8 +19,4 @@ export const PRIMARY_NAV: PrimaryNavProps = [
     href: '/recruit',
     text: 'Recruit',
   },
-  {
-    href: '/blogs',
-    text: 'Media',
-  },
 ];

@@ -83,7 +83,11 @@ export const AboutMember: FC = () => {
                               <Box display={'inline-block'} mt={3}>
                                 <Text
                                   fontWeight="bold"
-                                  fontSize={{ base: 'sm', lg: '26px' }}
+                                  fontSize={{
+                                    base: 'xl',
+                                    xl: '2vw',
+                                    '2xl': '29px',
+                                  }}
                                 >
                                   {item.name_en}
                                 </Text>

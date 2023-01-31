@@ -1,20 +1,15 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Image, Text } from '@chakra-ui/react';
 import {
-  BaseImage,
   BaseLink,
   FadeInAnimation,
   PrimaryLink,
   PrimaryTitle,
 } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
+import { BLOG_LIST } from 'configs';
 import React, { FC } from 'react';
-import { PickupContentProps } from 'types';
 
-type RootPickupProps = {
-  contents: PickupContentProps[];
-};
-
-export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
+export const RootBlog: FC = () => {
   return (
     <IdWrapper id="media">
       <ContentWrapper bg="white" py={{ base: 7, xl: 14 }}>
@@ -31,7 +26,7 @@ export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
               gap={{ base: 4, lg: 7 }}
               gridTemplateColumns="repeat(3, 1fr)"
             >
-              {contents.map((item) => (
+              {BLOG_LIST.map((item) => (
                 <Box
                   key={item.href}
                   w={{ base: 'calc(264px + 12px)', lg: 'full' }}
@@ -39,9 +34,10 @@ export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
                   pb={{ base: 3, lg: 0 }}
                 >
                   <Box
-                    bg="base.100"
                     borderRadius={'32px'}
-                    boxShadow={'secondary'}
+                    boxShadow={'lg'}
+                    border="1px"
+                    borderColor={'gray.100'}
                     transitionProperty="all"
                     transitionTimingFunction="linear"
                     transitionDuration="fast"
@@ -59,11 +55,13 @@ export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
                         opacity: 1,
                       }}
                     >
-                      <Box px={8} py={{ base: 7, lg: 10 }}>
-                        <BaseImage
-                          src={item.image.url}
-                          width={item.image.width}
-                          height={item.image.height}
+                      <Box px={6} py={{ base: 4, lg: 5 }}>
+                        <Image
+                          src={item.image}
+                          width="100%"
+                          height="100%"
+                          boxShadow={'lg'}
+                          borderRadius="10px"
                           alt=""
                         />
                         <Text
@@ -79,7 +77,7 @@ export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
                           py={{ base: '2px', lg: 1 }}
                           px={{ base: 1, lg: 2 }}
                         >
-                          Topics
+                          CATEGORY
                         </Text>
                         <Text fontWeight={'bold'} mt={{ base: 3 }}>
                           {item.title}
@@ -96,7 +94,11 @@ export const RootPickup: FC<RootPickupProps> = ({ contents }) => {
             mx={{ base: '0', lg: 'auto' }}
             mt={{ base: 10, xl: 10 }}
           >
-            <PrimaryLink href="/blogs" variant={'primary'} w="full">
+            <PrimaryLink
+              href="https://blog-scrumy.com/"
+              variant={'primary'}
+              w="full"
+            >
               詳しく見る
             </PrimaryLink>
           </Text>
