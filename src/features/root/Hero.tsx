@@ -20,7 +20,7 @@ export const RootHero: FC = () => {
           <Box fontWeight="bold">
             <Box
               display={'flex'}
-              justifyContent={{ base: 'center', sm: 'center', lg: 'normal' }}
+              justifyContent={{ base: 'center', sm: 'center', lg: 'center' }}
             >
               <Text
                 as="p"
