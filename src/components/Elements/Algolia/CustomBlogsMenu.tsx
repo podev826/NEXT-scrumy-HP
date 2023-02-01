@@ -25,7 +25,7 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
     <Box as="li">
       <Box
         as="button"
-        onClick={() => handleClick(category.slug)}
+        onClick={() => handleClick(category.text)}
         fontWeight={'bold'}
         color={active ? 'base.100' : 'sub.100'}
         bg={active ? 'sub.100' : 'base.100'}
@@ -44,7 +44,7 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
           bg: 'sub.100',
         }}
       >
-        {category.text}
+        {category.name}
       </Box>
     </Box>
   );
@@ -62,7 +62,7 @@ const CustomBlogMenuItemSp: FC<CustomBlogMenuItemSpProps> = ({
   return (
     <Box
       as="button"
-      onClick={() => handleClick(category.slug)}
+      onClick={() => handleClick(category.text)}
       px={7}
       w="full"
       minH={12}
@@ -75,7 +75,7 @@ const CustomBlogMenuItemSp: FC<CustomBlogMenuItemSpProps> = ({
         backgroundColor: 'sub.200',
       }}
     >
-      {category.text}
+      {category.name}
     </Box>
   );
 };
@@ -112,38 +112,38 @@ export const CustomBlogsMenu: FC<MenuProps> = (props) => {
                   }}
                 >
                   <Box flex="1" textAlign="left" fontWeight={'bold'}>
-                    {activeCategory === BLOG_CATEGORIES.all.slug
-                      ? BLOG_CATEGORIES.all.text
-                      : activeCategory === BLOG_CATEGORIES.esgsdgs.slug
-                      ? BLOG_CATEGORIES.esgsdgs.text
-                      : activeCategory === BLOG_CATEGORIES.sustainable.slug
-                      ? BLOG_CATEGORIES.sustainable.text
-                      : activeCategory === BLOG_CATEGORIES.esginvestment.slug
-                      ? BLOG_CATEGORIES.esginvestment.text
+                    {activeCategory === BLOG_CATEGORIES.all.text
+                      ? BLOG_CATEGORIES.all.name
+                      : activeCategory === BLOG_CATEGORIES.esgsdgs.text
+                      ? BLOG_CATEGORIES.esgsdgs.name
+                      : activeCategory === BLOG_CATEGORIES.sustainable.text
+                      ? BLOG_CATEGORIES.sustainable.name
+                      : activeCategory === BLOG_CATEGORIES.esginvestment.text
+                      ? BLOG_CATEGORIES.esginvestment.name
                       : null}
                   </Box>
                   <Box>{isExpanded ? <AngleUpIcon /> : <AngleDownIcon />}</Box>
                 </AccordionButton>
                 <AccordionPanel p={0}>
-                  {activeCategory !== BLOG_CATEGORIES.all.slug ? (
+                  {activeCategory !== BLOG_CATEGORIES.all.text ? (
                     <CustomBlogMenuItemSp
                       handleClick={handleClick}
                       category={BLOG_CATEGORIES.all}
                     />
                   ) : null}
-                  {activeCategory !== BLOG_CATEGORIES.esgsdgs.slug ? (
+                  {activeCategory !== BLOG_CATEGORIES.esgsdgs.text ? (
                     <CustomBlogMenuItemSp
                       handleClick={handleClick}
                       category={BLOG_CATEGORIES.esgsdgs}
                     />
                   ) : null}
-                  {activeCategory !== BLOG_CATEGORIES.sustainable.slug ? (
+                  {activeCategory !== BLOG_CATEGORIES.sustainable.text ? (
                     <CustomBlogMenuItemSp
                       handleClick={handleClick}
                       category={BLOG_CATEGORIES.sustainable}
                     />
                   ) : null}
-                  {activeCategory !== BLOG_CATEGORIES.esginvestment.slug ? (
+                  {activeCategory !== BLOG_CATEGORIES.esginvestment.text ? (
                     <CustomBlogMenuItemSp
                       handleClick={handleClick}
                       category={BLOG_CATEGORIES.esginvestment}
@@ -165,22 +165,22 @@ export const CustomBlogsMenu: FC<MenuProps> = (props) => {
         <CustomBlogMenuItemPc
           handleClick={handleClick}
           category={BLOG_CATEGORIES.all}
-          active={activeCategory === BLOG_CATEGORIES.all.slug}
+          active={activeCategory === BLOG_CATEGORIES.all.text}
         />
         <CustomBlogMenuItemPc
           handleClick={handleClick}
           category={BLOG_CATEGORIES.esgsdgs}
-          active={activeCategory === BLOG_CATEGORIES.esgsdgs.slug}
+          active={activeCategory === BLOG_CATEGORIES.esgsdgs.text}
         />
         <CustomBlogMenuItemPc
           handleClick={handleClick}
           category={BLOG_CATEGORIES.sustainable}
-          active={activeCategory === BLOG_CATEGORIES.sustainable.slug}
+          active={activeCategory === BLOG_CATEGORIES.sustainable.text}
         />
         <CustomBlogMenuItemPc
           handleClick={handleClick}
           category={BLOG_CATEGORIES.esginvestment}
-          active={activeCategory === BLOG_CATEGORIES.esginvestment.slug}
+          active={activeCategory === BLOG_CATEGORIES.esginvestment.text}
         />
       </Box>
     </>

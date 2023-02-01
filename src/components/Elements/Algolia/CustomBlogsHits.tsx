@@ -1,10 +1,13 @@
-import { Accordion, AccordionItem, Box, Text } from '@chakra-ui/react';
-import { BLOG_CATEGORIES } from 'configs';
-import dayjs from 'dayjs';
+import {
+  Accordion,
+  AccordionItem,
+  Box,
+  Image,
+  Link,
+  Text,
+} from '@chakra-ui/react';
 import React, { FC } from 'react';
 import { HitsProps, useHits } from 'react-instantsearch-hooks-web';
-
-import { BaseAccordionButton, BaseAccordionPanel } from '../Accordion';
 
 export const CustomBlogsHits: FC<
   HitsProps<{
@@ -34,56 +37,60 @@ export const CustomBlogsHits: FC<
           border="none"
           p={0}
         >
-          {({ isExpanded }) => (
-            <>
-              <BaseAccordionButton isExpanded={isExpanded}>
-                <Box display={{ xl: 'flex' }} alignItems={{ xl: 'center' }}>
-                  <Box
-                    fontSize={{ base: 'sm', xl: 'md' }}
-                    display={'flex'}
-                    alignItems={'center'}
-                    mr={{ xl: 16 }}
-                  >
-                    <Box mr={{ base: 5, xl: 10 }} lang="en">
-                      {dayjs(hit.publishedAt).format('YYYY.MM.DD')}
-                    </Box>
-                    <Text
-                      minW={{ base: 20, xl: '140px' }}
-                      display="inline-block"
-                      bg="main.100"
-                      color="sub.100"
-                      px={2}
-                      textAlign={'center'}
-                    >
-                      {hit.category} {/* ここを変更する */}
-                    </Text>
-                    <Box
-                      minW={{ base: 20, xl: '140px' }}
-                      display="inline-block"
-                      bg="main.100"
-                      color="sub.100"
-                      px={2}
-                      textAlign={'center'}
-                    >
-                      {hit.category === BLOG_CATEGORIES.all.slug
-                        ? BLOG_CATEGORIES.all.text
-                        : hit.category === BLOG_CATEGORIES.esgsdgs.slug
-                        ? BLOG_CATEGORIES.esgsdgs.text
-                        : hit.category === BLOG_CATEGORIES.sustainable.slug
-                        ? BLOG_CATEGORIES.sustainable.text
-                        : hit.category === BLOG_CATEGORIES.esginvestment.slug
-                        ? BLOG_CATEGORIES.esginvestment.text
-                        : null}
-                    </Box>
-                  </Box>
-                  <Box pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}>
-                    {hit.title}
-                  </Box>
+          <Box
+            display={{ xl: 'flex' }}
+            alignItems={{ xl: 'center' }}
+            height="350px"
+          >
+            <Link href={`/blog/${hit.objectID}`}>
+              <Box
+                fontSize={{ base: 'xl', xl: '2xl' }}
+                display={'flex'}
+                alignItems={'center'}
+                mr={{ xl: 16 }}
+              >
+                <Box mr={{ base: 5, xl: 10 }} lang="en">
+                  <Image
+                    src={hit.image.url}
+                    height={hit.image.height}
+                    width={hit.image.width}
+                  />
                 </Box>
-              </BaseAccordionButton>
-              <BaseAccordionPanel>{hit.content}</BaseAccordionPanel>
-            </>
-          )}
+                <Box>
+                  <Text
+                    minW={{ base: 20, xl: '140px' }}
+                    display="inline-block"
+                    color="sub.100"
+                    px={2}
+                    textAlign={'left'}
+                    as="b"
+                    fontSize={{ base: '2xl', xl: '3xl' }}
+                  >
+                    {hit.title}
+                  </Text>
+
+                  <Text
+                    minW={{ base: 20, xl: '140px' }}
+                    display="inline-block"
+                    color="sub.100"
+                    px={2}
+                    textAlign={'left'}
+                  >
+                    {hit.description}
+                  </Text>
+                  <Text
+                    minW={{ base: 20, xl: '140px' }}
+                    display="inline-block"
+                    color="sub.100"
+                    px={2}
+                  >
+                    {hit.publishedAt}
+                  </Text>
+                </Box>
+              </Box>
+            </Link>
+            <Box pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}></Box>
+          </Box>
         </AccordionItem>
       ))}
     </Accordion>

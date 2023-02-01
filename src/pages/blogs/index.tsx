@@ -7,7 +7,7 @@ import { generateBlogIndex } from 'pages/api/algolia/generateIndex';
 
 const Blog: NextPage = () => {
   return (
-    <MainLayout meta={META.news}>
+    <MainLayout meta={META.media}>
       <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
       <BlogCategory />
       <BlogMain />
