@@ -3,7 +3,7 @@ export const MEMBER_LIST = [
     name: '笹埜 健斗',
     name_en: 'Kento Sasano',
     image: '/images/about/Kento Sasano 2.png',
-    position: '最高取締役CEO',
+    position: '代表取締役CEO',
     description:
       'サステナビリティ学者。専門はビジネスと人権、ＥＳＧ/ＳＤＧｓ、企業統治。各種業界でＣＳＯ（最高サステナビリティ責任者）歴任後、株式会社Ｓｃｒｕｍｙ代表取締役、一般社団法人サステナビリティ協会理事。主な単著論文は「持続可能なＩｏＭＴセキュリティに向けた法政策 ―サステイナビリティ学の視座からの政策提言―」など。',
   },
@@ -43,7 +43,7 @@ export const MEMBER_LIST = [
     name: '國領 二郎',
     name_en: 'Jiro Kokuryo',
     image: '/images/about/Jiro Kokuryo.png',
-    position: '最高顧問',
+    position: '顧問',
     description:
       '経営学者。専門は経営情報システム。東京大学を卒業後、日本電信電話公社に勤務後、ハーバード・ビジネス・スクールに留学しMBA、経営学博士号を取得。慶應義塾大学環境情報学部教授、総合政策学部長を経て、2013年に慶應義塾大学常任理事に就任。『サイバー文明論』をはじめとする数々の論文や著書を執筆する。現在はデジタル庁「Web3.0研究会」の座長を務めている。',
   },

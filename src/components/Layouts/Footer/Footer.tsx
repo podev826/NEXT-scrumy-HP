@@ -12,7 +12,7 @@ export const Footer: FC = () => {
         maxW={1440}
         px={{ base: 6, md: 10, lg: 16, xl: 24 }}
         pt={{ base: 16, md: 20, xl: 24 }}
-        pb={{ base: 20, xl: 3 }}
+        pb={{ base: 3, xl: 3 }}
         mx="auto"
       >
         <Flex flexDirection={{ base: 'column', md: 'row' }}>
@@ -106,7 +106,7 @@ export const Footer: FC = () => {
           textAlign={{ md: 'center' }}
           mt={{ base: 12, xl: '88' }}
         >
-          <small lang="en">©︎ 2021-2023 Scrumy. All Rights Reserved</small>
+          <small lang="en">©︎ 2021-2023 Scrumy inc. All Rights Reserved</small>
         </Text>
       </Box>
     </Box>
