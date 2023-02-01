@@ -106,7 +106,7 @@ export const Footer: FC = () => {
           textAlign={{ md: 'center' }}
           mt={{ base: 12, xl: '88' }}
         >
-          <small lang="en">©︎ 2021-2023 Scrumy inc. All Rights Reserved</small>
+          <small lang="en">©︎ 2021-2023 Scrumy Inc. All Rights Reserved</small>
         </Text>
       </Box>
     </Box>
