@@ -62,7 +62,10 @@ export const RootHero: FC = () => {
               競争と共創を両立できる時代
             </Text>
             <Text as="span" display={'block'}>
-              サステナブルファイナンスで金融資本市場の懸け橋となる
+              サステナブルファイナンスで
+            </Text>
+            <Text as="span" display={'block'}>
+              金融資本市場の懸け橋となる
             </Text>
           </Text>
           <Box
