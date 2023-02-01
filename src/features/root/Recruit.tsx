@@ -11,7 +11,7 @@ import React, { FC } from 'react';
 export const RootRecruit: FC = () => {
   return (
     <IdWrapper id="recruit">
-      <ContentWrapper bgType="gray">
+      <ContentWrapper>
         <FadeInAnimation>
           <PrimaryTitle en="Join us" />
           <Box

@@ -60,7 +60,7 @@ const AboutCompanyItem: FC<AboutCompanyItemProps> = ({
 export const AboutCompany: FC = () => {
   return (
     <IdWrapper id="company">
-      <ContentWrapper as="section" bgType="white">
+      <ContentWrapper as="section">
         <FadeInAnimation>
           <PrimaryTitle en="Company" />
           <Box mt={{ base: 8, xl: 16 }}>

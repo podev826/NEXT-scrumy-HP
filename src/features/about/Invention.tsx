@@ -127,7 +127,7 @@ const AboutInventionScrumQuestion: FC<AboutInventionScrumQuestionProps> = ({
 export const AboutInvention: FC = () => {
   return (
     <IdWrapper id="invention">
-      <ContentWrapper as="section" bgType="gray">
+      <ContentWrapper as="section">
         <FadeInAnimation>
           <PrimaryTitle en="Invention" />
           <Box mt={{ base: 12, xl: 16 }}>

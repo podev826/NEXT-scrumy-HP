@@ -15,11 +15,7 @@ import { NEWS_PER_PAGE } from 'types';
 export const NewsMain: FC = () => {
   return (
     <IdWrapper id="news">
-      <ContentWrapper
-        bgType="gray"
-        as="section"
-        maxW={'calc(1080px + (96px * 2))'}
-      >
+      <ContentWrapper as="section" maxW={'calc(1080px + (96px * 2))'}>
         <InstantSearch searchClient={searchClient} indexName="news">
           <FadeInAnimation>
             <Configure hitsPerPage={NEWS_PER_PAGE} />

@@ -48,7 +48,7 @@ export const ContactMain: FC = () => {
   };
 
   return (
-    <ContentWrapper maxW="calc(820px + (96px * 2))" bgType="white">
+    <ContentWrapper maxW="calc(820px + (96px * 2))">
       <FadeInAnimation>
         <Box as="form" onSubmit={handleSubmit(onSubmit)}>
           <Box display={'grid'} gap={{ base: 9, xl: '44px' }}>

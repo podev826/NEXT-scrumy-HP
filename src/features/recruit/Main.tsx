@@ -113,7 +113,7 @@ export const JobDescriptionContent: FC<JobDescriptionContentProps> = ({
 export const RecruitMain: FC = () => {
   return (
     <IdWrapper id="requirements">
-      <ContentWrapper bgType="white">
+      <ContentWrapper>
         <FadeInAnimation>
           <PrimaryTitle en="Requirements" />
           <Box mt={{ base: 8, md: 12, xl: 16 }} pl={{ xl: 14 }}>
