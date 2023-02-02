@@ -42,7 +42,7 @@ export const CustomBlogsHits: FC<
             alignItems={{ xl: 'center' }}
             height="350px"
           >
-            <Link href={`/blog/${hit.objectID}`}>
+            <Link href={`/blogs/${hit.objectID}`}>
               <Box
                 fontSize={{ base: 'xl', xl: '2xl' }}
                 display={'flex'}
@@ -51,6 +51,7 @@ export const CustomBlogsHits: FC<
               >
                 <Box mr={{ base: 5, xl: 10 }} lang="en">
                   <Image
+                    alt="アイキャッチ"
                     src={hit.image.url}
                     height={hit.image.height}
                     width={hit.image.width}

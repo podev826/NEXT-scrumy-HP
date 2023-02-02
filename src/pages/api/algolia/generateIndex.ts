@@ -49,9 +49,9 @@ export const generateBlogIndex = async (): Promise<void> => {
   });
 
   const index = client.initIndex('blog');
-  await index.saveObjects(objects, {
-    autoGenerateObjectIDIfNotExist: true,
-  });
+  process.env.NODE_ENV === 'production' && (await index.clearObjects());
+  process.env.NODE_ENV === 'production' &&
+    (await index.saveObjects(objects, {
+      autoGenerateObjectIDIfNotExist: true,
+    }));
 };
-
-generateBlogIndex();
