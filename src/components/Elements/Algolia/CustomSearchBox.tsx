@@ -49,7 +49,7 @@ export const CustomSearchBox = (props: SearchBoxProps) => {
         <Box
           position={'absolute'}
           top="50%"
-          right={7}
+          right={8}
           transform="translateY(-50%)"
           zIndex={'2'}
         >

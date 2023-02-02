@@ -1,13 +1,14 @@
 import { Image } from '@chakra-ui/react';
 import { Blogclient } from 'libraries/microcms';
-import { blogstyles } from 'styles/blog/styles';
+import { BlogItemProps, ContentType, ContextType } from 'types';
 
-const BlogId = ({ blog }) => {
+const BlogId = ({ blog }: BlogItemProps) => {
   return (
-    <main className={blogstyles.blog}>
+    <main>
       <h1>{blog.title}</h1>
       <p>{blog.publishedAt}</p>
       <Image
+        alt=""
         src={blog.eyecatch.url}
         height={blog.eyecatch.height}
         width={blog.eyecatch.width}
@@ -26,14 +27,19 @@ const BlogId = ({ blog }) => {
 export const getStaticPaths = async () => {
   const blog = await Blogclient.get({ endpoint: 'blogs' });
 
-  const paths = blog.contents.map((content) => `/blogs/${content.id}`);
+  const paths = blog.contents.map(
+    (content: ContentType) => `/blogs/${content.id}`
+  );
   return { paths, fallback: false };
 };
 
 // データをテンプレートに受け渡す部分の処理を記述します
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context: ContextType) => {
   const id = context.params.id;
-  const data = await Blogclient.get({ endpoint: 'blogs', contentId: id });
+  const data: BlogItemProps = await Blogclient.get({
+    endpoint: 'blogs',
+    contentId: id,
+  });
 
   return {
     props: {

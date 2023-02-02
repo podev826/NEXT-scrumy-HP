@@ -6,14 +6,12 @@ import {
   Link,
   Text,
 } from '@chakra-ui/react';
+import dayjs from 'dayjs';
 import React, { FC } from 'react';
 import { HitsProps, useHits } from 'react-instantsearch-hooks-web';
+import { BlogItemProps } from 'types';
 
-export const CustomBlogsHits: FC<
-  HitsProps<{
-    [x: string]: string;
-  }>
-> = (props) => {
+export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
   const { hits } = useHits(props);
 
   if (!hits?.length) {
@@ -21,76 +19,54 @@ export const CustomBlogsHits: FC<
   }
 
   return (
-    <Accordion
-      allowToggle
-      allowMultiple
-      display={'grid'}
-      gap={{ base: 8, xl: '60px' }}
-      mt={8}
-    >
+    <Accordion allowToggle allowMultiple>
       {hits.map((hit) => (
         <AccordionItem
           key={hit.objectID}
-          boxShadow={'secondary'}
-          borderRadius="32px"
-          overflow="hidden"
           border="none"
           p={0}
+          px={{ base: 18, xl: 0 }}
+          mb={{ base: 8, lg: 12 }}
         >
-          <Box
-            display={{ xl: 'flex' }}
-            alignItems={{ xl: 'center' }}
-            height="350px"
-          >
+          <Box>
             <Link href={`/blogs/${hit.objectID}`}>
               <Box
-                fontSize={{ base: 'xl', xl: '2xl' }}
+                fontSize={{ base: 'xl', xl: 'lg' }}
                 display={'flex'}
                 alignItems={'center'}
-                mr={{ xl: 16 }}
+                w={{ base: '', xl: '65vw' }}
               >
-                <Box mr={{ base: 5, xl: 10 }} lang="en">
+                <Box lang="en" mr={8}>
                   <Image
                     alt="アイキャッチ"
                     src={hit.image.url}
-                    height={hit.image.height}
-                    width={hit.image.width}
+                    objectFit="contain"
+                    w={{ base: '30vw', xl: '25vw' }}
                   />
                 </Box>
-                <Box>
-                  <Text
-                    minW={{ base: 20, xl: '140px' }}
-                    display="inline-block"
-                    color="sub.100"
-                    px={2}
-                    textAlign={'left'}
-                    as="b"
-                    fontSize={{ base: '2xl', xl: '3xl' }}
-                  >
+                <Box flex={{ base: '1.6', xl: '2.3' }}>
+                  <Text textAlign={'left'} fontWeight="bold" fontSize={'2xl'}>
                     {hit.title}
                   </Text>
-
-                  <Text
-                    minW={{ base: 20, xl: '140px' }}
-                    display="inline-block"
-                    color="sub.100"
-                    px={2}
-                    textAlign={'left'}
-                  >
-                    {hit.description}
-                  </Text>
-                  <Text
-                    minW={{ base: 20, xl: '140px' }}
-                    display="inline-block"
-                    color="sub.100"
-                    px={2}
-                  >
-                    {hit.publishedAt}
-                  </Text>
+                  <Box display={{ base: 'none', lg: 'block' }}>
+                    <Text textAlign={'left'}>{hit.description}</Text>
+                    <Text float={'right'}>
+                      {dayjs(hit.publishedAt).format('YYYY.MM.DD')}
+                    </Text>
+                  </Box>
                 </Box>
               </Box>
+              <Box
+                display={{ base: 'block', lg: 'none' }}
+                mt={2}
+                fontSize={'xl'}
+              >
+                <Text textAlign={'left'}>{hit.description}</Text>
+                <Text float={'right'}>
+                  {dayjs(hit.publishedAt).format('YYYY.MM.DD')}
+                </Text>
+              </Box>
             </Link>
-            <Box pr={{ base: 3, xl: 6 }} mt={{ base: 3, xl: 0 }}></Box>
           </Box>
         </AccordionItem>
       ))}
