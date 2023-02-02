@@ -33,6 +33,8 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
         borderColor={'sub.100'}
         py={2}
         px={6}
+        mt={5}
+        w={210}
         cursor={active ? 'auto' : 'pointer'}
         pointerEvents={active ? 'none' : 'auto'}
         borderRadius="full"
@@ -158,8 +160,9 @@ export const CustomBlogsMenu: FC<MenuProps> = (props) => {
       <Box
         as="ul"
         display={{ base: 'none', xl: 'flex' }}
+        flexDirection={'column'}
         alignItems={{ xl: 'center' }}
-        justifyContent={{ xl: 'space-between' }}
+        justifyContent={{ xl: 'center' }}
         flexBasis={{ xl: 'calc(100% - 264px)' }}
       >
         <CustomBlogMenuItemPc

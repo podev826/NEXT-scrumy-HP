@@ -1,8 +1,8 @@
 import { PrimarySubVisual } from 'components/Elements';
 import { MainLayout } from 'components/Layouts';
 import { META, SUB_VISUAL_LIST } from 'configs';
-import { BlogCategory, BlogMain, BlogsWriter } from 'features/Blogs';
-import type { GetStaticProps, NextPage } from 'next';
+import { BlogCategory, BlogMain } from 'features/Blogs';
+import type { NextPage } from 'next';
 import { generateBlogIndex } from 'pages/api/algolia/generateIndex';
 
 const Blog: NextPage = () => {
@@ -11,8 +11,6 @@ const Blog: NextPage = () => {
       <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
       <BlogCategory />
       <BlogMain />
-
-      <BlogsWriter />
     </MainLayout>
   );
 };
