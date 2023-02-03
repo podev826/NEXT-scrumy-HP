@@ -61,7 +61,7 @@ export const BlogMain: FC = () => {
               <Box>
                 <Box pt={{ base: 6, xl: 0 }}>
                   <CustomBlogsHits />
-                  <Box mt={{ base: 16, xl: 24 }}>
+                  <Box mt={{ base: 16, xl: 20 }} mb={10}>
                     <CustomPagination />
                   </Box>
                 </Box>
