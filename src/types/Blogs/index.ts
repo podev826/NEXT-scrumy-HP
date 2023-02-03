@@ -10,6 +10,10 @@ export type BlogItemProps = {
   title: string;
   content: string;
   description: string;
+  publishedAt: string;
+  image: {
+    url: string;
+  };
   eyecatch: HTMLImageElement;
   category: MicroCMSDate & BlogCategoryDataProps;
 };
