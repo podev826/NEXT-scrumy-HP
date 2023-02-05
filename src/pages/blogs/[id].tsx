@@ -1,10 +1,13 @@
-import { Image } from '@chakra-ui/react';
+import { Box, Image } from '@chakra-ui/react';
+import { Header } from 'components/Layouts/Header';
 import { Blogclient } from 'libraries/microcms';
+import { MarkdownTemplate } from 'styles/blog/MarkdouwnTemplate';
 import { BlogItemProps, ContentType, ContextType } from 'types';
 
-const BlogId = ({ blog }: BlogItemProps) => {
+export const BlogId = ({ blog }: BlogItemProps) => {
   return (
-    <main>
+    <Box>
+      <Header />
       <h1>{blog.title}</h1>
       <p>{blog.publishedAt}</p>
       <Image
@@ -14,12 +17,8 @@ const BlogId = ({ blog }: BlogItemProps) => {
         width={blog.eyecatch.width}
       />
       {/* 目次 */}
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blog.content}`,
-        }}
-      />
-    </main>
+      <MarkdownTemplate source={blog.content} />
+    </Box>
   );
 };
 
