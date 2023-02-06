@@ -12,11 +12,16 @@ import { renderToc } from 'libraries/microcms';
 import { FC } from 'react';
 import { InstantSearch } from 'react-instantsearch-hooks-web';
 import { MarkdownTemplate } from 'styles/blog/MarkdownTemplate';
+import { BlogItemProps } from 'types';
 
 import { TableOfContents } from './TableOfContent';
 import { BlogsWriter } from './Writer';
 
-export const BlogContentMain: FC = ({ blog }) => {
+type blogType = {
+  blog: BlogItemProps;
+};
+
+export const BlogContentMain: FC<blogType> = ({ blog }) => {
   const toc = renderToc(blog.content);
   return (
     <IdWrapper id="blog">

@@ -5,7 +5,11 @@ import { BlogContentMain } from 'features/Blogs/Content';
 import { Blogclient } from 'libraries/microcms';
 import { BlogItemProps, ContentType, ContextType } from 'types';
 
-export const BlogId = ({ blog }: BlogItemProps) => {
+type blogType = {
+  blog: BlogItemProps;
+};
+
+export const BlogId = ({ blog }: blogType) => {
   return (
     <MainLayout meta={META.media}>
       <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
@@ -39,5 +43,4 @@ export const getStaticProps = async (context: ContextType) => {
   };
 };
 
-// 型はBlogItemProps?
 export default BlogId;
