@@ -1,4 +1,4 @@
-import { Box, Image } from '@chakra-ui/react';
+import { Image } from '@chakra-ui/react';
 import { FadeInAnimation, PrimarySubVisual } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import { Footer } from 'components/Layouts/Footer';
