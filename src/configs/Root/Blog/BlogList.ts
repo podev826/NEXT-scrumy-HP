@@ -5,12 +5,12 @@ export const BLOG_LIST = [
     href: 'https://blog-scrumy.com/what_is_esgs_sdgs/',
   },
   {
-    title: 'ESGや企業経営にどのように生かされているのかを解説します',
+    title: 'ESGが企業経営にどのように生かされているのかを解説します',
     image: '/images/root/blog2.png',
     href: 'https://blog-scrumy.com/sustainable_management/',
   },
   {
-    title: '国際投資市場やESGの動向について解説します',
+    title: '国際投資市場やESG投資の動向について解説します',
     image: '/images/root/blog3.png',
     href: 'https://blog-scrumy.com/esg_investment/',
   },
