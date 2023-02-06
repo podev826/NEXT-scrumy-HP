@@ -24,10 +24,10 @@ export const Footer: FC = () => {
               <Text>〒104-0061</Text>
               <Text>
                 <Box as="span" display={{ base: 'inline-block', xl: 'block' }}>
-                  東京都中央区銀座1丁目
+                  東京都中央区銀座
                 </Box>
                 <Box as="span" display={{ base: 'inline-block', xl: 'block' }}>
-                  22番地11号2階
+                  1丁目22番地11号2階
                 </Box>
               </Text>
               <Text mt={{ base: 1, xl: '6px' }}>Mail：info@scrumy.co.jp</Text>
@@ -39,7 +39,7 @@ export const Footer: FC = () => {
               display={{ base: 'none', xl: 'block' }}
               lang="en"
             >
-              <BaseLink href="/privacy-policy">privacy policy</BaseLink>
+              <BaseLink href="/privacy-policy">Privacy Policy</BaseLink>
             </Text>
           </Box>
           <Spacer />
