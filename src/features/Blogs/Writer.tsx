@@ -29,7 +29,7 @@ export const BlogsWriter: FC = () => {
             </Box>
             <Box
               bg="white"
-              fontSize={{ base: 'xl', xl: '2xl' }}
+              fontSize={'xl'}
               p="8"
               w={'70vw'}
               mx={{ base: 'auto', lg: 0 }}
@@ -66,32 +66,32 @@ export const BlogsWriter: FC = () => {
             <Image
               src={'/images/blog/youtube.png'}
               objectFit="contain"
-              w={{ base: '16', md: '20' }}
-              h={{ base: '16', md: '20' }}
+              w={{ base: '16', md: '10' }}
+              h={{ base: '16', md: '10' }}
               borderRadius={'100%'}
               alt=""
             />
             <Image
               src={'/images/blog/twitter.png'}
               objectFit="contain"
-              w={{ base: '16', md: '20' }}
-              h={{ base: '16', md: '20' }}
+              w={{ base: '16', md: '10' }}
+              h={{ base: '16', md: '10' }}
               borderRadius={'100%'}
               alt=""
             />
             <Image
               src={'/images/blog/instagram.png'}
               objectFit="contain"
-              w={{ base: '16', md: '20' }}
-              h={{ base: '16', md: '20' }}
+              w={{ base: '16', md: '10' }}
+              h={{ base: '16', md: '10' }}
               borderRadius={'100%'}
               alt=""
             />
             <Image
               src={'/images/blog/facebook.png'}
               objectFit="contain"
-              w={{ base: '16', md: '20' }}
-              h={{ base: '16', md: '20' }}
+              w={{ base: '16', md: '10' }}
+              h={{ base: '16', md: '10' }}
               borderRadius={'100%'}
               alt=""
             />

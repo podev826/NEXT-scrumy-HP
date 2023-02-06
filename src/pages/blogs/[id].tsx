@@ -1,41 +1,16 @@
-import { Image } from '@chakra-ui/react';
-import { FadeInAnimation, PrimarySubVisual } from 'components/Elements';
-import { ContentWrapper, IdWrapper } from 'components/Layouts';
-import { Footer } from 'components/Layouts/Footer';
-import { Header } from 'components/Layouts/Header';
-import { SUB_VISUAL_LIST } from 'configs';
-import { TableOfContents } from 'features/Blogs';
-import { Blogclient, renderToc } from 'libraries/microcms';
-import { FC } from 'react';
-import { MarkdownTemplate } from 'styles/blog/MarkdownTemplate';
+import { PrimarySubVisual } from 'components/Elements';
+import { MainLayout } from 'components/Layouts';
+import { META, SUB_VISUAL_LIST } from 'configs';
+import { BlogContentMain } from 'features/Blogs/Content';
+import { Blogclient } from 'libraries/microcms';
 import { BlogItemProps, ContentType, ContextType } from 'types';
 
-type BlogTypeProps = {
-  blog: BlogItemProps;
-};
-
-export const BlogId: FC<BlogTypeProps> = ({ blog }) => {
-  const toc = renderToc(blog.content);
+export const BlogId = ({ blog }: BlogItemProps) => {
   return (
-    <IdWrapper id={blog.title}>
-      <Header />
+    <MainLayout meta={META.media}>
       <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
-      <ContentWrapper as="section" maxW={'calc(1080px + (96px * 2))'}>
-        <FadeInAnimation>
-          <h1>{blog.title}</h1>
-          <p>{blog.publishedAt}</p>
-          <Image
-            alt=""
-            src={blog.eyecatch.url}
-            height={blog.eyecatch.height}
-            width={blog.eyecatch.width}
-          />
-          <TableOfContents toc={toc} />
-          <MarkdownTemplate source={blog.content} />
-        </FadeInAnimation>
-      </ContentWrapper>
-      <Footer />
-    </IdWrapper>
+      <BlogContentMain blog={blog} />
+    </MainLayout>
   );
 };
 
