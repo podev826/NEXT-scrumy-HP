@@ -24,8 +24,7 @@ export const COMPANY_INFORMATION: CompanyInformationProps = [
   },
   {
     term: '事業内容',
-    description: `(1)サステナブル経営のための戦略コンサルティング
-    (2)サステナビリティ情報開示AI技術の開発・運営等`,
+    description: '(1)サステナブル経営のための戦略コンサルティング\n(2)サステナビリティ情報開示AI技術の開発・運営等',
   },
   {
     term: '資本金',
