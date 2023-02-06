@@ -41,7 +41,7 @@ export const RootMessage: FC = () => {
                         py={{ base: 1, xl: 0 }}
                         mt={{ base: 2, xl: 0 }}
                       >
-                        持続可能な新しい資本主義を
+                        持続可能な資本主義を
                       </Text>
                     </Text>
                     <Text as="span" display={{ base: 'block', xl: 'inline' }}>
@@ -65,7 +65,7 @@ export const RootMessage: FC = () => {
                 </Text>
                 <Box display={{ md: 'block' }}>
                   <Text mt={6}>
-                    ミッションは、世界一のゼブラ企業にとして「資本主義経済システム」と「民主政治システム」の「API連携」を行うことです。そのためのキーワードとして「サステナビリティ」を中心に据えています。
+                    ミッションは、世界一のゼブラ企業として「資本主義経済システム」と「民主政治システム」の「API連携」を行うことです。そのためのキーワードとして「サステナビリティ」を中心に据えています。
                   </Text>
                 </Box>
                 <Box display={{ md: 'block' }}>
