@@ -21,7 +21,7 @@ export const ContactBlock: FC = () => {
             各種お問い合わせにつきましては
           </Text>
           <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-            こちらからお願いいたします。
+            こちらからお願いいたします
           </Text>
         </Text>
         <Box mt={5} mx="auto" maxW={'536px'}>
