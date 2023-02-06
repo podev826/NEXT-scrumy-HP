@@ -31,7 +31,7 @@ export const BlogCategory: FC = () => {
                 >
                   <Box>
                     <BaseLink
-                      href={item.href}
+                      href={`/blogs/category/${item.href}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       h="full"

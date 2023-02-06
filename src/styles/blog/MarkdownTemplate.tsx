@@ -12,8 +12,15 @@ import {
 import parse, { domToReact, HTMLReactParserOptions } from 'html-react-parser';
 
 type MarkdownTemplateProps = {
-  source: any;
+  source: string;
 } & BoxProps;
+
+// type domNodeType = {
+//   name: string,
+//   tag: string,
+//   type: string,
+//   chirdren: string,
+// }
 
 const h1 = {
   props: {
@@ -178,7 +185,7 @@ const options: HTMLReactParserOptions = {
         );
       }
       if (domNode.name === 'img') {
-        return <Image {...img.props} src={domNode.attribs.url} />;
+        return <Image {...img.props} alt="" src={domNode.attribs.url} />;
       }
     }
   },

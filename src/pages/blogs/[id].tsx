@@ -1,10 +1,17 @@
 import { Box, Image } from '@chakra-ui/react';
 import { Header } from 'components/Layouts/Header';
-import { Blogclient } from 'libraries/microcms';
-import { MarkdownTemplate } from 'styles/blog/MarkdouwnTemplate';
-import { BlogItemProps, ContentType, ContextType } from 'types';
+import { TableOfContents } from 'features/Blogs';
+import { Blogclient, renderToc } from 'libraries/microcms';
+import { FC } from 'react';
+import { MarkdownTemplate } from 'styles/blog/MarkdownTemplate';
+import { BlogItemProps, ContentType, ContextType, TocType } from 'types';
 
-export const BlogId = ({ blog }: BlogItemProps) => {
+type BlogTypeProps = {
+  blog: BlogItemProps;
+};
+
+export const BlogId: FC<BlogTypeProps> = ({ blog }) => {
+  const toc = renderToc(blog.content);
   return (
     <Box>
       <Header />
@@ -16,7 +23,8 @@ export const BlogId = ({ blog }: BlogItemProps) => {
         height={blog.eyecatch.height}
         width={blog.eyecatch.width}
       />
-      {/* 目次 */}
+      <TableOfContents toc={toc} />
+
       <MarkdownTemplate source={blog.content} />
     </Box>
   );

@@ -74,3 +74,5 @@ element：各ページのコンポーネント
 layout:ヘッダーやフッター
 
 pages:基本的にここをいじる？コンポーネント化されているので、src/components/element にある各ページで使用されているコンポーネントを編集する。
+
+－－Blog ページ実装のため、cheerio,paser などを追加
