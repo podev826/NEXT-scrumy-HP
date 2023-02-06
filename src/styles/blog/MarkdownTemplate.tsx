@@ -9,6 +9,7 @@ import {
   Text,
   UnorderedList,
 } from '@chakra-ui/react';
+import { IdWrapper } from 'components/Layouts';
 import parse, { domToReact, HTMLReactParserOptions } from 'html-react-parser';
 
 type MarkdownTemplateProps = {
@@ -124,23 +125,29 @@ const options: HTMLReactParserOptions = {
     if (domNode.type === 'tag') {
       if (domNode.name === 'h1') {
         return (
-          <Heading as="h1" {...h1.props}>
-            {domToReact(domNode.children, options)}
-          </Heading>
+          <IdWrapper id={domNode.children[0].data}>
+            <Heading as="h1" {...h1.props}>
+              {domToReact(domNode.children, options)}
+            </Heading>
+          </IdWrapper>
         );
       }
       if (domNode.name === 'h2') {
         return (
-          <Heading as="h2" {...h2.props}>
-            {domToReact(domNode.children, options)}
-          </Heading>
+          <IdWrapper id={domNode.children[0].data}>
+            <Heading as="h2" {...h2.props}>
+              {domToReact(domNode.children, options)}
+            </Heading>
+          </IdWrapper>
         );
       }
       if (domNode.name === 'h3') {
         return (
-          <Text as="h3" {...h3.props}>
-            {domToReact(domNode.children, options)}
-          </Text>
+          <IdWrapper id={domNode.children[0].data}>
+            <Text as="h3" {...h3.props}>
+              {domToReact(domNode.children, options)}
+            </Text>
+          </IdWrapper>
         );
       }
       if (domNode.name === 'ul') {

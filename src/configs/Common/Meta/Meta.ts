@@ -30,7 +30,7 @@ export const META = {
       '株式会社ScrumyのContactページです。株式会社Scrumyは、サステイナブル経営のためのESG情報開示戦略をサポートする会社です。',
   },
   media: {
-    href: '/media/',
+    href: '/blogs/',
     title: 'Media | 株式会社Scrumy',
     description:
       '株式会社ScrumyのMediaページです。株式会社Scrumyは、サステイナブル経営のためのESG情報開示戦略をサポートする会社です。',
