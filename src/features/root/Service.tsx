@@ -51,7 +51,7 @@ export const RootService: FC = () => {
                         as="h3"
                         bg="main.100"
                         color="white"
-                        fontSize={'2vw'}
+                        fontSize={'20pt'}
                         fontWeight="bold"
                         letterSpacing={0}
                         textAlign="center"
@@ -67,7 +67,7 @@ export const RootService: FC = () => {
                         as="h3"
                         bg="main.100"
                         color="white"
-                        fontSize={'2.5vw'}
+                        fontSize={'20pt'}
                         fontWeight="bold"
                         letterSpacing={0}
                         textAlign="center"
@@ -83,7 +83,7 @@ export const RootService: FC = () => {
                         as="h3"
                         bg="main.100"
                         color="white"
-                        fontSize={'2.5vw'}
+                        fontSize={'20pt'}
                         fontWeight="bold"
                         letterSpacing={0}
                         textAlign="center"
@@ -98,7 +98,7 @@ export const RootService: FC = () => {
                       </Text>
                       <Text
                         mt={{ base: 4 }}
-                        fontSize={{ base: '2vw', md: '1.5vw', xl: '1.4vw' }}
+                        fontSize={{ base: '2vw', md: '1.5vw', xl: '14pt' }}
                       >
                         {item.text1}
                         <br />
