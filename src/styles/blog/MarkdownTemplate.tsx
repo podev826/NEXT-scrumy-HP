@@ -86,8 +86,9 @@ const a = {
 
 const img = {
   props: {
+    mx: 'auto',
     my: '40px',
-    height: '25vw',
+    height: '350px',
   },
 };
 
