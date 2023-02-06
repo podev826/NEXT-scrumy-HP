@@ -29,7 +29,7 @@ export const BlogsWriter: FC = () => {
             </Box>
             <Box
               bg="white"
-              fontSize={{ base: 'xl', xl: '2xl' }}
+              fontSize={'xl'}
               p="8"
               w={'70vw'}
               mx={{ base: 'auto', lg: 0 }}

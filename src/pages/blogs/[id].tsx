@@ -1,32 +1,16 @@
-import { Box, Image } from '@chakra-ui/react';
-import { Header } from 'components/Layouts/Header';
-import { TableOfContents } from 'features/Blogs';
-import { Blogclient, renderToc } from 'libraries/microcms';
-import { FC } from 'react';
-import { MarkdownTemplate } from 'styles/blog/MarkdownTemplate';
-import { BlogItemProps, ContentType, ContextType, TocType } from 'types';
+import { PrimarySubVisual } from 'components/Elements';
+import { MainLayout } from 'components/Layouts';
+import { META, SUB_VISUAL_LIST } from 'configs';
+import { BlogContentMain } from 'features/Blogs/Content';
+import { Blogclient } from 'libraries/microcms';
+import { BlogItemProps, ContentType, ContextType } from 'types';
 
-type BlogTypeProps = {
-  blog: BlogItemProps;
-};
-
-export const BlogId: FC<BlogTypeProps> = ({ blog }) => {
-  const toc = renderToc(blog.content);
+export const BlogId = ({ blog }: BlogItemProps) => {
   return (
-    <Box>
-      <Header />
-      <h1>{blog.title}</h1>
-      <p>{blog.publishedAt}</p>
-      <Image
-        alt=""
-        src={blog.eyecatch.url}
-        height={blog.eyecatch.height}
-        width={blog.eyecatch.width}
-      />
-      <TableOfContents toc={toc} />
-
-      <MarkdownTemplate source={blog.content} />
-    </Box>
+    <MainLayout meta={META.media}>
+      <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
+      <BlogContentMain blog={blog} />
+    </MainLayout>
   );
 };
 
