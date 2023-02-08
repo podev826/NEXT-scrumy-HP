@@ -7,12 +7,14 @@ import { FC } from 'react';
 type AboutCompanyItemProps = {
   term: string;
   description: string | string[];
+  description2: string | string[];
   last: boolean;
 };
 
 const AboutCompanyItem: FC<AboutCompanyItemProps> = ({
   term,
   description,
+  description2,
   last,
 }) => {
   return (
@@ -52,6 +54,8 @@ const AboutCompanyItem: FC<AboutCompanyItemProps> = ({
         flexBasis={{ xl: 'calc(100% - 240px)' }}
       >
         {description}
+        <br />
+        {description2}
       </Box>
     </Box>
   );
@@ -88,7 +92,7 @@ export const AboutCompany: FC = () => {
             as="dl"
             mx="auto"
             w={{ base: 'calc(100% - 36px)', xl: '100%' }}
-            maxW="844px"
+            maxW="1055px"
             display="grid"
             gap={{ base: 4, xl: 6 }}
             bg="base.100"
@@ -101,6 +105,7 @@ export const AboutCompany: FC = () => {
                 key={item.term}
                 term={item.term}
                 description={item.description}
+                description2={item.description2}
                 last={index + 1 === COMPANY_INFORMATION.length ? true : false}
               />
             ))}
