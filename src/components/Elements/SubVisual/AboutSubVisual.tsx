@@ -73,28 +73,28 @@ export const AboutSubVisual: FC = () => {
               mt={{ base: '15vw', md: '13vw' }}
             >
               <Box as="span" display={{ base: 'none', md: 'block' }}>
-                「サステナビリティ」をブームで終わらせず、経営戦略に革命を起こすために、
+                「サステナビリティ」を一時のブームで終わらせず、経営戦略に革命を起こすため、
               </Box>
               <Box as="span" display={{ base: 'none', md: 'block' }}>
-                サービスの開発に加えて、領域の先駆者として政策・法律の整備を含めて取り組んでいます。
+                サービスの開発に加えて領域の先駆者として法政策の整備にも取り組んでいます
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                「サステナビリティ」をブームで
+                「サステナビリティ」を
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                終わらせず、経営戦略に革命を
+                一時のブームで終わらせず、
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                起こすために、サービスの開発に
+                経営戦略に革命を起こすため、
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                加えて、領域の先駆者として
+                サービスの開発に加えて
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                政策・法律の整備を含めて
+                領域の先駆者として
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                取り組んでいます。
+                法政策の整備にも取り組んでいます
               </Box>
             </Text>
           </Flex>

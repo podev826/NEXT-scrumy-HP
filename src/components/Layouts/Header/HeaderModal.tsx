@@ -181,7 +181,7 @@ export const HeaderModal: FC = () => {
           </TertiaryLink>
         </Box>
         <Text mt="52px" fontSize={12}>
-          <small lang="en">©︎ 2021 Scrumy. All Rights Reserved</small>
+          <small lang="en">©︎ 2021-2023 Scrumy Inc. All Rights Reserved</small>
         </Text>
       </Box>
       <Box
@@ -308,7 +308,9 @@ export const HeaderModal: FC = () => {
                 privacy-policy
               </BaseLink>
               <Text mt="10px" fontSize={12}>
-                <small lang="en">©︎ 2021 Scrumy. All Rights Reserved</small>
+                <small lang="en">
+                  ©︎ 2021-2023 Scrumy Inc. All Rights Reserved
+                </small>
               </Text>
             </Box>
           </Flex>

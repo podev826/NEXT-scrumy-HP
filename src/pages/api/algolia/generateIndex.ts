@@ -1,6 +1,6 @@
 import algoliasearch from 'algoliasearch';
-import { BloggetAllContents, NewsgetAllContents } from 'libraries/microcms';
-import { BlogContentProps, NewsContentProps } from 'types';
+import { NewsgetAllContents } from 'libraries/microcms';
+import { NewsContentProps } from 'types';
 
 export const generateNewsIndex = async (): Promise<void> => {
   const client = algoliasearch(

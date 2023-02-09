@@ -2,16 +2,16 @@ export const BLOG_LIST = [
   {
     title: 'ESGやSDGsに関する基本的な内容をわかりやすく解説します',
     image: '/images/root/blog1.png',
-    href: '8a_cl5gq5dy',
+    href: 'https://blog-scrumy.com/what_is_esgs_sdgs/',
   },
   {
-    title: 'ESGや企業経営にどのように生かされているのかを解説します',
+    title: 'ESGが企業経営にどのように生かされているのかを解説します',
     image: '/images/root/blog2.png',
-    href: '3kjcv5uy5l',
+    href: 'https://blog-scrumy.com/sustainable_management/',
   },
   {
-    title: '国際投資市場やESGの動向について解説します',
+    title: '国際投資市場やESG投資の動向について解説します',
     image: '/images/root/blog3.png',
-    href: 'ad_du_l5jb',
+    href: 'https://blog-scrumy.com/esg_investment/',
   },
 ];

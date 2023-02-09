@@ -64,6 +64,7 @@ export const RootNews: FC<RootNewsProps> = ({ contents }) => {
                               bg="main.100"
                               color="sub.100"
                               px={2}
+                              fontSize={{ base: '', xl: '14px' }}
                               textAlign={'center'}
                             >
                               {item.category.name}

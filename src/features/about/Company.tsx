@@ -7,12 +7,14 @@ import { FC } from 'react';
 type AboutCompanyItemProps = {
   term: string;
   description: string | string[];
+  description2: string | string[];
   last: boolean;
 };
 
 const AboutCompanyItem: FC<AboutCompanyItemProps> = ({
   term,
   description,
+  description2,
   last,
 }) => {
   return (
@@ -52,6 +54,8 @@ const AboutCompanyItem: FC<AboutCompanyItemProps> = ({
         flexBasis={{ xl: 'calc(100% - 240px)' }}
       >
         {description}
+        <br />
+        {description2}
       </Box>
     </Box>
   );
@@ -72,19 +76,15 @@ export const AboutCompany: FC = () => {
               w="full"
             >
               <Text as="span" display="block">
-                株式会社Scrumy
-                (スクラミー)はサステナブルファイナンスサービスを提供する会社として2021年4月に創業しました。2021年11月にEastVentures、慶應義塾大学元常任理事の國領二郎博士をはじめ個人投資家5名からシードラウンドで約4,500万円の資金調達を実施しました。
+                株式会社Scrumy（スクラミー）は、サステナブル経営とサステナブルファイナンスを専門とする戦略コンサルティングファームです。
               </Text>
               <br />
               <Text as="span" display="block">
-                国内で有数のベンチャーキャピタルであるIncubate
-                Fundが主催するピッチコンテストで優勝、グロービス経営大学院が主催するG-STARTUPにおいて100名を超える投資家から選ばれてベストオーディエンス賞を受賞するなど多くのビジネスコンテストで国内外から高い評価をいただき、20社以上のベンチャーキャピタルから出資のオファーをいただいています。
+                国内外の大企業、政府・自治体、大学・研究所、非営利組織、機関投資家、メディアの皆様と連携させていただいております。
               </Text>
               <br />
               <Text as="span" display="block">
-                2022年9月、国連投資責任原則（PRI）の署名機関として認定されました。
-                「新しい資本主義」を掲げるゼブラベンチャーとして内閣府、日本経済新聞をはじめとした各種メディアに取り上げていただいており、大学や自治体などでの講演会も多数お受けしています。さらに、政治家や
-                官僚にも興味を持っていただき、国連委員会への出席や衆議院議員会館での勉強会などを通し、政策提言によるルールメイキングを進めています。
+                サステナビリティに関するあらゆる領域（法律、会計・監査、医療・ヘルスケア、金融、環境、人権、HR、ガバナンス・情報セキュリティ）の経験豊富な専門家集団として、日々進化を続けるSXデータベース「Scrumy-Code」に基づくデータドリブンな戦略コンサルティングサービスを提供してまいります。
               </Text>
             </Text>
           </Box>
@@ -92,7 +92,7 @@ export const AboutCompany: FC = () => {
             as="dl"
             mx="auto"
             w={{ base: 'calc(100% - 36px)', xl: '100%' }}
-            maxW="844px"
+            maxW="1055px"
             display="grid"
             gap={{ base: 4, xl: 6 }}
             bg="base.100"
@@ -105,6 +105,7 @@ export const AboutCompany: FC = () => {
                 key={item.term}
                 term={item.term}
                 description={item.description}
+                description2={item.description2}
                 last={index + 1 === COMPANY_INFORMATION.length ? true : false}
               />
             ))}

@@ -13,12 +13,12 @@ export const NEWS_CATEGORIES: NewsCategoriesProps = {
     name: 'All',
   },
   pitch_media: {
-    text: 'ピッチ・メディア',
-    name: 'ピッチ・メディア',
+    text: 'メディア',
+    name: 'メディア',
   },
   fundraising: {
-    text: '資金調達',
-    name: '資金調達',
+    text: '経営情報',
+    name: '経営情報',
   },
   seminar_edu: {
     text: 'セミナー・教育',
