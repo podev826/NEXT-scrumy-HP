@@ -23,31 +23,35 @@ export const AboutMember: FC = () => {
       <ContentWrapper>
         <FadeInAnimation>
           <PrimaryTitle en="Team" />
-          <Box
-            mt={{ base: 8, md: 12, xl: 16 }}
-            pl={{ xl: 14 }}
-            overflowX={{ base: 'scroll', xl: 'visible' }}
-          >
+          <Box mt={{ base: 8, md: 12, xl: 16 }} px={{ xl: 14 }}>
             <Accordion
               allowToggle
               allowMultiple
-              w={{ base: 'calc((240px * 6) + (12px * 5))', xl: 'full' }}
-              display={{ base: 'flex', xl: 'grid' }}
+              w={'full'}
+              display={{ base: 'block', md: 'grid' }}
               pb="1px"
-              gridTemplateColumns={{ xl: 'repeat(2, 1fr)' }}
-              rowGap={{ base: 3, md: 4, xl: '5vw' }}
-              columnGap={{ base: 3, md: 4, xl: '5vw' }}
-              overflowX={{ base: 'scroll', xl: 'visible' }}
+              gridTemplateColumns={{ md: 'repeat(2, 1fr)' }}
+              rowGap={{ md: '3vw' }}
+              columnGap={{ md: '2vw', xl: '5vw' }}
+              justifyItems={'center'}
             >
               {MEMBER_LIST.map((item) => (
                 <AccordionItem
                   key={item.name}
-                  w={{ base: '240px', xl: 'full' }}
+                  w={{
+                    base: '60vw',
+                    md: '340px',
+                    lg: '410px',
+                    xl: '500px',
+                    '2xl': '550px',
+                  }}
                   _expanded={{ h: '500' }}
                   overflow={'hidden'}
                   shadow="lg"
-                  borderRadius="30px"
+                  borderRadius={{ base: '20px', sm: '30px' }}
                   mb={{ base: 'auto', xl: 'auto' }}
+                  mt={{ base: '7', lg: 0 }}
+                  mx={{ base: 'auto', lg: 0 }}
                 >
                   {({ isExpanded }) => (
                     <Box>
@@ -55,19 +59,15 @@ export const AboutMember: FC = () => {
                         w="full"
                         display={{ base: '', xl: 'flex' }}
                         alignContent={'center'}
-                        borderRadius={{ base: '0', md: '30px' }}
                       >
-                        <Box>
-                          <Image src={item.image} width="300px" alt="" />
-                        </Box>
                         <AccordionButton
                           p={0}
                           _hover={{ bg: 'base.100' }}
                           _focus={{ outline: 'none' }}
                         >
-                          <Box px={{ base: 4, xl: 4 }} w="full">
+                          <Box px={{ base: 3, xl: 4 }} w="full">
                             <Box
-                              py={{ base: 6, xl: 5 }}
+                              py={{ base: 3, md: 4 }}
                               display={{ base: 'flex' }}
                               flexDirection="column"
                               alignItems={'flex-start'}
@@ -75,39 +75,61 @@ export const AboutMember: FC = () => {
                               <Box display={'inline-block'}>
                                 <Text
                                   fontWeight="bold"
-                                  fontSize={{ base: 'sm', xl: 'md' }}
+                                  fontSize={{
+                                    base: '2.2vw',
+                                    md: 'sm',
+                                    lg: 'md',
+                                  }}
+                                  pl="2"
                                 >
                                   {item.position}
                                 </Text>
                               </Box>
-                              <Box display={'inline-block'} mt={3}>
-                                <Text
-                                  fontWeight="bold"
-                                  fontSize={{ base: 'sm', lg: '26px' }}
-                                >
-                                  {item.name_en}
-                                </Text>
-                              </Box>
                               <Box
-                                w="full"
-                                display={{ base: 'flex' }}
-                                justifyContent={{ base: 'space-between' }}
-                                alignItems={{ base: 'flex-end' }}
-                                flexGrow={{ xl: 1 }}
-                                mt={{ base: 3 }}
+                                display={'flex'}
+                                mt={3}
+                                ml="3"
+                                position="relative"
+                                alignItems="flex-end"
                               >
                                 <Text
-                                  fontSize={{ base: 'lg', xl: 'xl' }}
+                                  fontSize={{
+                                    base: '3.5vw',
+                                    sm: '2.8vw',
+                                    md: '20px',
+                                    lg: '25px',
+                                    xl: '25px',
+                                  }}
                                   fontWeight="bold"
+                                  mr={{ base: '2vw', md: '5' }}
                                 >
                                   {item.name}
                                 </Text>
+                                <Text
+                                  fontWeight="bold"
+                                  fontSize={{
+                                    base: '2.8vw',
+                                    sm: '2.4vw',
+                                    md: '15px',
+                                    lg: '20px',
+                                    xl: '22px',
+                                  }}
+                                >
+                                  {item.name_en}
+                                </Text>
                                 <Box
-                                  fontSize={{ base: 'xl', xl: '2xl' }}
+                                  fontSize={{ base: 14, sm: 'xl', xl: '2xl' }}
                                   color={'accent.100'}
-                                  position="relative"
-                                  top="5"
-                                  left="1"
+                                  position="absolute"
+                                  top={{ base: '2.5vw', sm: 2, md: 3 }}
+                                  left={{
+                                    base: '48vw',
+                                    sm: '50vw',
+                                    md: '270px',
+                                    lg: '340px',
+                                    xl: '430px',
+                                    '2xl': '470px',
+                                  }}
                                   transitionProperty="all"
                                   transitionTimingFunction="linear"
                                   transitionDuration="fast"
