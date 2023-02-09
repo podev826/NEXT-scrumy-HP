@@ -69,6 +69,7 @@ export const BlogsWriter: FC = () => {
               w={{ base: '16', md: '10' }}
               h={{ base: '16', md: '10' }}
               borderRadius={'100%'}
+              cursor={'pointer'}
               alt=""
             />
             <Image
@@ -77,6 +78,7 @@ export const BlogsWriter: FC = () => {
               w={{ base: '16', md: '10' }}
               h={{ base: '16', md: '10' }}
               borderRadius={'100%'}
+              cursor={'pointer'}
               alt=""
             />
             <Image
@@ -85,6 +87,7 @@ export const BlogsWriter: FC = () => {
               w={{ base: '16', md: '10' }}
               h={{ base: '16', md: '10' }}
               borderRadius={'100%'}
+              cursor={'pointer'}
               alt=""
             />
             <Image
@@ -93,6 +96,7 @@ export const BlogsWriter: FC = () => {
               w={{ base: '16', md: '10' }}
               h={{ base: '16', md: '10' }}
               borderRadius={'100%'}
+              cursor={'pointer'}
               alt=""
             />
           </Box>
