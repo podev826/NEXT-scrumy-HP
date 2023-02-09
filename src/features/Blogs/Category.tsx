@@ -32,7 +32,6 @@ export const BlogCategory: FC = () => {
                   <Box>
                     <BaseLink
                       href={`/blogs/category/${item.href}`}
-                      target="_blank"
                       rel="noopener noreferrer"
                       h="full"
                       _hover={{
