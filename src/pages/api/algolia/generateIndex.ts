@@ -27,31 +27,3 @@ export const generateNewsIndex = async (): Promise<void> => {
       autoGenerateObjectIDIfNotExist: true,
     }));
 };
-
-export const generateBlogIndex = async (): Promise<void> => {
-  const client = algoliasearch(
-    process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID as string,
-    process.env.ALGOLIA_ADMIN_API_KEY as string
-  );
-  const items = await BloggetAllContents();
-
-  const objects = items.map((item: BlogContentProps) => {
-    return {
-      objectID: item.id,
-      publishedAt: item.publishedAt,
-      title: item.title,
-      category: item.category.name,
-      slug: item.category.id,
-      content: item.content,
-      image: item.eyecatch,
-      description: item.description,
-    };
-  });
-
-  const index = client.initIndex('blog');
-  process.env.NODE_ENV === 'production' && (await index.clearObjects());
-  process.env.NODE_ENV === 'production' &&
-    (await index.saveObjects(objects, {
-      autoGenerateObjectIDIfNotExist: true,
-    }));
-};
