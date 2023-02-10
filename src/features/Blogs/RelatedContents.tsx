@@ -6,10 +6,8 @@ import {
   Link,
   Text,
 } from '@chakra-ui/react';
-import dayjs from 'dayjs';
-import { Blogclient } from 'libraries/microcms';
 import { FC } from 'react';
-import { BlogItemProps, ContextType } from 'types';
+import { BlogItemProps } from 'types';
 
 type BlogTypeProps = {
   contents: BlogItemProps[];
@@ -56,27 +54,37 @@ export const RelatedContents: FC<BlogTypeProps> = ({ contents }) => {
                       w={{ base: '30vw', xl: '25vw' }}
                     />
                   </Box>
-                  <Box flex={{ base: '1.6', xl: '2.3' }}>
-                    <Text textAlign={'left'} fontWeight="bold" fontSize={'2xl'}>
-                      {blog.title}
-                    </Text>
+                  {/* <Box
+                    flex={{ base: '1.6', xl: '2.3' }}
+                    w={{ base: '30vw', xl: '25vw' }}
+                  >
                     <Box display={{ base: 'none', lg: 'block' }}>
+                      <Text
+                        textAlign={'left'}
+                        fontWeight="bold"
+                        fontSize={'2xl'}
+                      >
+                        {blog.title}
+                      </Text>
                       <Text textAlign={'left'}>{blog.description}</Text>
                       <Text float={'right'}>
                         {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
                       </Text>
                     </Box>
-                  </Box>
+                  </Box> */}
                 </Box>
                 <Box
-                  display={{ base: 'block', lg: 'none' }}
                   mt={2}
                   fontSize={'xl'}
+                  w={{ base: '30vw', xl: '25vw' }}
+                  flex={{ base: '1.6', xl: '2.3' }}
                 >
+                  <Box display={{ base: 'none', lg: 'block' }}>
+                    <Text textAlign={'left'} fontWeight="bold" fontSize={'2xl'}>
+                      {blog.title}
+                    </Text>
+                  </Box>
                   <Text textAlign={'left'}>{blog.description}</Text>
-                  <Text float={'right'}>
-                    {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
-                  </Text>
                 </Box>
               </Link>
             </Box>

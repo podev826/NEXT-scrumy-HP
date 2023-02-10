@@ -2,6 +2,7 @@ import {
   Accordion,
   AccordionItem,
   Box,
+  Center,
   Image,
   Link,
   Text,
@@ -41,14 +42,14 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
                     alt="アイキャッチ"
                     src={hit.image.url}
                     objectFit="contain"
-                    w={{ base: '30vw', xl: '25vw' }}
+                    w={{ base: '60vw', lg: '25vw' }}
                   />
                 </Box>
                 <Box flex={{ base: '1.6', xl: '2.3' }}>
-                  <Text textAlign={'left'} fontWeight="bold" fontSize={'2xl'}>
-                    {hit.title}
-                  </Text>
                   <Box display={{ base: 'none', lg: 'block' }}>
+                    <Text textAlign={'left'} fontWeight="bold" fontSize={'2xl'}>
+                      {hit.title}
+                    </Text>
                     <Text textAlign={'left'}>{hit.description}</Text>
                     <Text float={'right'}>
                       {dayjs(hit.publishedAt).format('YYYY.MM.DD')}
