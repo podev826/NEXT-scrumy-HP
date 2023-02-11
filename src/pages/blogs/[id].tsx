@@ -2,18 +2,21 @@ import { PrimarySubVisual } from 'components/Elements';
 import { MainLayout } from 'components/Layouts';
 import { META, SUB_VISUAL_LIST } from 'configs';
 import { BlogContentMain } from 'features/Blogs/Content';
+import RelatedContents from 'features/Blogs/RelatedContents';
 import { Blogclient } from 'libraries/microcms';
-import { BlogItemProps, ContentType, ContextType } from 'types';
+import { BlogDataProps, BlogItemProps, ContentType, ContextType } from 'types';
 
 type blogType = {
   blog: BlogItemProps;
+  related: BlogDataProps;
 };
 
-export const BlogId = ({ blog }: blogType) => {
+export const BlogId = ({ blog, related }: blogType) => {
   return (
     <MainLayout meta={META.media}>
       <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
       <BlogContentMain blog={blog} />
+      <RelatedContents contents={related.contents} />
     </MainLayout>
   );
 };
@@ -36,9 +39,20 @@ export const getStaticProps = async (context: ContextType) => {
     contentId: id,
   });
 
+  const category = data.category.id;
+  const data2: BlogItemProps = await Blogclient.get({
+    endpoint: 'blogs',
+    queries: {
+      limit: 6,
+      orders: '-publishedAt',
+      filters: `category[equals]${category}[and]contentId[not_equals]${id}`,
+    },
+  });
+
   return {
     props: {
       blog: data,
+      related: data2,
     },
   };
 };

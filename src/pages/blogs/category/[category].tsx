@@ -1,4 +1,11 @@
-import { Accordion, AccordionItem, Box, Image, Text } from '@chakra-ui/react';
+import {
+  Accordion,
+  AccordionItem,
+  Box,
+  Image,
+  Link,
+  Text,
+} from '@chakra-ui/react';
 import { FadeInAnimation, PrimarySubVisual } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import { Footer } from 'components/Layouts/Footer';
@@ -67,53 +74,55 @@ export const CategoryId: FC<BlogTypeProps> = ({ blog }) => {
             <Accordion allowToggle allowMultiple>
               {blog.map((blog) => (
                 <AccordionItem
-                  key={blog.objectID}
+                  key={blog.id}
                   border="none"
                   p={0}
                   px={{ base: 18, xl: 0 }}
                   mb={{ base: 8, lg: 12 }}
                 >
                   <Box mt="xl">
-                    <Box
-                      fontSize={{ base: 'xl', xl: 'lg' }}
-                      display={'flex'}
-                      alignItems={'center'}
-                      w={{ base: '', xl: '65vw' }}
-                    >
-                      <Box lang="en" mr={8}>
-                        <Image
-                          alt="アイキャッチ"
-                          src={blog.eyecatch.url}
-                          objectFit="contain"
-                          w={{ base: '30vw', xl: '25vw' }}
-                        />
-                      </Box>
-                      <Box flex={{ base: '1.6', xl: '2.3' }}>
-                        <Text
-                          textAlign={'left'}
-                          fontWeight="bold"
-                          fontSize={'2xl'}
-                        >
-                          {blog.title}
-                        </Text>
-                        <Box display={{ base: 'none', lg: 'block' }}>
-                          <Text textAlign={'left'}>{blog.description}</Text>
-                          <Text float={'right'}>
-                            {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
+                    <Link href={`/blogs/${blog.id}`}>
+                      <Box
+                        fontSize={{ base: 'xl', xl: 'lg' }}
+                        display={'flex'}
+                        alignItems={'center'}
+                        w={{ base: '', xl: '65vw' }}
+                      >
+                        <Box lang="en" mr={8}>
+                          <Image
+                            alt="アイキャッチ"
+                            src={blog.eyecatch.url}
+                            objectFit="contain"
+                            w={{ base: '30vw', xl: '25vw' }}
+                          />
+                        </Box>
+                        <Box flex={{ base: '1.6', xl: '2.3' }}>
+                          <Text
+                            textAlign={'left'}
+                            fontWeight="bold"
+                            fontSize={'2xl'}
+                          >
+                            {blog.title}
                           </Text>
+                          <Box display={{ base: 'none', lg: 'block' }}>
+                            <Text textAlign={'left'}>{blog.description}</Text>
+                            <Text float={'right'}>
+                              {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
+                            </Text>
+                          </Box>
                         </Box>
                       </Box>
-                    </Box>
-                    <Box
-                      display={{ base: 'block', lg: 'none' }}
-                      mt={2}
-                      fontSize={'xl'}
-                    >
-                      <Text textAlign={'left'}>{blog.description}</Text>
-                      <Text float={'right'}>
-                        {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
-                      </Text>
-                    </Box>
+                      <Box
+                        display={{ base: 'block', lg: 'none' }}
+                        mt={2}
+                        fontSize={'xl'}
+                      >
+                        <Text textAlign={'left'}>{blog.description}</Text>
+                        <Text float={'right'}>
+                          {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
+                        </Text>
+                      </Box>
+                    </Link>
                   </Box>
                 </AccordionItem>
               ))}

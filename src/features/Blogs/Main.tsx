@@ -44,7 +44,7 @@ export const BlogMain: FC = () => {
                       <CustomSearchBox />
                     </Box>
                   </Box>
-                  <Box display={{ xl: '' }}>
+                  <Box display={{ base: 'none', xl: 'block' }}>
                     <Text
                       fontSize={{ base: 'xl', xl: '2xl' }}
                       fontWeight="bold"
