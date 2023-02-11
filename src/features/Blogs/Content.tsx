@@ -14,6 +14,7 @@ import { InstantSearch } from 'react-instantsearch-hooks-web';
 import { MarkdownTemplate } from 'styles/blog/MarkdownTemplate';
 import { BlogItemProps } from 'types';
 
+import { BlogContact } from './Contact';
 import { BlogsShare } from './Share';
 import { TableOfContents } from './TableOfContent';
 import { BlogsWriter } from './Writer';
@@ -29,7 +30,7 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
       <ContentWrapper as="section" py={0} px={8}>
         <FadeInAnimation>
           <Box
-            display={'flex'}
+            display={{ base: '', xl: 'flex' }}
             flexDirection={{ base: 'column', lg: 'row-reverse' }}
             justifyContent={{ base: '', lg: 'space-between' }}
             mt="10"
@@ -102,6 +103,7 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
               <Box>
                 <BlogsWriter />
                 <BlogsShare blog={blog} />
+                <BlogContact />
               </Box>
             </Box>
           </Box>
