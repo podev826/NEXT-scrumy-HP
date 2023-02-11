@@ -7,6 +7,8 @@ type TocTypeProps = {
 };
 
 export const TableOfContents: FC<TocTypeProps> = ({ toc }) => {
+  let h2 = 0;
+  let h3 = 0;
   return (
     <Box
       mt="20"
@@ -23,10 +25,13 @@ export const TableOfContents: FC<TocTypeProps> = ({ toc }) => {
         <Text cursor={'pointer'}>[閉じる]</Text>
       </Box>
       <Box mt="5">
-        {toc.map((data: TocType, index) => (
+        {toc.map((data: TocType) => (
           <Text key={data.id} cursor={'pointer'}>
-            <Link href={`#${data.text}`}>
-              {index + 1} {data.text}
+            <Link href={`#${data.text}`} ml={data.name == 'h3' ? '4' : 0}>
+              {data.name == 'h2'
+                ? String((h2 += 1)) + '.'
+                : String((h3 += 1)) + '.'}{' '}
+              {data.text}
             </Link>
           </Text>
         ))}
