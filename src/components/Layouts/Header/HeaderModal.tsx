@@ -305,7 +305,7 @@ export const HeaderModal: FC = () => {
                 pb={1}
                 onClick={closeHeader}
               >
-                privacy-policy
+                Privacy-Policy
               </BaseLink>
               <Text mt="10px" fontSize={12}>
                 <small lang="en">
