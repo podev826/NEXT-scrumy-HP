@@ -1,6 +1,7 @@
 import { PrimarySubVisual } from 'components/Elements';
 import { MainLayout } from 'components/Layouts';
 import { META, SUB_VISUAL_LIST } from 'configs';
+import { BlogContact } from 'features/Blogs/Contact';
 import { BlogContentMain } from 'features/Blogs/Content';
 import RelatedContents from 'features/Blogs/RelatedContents';
 import { Blogclient } from 'libraries/microcms';
@@ -17,6 +18,7 @@ export const BlogId = ({ blog, related }: blogType) => {
       <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
       <BlogContentMain blog={blog} />
       <RelatedContents contents={related.contents} />
+      <BlogContact />
     </MainLayout>
   );
 };

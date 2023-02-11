@@ -14,7 +14,6 @@ import { InstantSearch } from 'react-instantsearch-hooks-web';
 import { MarkdownTemplate } from 'styles/blog/MarkdownTemplate';
 import { BlogItemProps } from 'types';
 
-import { BlogContact } from './Contact';
 import { BlogsShare } from './Share';
 import { TableOfContents } from './TableOfContent';
 import { BlogsWriter } from './Writer';
@@ -103,7 +102,6 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
               <Box>
                 <BlogsWriter />
                 <BlogsShare blog={blog} />
-                <BlogContact />
               </Box>
             </Box>
           </Box>

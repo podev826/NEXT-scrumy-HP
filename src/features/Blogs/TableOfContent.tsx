@@ -11,7 +11,7 @@ export const TableOfContents: FC<TocTypeProps> = ({ toc }) => {
   let h3 = 0;
   return (
     <Box
-      mt="20"
+      my="20"
       border="1px"
       borderColor="#38B5A6"
       w="fit-content"

@@ -48,10 +48,9 @@ export const BlogContact: FC = () => {
   const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
 
   return (
-    <ContentWrapper>
+    <ContentWrapper w="60vw" mx="0">
       <Box
         maxW={{ base: 'full', xl: 'full' }}
-        mx="auto"
         onClick={() => setIsFormOpen(!isFormOpen)}
       >
         <Box
