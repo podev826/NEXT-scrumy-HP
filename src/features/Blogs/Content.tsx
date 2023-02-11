@@ -30,7 +30,7 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
           display={'flex'}
           flexDirection={{ base: 'column', lg: 'row-reverse' }}
           justifyContent={{ base: '', lg: 'space-between' }}
-          mt="10"
+          mt={{ base: '10', lg: '100px', xl: '10' }}
           mb={{ xl: '40' }}
         >
           <Box w="30vw" mt={{ lg: '20' }}>
@@ -81,7 +81,7 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
             </InstantSearch>
           </Box>
           <Box w="65vw">
-            <Text fontSize={{ lg: '3xl' }} fontWeight="bold" mb={'5'}>
+            <Text fontSize={{ xl: '3xl' }} fontWeight="bold" mb={'5'}>
               {blog.title}
             </Text>
             <Image

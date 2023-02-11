@@ -16,9 +16,6 @@ export const BlogId = ({ blog, related }: blogType) => {
   return (
     <BlogMainLayout meta={META.media}>
       <IdWrapper id={blog.title}>
-        <Box display={{ base: 'none', md: 'block' }}>
-          <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
-        </Box>
         <BlogContentMain blog={blog} />
         <RelatedContents contents={related.contents} />
       </IdWrapper>

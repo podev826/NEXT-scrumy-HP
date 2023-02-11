@@ -31,7 +31,7 @@ export const BlogSPHeader: FC = () => {
             <Spacer />
             <Text
               as="h1"
-              fontSize={{ base: '4vw', md: '6.111vw', '2xl': '9xl' }}
+              fontSize={{ base: '4vw', md: '3vw', '2xl': '9xl' }}
               fontStyle="italic"
               lang="en"
               color={'white'}

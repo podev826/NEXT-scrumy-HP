@@ -52,7 +52,7 @@ export const SearchModalSp: FC = () => {
         <VisuallyHidden>メニューを開閉する</VisuallyHidden>
       </Box>
       <Box
-        display={{ base: 'block', md: 'none' }}
+        display={{ base: 'block', xl: 'none' }}
         position="fixed"
         zIndex="modal"
         overflowY="scroll"

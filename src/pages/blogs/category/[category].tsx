@@ -48,9 +48,6 @@ export const CategoryId: FC<BlogTypeProps> = ({ blog }) => {
   return (
     <BlogMainLayout meta={META.media}>
       <IdWrapper id={blog[0].category.name}>
-        <Box display={{ base: 'none', md: 'block' }}>
-          <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
-        </Box>
         <ContentWrapper as="section" maxW={'calc(1080px + (96px * 2))'}>
           <FadeInAnimation>
             <Box>
