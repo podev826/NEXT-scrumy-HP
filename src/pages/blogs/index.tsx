@@ -1,5 +1,6 @@
+import { Box } from '@chakra-ui/react';
 import { PrimarySubVisual } from 'components/Elements';
-import { MainLayout } from 'components/Layouts';
+import { BlogMainLayout } from 'components/Layouts';
 import { META, SUB_VISUAL_LIST } from 'configs';
 import { BlogCategory, BlogMain } from 'features/Blogs';
 import type { NextPage } from 'next';
@@ -7,11 +8,14 @@ import { generateBlogIndex } from 'pages/api/algolia/generateIndex';
 
 const Blog: NextPage = () => {
   return (
-    <MainLayout meta={META.media}>
-      <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
+    <BlogMainLayout meta={META.media}>
+      <Box display={{ base: 'none', md: 'block' }}>
+        <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
+      </Box>
+
       <BlogCategory />
       <BlogMain />
-    </MainLayout>
+    </BlogMainLayout>
   );
 };
 

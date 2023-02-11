@@ -25,88 +25,86 @@ type blogType = {
 export const BlogContentMain: FC<blogType> = ({ blog }) => {
   const toc = renderToc(blog.content);
   return (
-    <IdWrapper id="blog">
-      <ContentWrapper as="section" py={0} px={8}>
-        <FadeInAnimation>
-          <Box
-            display={'flex'}
-            flexDirection={{ base: 'column', lg: 'row-reverse' }}
-            justifyContent={{ base: '', lg: 'space-between' }}
-            mt="10"
-            mb={{ xl: '40' }}
-          >
-            <Box w="30vw" mt={{ lg: '20' }}>
-              <InstantSearch searchClient={searchClient} indexName="blog">
-                <FadeInAnimation>
+    <ContentWrapper as="section" py={0} px={8}>
+      <FadeInAnimation>
+        <Box
+          display={'flex'}
+          flexDirection={{ base: 'column', lg: 'row-reverse' }}
+          justifyContent={{ base: '', lg: 'space-between' }}
+          mt="10"
+          mb={{ xl: '40' }}
+        >
+          <Box w="30vw" mt={{ lg: '20' }}>
+            <InstantSearch searchClient={searchClient} indexName="blog">
+              <Box
+                display={'flex'}
+                flexDirection={{ base: 'column', xl: 'row-reverse' }}
+                justifyContent={{ base: '', xl: 'space-between' }}
+              >
+                <Box mx={'auto'}>
                   <Box
-                    display={'flex'}
-                    flexDirection={{ base: 'column', xl: 'row-reverse' }}
-                    justifyContent={{ base: '', xl: 'space-between' }}
+                    pb={{ base: 16, xl: 0 }}
+                    pr={{ base: 0, xl: 5 }}
+                    w={{ base: '70vw', xl: 370 }}
+                    alignItems={'center'}
                   >
-                    <Box mx={'auto'}>
-                      <Box
-                        pb={{ base: 16, xl: 0 }}
-                        pr={{ base: 0, xl: 5 }}
-                        w={{ base: '70vw', xl: 370 }}
-                        alignItems={'center'}
+                    <Box
+                      display={{ base: 'none', xl: 'block' }}
+                      textAlign={'center'}
+                    >
+                      <Text
+                        fontSize={{ base: 'xl', xl: '2xl' }}
+                        fontWeight="bold"
+                        flexBasis={{ xl: '264px' }}
+                        pr={{ xl: 0 }}
                       >
-                        <Box display={{ xl: '' }} textAlign={'center'}>
-                          <Text
-                            fontSize={{ base: 'xl', xl: '2xl' }}
-                            fontWeight="bold"
-                            flexBasis={{ xl: '264px' }}
-                            pr={{ xl: 0 }}
-                          >
-                            キーワードから探す
-                          </Text>
-                          <Box mt={{ base: 4, xl: 4 }}>
-                            <CustomSearchBox />
-                          </Box>
-                        </Box>
-                        <Box display={{ xl: '' }}>
-                          <Text
-                            fontSize={{ base: 'xl', xl: '2xl' }}
-                            fontWeight="bold"
-                            textAlign={'center'}
-                            pr={{ xl: 0 }}
-                            mt={{ base: 7, xl: 10 }}
-                          >
-                            カテゴリから探す
-                          </Text>
-                          <CustomBlogsMenu attribute="category" />
-                        </Box>
+                        キーワードから探す
+                      </Text>
+                      <Box mt={{ base: 4, xl: 4 }}>
+                        <CustomSearchBox />
                       </Box>
                     </Box>
+                    <Box display={{ base: 'none', xl: 'block' }}>
+                      <Text
+                        fontSize={{ base: 'xl', xl: '2xl' }}
+                        fontWeight="bold"
+                        textAlign={'center'}
+                        pr={{ xl: 0 }}
+                        mt={{ base: 7, xl: 10 }}
+                      >
+                        カテゴリから探す
+                      </Text>
+                      <CustomBlogsMenu attribute="category" />
+                    </Box>
                   </Box>
-                </FadeInAnimation>
-              </InstantSearch>
+                </Box>
+              </Box>
+            </InstantSearch>
+          </Box>
+          <Box w="65vw">
+            <Text fontSize={{ lg: '3xl' }} fontWeight="bold" mb={'5'}>
+              {blog.title}
+            </Text>
+            <Image
+              alt=""
+              src={blog.eyecatch.url}
+              objectFit="contain"
+              w="60vw"
+            />
+            <Text float={'right'}>
+              {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
+            </Text>
+            <TableOfContents toc={toc} />
+            <Box mb={{ xl: '40' }}>
+              <MarkdownTemplate source={blog.content} />
             </Box>
-            <Box w="65vw">
-              <Header />
-              <Text fontSize={{ lg: '3xl' }} fontWeight="bold" mb={'5'}>
-                {blog.title}
-              </Text>
-              <Image
-                alt=""
-                src={blog.eyecatch.url}
-                objectFit="contain"
-                w="60vw"
-              />
-              <Text float={'right'}>
-                {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
-              </Text>
-              <TableOfContents toc={toc} />
-              <Box mb={{ xl: '40' }}>
-                <MarkdownTemplate source={blog.content} />
-              </Box>
-              <Box>
-                <BlogsWriter />
-                <BlogsShare blog={blog} />
-              </Box>
+            <Box>
+              <BlogsWriter />
+              <BlogsShare blog={blog} />
             </Box>
           </Box>
-        </FadeInAnimation>
-      </ContentWrapper>
-    </IdWrapper>
+        </Box>
+      </FadeInAnimation>
+    </ContentWrapper>
   );
 };

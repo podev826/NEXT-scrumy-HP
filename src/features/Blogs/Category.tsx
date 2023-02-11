@@ -7,7 +7,7 @@ import React, { FC } from 'react';
 export const BlogCategory: FC = () => {
   return (
     <IdWrapper id="category">
-      <ContentWrapper py={{ base: 7, xl: 14 }} px={5}>
+      <ContentWrapper py={{ base: 7, xl: 14 }} px={5} pt={{ base: 100, md: 0 }}>
         <FadeInAnimation>
           <PrimaryTitle en="Categories" />
 

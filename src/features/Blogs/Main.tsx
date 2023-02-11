@@ -31,7 +31,10 @@ export const BlogMain: FC = () => {
                   w={{ base: '70vw', xl: 370 }}
                   alignItems={'center'}
                 >
-                  <Box display={{ xl: '' }} textAlign={'center'}>
+                  <Box
+                    display={{ base: 'none', xl: 'block' }}
+                    textAlign={'center'}
+                  >
                     <Text
                       fontSize={{ base: 'xl', xl: '2xl' }}
                       fontWeight="bold"

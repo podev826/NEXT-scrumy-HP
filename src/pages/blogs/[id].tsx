@@ -1,5 +1,6 @@
+import { Box } from '@chakra-ui/react';
 import { PrimarySubVisual } from 'components/Elements';
-import { MainLayout } from 'components/Layouts';
+import { BlogMainLayout, IdWrapper } from 'components/Layouts';
 import { META, SUB_VISUAL_LIST } from 'configs';
 import { BlogContentMain } from 'features/Blogs/Content';
 import RelatedContents from 'features/Blogs/RelatedContents';
@@ -13,11 +14,15 @@ type blogType = {
 
 export const BlogId = ({ blog, related }: blogType) => {
   return (
-    <MainLayout meta={META.media}>
-      <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
-      <BlogContentMain blog={blog} />
-      <RelatedContents contents={related.contents} />
-    </MainLayout>
+    <BlogMainLayout meta={META.media}>
+      <IdWrapper id={blog.title}>
+        <Box display={{ base: 'none', md: 'block' }}>
+          <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
+        </Box>
+        <BlogContentMain blog={blog} />
+        <RelatedContents contents={related.contents} />
+      </IdWrapper>
+    </BlogMainLayout>
   );
 };
 

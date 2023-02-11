@@ -7,10 +7,9 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { FadeInAnimation, PrimarySubVisual } from 'components/Elements';
-import { ContentWrapper, IdWrapper } from 'components/Layouts';
+import { BlogMainLayout, ContentWrapper, IdWrapper } from 'components/Layouts';
 import { Footer } from 'components/Layouts/Footer';
-import { Header } from 'components/Layouts/Header';
-import { BLOG_LIST, SUB_VISUAL_LIST } from 'configs';
+import { BLOG_LIST, META, SUB_VISUAL_LIST } from 'configs';
 import dayjs from 'dayjs';
 import { Blogclient } from 'libraries/microcms';
 import { FC } from 'react';
@@ -47,91 +46,94 @@ export const CategoryId: FC<BlogTypeProps> = ({ blog }) => {
   // };
 
   return (
-    <IdWrapper id={blog[0].category.name}>
-      <Header />
-      <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
-      <ContentWrapper as="section" maxW={'calc(1080px + (96px * 2))'}>
-        <FadeInAnimation>
-          <Box>
-            <Text fontSize={'2xl'} color="black" mt="100px">
-              ホーム　＞　{blog[0].category.name}
-            </Text>
+    <BlogMainLayout meta={META.media}>
+      <IdWrapper id={blog[0].category.name}>
+        <Box display={{ base: 'none', md: 'block' }}>
+          <PrimarySubVisual content={SUB_VISUAL_LIST.blog} />
+        </Box>
+        <ContentWrapper as="section" maxW={'calc(1080px + (96px * 2))'}>
+          <FadeInAnimation>
+            <Box>
+              <Text fontSize={'2xl'} color="black" mt="100px">
+                ホーム　＞　{blog[0].category.name}
+              </Text>
 
-            <Box mb="50px">
-              <Image
-                alt=""
-                src={
-                  blog[0].category.id === BLOG_LIST[0].href
-                    ? '/images/root/blog1.png'
-                    : blog[0].category.id === BLOG_LIST[1].href
-                    ? '/images/root/blog2.png'
-                    : blog[0].category.id === BLOG_LIST[1].href
-                    ? '/images/root/blog3.png'
-                    : ''
-                }
-              />
-            </Box>
-            <Accordion allowToggle allowMultiple>
-              {blog.map((blog) => (
-                <AccordionItem
-                  key={blog.id}
-                  border="none"
-                  p={0}
-                  px={{ base: 18, xl: 0 }}
-                  mb={{ base: 8, lg: 12 }}
-                >
-                  <Box mt="xl">
-                    <Link href={`/blogs/${blog.id}`}>
-                      <Box
-                        fontSize={{ base: 'xl', xl: 'lg' }}
-                        display={'flex'}
-                        alignItems={'center'}
-                        w={{ base: '', xl: '65vw' }}
-                      >
-                        <Box lang="en" mr={8}>
-                          <Image
-                            alt="アイキャッチ"
-                            src={blog.eyecatch.url}
-                            objectFit="contain"
-                            w={{ base: '30vw', xl: '25vw' }}
-                          />
-                        </Box>
-                        <Box flex={{ base: '1.6', xl: '2.3' }}>
-                          <Text
-                            textAlign={'left'}
-                            fontWeight="bold"
-                            fontSize={'2xl'}
-                          >
-                            {blog.title}
-                          </Text>
-                          <Box display={{ base: 'none', lg: 'block' }}>
-                            <Text textAlign={'left'}>{blog.description}</Text>
-                            <Text float={'right'}>
-                              {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
+              <Box mb="50px">
+                <Image
+                  alt=""
+                  src={
+                    blog[0].category.id === BLOG_LIST[0].href
+                      ? '/images/root/blog1.png'
+                      : blog[0].category.id === BLOG_LIST[1].href
+                      ? '/images/root/blog2.png'
+                      : blog[0].category.id === BLOG_LIST[1].href
+                      ? '/images/root/blog3.png'
+                      : ''
+                  }
+                />
+              </Box>
+              <Accordion allowToggle allowMultiple>
+                {blog.map((blog) => (
+                  <AccordionItem
+                    key={blog.id}
+                    border="none"
+                    p={0}
+                    px={{ base: 18, xl: 0 }}
+                    mb={{ base: 8, lg: 12 }}
+                  >
+                    <Box mt="xl">
+                      <Link href={`/blogs/${blog.id}`}>
+                        <Box
+                          fontSize={{ base: 'xl', xl: 'lg' }}
+                          display={'flex'}
+                          alignItems={'center'}
+                          w={{ base: '', xl: '65vw' }}
+                        >
+                          <Box lang="en" mr={8}>
+                            <Image
+                              alt="アイキャッチ"
+                              src={blog.eyecatch.url}
+                              objectFit="contain"
+                              w={{ base: '30vw', xl: '25vw' }}
+                            />
+                          </Box>
+                          <Box flex={{ base: '1.6', xl: '2.3' }}>
+                            <Text
+                              textAlign={'left'}
+                              fontWeight="bold"
+                              fontSize={'2xl'}
+                            >
+                              {blog.title}
                             </Text>
+                            <Box display={{ base: 'none', lg: 'block' }}>
+                              <Text textAlign={'left'}>{blog.description}</Text>
+                              <Text float={'right'}>
+                                {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
+                              </Text>
+                            </Box>
                           </Box>
                         </Box>
-                      </Box>
-                      <Box
-                        display={{ base: 'block', lg: 'none' }}
-                        mt={2}
-                        fontSize={'xl'}
-                      >
-                        <Text textAlign={'left'}>{blog.description}</Text>
-                        <Text float={'right'}>
-                          {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
-                        </Text>
-                      </Box>
-                    </Link>
-                  </Box>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </Box>
-        </FadeInAnimation>
-      </ContentWrapper>
-      <Footer />
-    </IdWrapper>
+                        <Box
+                          display={{ base: 'block', lg: 'none' }}
+                          mt={2}
+                          fontSize={'xl'}
+                        >
+                          <Text textAlign={'left'}>{blog.description}</Text>
+                          <Text float={'right'}>
+                            {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
+                          </Text>
+                        </Box>
+                      </Link>
+                    </Box>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </Box>
+          </FadeInAnimation>
+        </ContentWrapper>
+        <Footer />
+      </IdWrapper>
+    </BlogMainLayout>
   );
 };
 

@@ -18,7 +18,7 @@ type CustomBlogMenuItemPcProps = {
 
 const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
   category,
-  handleClick,
+  // handleClick,
   active,
 }) => {
   return (
@@ -61,35 +61,44 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
   );
 };
 
-// type CustomBlogMenuItemSpProps = {
-//   category: BlogCategoryProps;
-//   handleClick: (value: string) => void;
-// };
+type CustomBlogMenuItemSpProps = {
+  category: BlogCategoryProps;
+  handleClick: (value: string) => void;
+};
 
-// const CustomBlogMenuItemSp: FC<CustomBlogMenuItemSpProps> = ({
-//   category,
-//   handleClick,
-// }) => {
-//   return (
-//     <Box
-//       as="button"
-//       onClick={() => handleClick(category.text)}
-//       px={7}
-//       w="full"
-//       minH={12}
-//       display="grid"
-//       alignItems={'center'}
-//       fontWeight="bold"
-//       textAlign={'left'}
-//       _hover={{
-//         color: 'base.100',
-//         backgroundColor: 'sub.200',
-//       }}
-//     >
-//       {category.name}
-//     </Box>
-//   );
-// };
+const CustomBlogMenuItemSp: FC<CustomBlogMenuItemSpProps> = ({
+  category,
+  // handleClick,
+}) => {
+  return (
+    <Box
+      as="button"
+      // onClick={() => handleClick(category.text)}
+      px={7}
+      w="full"
+      minH={12}
+      display="grid"
+      alignItems={'center'}
+      fontWeight="bold"
+      textAlign={'left'}
+      _hover={{
+        color: 'base.100',
+        backgroundColor: 'sub.200',
+      }}
+    >
+      <BaseLink
+        href={`/blogs/category/${category.slug}`}
+        rel="noopener noreferrer"
+        h="full"
+        _hover={{
+          opacity: 1,
+        }}
+      >
+        {category.name}
+      </BaseLink>
+    </Box>
+  );
+};
 
 export const CustomBlogsMenu: FC<MenuProps> = (props) => {
   const { refine } = useMenu(props);
@@ -102,7 +111,7 @@ export const CustomBlogsMenu: FC<MenuProps> = (props) => {
 
   return (
     <>
-      {/* <Box mt={4} display={{ xl: 'none' }}>
+      <Box mt={4} display={{ xl: 'none' }}>
         <Accordion allowToggle allowMultiple>
           <AccordionItem
             bg="base.100"
@@ -165,7 +174,7 @@ export const CustomBlogsMenu: FC<MenuProps> = (props) => {
             )}
           </AccordionItem>
         </Accordion>
-      </Box> */}
+      </Box>
       <Box
         as="ul"
         display={{ base: 'none', xl: 'flex' }}
