@@ -4,8 +4,7 @@ import {
   CustomSearchBox,
   FadeInAnimation,
 } from 'components/Elements';
-import { ContentWrapper, IdWrapper } from 'components/Layouts';
-import { Header } from 'components/Layouts/Header';
+import { ContentWrapper } from 'components/Layouts';
 import dayjs from 'dayjs';
 import { searchClient } from 'libraries/algolia';
 import { renderToc } from 'libraries/microcms';

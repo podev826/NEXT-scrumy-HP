@@ -54,6 +54,7 @@ export type ContextParamsType = {
 export type TocType = {
   text: string;
   id: string;
+  name: string;
 };
 
 export type HeadingType = {

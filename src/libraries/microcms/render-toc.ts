@@ -8,6 +8,7 @@ export const renderToc = (body: string) => {
     name: data.name,
     text: data.children[0].data,
     id: data.attribs.id,
+    name: data.name,
   }));
 
   return toc;
