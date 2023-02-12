@@ -17,7 +17,6 @@ type MarkdownTemplateProps = {
 
 const h2 = {
   props: {
-    mt: '70px',
     mb: '10px',
     p: '15px',
     fontSize: '2xl',
@@ -43,6 +42,7 @@ const p = {
   props: {
     lineHeight: '1.7',
     fontSize: 'xl',
+    mb: '10',
   },
 };
 
@@ -88,8 +88,7 @@ const a = {
 const img = {
   props: {
     mx: 'auto',
-    my: '40px',
-    height: '350px',
+    width: { base: '50vw', xl: '750px' },
   },
 };
 

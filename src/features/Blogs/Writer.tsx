@@ -29,7 +29,7 @@ export const BlogsWriter: FC = () => {
             </Box>
             <Box
               bg="white"
-              fontSize={'xl'}
+              fontSize={{ base: 'md', xl: 'lg' }}
               p="8"
               w={'70vw'}
               mx={{ base: 'auto', lg: 0 }}
@@ -37,7 +37,7 @@ export const BlogsWriter: FC = () => {
               <Text
                 fontWeight="bold"
                 textAlign={'center'}
-                fontSize={'4xl'}
+                fontSize={'3xl'}
                 mb={'5'}
               >
                 執筆者
@@ -66,8 +66,8 @@ export const BlogsWriter: FC = () => {
             <Image
               src={'/images/blog/youtube.png'}
               objectFit="contain"
-              w={{ base: '16', md: '10' }}
-              h={{ base: '16', md: '10' }}
+              w={{ base: '12', md: '10' }}
+              h={{ base: '12', md: '10' }}
               borderRadius={'100%'}
               cursor={'pointer'}
               alt=""
@@ -75,8 +75,8 @@ export const BlogsWriter: FC = () => {
             <Image
               src={'/images/blog/twitter.png'}
               objectFit="contain"
-              w={{ base: '16', md: '10' }}
-              h={{ base: '16', md: '10' }}
+              w={{ base: '12', md: '10' }}
+              h={{ base: '12', md: '10' }}
               borderRadius={'100%'}
               cursor={'pointer'}
               alt=""
@@ -84,8 +84,8 @@ export const BlogsWriter: FC = () => {
             <Image
               src={'/images/blog/instagram.png'}
               objectFit="contain"
-              w={{ base: '16', md: '10' }}
-              h={{ base: '16', md: '10' }}
+              w={{ base: '12', md: '10' }}
+              h={{ base: '12', md: '10' }}
               borderRadius={'100%'}
               cursor={'pointer'}
               alt=""
@@ -93,8 +93,8 @@ export const BlogsWriter: FC = () => {
             <Image
               src={'/images/blog/facebook.png'}
               objectFit="contain"
-              w={{ base: '16', md: '10' }}
-              h={{ base: '16', md: '10' }}
+              w={{ base: '12', md: '10' }}
+              h={{ base: '12', md: '10' }}
               borderRadius={'100%'}
               cursor={'pointer'}
               alt=""

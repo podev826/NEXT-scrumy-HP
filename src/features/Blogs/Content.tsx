@@ -24,21 +24,21 @@ type blogType = {
 export const BlogContentMain: FC<blogType> = ({ blog }) => {
   const toc = renderToc(blog.content);
   return (
-    <ContentWrapper as="section" py={0} px={8}>
+    <ContentWrapper as="section" py={0} px={{ base: 5, lg: 8 }}>
       <FadeInAnimation>
         <Box
-          display={'flex'}
-          flexDirection={{ base: 'column', lg: 'row-reverse' }}
-          justifyContent={{ base: '', lg: 'space-between' }}
-          mt={{ base: '10', lg: '100px', xl: '10' }}
-          mb={{ xl: '40' }}
+          display={{ base: 'block', xl: 'flex' }}
+          flexDirection={'row-reverse'}
+          justifyContent={'space-between'}
+          mt={'10'}
+          mb={'40'}
         >
-          <Box w="30vw" mt={{ lg: '20' }}>
+          <Box w="30vw" mt={'20'}>
             <InstantSearch searchClient={searchClient} indexName="blog">
               <Box
                 display={'flex'}
-                flexDirection={{ base: 'column', xl: 'row-reverse' }}
-                justifyContent={{ base: '', xl: 'space-between' }}
+                flexDirection={'row-reverse'}
+                justifyContent={'space-between'}
               >
                 <Box mx={'auto'}>
                   <Box
@@ -80,7 +80,7 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
               </Box>
             </InstantSearch>
           </Box>
-          <Box w="65vw">
+          <Box w={{ base: '90vw', lg: '85vw', xl: '65vw' }} mx="auto">
             <Text fontSize={{ xl: '3xl' }} fontWeight="bold" mb={'5'}>
               {blog.title}
             </Text>
@@ -88,7 +88,8 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
               alt=""
               src={blog.eyecatch.url}
               objectFit="contain"
-              w="60vw"
+              w={{ base: '75vw', xl: '60vw' }}
+              mx="auto"
             />
             <Text float={'right'}>
               {dayjs(blog.publishedAt).format('YYYY.MM.DD')}
