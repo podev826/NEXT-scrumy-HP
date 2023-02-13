@@ -7,8 +7,6 @@ type TocTypeProps = {
 };
 
 export const TableOfContents: FC<TocTypeProps> = ({ toc }) => {
-  let h2 = 0;
-  let h3 = 0;
   const [isOpen, setIsOpen] = useState<boolean>(true);
   return (
     <Box my="20" border="1px" borderColor="#38B5A6" w="fit-content" mx="auto">
@@ -27,9 +25,6 @@ export const TableOfContents: FC<TocTypeProps> = ({ toc }) => {
                 ml={data.name == 'h3' ? '4' : 0}
                 cursor={'pointer'}
               >
-                {data.name == 'h2'
-                  ? String((h2 += 1)) + '.'
-                  : String((h3 += 1)) + '.'}
                 {data.text}
               </Link>
             </Text>
