@@ -2,7 +2,7 @@ import { Box, Button, Link, Text } from '@chakra-ui/react';
 import { FadeInAnimation } from 'components/Elements';
 import { ContentWrapper } from 'components/Layouts';
 import { useRouter } from 'next/router';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { BlogItemProps } from 'types';
 
 type blogType = {
@@ -11,17 +11,38 @@ type blogType = {
 
 export const BlogsShare: FC<blogType> = ({ blog }) => {
   const router = useRouter();
+  const [display, setDisplay] = useState<boolean>(false);
   const copyToClipboard = async () => {
     await global.navigator.clipboard.writeText(
-      'https://www.scrumy.co.jp' + router.asPath
+      blog.title + 'https://www.scrumy.co.jp' + router.asPath
     );
+    setDisplay(true);
+    setTimeout(() => {
+      setDisplay(false);
+    }, 2000);
   };
   return (
     <ContentWrapper as="section" px="5">
       <FadeInAnimation>
-        <Box textAlign={'center'}>
+        <Box textAlign={'center'} maxW="1000px" mx="auto">
           <Box>
             <Text>シェアする</Text>
+          </Box>
+          <Box
+            border="1px"
+            borderColor="gray.800"
+            borderRadius="md"
+            py={7}
+            w="350px"
+            position={'fixed'}
+            top="50%"
+            left="35%"
+            bg="gray.800"
+            color="white"
+            zIndex={'10'}
+            display={display ? 'block' : 'none'}
+          >
+            <Text fontSize={'xl'}>タイトルとURLコピーしました</Text>
           </Box>
           <Box display={'flex'} columnGap="7" mt="5">
             <Link
