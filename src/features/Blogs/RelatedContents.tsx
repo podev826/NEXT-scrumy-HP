@@ -7,7 +7,7 @@ import {
   Link,
   Text,
 } from '@chakra-ui/react';
-import { FadeInAnimation, PrimaryTitle } from 'components/Elements';
+import { FadeInAnimation } from 'components/Elements';
 import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import { FC } from 'react';
 import { BlogItemProps } from 'types';
@@ -61,7 +61,7 @@ export const RelatedContents: FC<BlogTypeProps> = ({ contents }) => {
                       fontSize={{ base: 'xl', xl: 'lg' }}
                       display={'flex'}
                       alignItems={'center'}
-                      w={{ base: '', xl: '65vw' }}
+                      w={{ base: '30vw', xl: '25vw' }} //ここを変更する
                     >
                       <Box lang="en" mr={8}>
                         <Image
@@ -100,12 +100,17 @@ export const RelatedContents: FC<BlogTypeProps> = ({ contents }) => {
                         <Text
                           textAlign={'left'}
                           fontWeight="bold"
-                          fontSize={'2xl'}
+                          fontSize={{ base: 'lg', md: '2xl', xl: 'xl' }}
                         >
                           {blog.title}
                         </Text>
                       </Box>
-                      <Text textAlign={'left'}>{blog.description}</Text>
+                      <Text
+                        textAlign={'left'}
+                        fontSize={{ base: 'md', md: 'xl', xl: 'lg' }}
+                      >
+                        {blog.description}
+                      </Text>
                     </Box>
                   </Link>
                 </Box>

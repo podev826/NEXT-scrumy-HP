@@ -35,6 +35,7 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
                 p={0}
                 px={{ base: 18, xl: 0 }}
                 mb={{ base: 8, lg: 12 }}
+                justifyItems={{ base: 'Center', md: '' }}
               >
                 <Box>
                   <Link href={`/blogs/${hit.objectID}`}>
@@ -44,12 +45,16 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
                       alignItems={'center'}
                       w={{ base: '', xl: '65vw' }}
                     >
-                      <Box lang="en" mr={8}>
+                      <Box
+                        lang="en"
+                        mr={{ base: 0, md: 8 }}
+                        justifyContent={{ base: 'center', md: 'left' }}
+                      >
                         <Image
                           alt="アイキャッチ"
                           src={hit.image.url}
                           objectFit="contain"
-                          w={{ base: '60vw', lg: '25vw' }}
+                          w={{ base: '', lg: '25vw' }}
                         />
                       </Box>
                       <Box flex={{ base: '1.6', xl: '2.3' }}>
@@ -57,12 +62,20 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
                           <Text
                             textAlign={'left'}
                             fontWeight="bold"
-                            fontSize={'2xl'}
+                            fontSize={{ base: 'lg', md: '2xl', xl: 'xl' }}
                           >
                             {hit.title}
                           </Text>
-                          <Text textAlign={'left'}>{hit.description}</Text>
-                          <Text float={'right'}>
+                          <Text
+                            fontSize={{ base: 'md', md: 'xl', xl: 'lg' }}
+                            textAlign={'left'}
+                          >
+                            {hit.description}
+                          </Text>
+                          <Text
+                            float={'right'}
+                            fontSize={{ base: 'sm', md: 'lg', xl: 'md' }}
+                          >
                             {dayjs(hit.publishedAt).format('YYYY.MM.DD')}
                           </Text>
                         </Box>
