@@ -41,7 +41,7 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
                   fontSize={{ base: 'xl', xl: 'lg' }}
                   display={'flex'}
                   alignItems={'center'}
-                  w={{ base: '', xl: '65vw' }}
+                  w={{ base: '', xl: '60vw' }}
                 >
                   <Box
                     lang="en"

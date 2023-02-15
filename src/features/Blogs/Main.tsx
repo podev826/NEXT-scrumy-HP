@@ -40,14 +40,21 @@ export const BlogMain: FC = () => {
             <Box
               display={'flex'}
               flexDirection={{ base: 'column', xl: 'row-reverse' }}
-              justifyContent={'center'}
-              gap={3}
+              justifyContent={'flex-end'}
+              gap={30}
               alignItems={'baseline'}
+              mb={10}
             >
-              <SearchModal />
+              <Box
+                display={{ base: 'none', xl: 'block' }}
+                justifyContent={'flex-start'}
+              >
+                <SearchModal />
+              </Box>
+              <Spacer />
               <Box>
                 <PrimaryTitle en="Articles" />
-                <Box pt={{ base: 6, xl: 0 }}>
+                <Box pt={{ base: 6, xl: 0 }} w={{ base: '', xl: '60vw' }}>
                   <CustomBlogsHits />
                   <Box mt={{ base: 16, xl: 20 }} mb={10}>
                     <CustomPagination />
