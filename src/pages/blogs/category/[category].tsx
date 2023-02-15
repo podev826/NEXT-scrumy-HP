@@ -66,7 +66,12 @@ export const CategoryId: FC<BlogTypeProps> = ({ blog }) => {
               alignItems={'baseline'}
             >
               <InstantSearch searchClient={searchClient} indexName="blog">
-                <SearchModal />
+                <Box
+                  display={{ base: 'none', xl: 'block' }}
+                  justifyContent={'flex-start'}
+                >
+                  <SearchModal />
+                </Box>
               </InstantSearch>
               <Box>
                 <Text fontSize={'2xl'} color="black">

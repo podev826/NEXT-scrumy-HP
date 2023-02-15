@@ -37,9 +37,8 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
           <Box w="30vw" mt={'20'}>
             <InstantSearch searchClient={searchClient} indexName="blog">
               <Box
-                display={'flex'}
-                flexDirection={'row-reverse'}
-                justifyContent={'space-between'}
+                display={{ base: 'none', xl: 'block' }}
+                justifyContent={'flex-start'}
               >
                 <SearchModal />
               </Box>
