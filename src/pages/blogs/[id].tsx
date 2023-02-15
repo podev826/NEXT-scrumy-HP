@@ -1,7 +1,5 @@
-import { Box } from '@chakra-ui/react';
-import { PrimarySubVisual } from 'components/Elements';
 import { BlogMainLayout, IdWrapper } from 'components/Layouts';
-import { META, SUB_VISUAL_LIST } from 'configs';
+import { META } from 'configs';
 import { BlogContact } from 'features/Blogs/Contact';
 import { BlogContentMain } from 'features/Blogs/Content';
 import RelatedContents from 'features/Blogs/RelatedContents';

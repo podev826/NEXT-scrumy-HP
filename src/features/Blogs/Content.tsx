@@ -13,6 +13,7 @@ import { InstantSearch } from 'react-instantsearch-hooks-web';
 import { MarkdownTemplate } from 'styles/blog/MarkdownTemplate';
 import { BlogItemProps } from 'types';
 
+import { SearchModal } from './SearchModal';
 import { BlogsShare } from './Share';
 import { TableOfContents } from './TableOfContent';
 import { BlogsWriter } from './Writer';
@@ -40,43 +41,7 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
                 flexDirection={'row-reverse'}
                 justifyContent={'space-between'}
               >
-                <Box mx={'auto'}>
-                  <Box
-                    pb={{ base: 16, xl: 0 }}
-                    pr={{ base: 0, xl: 5 }}
-                    w={{ base: '70vw', xl: 370 }}
-                    alignItems={'center'}
-                  >
-                    <Box
-                      display={{ base: 'none', xl: 'block' }}
-                      textAlign={'center'}
-                    >
-                      <Text
-                        fontSize={{ base: 'xl', xl: '2xl' }}
-                        fontWeight="bold"
-                        flexBasis={{ xl: '264px' }}
-                        pr={{ xl: 0 }}
-                      >
-                        キーワードから探す
-                      </Text>
-                      <Box mt={{ base: 4, xl: 4 }}>
-                        <CustomSearchBox />
-                      </Box>
-                    </Box>
-                    <Box display={{ base: 'none', xl: 'block' }}>
-                      <Text
-                        fontSize={{ base: 'xl', xl: '2xl' }}
-                        fontWeight="bold"
-                        textAlign={'center'}
-                        pr={{ xl: 0 }}
-                        mt={{ base: 7, xl: 10 }}
-                      >
-                        カテゴリから探す
-                      </Text>
-                      <CustomBlogsMenu attribute="category" />
-                    </Box>
-                  </Box>
-                </Box>
+                <SearchModal />
               </Box>
             </InstantSearch>
           </Box>

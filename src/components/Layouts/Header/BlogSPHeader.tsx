@@ -1,6 +1,8 @@
 import { Box, Flex, Spacer, Text } from '@chakra-ui/react';
-import { BaseImage, BaseLink, FadeInAnimation } from 'components/Elements';
+import { FadeInAnimation } from 'components/Elements';
+import { searchClient } from 'libraries/algolia';
 import { FC } from 'react';
+import { InstantSearch } from 'react-instantsearch-hooks-web';
 
 import { BlogHeaderModal } from './BlogHeaderModal';
 import { SearchModalSp } from './SearchModal';
@@ -40,7 +42,9 @@ export const BlogSPHeader: FC = () => {
             </Text>
             <Spacer />
             <Flex alignItems="center" gap={14}>
-              <SearchModalSp />
+              <InstantSearch searchClient={searchClient} indexName="blog">
+                <SearchModalSp />
+              </InstantSearch>
             </Flex>
           </Flex>
         </Box>

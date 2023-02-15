@@ -7,26 +7,36 @@ import React, { FC } from 'react';
 export const BlogCategory: FC = () => {
   return (
     <IdWrapper id="category">
-      <ContentWrapper py={{ base: 7, xl: 14 }} px={5} pt={{ base: 100, xl: 0 }}>
+      <ContentWrapper
+        as="section"
+        py={{ base: 7, xl: 14 }}
+        px={8}
+        pt={{ base: 100, xl: 0 }}
+      >
         <FadeInAnimation>
-          <PrimaryTitle en="Categories" />
+          <Box>
+            <PrimaryTitle en="Categories" />
+          </Box>
 
           <Box
             pt={3}
-            pb={{ base: '1.8vw', xl: '2.222vw' }}
+            pb={{ base: '0.5vw' }}
             px={{ base: '6.4vw', sm: 0 }}
             justifyContent="center"
           >
             <Stack
               justifyContent="center"
-              direction={'row'}
-              flexWrap={'wrap'}
+              direction={{ base: 'column', md: 'row' }}
               alignItems="center"
             >
               {BLOG_LIST.map((item) => (
                 <Box
                   key={item.href}
-                  w={{ base: '39vw', md: '40vw', lg: '30vw' }}
+                  w={{
+                    base: '55vw',
+                    lg: '30vw',
+                    xl: '25vw',
+                  }}
                   pb={{ base: 3, lg: 0 }}
                 >
                   <Box>

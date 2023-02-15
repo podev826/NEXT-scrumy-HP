@@ -28,7 +28,7 @@ export const HeaderModalListPc: FC<HeaderModalListProps> = ({ content }) => {
   const { closeHeader } = useHeader();
   return (
     <Box>
-      <BaseLink href={content.href}>
+      <BaseLink href={content.href} onClick={closeHeader}>
         <Text fontWeight="extrabold" lang="en">
           {content.title}
         </Text>
@@ -41,6 +41,7 @@ export const HeaderModalListPc: FC<HeaderModalListProps> = ({ content }) => {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={closeHeader}
               >
                 {item.text}
               </BaseLink>
