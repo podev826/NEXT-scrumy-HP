@@ -49,8 +49,9 @@ export const BlogContact: FC = () => {
 
   return (
     <ContentWrapper
-      w={{ base: '80vw', xl: '60vw' }}
+      maxW="calc(820px + (96px * 2))"
       mx={{ base: 'auto', xl: '0' }}
+      pb="0"
     >
       <Box
         maxW={{ base: 'full', xl: 'full' }}
