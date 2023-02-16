@@ -17,6 +17,7 @@ import { MarkdownTemplate } from 'styles/blog/MarkdownTemplate';
 import { BlogItemProps } from 'types';
 
 import { BlogContact } from './Contact';
+import { SearchModal } from './SearchModal';
 import { BlogsShare } from './Share';
 import { TableOfContents } from './TableOfContent';
 import { BlogsWriter } from './Writer';
@@ -39,42 +40,10 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
           <Box w="30vw">
             <InstantSearch searchClient={searchClient} indexName="blog">
               <Box
-                display={'flex'}
-                flexDirection={'row-reverse'}
-                justifyContent={'space-between'}
-                pr={{ base: 0, xl: 5 }}
-                w={{ base: '70vw', xl: 370 }}
-                alignItems={'center'}
-                mx={'auto'}
+                display={{ base: 'none', xl: 'block' }}
+                justifyContent={'flex-start'}
               >
-                <Box
-                  display={{ base: 'none', xl: 'block' }}
-                  textAlign={'center'}
-                >
-                  <Text
-                    fontSize={{ base: 'xl', xl: '2xl' }}
-                    fontWeight="bold"
-                    flexBasis={{ xl: '264px' }}
-                    pr={{ xl: 0 }}
-                  >
-                    キーワードから探す
-                  </Text>
-                  <Box mt={{ base: 4, xl: 4 }}>
-                    <CustomSearchBox />
-                  </Box>
-                </Box>
-                <Box display={{ base: 'none', xl: 'block' }}>
-                  <Text
-                    fontSize={{ base: 'xl', xl: '2xl' }}
-                    fontWeight="bold"
-                    textAlign={'center'}
-                    pr={{ xl: 0 }}
-                    mt={{ base: 7, xl: 10 }}
-                  >
-                    カテゴリから探す
-                  </Text>
-                  <CustomBlogsMenu attribute="category" />
-                </Box>
+                <SearchModal />
               </Box>
             </InstantSearch>
           </Box>

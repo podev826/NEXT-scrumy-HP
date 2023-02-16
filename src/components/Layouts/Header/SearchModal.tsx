@@ -1,14 +1,18 @@
-import { Box, Flex, Text, VisuallyHidden } from '@chakra-ui/react';
+import { Box, Flex, Input, Text, VisuallyHidden } from '@chakra-ui/react';
 import {
-  BaseImage,
-  BaseLink,
+  CustomBlogSearchBox,
+  CustomBlogSearchBox2,
   CustomBlogsMenu,
-  CustomSearchBox,
   MagnifyingGlass,
 } from 'components/Elements';
 import { searchClient } from 'libraries/algolia';
-import { createContext, Dispatch, FC, SetStateAction, useState } from 'react';
-import { InstantSearch } from 'react-instantsearch-hooks-web';
+import { FC, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import {
+  InstantSearch,
+  SearchBoxProps,
+  useSearchBox,
+} from 'react-instantsearch-hooks-web';
 
 // type HeaderModalListProps = {
 //   content: SecondaryNavContentProps;
@@ -25,11 +29,15 @@ export const SearchModalSp: FC = () => {
   const toggleBlogHeader = () => {
     setBlogHeaderIsActive((prevState) => !prevState);
   };
-  const closeBlogHeader = () => {
-    setBlogHeaderIsActive(false);
-  };
 
   const [blogHeaderIsActive, setBlogHeaderIsActive] = useState(false);
+
+  // const { refine } = useSearchBox(props);
+  // const { register, handleSubmit } = useForm<{ q: string }>();
+
+  // const search = async ({ q }: { q: string }) => {
+  //   refine(q);
+  // };
 
   return (
     <>
@@ -156,7 +164,52 @@ export const SearchModalSp: FC = () => {
                   キーワードから探す
                 </Text>
                 <Box mt={{ base: 4, xl: 4 }}>
-                  <CustomSearchBox />
+                  <Box as="form" onSubmit={toggleBlogHeader}>
+                    <CustomBlogSearchBox2 />
+                    {/* <Box position={'relative'}>
+                      <Input
+                        pl={{ base: 7, xl: 9 }}
+                        pr={{ base: '52px', xl: '60px' }}
+                        minH={12}
+                        py={2}
+                        bg="base.100"
+                        borderRadius={'full'}
+                        borderColor="sub.100"
+                        borderWidth={'2px'}
+                        placeholder="キーワードを入力してください。"
+                        transitionProperty="all"
+                        transitionTimingFunction="linear"
+                        transitionDuration="fast"
+                        _hover={{
+                          borderColor: 'sub.100',
+                        }}
+                        _focus={{
+                          borderColor: 'accent.100',
+                          boxShadow: 'tertiary',
+                        }}
+                        _placeholder={{
+                          base: {
+                            fontSize: 'sm',
+                            fontWeight: 'bold',
+                            color: 'sub.200',
+                          },
+                          xl: {
+                            fontSize: 'md',
+                          },
+                        }}
+                        // {...register('q')}
+                      />
+                      <Box
+                        position={'absolute'}
+                        top="50%"
+                        right={8}
+                        transform="translateY(-50%)"
+                        zIndex={'2'}
+                      >
+                        <MagnifyingGlass />
+                      </Box>
+                    </Box> */}
+                  </Box>
                 </Box>
 
                 <Text
