@@ -24,6 +24,7 @@ export const BlogsWriter: FC = () => {
                 objectFit="contain"
                 borderRadius={'100%'}
                 alt=""
+                w={{ base: '30vw', md: '' }}
                 mx={{ base: 'auto', lg: '' }}
               />
             </Box>

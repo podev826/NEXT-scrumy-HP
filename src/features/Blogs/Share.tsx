@@ -22,80 +22,87 @@ export const BlogsShare: FC<blogType> = ({ blog }) => {
     }, 2000);
   };
   return (
-    <ContentWrapper as="section" px="5">
-      <FadeInAnimation>
-        <Box textAlign={'center'} maxW="1000px" mx="auto">
-          <Box>
-            <Text>シェアする</Text>
-          </Box>
-          <Box
-            border="1px"
-            borderColor="gray.800"
-            borderRadius="md"
-            py={7}
-            w="350px"
-            position={'fixed'}
-            top="50%"
-            left="35%"
-            bg="gray.800"
-            color="white"
-            zIndex={'10'}
-            display={display ? 'block' : 'none'}
-          >
-            <Text fontSize={'xl'}>タイトルとURLコピーしました</Text>
-          </Box>
-          <Box display={'flex'} columnGap="7" mt="5">
-            <Link
-              target="_blank"
-              href={
-                'https://twitter.com/intent/tweet?text=' +
-                blog.title +
-                'https://www.scrumy.co.jp' +
-                router.asPath
-              }
-              bg="#1DA0F1"
-              color="white"
-              w="390px"
-              py="2"
-              fontSize={'sm'}
-              shadow="xl"
-              cursor={'pointer'}
-            >
-              Twitter
-            </Link>
-            <Link
-              target="_blank"
-              href={
-                'http://www.facebook.com/share.php?u=' +
-                'https://www.scrumy.co.jp' +
-                router.asPath
-              }
-              bg="#1877F2"
-              color="white"
-              w="390px"
-              py="2"
-              fontSize={'sm'}
-              shadow="xl"
-              cursor={'pointer'}
-            >
-              facebook
-            </Link>
-            <Button
-              bg="#D9D9D9"
-              w="390px"
-              py="2"
-              fontSize={'sm'}
-              shadow="xl"
-              cursor={'pointer'}
-              fontWeight="normal"
-              borderRadius="none"
-              onClick={() => copyToClipboard()}
-            >
-              リンクをコピー
-            </Button>
-          </Box>
+    <ContentWrapper
+      as="section"
+      mx={{ base: '10', xl: '0' }}
+      ml={{ base: '', xl: '30' }}
+      w={{ base: '', xl: '65vw' }}
+      py="0"
+      px="0"
+    >
+      <Box textAlign={'center'} maxW="1000px" mx="auto">
+        <Box>
+          <Text>シェアする</Text>
         </Box>
-      </FadeInAnimation>
+        <Box
+          border="1px"
+          borderColor="gray.800"
+          borderRadius="md"
+          py={7}
+          w="350px"
+          position={'fixed'}
+          top="50%"
+          left={{ base: '5%', sm: '35%' }}
+          bg="gray.800"
+          color="white"
+          zIndex={'10'}
+          display={display ? 'block' : 'none'}
+        >
+          <Text fontSize={'xl'}>タイトルとURLコピーしました</Text>
+        </Box>
+        <Box display={{ base: '', sm: 'flex' }} columnGap="7" mt="5">
+          <Link
+            target="_blank"
+            href={
+              'https://twitter.com/intent/tweet?text=' +
+              blog.title +
+              'https://www.scrumy.co.jp' +
+              router.asPath
+            }
+            bg="#1DA0F1"
+            color="white"
+            w={{ base: '50vw', sm: '390px' }}
+            py="2"
+            fontSize={'sm'}
+            shadow="xl"
+            cursor={'pointer'}
+          >
+            Twitter
+          </Link>
+          <Link
+            target="_blank"
+            href={
+              'http://www.facebook.com/share.php?u=' +
+              'https://www.scrumy.co.jp' +
+              router.asPath
+            }
+            bg="#1877F2"
+            color="white"
+            w={{ base: '50vw', sm: '390px' }}
+            py="2"
+            fontSize={'sm'}
+            shadow="xl"
+            cursor={'pointer'}
+            mt={{ base: '2', sm: '0' }}
+          >
+            facebook
+          </Link>
+          <Button
+            bg="#D9D9D9"
+            w={{ base: '50vw', sm: '390px' }}
+            py="2"
+            fontSize={'sm'}
+            shadow="xl"
+            cursor={'pointer'}
+            fontWeight="normal"
+            borderRadius="none"
+            mt={{ base: '2', sm: '0' }}
+            onClick={() => copyToClipboard()}
+          >
+            リンクをコピー
+          </Button>
+        </Box>
+      </Box>
     </ContentWrapper>
   );
 };

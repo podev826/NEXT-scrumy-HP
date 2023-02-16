@@ -88,7 +88,7 @@ const a = {
 const img = {
   props: {
     mx: 'auto',
-    width: { base: '50vw', xl: '750px' },
+    width: { base: '70vw', xl: '750px' },
   },
 };
 
