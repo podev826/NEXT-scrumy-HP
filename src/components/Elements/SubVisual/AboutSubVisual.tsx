@@ -50,19 +50,20 @@ export const AboutSubVisual: FC = () => {
               as="h1"
               mt={{ md: '7.444vw', xl: '104px' }}
               fontSize={{
-                base: '6.467vw',
+                base: '5.467vw',
                 sm: '5vw',
                 md: '3.333vw',
                 '2xl': '6xl',
               }}
               fontWeight="bold"
               lineHeight={{ base: '1.32', md: '1.5' }}
+              w={{ base: '', sm: '75vw', md: '50vw' }}
             >
               <Box as="span" display={{ md: 'inline', base: 'block' }}>
-                世界一のESG
+                サステナブルファイナンスで
               </Box>
               <Box as="span" display={{ md: 'inline', base: 'block' }}>
-                プラットフォーマーになる
+                国際金融市場の懸け橋となる
               </Box>
             </Text>
             <Text

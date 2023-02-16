@@ -40,6 +40,22 @@ export const MEMBER_LIST = [
       '岡山県出身。京都大学法学部卒。弁護士（74期）。法律事務所勤務。取扱分野は、一般民事事件、刑事事件、企業法務。',
   },
   {
+    name: '大島　予章',
+    name_en: 'Yosho Oshima',
+    image: '',
+    position: 'シニアコンサルタント',
+    description:
+      '岡山県出身。京都大学法学部卒。弁護士（74期）。法律事務所勤務。取扱分野は、一般民事事件、刑事事件、企業法務。',
+  },
+  {
+    name: '藤本　順也',
+    name_en: 'Junya Fujimoto',
+    image: '',
+    position: '戦略プロデューサー',
+    description:
+      '岡山県出身。京都大学法学部卒。弁護士（74期）。法律事務所勤務。取扱分野は、一般民事事件、刑事事件、企業法務。',
+  },
+  {
     name: '國領 二郎',
     name_en: 'Jiro Kokuryo',
     image: '/images/about/Jiro Kokuryo.png',
