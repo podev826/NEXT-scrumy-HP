@@ -32,20 +32,22 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
     <ContentWrapper as="section" py={0} px={{ base: 5, lg: 8 }} mt="20">
       <FadeInAnimation>
         <Box
-          display={{ base: 'block', xl: 'flex' }}
+          display="flex"
           flexDirection={'row-reverse'}
           justifyContent={'space-between'}
           mb={'40'}
         >
           <Box w="30vw">
-            <InstantSearch searchClient={searchClient} indexName="blog">
-              <Box
-                display={{ base: 'none', xl: 'block' }}
-                justifyContent={'flex-start'}
-              >
-                <SearchModal />
-              </Box>
-            </InstantSearch>
+            <Box position="sticky" top="40">
+              <InstantSearch searchClient={searchClient} indexName="blog">
+                <Box
+                  display={{ base: 'none', xl: 'block' }}
+                  justifyContent={'flex-start'}
+                >
+                  <SearchModal />
+                </Box>
+              </InstantSearch>
+            </Box>
           </Box>
           <Box w={{ base: '90vw', lg: '85vw', xl: '65vw' }} mx="auto">
             <Text fontSize={{ xl: '3xl' }} fontWeight="bold" mb={'5'}>
