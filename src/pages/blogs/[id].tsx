@@ -2,7 +2,6 @@ import { BlogMainLayout, IdWrapper } from 'components/Layouts';
 import { META } from 'configs';
 import { BlogContact } from 'features/Blogs/Contact';
 import { BlogContentMain } from 'features/Blogs/Content';
-import RelatedContents from 'features/Blogs/RelatedContents';
 import { Blogclient } from 'libraries/microcms';
 import { BlogDataProps, BlogItemProps, ContentType, ContextType } from 'types';
 

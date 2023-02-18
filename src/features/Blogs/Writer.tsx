@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Link, Text } from '@chakra-ui/react';
 import { FadeInAnimation } from 'components/Elements';
 import { ContentWrapper } from 'components/Layouts';
 import { MEMBER_LIST } from 'configs';
@@ -24,6 +24,7 @@ export const BlogsWriter: FC = () => {
                 objectFit="contain"
                 borderRadius={'100%'}
                 alt=""
+                w={{ base: '30vw', md: '' }}
                 mx={{ base: 'auto', lg: '' }}
               />
             </Box>
@@ -63,42 +64,61 @@ export const BlogsWriter: FC = () => {
             mt="7"
             columnGap={'8'}
           >
-            <Image
-              src={'/images/blog/youtube.png'}
-              objectFit="contain"
-              w={{ base: '12', md: '10' }}
-              h={{ base: '12', md: '10' }}
-              borderRadius={'100%'}
-              cursor={'pointer'}
-              alt=""
-            />
-            <Image
-              src={'/images/blog/twitter.png'}
-              objectFit="contain"
-              w={{ base: '12', md: '10' }}
-              h={{ base: '12', md: '10' }}
-              borderRadius={'100%'}
-              cursor={'pointer'}
-              alt=""
-            />
-            <Image
-              src={'/images/blog/instagram.png'}
-              objectFit="contain"
-              w={{ base: '12', md: '10' }}
-              h={{ base: '12', md: '10' }}
-              borderRadius={'100%'}
-              cursor={'pointer'}
-              alt=""
-            />
-            <Image
-              src={'/images/blog/facebook.png'}
-              objectFit="contain"
-              w={{ base: '12', md: '10' }}
-              h={{ base: '12', md: '10' }}
-              borderRadius={'100%'}
-              cursor={'pointer'}
-              alt=""
-            />
+            <Link
+              href="https://www.youtube.com/@sustan_sustan"
+              target={'_blank'}
+            >
+              <Image
+                src={'/images/blog/youtube.png'}
+                objectFit="contain"
+                w={{ base: '12', md: '10' }}
+                h={{ base: '12', md: '10' }}
+                borderRadius={'100%'}
+                cursor={'pointer'}
+                alt=""
+              />
+            </Link>
+            <Link href="https://twitter.com/sustan_sustan" target={'_blank'}>
+              <Image
+                src={'/images/blog/twitter.png'}
+                objectFit="contain"
+                w={{ base: '12', md: '10' }}
+                h={{ base: '12', md: '10' }}
+                borderRadius={'100%'}
+                cursor={'pointer'}
+                alt=""
+              />
+            </Link>
+
+            <Link
+              href="https://www.instagram.com/sustan_sustan/"
+              target={'_blank'}
+            >
+              <Image
+                src={'/images/blog/instagram.png'}
+                objectFit="contain"
+                w={{ base: '12', md: '10' }}
+                h={{ base: '12', md: '10' }}
+                borderRadius={'100%'}
+                cursor={'pointer'}
+                alt=""
+              />
+            </Link>
+
+            <Link
+              href="https://www.facebook.com/sasano.kento"
+              target={'_blank'}
+            >
+              <Image
+                src={'/images/blog/facebook.png'}
+                objectFit="contain"
+                w={{ base: '12', md: '10' }}
+                h={{ base: '12', md: '10' }}
+                borderRadius={'100%'}
+                cursor={'pointer'}
+                alt=""
+              />
+            </Link>
           </Box>
         </Box>
       </FadeInAnimation>

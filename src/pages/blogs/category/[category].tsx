@@ -69,6 +69,8 @@ export const CategoryId: FC<BlogTypeProps> = ({ blog }) => {
                 <Box
                   display={{ base: 'none', xl: 'block' }}
                   justifyContent={'flex-start'}
+                  position="sticky"
+                  top="40"
                 >
                   <SearchModal />
                 </Box>

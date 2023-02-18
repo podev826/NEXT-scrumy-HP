@@ -1,7 +1,6 @@
 import { Box, Flex, Input, Text, VisuallyHidden } from '@chakra-ui/react';
 import {
   CustomBlogSearchBox,
-  CustomBlogSearchBox2,
   CustomBlogsMenu,
   MagnifyingGlass,
 } from 'components/Elements';
@@ -165,7 +164,7 @@ export const SearchModalSp: FC = () => {
                 </Text>
                 <Box mt={{ base: 4, xl: 4 }}>
                   <Box as="form" onSubmit={toggleBlogHeader}>
-                    <CustomBlogSearchBox2 />
+                    <CustomBlogSearchBox />
                     {/* <Box position={'relative'}>
                       <Input
                         pl={{ base: 7, xl: 9 }}

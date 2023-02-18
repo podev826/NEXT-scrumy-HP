@@ -8,7 +8,7 @@ export const styles = {
       fontWeight: 'normal',
       fontFamily: '"YakuHanJP", "Noto Sans JP", "sans-serif"',
       color: 'sub.100',
-      overflowX: 'hidden',
+      // overflowX: 'hidden',
     },
     '*': {
       letterSpacing: '0.08em',
