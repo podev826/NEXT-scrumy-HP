@@ -15,8 +15,8 @@ export const BlogId = ({ blog, related }: blogType) => {
   return (
     <BlogMainLayout meta={META.media}>
       <IdWrapper id={blog.title}>
-        <BlogContentMain blog={blog} />
-        <RelatedContents contents={related.contents} />
+        <BlogContentMain blog={blog} related={related} />
+        {/* <RelatedContents contents={related.contents} /> */}
         <BlogContact />
       </IdWrapper>
     </BlogMainLayout>
