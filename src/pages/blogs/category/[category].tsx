@@ -28,54 +28,34 @@ type BlogTypeProps = {
 };
 
 export const CategoryId: FC<BlogTypeProps> = ({ blog }) => {
-  // カテゴリーに紐付いたコンテンツがない場合に表示
   if (blog.length === 0) {
-    return <div>ブログコンテンツがありません</div>;
+    return <Box>ブログコンテンツがありません</Box>;
   }
-
-  // const blogMeta: MetaItemProps = {
-  //   title: blog[0].category.name,
-  //   description:
-  //     blog[0].category.id === BLOG_LIST[0].href
-  //       ? BLOG_LIST[0].title
-  //       : blog[0].category.id === BLOG_LIST[1].href
-  //       ? BLOG_LIST[1].title
-  //       : blog[0].category.id === BLOG_LIST[2].href
-  //       ? BLOG_LIST[2].title
-  //       : '',
-  //   href:
-  //     blog[0].category.id === BLOG_LIST[0].href
-  //       ? `/blogs/category/${BLOG_LIST[0].href}`
-  //       : blog[0].category.id === BLOG_LIST[1].href
-  //       ? `/blogs/category/${BLOG_LIST[1].href}`
-  //       : blog[0].category.id === BLOG_LIST[2].href
-  //       ? `/blogs/category/${BLOG_LIST[2].href}`
-  //       : '',
-  // };
 
   return (
     <BlogMainLayout meta={META.media}>
       <IdWrapper id={blog[0].category.name}>
-        <ContentWrapper as="section" maxW={'calc(1080px + (96px * 2))'}>
+        <Box as="section">
           <FadeInAnimation>
             <Box
-              display={'flex'}
+              display={{ base: 'block', xl: 'flex' }}
               flexDirection={{ base: 'column', xl: 'row-reverse' }}
               justifyContent={'center'}
-              gap={3}
               alignItems={'baseline'}
             >
-              <InstantSearch searchClient={searchClient} indexName="blog">
-                <Box
-                  display={{ base: 'none', xl: 'block' }}
-                  justifyContent={'flex-start'}
-                  position="sticky"
-                  top="40"
-                >
-                  <SearchModal />
-                </Box>
-              </InstantSearch>
-              <Box>
+              <Box bg="gray.100" w="full" position="sticky" top="40">
+                <InstantSearch searchClient={searchClient} indexName="blog">
+                  <Box
+                    display={{ base: 'none', xl: 'block' }}
+                    justifyContent={'flex-start'}
+                    position="sticky"
+                    top="40"
+                  >
+                    <SearchModal />
+                  </Box>
+                </InstantSearch>
+              </Box>
+              <Box w="65vw">
                 <Text fontSize={'2xl'} color="black">
                   ホーム　＞　{blog[0].category.name}
                 </Text>
@@ -159,7 +139,7 @@ export const CategoryId: FC<BlogTypeProps> = ({ blog }) => {
               </Box>
             </Box>
           </FadeInAnimation>
-        </ContentWrapper>
+        </Box>
         <Footer />
       </IdWrapper>
     </BlogMainLayout>

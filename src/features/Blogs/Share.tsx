@@ -50,7 +50,7 @@ export const BlogsShare: FC<blogType> = ({ blog }) => {
         >
           <Text fontSize={'xl'}>タイトルとURLコピーしました</Text>
         </Box>
-        <Box display={{ base: '', sm: 'flex' }} columnGap="7" mt="5">
+        <Box display={{ base: '', sm: 'flex' }} columnGap="7" mt="5" px="10">
           <Link
             target="_blank"
             href={
@@ -61,7 +61,7 @@ export const BlogsShare: FC<blogType> = ({ blog }) => {
             }
             bg="#1DA0F1"
             color="white"
-            w={{ base: '50vw', sm: '390px' }}
+            w={{ base: '50vw', sm: '' }}
             py="2"
             fontSize={'sm'}
             shadow="xl"
@@ -78,7 +78,7 @@ export const BlogsShare: FC<blogType> = ({ blog }) => {
             }
             bg="#1877F2"
             color="white"
-            w={{ base: '50vw', sm: '390px' }}
+            w={{ base: '50vw', sm: '' }}
             py="2"
             fontSize={'sm'}
             shadow="xl"
@@ -89,7 +89,7 @@ export const BlogsShare: FC<blogType> = ({ blog }) => {
           </Link>
           <Button
             bg="#D9D9D9"
-            w={{ base: '50vw', sm: '390px' }}
+            w={{ base: '50vw', sm: '' }}
             py="2"
             fontSize={'sm'}
             shadow="xl"

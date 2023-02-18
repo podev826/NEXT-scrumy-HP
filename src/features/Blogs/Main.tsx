@@ -24,41 +24,33 @@ import { SearchModal } from './SearchModal';
 export const BlogMain: FC = () => {
   return (
     <IdWrapper id="blog">
-      <ContentWrapper as="section" py={0} px={8}>
+      <Box as="section" py={0} px={5} bg="gray.100" mx="0">
         <InstantSearch
           searchClient={searchClient}
           indexName="blog"
-          // initialUiState={{
-          //   indexName: {
-          //     query: 'a',
-          //     page: 5,
-          //   },
-          // }}
           routing={true}
         >
           <FadeInAnimation>
             <Box
-              display={'flex'}
+              display={{ base: 'block', xl: 'flex' }}
               flexDirection={{ base: 'column', xl: 'row-reverse' }}
-              justifyContent={'flex-end'}
-              gap={30}
               alignItems={'baseline'}
-              mb={10}
             >
               <Box
                 display={{ base: 'none', xl: 'block' }}
                 justifyContent={'flex-start'}
                 position="sticky"
                 top="40"
+                mx="auto"
+                pb="10"
               >
                 <SearchModal />
               </Box>
-              <Spacer />
-              <Box>
+              <Box bg="white" p="7" w={{ base: '95vw', xl: '67vw' }} mx="auto">
                 <PrimaryTitle en="Articles" />
-                <Box pt={{ base: 6, xl: 0 }} w={{ base: '', xl: '60vw' }}>
+                <Box pt={{ base: 6, xl: 0 }} mx="auto">
                   <CustomBlogsHits />
-                  <Box mt={{ base: 16, xl: 20 }} mb={10}>
+                  <Box mt={{ base: 16, xl: 20 }}>
                     <CustomPagination />
                   </Box>
                 </Box>
@@ -66,7 +58,7 @@ export const BlogMain: FC = () => {
             </Box>
           </FadeInAnimation>
         </InstantSearch>
-      </ContentWrapper>
+      </Box>
     </IdWrapper>
   );
 };

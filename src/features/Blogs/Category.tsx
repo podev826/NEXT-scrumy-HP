@@ -7,11 +7,13 @@ import React, { FC } from 'react';
 export const BlogCategory: FC = () => {
   return (
     <IdWrapper id="category">
-      <ContentWrapper
+      <Box
         as="section"
         py={{ base: 7, xl: 14 }}
         px={8}
-        pt={{ base: 100, xl: 0 }}
+        pt={{ base: 100, xl: 10 }}
+        mx="auto"
+        bg="gray.100"
       >
         <FadeInAnimation>
           <Box>
@@ -65,7 +67,7 @@ export const BlogCategory: FC = () => {
             </Stack>
           </Box>
         </FadeInAnimation>
-      </ContentWrapper>
+      </Box>
     </IdWrapper>
   );
 };

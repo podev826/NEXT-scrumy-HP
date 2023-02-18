@@ -29,27 +29,32 @@ type blogType = {
 export const BlogContentMain: FC<blogType> = ({ blog }) => {
   const toc = renderToc(blog.content);
   return (
-    <ContentWrapper as="section" py={0} px={{ base: 5, lg: 8 }} mt="20">
+    <Box>
       <FadeInAnimation>
         <Box
-          display="flex"
+          display={{ base: 'block', xl: 'flex' }}
           flexDirection={'row-reverse'}
           justifyContent={'space-between'}
-          mb={'40'}
         >
-          <Box w="30vw">
+          <Box
+            py="20"
+            display={{ base: 'none', xl: 'block' }}
+            bg="gray.100"
+            w="30vw"
+          >
             <Box position="sticky" top="40">
               <InstantSearch searchClient={searchClient} indexName="blog">
-                <Box
-                  display={{ base: 'none', xl: 'block' }}
-                  justifyContent={'flex-start'}
-                >
+                <Box justifyContent={'flex-start'}>
                   <SearchModal />
                 </Box>
               </InstantSearch>
             </Box>
           </Box>
-          <Box w={{ base: '90vw', lg: '85vw', xl: '65vw' }} mx="auto">
+          <Box
+            w={{ base: '90vw', lg: '85vw', xl: '65vw' }}
+            mx="auto"
+            mt={{ xl: 20 }}
+          >
             <Text fontSize={{ xl: '3xl' }} fontWeight="bold" mb={'5'}>
               {blog.title}
             </Text>
@@ -90,6 +95,6 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
           </Box>
         </Box>
       </FadeInAnimation>
-    </ContentWrapper>
+    </Box>
   );
 };
