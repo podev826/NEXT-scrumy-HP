@@ -133,7 +133,7 @@ const options: HTMLReactParserOptions = {
       }
       if (domNode.name === 'li') {
         return (
-          <ListItem {...li.props}>
+          <ListItem {...li.props} listStyleType="initial">
             {domToReact(domNode.children, options)}
           </ListItem>
         );
