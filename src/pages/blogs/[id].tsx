@@ -1,5 +1,6 @@
 import { BlogMainLayout, IdWrapper } from 'components/Layouts';
 import { META } from 'configs';
+import { BlogContact } from 'features/Blogs/Contact';
 import { BlogContentMain } from 'features/Blogs/Content';
 import { Blogclient } from 'libraries/microcms';
 import { BlogDataProps, BlogItemProps, ContentType, ContextType } from 'types';
@@ -13,7 +14,9 @@ export const BlogId = ({ blog, related }: blogType) => {
   return (
     <BlogMainLayout meta={META.media}>
       <IdWrapper id={blog.title}>
-        <BlogContentMain blog={blog} />
+        <BlogContentMain blog={blog} related={related} />
+        {/* <RelatedContents contents={related.contents} /> */}
+        <BlogContact />
       </IdWrapper>
     </BlogMainLayout>
   );

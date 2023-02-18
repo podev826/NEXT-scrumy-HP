@@ -27,9 +27,9 @@ export const RelatedContents: FC<BlogTypeProps> = ({ contents }) => {
   //     },
   //   }).catch();
 
-  if (contents.length === 0) {
-    return <div>ブログコンテンツがありません</div>;
-  }
+  // if (contents.length === 0) {
+  //   return <div>ブログコンテンツがありません</div>;
+  // }
   return (
     <IdWrapper id="category">
       <ContentWrapper py={{ base: 7, xl: 14 }} px={5}>
@@ -61,14 +61,14 @@ export const RelatedContents: FC<BlogTypeProps> = ({ contents }) => {
                       fontSize={{ base: 'xl', xl: 'lg' }}
                       display={'flex'}
                       alignItems={'center'}
-                      w={{ base: '30vw', xl: '25vw' }} //ここを変更する
+                      w={{ base: '30vw', xl: 400 }} //ここを変更する
                     >
-                      <Box lang="en" mr={8}>
+                      <Box lang="en" mr={3}>
                         <Image
                           alt="アイキャッチ"
                           src={blog.eyecatch.url}
                           objectFit="contain"
-                          w={{ base: '30vw', xl: '25vw' }}
+                          w={{ base: '30vw', xl: 150 }}
                         />
                       </Box>
                       {/* <Box
@@ -89,28 +89,28 @@ export const RelatedContents: FC<BlogTypeProps> = ({ contents }) => {
                       </Text>
                     </Box>
                   </Box> */}
-                    </Box>
-                    <Box
-                      mt={2}
-                      fontSize={'xl'}
-                      w={{ base: '30vw', xl: '25vw' }}
-                      flex={{ base: '1.6', xl: '2.3' }}
-                    >
-                      <Box display={{ base: 'none', lg: 'block' }}>
-                        <Text
-                          textAlign={'left'}
-                          fontWeight="bold"
-                          fontSize={{ base: 'lg', md: '2xl', xl: 'xl' }}
-                        >
-                          {blog.title}
-                        </Text>
-                      </Box>
-                      <Text
-                        textAlign={'left'}
-                        fontSize={{ base: 'md', md: 'xl', xl: 'lg' }}
+
+                      <Box
+                        mt={2}
+                        fontSize={'xl'}
+                        w={{ base: '30vw', xl: 200 }}
+                        flex={{ base: '1.6', xl: '2.3' }}
                       >
-                        {blog.description}
-                      </Text>
+                        <Box display={{ base: 'none', lg: 'block' }}>
+                          <Text
+                            textAlign={'left'}
+                            fontSize={{ base: 'lg', md: '2xl', xl: 'lg' }}
+                          >
+                            {blog.title}
+                          </Text>
+                        </Box>
+                        {/* <Text
+                          textAlign={'left'}
+                          fontSize={{ base: 'md', md: 'xl', xl: 'sm' }}
+                        >
+                          {blog.description}
+                        </Text> */}
+                      </Box>
                     </Box>
                   </Link>
                 </Box>

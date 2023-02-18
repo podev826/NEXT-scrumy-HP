@@ -10,23 +10,29 @@ import { ContentWrapper } from 'components/Layouts';
 import dayjs from 'dayjs';
 import { ContactMain } from 'features/contact';
 import { searchClient } from 'libraries/algolia';
-import { renderToc } from 'libraries/microcms';
+import { Blogclient, renderToc } from 'libraries/microcms';
 import { FC } from 'react';
 import { InstantSearch } from 'react-instantsearch-hooks-web';
 import { MarkdownTemplate } from 'styles/blog/MarkdownTemplate';
-import { BlogItemProps } from 'types';
+import { BlogDataProps, BlogItemProps, ContextType } from 'types';
 
 import { BlogContact } from './Contact';
+import { RelatedContents } from './RelatedContents';
 import { SearchModal } from './SearchModal';
 import { BlogsShare } from './Share';
 import { TableOfContents } from './TableOfContent';
 import { BlogsWriter } from './Writer';
 
-type blogType = {
-  blog: BlogItemProps;
+type BlogTypeProps = {
+  contents: BlogItemProps[];
 };
 
-export const BlogContentMain: FC<blogType> = ({ blog }) => {
+type blogType = {
+  blog: BlogItemProps;
+  related: BlogTypeProps;
+};
+
+export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
   const toc = renderToc(blog.content);
   return (
     <Box>
@@ -46,6 +52,7 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
               <InstantSearch searchClient={searchClient} indexName="blog">
                 <Box justifyContent={'flex-start'}>
                   <SearchModal />
+                  <RelatedContents contents={related.contents} />
                 </Box>
               </InstantSearch>
             </Box>
@@ -98,3 +105,27 @@ export const BlogContentMain: FC<blogType> = ({ blog }) => {
     </Box>
   );
 };
+
+// export const getStaticProps = async (context: ContextType) => {
+//   const id = context.params.id;
+//   const data: BlogItemProps = await Blogclient.get({
+//     endpoint: 'blogs',
+//     contentId: id,
+//   });
+
+//   const category = data.category.id;
+//   const data2: BlogItemProps = await Blogclient.get({
+//     endpoint: 'blogs',
+//     queries: {
+//       limit: 6,
+//       orders: '-publishedAt',
+//       filters: `category[equals]${category}[and]contentId[not_equals]${id}`,
+//     },
+//   });
+
+//   return {
+//     props: {
+//       related: data2,
+//     },
+//   };
+// };
