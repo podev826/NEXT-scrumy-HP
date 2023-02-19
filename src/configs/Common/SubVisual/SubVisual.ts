@@ -34,10 +34,4 @@ export const SUB_VISUAL_LIST: SubVisualListProps = {
     text2: '',
     text3: '',
   },
-  blog: {
-    title: 'Scrumy Media',
-    text1: '',
-    text2: '',
-    text3: '',
-  },
 };
