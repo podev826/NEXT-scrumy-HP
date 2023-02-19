@@ -7,9 +7,16 @@ export const renderToc = (body: string) => {
   let h2 = 0;
   let h3 = 0;
 
+  // 型がわからない
   const toc = headings.map((data) => ({
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     name: data.name,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     text: data.children[0].data,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     id: data.attribs.id,
   }));
 
