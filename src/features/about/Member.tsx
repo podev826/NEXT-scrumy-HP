@@ -38,7 +38,8 @@ export const AboutMember: FC = () => {
                 <AccordionItem
                   key={item.name}
                   w={{
-                    base: '60vw',
+                    base: '75vw',
+                    sm: '60vw',
                     md: '340px',
                     lg: '410px',
                     xl: '500px',
@@ -117,12 +118,12 @@ export const AboutMember: FC = () => {
                                   {item.name_en}
                                 </Text>
                                 <Box
-                                  fontSize={{ base: 14, sm: 'xl', xl: '2xl' }}
+                                  fontSize={{ base: 17, sm: 'xl', xl: '2xl' }}
                                   color={'accent.100'}
                                   position="absolute"
-                                  top={{ base: '2.5vw', sm: 2, md: 3 }}
+                                  top={{ base: '2.0vw', sm: 2, md: 3 }}
                                   left={{
-                                    base: '48vw',
+                                    base: '62vw',
                                     sm: '50vw',
                                     md: '270px',
                                     lg: '340px',

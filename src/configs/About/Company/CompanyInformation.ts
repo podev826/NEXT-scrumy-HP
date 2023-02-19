@@ -19,7 +19,7 @@ export const COMPANY_INFORMATION: CompanyInformationProps = [
   },
   {
     term: '所在地',
-    description: '東京都中央区銀座1丁目22番11号大竹ビジデンス2階',
+    description: '東京都中央区銀座1丁目22番11号2階',
     description2: '',
   },
   {
