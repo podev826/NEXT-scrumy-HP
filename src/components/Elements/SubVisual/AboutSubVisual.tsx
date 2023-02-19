@@ -67,11 +67,7 @@ export const AboutSubVisual: FC = () => {
             </Text>
             <Text
               w={{ base: '72vw', md: 'auto' }}
-              fontSize={{
-                base: '18px',
-                md: '2.1vw',
-                lg: '1.767vw',
-              }}
+              fontSize={{ base: 'lg', md: 'lg', xl: 'xl' }}
               fontWeight="medium"
               lineHeight="1.667"
               mt={{ base: '15vw', md: '13vw' }}
