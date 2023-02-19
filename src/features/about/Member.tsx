@@ -76,8 +76,9 @@ export const AboutMember: FC = () => {
                                 <Text
                                   fontWeight="bold"
                                   fontSize={{
-                                    base: '2.6vw',
-                                    sm: 'sm',
+                                    base: '3.5vw',
+                                    sm: '2.5vw',
+                                    md: '15px',
                                     lg: 'md',
                                   }}
                                   pl="2"
@@ -94,8 +95,8 @@ export const AboutMember: FC = () => {
                               >
                                 <Text
                                   fontSize={{
-                                    base: '3.9vw',
-                                    sm: '2.8vw',
+                                    base: '4.2vw',
+                                    sm: '3.5vw',
                                     md: '20px',
                                     lg: '25px',
                                     xl: '25px',
@@ -108,8 +109,8 @@ export const AboutMember: FC = () => {
                                 <Text
                                   fontWeight="bold"
                                   fontSize={{
-                                    base: '3.6vw',
-                                    sm: '2.4vw',
+                                    base: '3.8vw',
+                                    sm: '3vw',
                                     md: '15px',
                                     lg: '20px',
                                     xl: '22px',
@@ -121,7 +122,7 @@ export const AboutMember: FC = () => {
                                   fontSize={{ base: 17, sm: 'xl', xl: '2xl' }}
                                   color={'accent.100'}
                                   position="absolute"
-                                  top={{ base: '1.8vw', sm: 2, md: 3 }}
+                                  top={{ base: '1.3vw', sm: 2, md: 3 }}
                                   left={{
                                     base: '61vw',
                                     sm: '50vw',
@@ -155,8 +156,8 @@ export const AboutMember: FC = () => {
                       >
                         <Text
                           fontSize={{
-                            base: '3.0vw',
-                            sm: '2.2vw',
+                            base: '2.8vw',
+                            sm: '2.4vw',
                             md: '1.9vw',
                             lg: '1.4vw',
                           }}
