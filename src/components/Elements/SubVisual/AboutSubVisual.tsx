@@ -59,10 +59,10 @@ export const AboutSubVisual: FC = () => {
               lineHeight={{ base: '1.32', md: '1.5' }}
               w={{ base: '', sm: '75vw', md: '50vw' }}
             >
-              <Box as="span" display={{ md: 'inline', base: 'block' }}>
+              <Box as="span" display={'block'}>
                 サステナブルファイナンスで
               </Box>
-              <Box as="span" display={{ md: 'inline', base: 'block' }}>
+              <Box as="span" display={'block'}>
                 国際金融市場の懸け橋となる
               </Box>
             </Text>
