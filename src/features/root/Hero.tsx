@@ -16,6 +16,7 @@ export const RootHero: FC = () => {
         pt={{ base: '120px', sm: '130px', lg: '180px', xl: '230px' }}
         justifyContent="center"
         direction={{ base: 'column', lg: 'row' }}
+        alignItems={'ceter'}
       >
         <Box
           pb={{ base: '12.8vw', sm: '5.2vw', xl: '2.222vw' }}
@@ -23,10 +24,7 @@ export const RootHero: FC = () => {
           justifyContent="left"
         >
           <Box fontWeight="bold">
-            <Box
-              display={'flex'}
-              justifyContent={{ base: 'center', sm: 'center', lg: 'center' }}
-            >
+            <Box display={'flex'} justifyContent={'center'}>
               <Text
                 as="p"
                 fontSize={{
@@ -61,7 +59,7 @@ export const RootHero: FC = () => {
             fontSize={{ base: '3.95vw', sm: '2.3vw', lg: '1.5vw' }}
             textAlign="center"
             fontWeight={'medium'}
-            mt={{ base: '8.53vw', sm: '4.167vw', xl: '2.5vw' }}
+            mt={{ base: '8.53vw', sm: '4.167vw', xl: '4vw' }}
           >
             <Text as="span" display={'block'}>
               競争と共創を両立できる時代
@@ -74,20 +72,51 @@ export const RootHero: FC = () => {
             </Text>
           </Text>
           <Box
-            mt={{ base: 9, xl: 10 }}
-            mx={{ base: 'auto', md: 0 }}
-            maxW="280px"
+            maxW={{ base: '250', sm: '300', xl: '350' }}
+            mx="auto"
+            mt={{ base: 6, sm: '2vh', lg: '9vh', xl: '14vh' }}
           >
-            <PrimaryLink href="/news" variant={'primary'} w="full">
-              私たちについて
-            </PrimaryLink>
+            <BaseLink
+              href="/about"
+              px={{ base: 10, xl: 8 }}
+              py={{ base: 3, xl: 4 }}
+              minH={{ base: 12, xl: 16 }}
+              w="full"
+              color="base.100"
+              bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
+              transitionProperty="all"
+              transitionTimingFunction="linear"
+              transitionDuration="fast"
+              boxShadow={'primary'}
+              _hover={{
+                boxShadow: 'transparent',
+                backgroundColor: 'sub.200',
+                opacity: 1,
+              }}
+              borderRadius="full"
+              fontSize={{ base: 'md', xl: 'xl' }}
+              fontWeight={'bold'}
+              position="relative"
+            >
+              <Text textAlign={'center'} pr={{ base: '1.6vw', md: 0 }}>
+                わたしたちについて
+              </Text>
+              <Box
+                as="span"
+                position="absolute"
+                right={{ base: 6, xl: 8 }}
+                top="50%"
+                transform={'translateY(-50%)'}
+              >
+                <AngleRightIcon />
+              </Box>
+            </BaseLink>
           </Box>
         </Box>
         <Box
           pb={{ base: '12.8vw', sm: '5.2vw', xl: '2.222vw' }}
           px={{ base: '6.4vw', sm: 0 }}
           display={{ base: 'none', lg: 'flex' }}
-          justifyContent="center"
         >
           <Image
             src={'/images/root/mainImage.png'}
