@@ -129,17 +129,22 @@ export const RecruitMain: FC = () => {
                 />
               ))}
             </Accordion>
-            <Box mt={{ base: 8, xl: 10 }}>
-              <PrimaryLink
-                href="/contact"
-                bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
-                w="full"
-                maxW={{ base: '280px', xl: '284px' }}
-                color="white"
-              >
-                応募する
-              </PrimaryLink>
-            </Box>
+          </Box>
+          <Box
+            mt={{ base: 8, xl: 10 }}
+            mx={'auto'}
+            display={'flex'}
+            justifyContent={'center'}
+          >
+            <PrimaryLink
+              href="/contact"
+              bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
+              w="full"
+              maxW={{ base: '280px', xl: '284px' }}
+              color="white"
+            >
+              応募する
+            </PrimaryLink>
           </Box>
         </FadeInAnimation>
       </ContentWrapper>

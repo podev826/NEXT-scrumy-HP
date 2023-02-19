@@ -89,9 +89,9 @@ export const RootBlog: FC = () => {
               ))}
             </Box>
           </Box>
-          <Text
+          <Box
             maxW={{ base: '280px', xl: '364px' }}
-            mx={{ base: '0', lg: 'auto' }}
+            mx={'auto'}
             mt={{ base: 10, xl: 10 }}
           >
             <PrimaryLink
@@ -101,7 +101,7 @@ export const RootBlog: FC = () => {
             >
               詳しく見る
             </PrimaryLink>
-          </Text>
+          </Box>
         </FadeInAnimation>
       </ContentWrapper>
     </IdWrapper>

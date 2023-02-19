@@ -1,5 +1,10 @@
 import { Box, Image, Stack, Text } from '@chakra-ui/react';
-import { AngleRightIcon, BaseLink, FadeInAnimation } from 'components/Elements';
+import {
+  AngleRightIcon,
+  BaseLink,
+  FadeInAnimation,
+  PrimaryLink,
+} from 'components/Elements';
 import React, { FC } from 'react';
 
 export const RootHero: FC = () => {
@@ -69,43 +74,13 @@ export const RootHero: FC = () => {
             </Text>
           </Text>
           <Box
-            maxW={{ base: '64vw', sm: '40vw', xl: '30.278vw' }}
-            mx="auto"
-            mt={{ base: 6, sm: '2vh', lg: '9vh', xl: '14vh' }}
+            mt={{ base: 9, xl: 10 }}
+            mx={{ base: 'auto', md: 0 }}
+            maxW="280px"
           >
-            <BaseLink
-              href="/about"
-              py={{ base: '1.5vw', xl: '1.528vw' }}
-              px={{ base: 4, sm: 6 }}
-              w="full"
-              color="base.100"
-              bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
-              transitionProperty="all"
-              transitionTimingFunction="linear"
-              transitionDuration="fast"
-              boxShadow={'primary'}
-              _hover={{
-                boxShadow: 'transparent',
-                backgroundColor: 'sub.200',
-                opacity: 1,
-              }}
-              borderRadius="full"
-              fontSize={{ base: '4.267vw', sm: '2.344vw', lg: '1.389vw' }}
-              fontWeight={'bold'}
-              position="relative"
-            >
-              <Text textAlign={'center'} pr={{ base: '1.6vw', md: 0 }}>
-                わたしたちについて
-              </Text>
-              <Box
-                position="absolute"
-                right={{ base: '6.4vw', xl: '4.167vw' }}
-                top="50%"
-                transform={'translateY(-50%)'}
-              >
-                <AngleRightIcon />
-              </Box>
-            </BaseLink>
+            <PrimaryLink href="/news" variant={'primary'} w="full">
+              私たちについて
+            </PrimaryLink>
           </Box>
         </Box>
         <Box
