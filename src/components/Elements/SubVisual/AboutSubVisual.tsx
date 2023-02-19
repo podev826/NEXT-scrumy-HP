@@ -6,7 +6,6 @@ import { FadeInAnimation } from '../Animations';
 export const AboutSubVisual: FC = () => {
   return (
     <Box
-      // smサイズの時のheightを修正
       backgroundImage={{
         base: "url('/images/about/about_sub-visual_bg.png')",
       }}
@@ -69,8 +68,7 @@ export const AboutSubVisual: FC = () => {
             <Text
               w={{ base: '72vw', md: 'auto' }}
               fontSize={{
-                base: '3.8vw',
-                sm: '2.8vw',
+                base: '18px',
                 md: '2.1vw',
                 lg: '1.767vw',
               }}
