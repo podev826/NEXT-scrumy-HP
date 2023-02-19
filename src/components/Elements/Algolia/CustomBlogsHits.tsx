@@ -22,7 +22,9 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
 
   return (
     <FadeInAnimation>
-      <text>{results.query !== '' ? `${results.query}の検索結果` : null}</text>
+      <text>
+        {results && results.query !== '' ? `${results.query}の検索結果` : null}
+      </text>
       <Accordion allowToggle allowMultiple>
         {hits.map((hit) => (
           <AccordionItem
