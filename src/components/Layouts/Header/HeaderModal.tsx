@@ -8,7 +8,6 @@ import { HeaderModalListPc, HeaderModalListSp } from './HeaderModalList';
 
 export const HeaderModal: FC = () => {
   const { headerIsActive, toggleHeader, closeHeader } = useHeader();
-
   return (
     <>
       <Box

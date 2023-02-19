@@ -47,8 +47,11 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
         }}
       >
         <BaseLink
-          href={`/blogs/category/${category.slug}`}
+          href={`?blog%5Bmenu%5D%5Bcategory%5D=${category.name}`}
+          // href={encodeURI(`?blog%5Bmenu%5D%5Bcategory%5D=${category.name}`)}
+          // href={`/blogs/category/${category.slug}`}
           rel="noopener noreferrer"
+          target="_blank"
           h="full"
           _hover={{
             opacity: 1,
@@ -60,6 +63,8 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
     </Box>
   );
 };
+
+// ページ遷移をはさみたくない場合は、BaseLinkタグをaタグに変更
 
 type CustomBlogMenuItemSpProps = {
   category: BlogCategoryProps;

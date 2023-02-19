@@ -4,14 +4,10 @@ import {
   CustomBlogsMenu,
   MagnifyingGlass,
 } from 'components/Elements';
+import { CustomBlogSearchBox2 } from 'components/Elements/Algolia/prottype';
 import { searchClient } from 'libraries/algolia';
 import { FC, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import {
-  InstantSearch,
-  SearchBoxProps,
-  useSearchBox,
-} from 'react-instantsearch-hooks-web';
+import { InstantSearch } from 'react-instantsearch-hooks-web';
 
 // type HeaderModalListProps = {
 //   content: SecondaryNavContentProps;
@@ -164,7 +160,7 @@ export const SearchModalSp: FC = () => {
                 </Text>
                 <Box mt={{ base: 4, xl: 4 }}>
                   <Box as="form" onSubmit={toggleBlogHeader}>
-                    <CustomBlogSearchBox />
+                    <CustomBlogSearchBox2 />
                     {/* <Box position={'relative'}>
                       <Input
                         pl={{ base: 7, xl: 9 }}

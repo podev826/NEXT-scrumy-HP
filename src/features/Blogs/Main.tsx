@@ -1,4 +1,4 @@
-import { Box, Center, Input, Spacer, Text } from '@chakra-ui/react';
+import { Box, Spacer } from '@chakra-ui/react';
 import {
   CustomBlogsHits,
   CustomBlogsMenu,

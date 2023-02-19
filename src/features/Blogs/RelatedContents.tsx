@@ -61,7 +61,7 @@ export const RelatedContents: FC<BlogTypeProps> = ({ contents }) => {
                       fontSize={{ base: 'xl', xl: 'lg' }}
                       display={'flex'}
                       alignItems={'center'}
-                      w={{ base: '30vw', xl: 400 }} //ここを変更する
+                      w={{ base: '30vw', xl: 300 }} //ここを変更する
                     >
                       <Box lang="en" mr={3}>
                         <Image
@@ -96,7 +96,7 @@ export const RelatedContents: FC<BlogTypeProps> = ({ contents }) => {
                         w={{ base: '30vw', xl: 200 }}
                         flex={{ base: '1.6', xl: '2.3' }}
                       >
-                        <Box display={{ base: 'none', lg: 'block' }}>
+                        <Box display={{ base: 'none', lg: 'block' }} w={200}>
                           <Text
                             textAlign={'left'}
                             fontSize={{ base: 'lg', md: '2xl', xl: 'lg' }}

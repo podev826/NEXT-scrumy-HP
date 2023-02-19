@@ -9,7 +9,7 @@ type BaseLinkProps = ChakraLinkProps & NextLinkProps;
 
 export const BaseLink: FC<BaseLinkProps> = ({ href, children, ...props }) => {
   return (
-    <NextLink href={href} passHref>
+    <NextLink href={href} passHref replace={true}>
       <ChakraLink {...props}>{children}</ChakraLink>
     </NextLink>
   );

@@ -58,11 +58,11 @@ export const AboutSubVisual: FC = () => {
               fontWeight="bold"
               lineHeight={{ base: '1.32', md: '1.5' }}
             >
-              <Box as="span" display={{ md: 'inline', base: 'block' }}>
-                世界一のESG
+              <Box as="span" display={'block'}>
+                サステナブルファイナンスで
               </Box>
-              <Box as="span" display={{ md: 'inline', base: 'block' }}>
-                プラットフォーマーになる
+              <Box as="span" display={'block'}>
+                国際金融市場の懸け橋となる
               </Box>
             </Text>
             <Text
