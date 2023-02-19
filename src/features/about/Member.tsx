@@ -38,8 +38,7 @@ export const AboutMember: FC = () => {
                 <AccordionItem
                   key={item.name}
                   w={{
-                    base: '75vw',
-                    sm: '60vw',
+                    base: '60vw',
                     md: '340px',
                     lg: '410px',
                     xl: '500px',
@@ -76,9 +75,9 @@ export const AboutMember: FC = () => {
                                 <Text
                                   fontWeight="bold"
                                   fontSize={{
-                                    base: '3.5vw',
-                                    sm: '2.5vw',
-                                    md: '15px',
+                                    base: '2.2vw',
+                                    md: 'sm',
+
                                     lg: 'md',
                                   }}
                                   pl="2"
@@ -95,8 +94,9 @@ export const AboutMember: FC = () => {
                               >
                                 <Text
                                   fontSize={{
-                                    base: '4.2vw',
-                                    sm: '3.5vw',
+                                    base: '3.5vw',
+                                    sm: '2.8vw',
+
                                     md: '20px',
                                     lg: '25px',
                                     xl: '25px',
@@ -109,8 +109,9 @@ export const AboutMember: FC = () => {
                                 <Text
                                   fontWeight="bold"
                                   fontSize={{
-                                    base: '3.8vw',
-                                    sm: '3vw',
+                                    base: '2.8vw',
+                                    sm: '2.4vw',
+
                                     md: '15px',
                                     lg: '20px',
                                     xl: '22px',
@@ -119,12 +120,13 @@ export const AboutMember: FC = () => {
                                   {item.name_en}
                                 </Text>
                                 <Box
-                                  fontSize={{ base: 17, sm: 'xl', xl: '2xl' }}
+                                  fontSize={{ base: 14, sm: 'xl', xl: '2xl' }}
                                   color={'accent.100'}
                                   position="absolute"
-                                  top={{ base: '1.3vw', sm: 2, md: 3 }}
+                                  top={{ base: '2.5vw', sm: 2, md: 3 }}
                                   left={{
-                                    base: '61vw',
+                                    base: '48vw',
+
                                     sm: '50vw',
                                     md: '270px',
                                     lg: '340px',

@@ -17,7 +17,6 @@ type MarkdownTemplateProps = {
 
 const h2 = {
   props: {
-    mt: '70px',
     mb: '10px',
     p: '15px',
     fontSize: '2xl',
@@ -43,6 +42,7 @@ const p = {
   props: {
     lineHeight: '1.7',
     fontSize: 'xl',
+    mb: '10',
   },
 };
 
@@ -88,8 +88,8 @@ const a = {
 const img = {
   props: {
     mx: 'auto',
-    my: '40px',
-    height: '350px',
+    // width: { base:'70vw',md: '50vw', xl: '550px' },
+    h: '30vh',
   },
 };
 
@@ -133,7 +133,7 @@ const options: HTMLReactParserOptions = {
       }
       if (domNode.name === 'li') {
         return (
-          <ListItem {...li.props}>
+          <ListItem {...li.props} listStyleType="initial">
             {domToReact(domNode.children, options)}
           </ListItem>
         );

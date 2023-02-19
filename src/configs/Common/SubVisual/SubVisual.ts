@@ -32,4 +32,11 @@ export const SUB_VISUAL_LIST: SubVisualListProps = {
     text3: '以下のフォームより',
     text4: 'お願いいたします',
   },
+  blog: {
+    title: 'Scrumy Media',
+    text1: '',
+    text2: '',
+    text3: '',
+    text4: '',
+  },
 };

@@ -3,16 +3,16 @@ import { MagnifyingGlass } from 'components/Elements';
 import { useForm } from 'react-hook-form';
 import { SearchBoxProps, useSearchBox } from 'react-instantsearch-hooks-web';
 
-export const CustomSearchBox = (props: SearchBoxProps) => {
+export const CustomBlogSearchBox = (props: SearchBoxProps, q: string) => {
   const { refine } = useSearchBox(props);
-  const { register, handleSubmit } = useForm<{ q: string }>();
+  const { register, handleSubmit } = useForm<{ query: string }>();
 
-  const search = async ({ q }: { q: string }) => {
-    refine(q);
+  const search = async ({ query = q }: { query: string }) => {
+    refine(query);
   };
 
   return (
-    <Box as="form" onSubmit={handleSubmit(search)}>
+    <Box as="form" onSubmit={handleSubmit(search)} w={50}>
       <Box position={'relative'}>
         <Input
           pl={{ base: 7, xl: 9 }}
@@ -44,7 +44,7 @@ export const CustomSearchBox = (props: SearchBoxProps) => {
               fontSize: 'md',
             },
           }}
-          {...register('q')}
+          {...register('query')}
         />
         <Box
           position={'absolute'}

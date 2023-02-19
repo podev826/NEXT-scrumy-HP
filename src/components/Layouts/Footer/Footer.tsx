@@ -66,6 +66,7 @@ export const Footer: FC = () => {
                 <FooterNavContentSp content={SECONDARY_NAV.recruit} />
               </Grid>
               <Grid gap={3}>
+                <FooterNavContentSp content={SECONDARY_NAV.media} />
                 <FooterNavContentSp content={SECONDARY_NAV.privacyPolicy} />
               </Grid>
             </Flex>
@@ -75,7 +76,9 @@ export const Footer: FC = () => {
               <FooterNavContentPc content={SECONDARY_NAV.top} />
               <FooterNavContentPc content={SECONDARY_NAV.about} />
               <FooterNavContentPc content={SECONDARY_NAV.news} />
+
               <FooterNavContentPc content={SECONDARY_NAV.recruit} />
+              <FooterNavContentPc content={SECONDARY_NAV.media} />
             </Flex>
           </Box>
           <Spacer />

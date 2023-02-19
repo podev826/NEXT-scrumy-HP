@@ -1,10 +1,5 @@
 import { Box, Image, Stack, Text } from '@chakra-ui/react';
-import {
-  AngleRightIcon,
-  BaseLink,
-  FadeInAnimation,
-  PrimaryLink,
-} from 'components/Elements';
+import { AngleRightIcon, BaseLink, FadeInAnimation } from 'components/Elements';
 import React, { FC } from 'react';
 
 export const RootHero: FC = () => {

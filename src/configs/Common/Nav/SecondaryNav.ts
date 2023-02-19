@@ -78,6 +78,11 @@ export const SECONDARY_NAV: SecondaryNavProps = {
       },
     ],
   },
+  media: {
+    title: 'Media',
+    href: '/blogs',
+    list: [],
+  },
   privacyPolicy: {
     title: 'Privacy Policy',
     href: '/privacy-policy',

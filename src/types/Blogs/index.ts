@@ -17,6 +17,8 @@ export type BlogItemProps = {
   category: MicroCMSDate & BlogCategoryDataProps;
   publishedAt: string;
   objectID: string;
+
+  id: string;
 };
 
 export type BlogEyecatchDataProps = {
@@ -52,6 +54,7 @@ export type ContextParamsType = {
 export type TocType = {
   text: string;
   id: string;
+  name: string;
 };
 
 export type HeadingType = {

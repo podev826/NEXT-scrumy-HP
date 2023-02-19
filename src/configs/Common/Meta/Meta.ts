@@ -29,9 +29,15 @@ export const META = {
     description:
       '株式会社ScrumyのContactページです。株式会社Scrumyは、サステイナブル経営のためのESG情報開示戦略をサポートする会社です。',
   },
+  media: {
+    href: '/blogs/',
+    title: 'Media | 株式会社Scrumy',
+    description:
+      '株式会社ScrumyのMediaページです。株式会社Scrumyは、サステイナブル経営のためのESG情報開示戦略をサポートする会社です。',
+  },
   privacyPolicy: {
     href: '/privacy-policy/',
-    title: 'Privacy policy | 株式会社Scrumy',
+    title: 'Privacy Policy | 株式会社Scrumy',
     description:
       '株式会社ScrumyのPrivacy policyページです。株式会社Scrumyは、サステイナブル経営のためのESG情報開示戦略をサポートする会社です。',
   },
