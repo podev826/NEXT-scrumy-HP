@@ -6,7 +6,6 @@ import {
   Link,
   Text,
 } from '@chakra-ui/react';
-import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import dayjs from 'dayjs';
 import React, { FC } from 'react';
 import { HitsProps, useHits } from 'react-instantsearch-hooks-web';

@@ -1,22 +1,14 @@
 import { Box } from '@chakra-ui/react';
 import {
   CustomBlogsHits,
-  CustomBlogsMenu,
   CustomBlogsPagination,
   FadeInAnimation,
-  MagnifyingGlass,
   PrimaryTitle,
 } from 'components/Elements';
-import { ContentWrapper, IdWrapper } from 'components/Layouts';
+import { IdWrapper } from 'components/Layouts';
 import { searchClient } from 'libraries/algolia';
 import { FC } from 'react';
-import { useForm } from 'react-hook-form';
-import {
-  Configure,
-  InstantSearch,
-  SearchBoxProps,
-  useSearchBox,
-} from 'react-instantsearch-hooks-web';
+import { Configure, InstantSearch } from 'react-instantsearch-hooks-web';
 import { BLOG_PER_PAGE } from 'types';
 
 import { SearchModal } from './SearchModal';

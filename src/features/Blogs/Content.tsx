@@ -1,20 +1,13 @@
 import { Box, Image, Text } from '@chakra-ui/react';
-import {
-  ContactBlock,
-  CustomBlogsMenu,
-  CustomSearchBox,
-  FadeInAnimation,
-  SecondaryLink,
-} from 'components/Elements';
-import { ContentWrapper } from 'components/Layouts';
+import { FadeInAnimation, SecondaryLink } from 'components/Elements';
 import dayjs from 'dayjs';
 import { ContactMain } from 'features/contact';
 import { searchClient } from 'libraries/algolia';
-import { Blogclient, renderToc } from 'libraries/microcms';
+import { renderToc } from 'libraries/microcms';
 import { FC } from 'react';
 import { InstantSearch } from 'react-instantsearch-hooks-web';
 import { MarkdownTemplate } from 'styles/blog/MarkdownTemplate';
-import { BlogDataProps, BlogItemProps, ContextType } from 'types';
+import { BlogItemProps } from 'types';
 
 import { BlogContact } from './Contact';
 import { RelatedContents } from './RelatedContents';

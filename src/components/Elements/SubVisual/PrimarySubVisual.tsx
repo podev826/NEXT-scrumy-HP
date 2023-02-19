@@ -48,7 +48,7 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
               </Text>
               <Text as="span" display={{ base: 'block', xl: 'inline' }}>
                 <Text
-                  fontSize={{ base: '4.2vw', md: '1.667vw', '2xl': '2xl' }}
+                  fontSize={{ base: '4.3vw', md: '1.667vw', '2xl': '2xl' }}
                   fontWeight="bold"
                   lineHeight="1.667"
                   display="inline-block"
@@ -58,7 +58,7 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
                   {content.text1}
                 </Text>
                 <Text
-                  fontSize={{ base: '4.2vw', md: '1.667vw', '2xl': '2xl' }}
+                  fontSize={{ base: '4.3vw', md: '1.667vw', '2xl': '2xl' }}
                   fontWeight="bold"
                   lineHeight="1.667"
                   display="inline-block"
@@ -68,27 +68,14 @@ export const PrimarySubVisual: FC<PrimarySubVisualProps> = ({ content }) => {
                   {content.text2}
                 </Text>
               </Text>
-              <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-                <Text
-                  fontSize={{ base: '4.2vw', md: '1.667vw', '2xl': '2xl' }}
-                  fontWeight="bold"
-                  lineHeight="1.667"
-                  display="inline-block"
-                  mt={{ base: 4, md: 1 }}
-                  color="white"
-                >
-                  {content.text3}
-                </Text>
-                <Text
-                  fontSize={{ base: '4.2vw', md: '1.667vw', '2xl': '2xl' }}
-                  fontWeight="bold"
-                  lineHeight="1.667"
-                  display="inline-block"
-                  mt={{ base: 4, md: 1 }}
-                  color="white"
-                >
-                  {content.text4}
-                </Text>
+              <Text
+                fontSize={{ base: '4.3vw', md: '1.667vw', '2xl': '2xl' }}
+                fontWeight="bold"
+                lineHeight="1.667"
+                mt={{ base: 4, md: 1 }}
+                color="white"
+              >
+                {content.text3}
               </Text>
             </Box>
           </Flex>

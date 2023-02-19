@@ -6,13 +6,8 @@ import {
   Link,
   Text,
 } from '@chakra-ui/react';
-import {
-  CustomBlogsMenu,
-  CustomPagination,
-  CustomSearchBox,
-  FadeInAnimation,
-} from 'components/Elements';
-import { BlogMainLayout, ContentWrapper, IdWrapper } from 'components/Layouts';
+import { FadeInAnimation } from 'components/Elements';
+import { BlogMainLayout, IdWrapper } from 'components/Layouts';
 import { Footer } from 'components/Layouts/Footer';
 import { BLOG_LIST, META } from 'configs';
 import dayjs from 'dayjs';

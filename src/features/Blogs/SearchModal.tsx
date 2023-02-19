@@ -1,11 +1,5 @@
 import { Box, Text } from '@chakra-ui/react';
 import { CustomBlogsMenu, CustomSearchBox } from 'components/Elements';
-import { searchClient } from 'libraries/algolia';
-import {
-  InstantSearch,
-  PoweredBy,
-  SearchBox,
-} from 'react-instantsearch-hooks-web';
 
 export const SearchModal = () => {
   return (

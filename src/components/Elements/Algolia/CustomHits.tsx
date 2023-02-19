@@ -38,7 +38,7 @@ export const CustomHits: FC<
               <BaseAccordionButton isExpanded={isExpanded}>
                 <Box display={{ xl: 'flex' }} alignItems={{ xl: 'center' }}>
                   <Box
-                    fontSize={{ base: 'sm', xl: '14' }}
+                    fontSize={{ base: 'sm', xl: 'md' }}
                     display={'flex'}
                     alignItems={'center'}
                     mr={{ xl: 16 }}
@@ -53,7 +53,6 @@ export const CustomHits: FC<
                       color="sub.100"
                       px={2}
                       textAlign={'center'}
-                      fontSize={{ base: '', xl: '14px' }}
                     >
                       {hit.category}
                     </Text>

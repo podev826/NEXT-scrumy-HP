@@ -1,5 +1,4 @@
 import { Box, Button, Link, Text } from '@chakra-ui/react';
-import { FadeInAnimation } from 'components/Elements';
 import { ContentWrapper } from 'components/Layouts';
 import { useRouter } from 'next/router';
 import { FC, useState } from 'react';

@@ -1,6 +1,9 @@
 import { Box, Flex, Text, VisuallyHidden } from '@chakra-ui/react';
-import { CustomBlogsMenu, MagnifyingGlass } from 'components/Elements';
-import { CustomBlogSearchBox2 } from 'components/Elements/Algolia/prottype';
+import {
+  CustomBlogSearchBox,
+  CustomBlogsMenu,
+  MagnifyingGlass,
+} from 'components/Elements';
 import { searchClient } from 'libraries/algolia';
 import { FC, useState } from 'react';
 import { InstantSearch } from 'react-instantsearch-hooks-web';
@@ -156,7 +159,8 @@ export const SearchModalSp: FC = () => {
                 </Text>
                 <Box mt={{ base: 4, xl: 4 }}>
                   <Box as="form" onSubmit={toggleBlogHeader}>
-                    <CustomBlogSearchBox2 />
+                    <CustomBlogSearchBox />
+
                     {/* <Box position={'relative'}>
                       <Input
                         pl={{ base: 7, xl: 9 }}
