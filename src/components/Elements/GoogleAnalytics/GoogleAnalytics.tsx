@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 
+/* eslint @typescript-eslint/no-explicit-any: 0 */
 type GoogleAnalyticsProps = {
   GA_ID: any;
   existsGaId: any;
