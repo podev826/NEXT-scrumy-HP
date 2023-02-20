@@ -17,8 +17,8 @@ export const BLOG_CATEGORIES: BlogCategoriesProps = {
     slug: '',
   },
   esgsdgs: {
-    text: 'SDGs／ESGとは？',
-    name: 'SDGs／ESGとは？',
+    text: 'ESG／SDGsとは？',
+    name: 'ESG／SDGsとは？',
     image: '/images/root/blog1.png',
     slug: '8a_cl5gq5dy',
     // slug: 'esg-sdgs',

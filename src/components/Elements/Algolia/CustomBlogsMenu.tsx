@@ -47,7 +47,7 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
         }}
       >
         <BaseLink
-          href={`?blog%5Bmenu%5D%5Bcategory%5D=${category.name}`}
+          href={`/blogs?blog%5Bmenu%5D%5Bcategory%5D=${category.name}`}
           // href={encodeURI(`?blog%5Bmenu%5D%5Bcategory%5D=${category.name}`)}
           // href={`/blogs/category/${category.slug}`}
           rel="noopener noreferrer"

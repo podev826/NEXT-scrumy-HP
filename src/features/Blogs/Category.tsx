@@ -43,7 +43,7 @@ export const BlogCategory: FC = () => {
                 >
                   <Box>
                     <BaseLink
-                      href={`/blogs/category/${item.href}`}
+                      href={`?blog%5Bmenu%5D%5Bcategory%5D=${item.name}`}
                       rel="noopener noreferrer"
                       h="full"
                       _hover={{
