@@ -18,14 +18,14 @@ type CustomBlogMenuItemPcProps = {
 
 const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
   category,
-  // handleClick,
+  handleClick,
   active,
 }) => {
   return (
     <Box as="li">
       <Box
         as="button"
-        // onClick={() => handleClick(category.text)}
+        onClick={() => handleClick(category.text)}
         fontWeight={'bold'}
         color={active ? 'base.100' : 'sub.100'}
         bg={active ? 'sub.100' : 'base.100'}
@@ -51,7 +51,7 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
           // href={encodeURI(`?blog%5Bmenu%5D%5Bcategory%5D=${category.name}`)}
           // href={`/blogs/category/${category.slug}`}
           rel="noopener noreferrer"
-          target="_blank"
+          // target="_blank"
           h="full"
           _hover={{
             opacity: 1,
@@ -72,12 +72,12 @@ type CustomBlogMenuItemSpProps = {
 
 const CustomBlogMenuItemSp: FC<CustomBlogMenuItemSpProps> = ({
   category,
-  // handleClick,
+  handleClick,
 }) => {
   return (
     <Box
       as="button"
-      // onClick={() => handleClick(category.text)}
+      onClick={() => handleClick(category.text)}
       px={7}
       w="full"
       minH={12}
