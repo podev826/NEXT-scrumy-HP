@@ -22,7 +22,10 @@ export const BlogId = ({ blog, related }: blogType) => {
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
-  const blog = await Blogclient.get({ endpoint: 'blogs' });
+  const blog = await Blogclient.get({
+    endpoint: 'blogs',
+    queries: { limit: 30 },
+  });
 
   const paths = blog.contents.map(
     (content: ContentType) => `/blogs/${content.id}`
@@ -36,13 +39,14 @@ export const getStaticProps = async (context: ContextType) => {
   const data: BlogItemProps = await Blogclient.get({
     endpoint: 'blogs',
     contentId: id,
+    queries: { limit: 30 },
   });
 
   const category = data.category.id;
   const data2: BlogItemProps = await Blogclient.get({
     endpoint: 'blogs',
     queries: {
-      limit: 6,
+      limit: 3,
       orders: '-publishedAt',
       filters: `category[equals]${category}[and]contentId[not_equals]${id}`,
     },
