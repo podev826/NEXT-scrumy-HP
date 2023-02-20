@@ -1,5 +1,5 @@
 import { Box, Text } from '@chakra-ui/react';
-import { CustomBlogSearchBox2, CustomBlogsMenu } from 'components/Elements';
+import { CustomBlogSearchBox2, CustomBlogsMenu2 } from 'components/Elements';
 
 export const SearchModal2 = () => {
   return (
@@ -42,7 +42,7 @@ export const SearchModal2 = () => {
       >
         カテゴリから探す
       </Text>
-      <CustomBlogsMenu attribute="category" />
+      <CustomBlogsMenu2 attribute="category" />
     </Box>
 
     //     </InstantSearch>

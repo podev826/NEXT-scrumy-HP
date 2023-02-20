@@ -1,8 +1,7 @@
 import { Box, Flex, Text, VisuallyHidden } from '@chakra-ui/react';
 import {
-  CustomBlogSearchBox,
   CustomBlogSearchBox2,
-  CustomBlogsMenu,
+  CustomBlogsMenu2,
   MagnifyingGlass,
 } from 'components/Elements';
 import { searchClient } from 'libraries/algolia';
@@ -217,7 +216,7 @@ export const SearchModalSp: FC = () => {
                 >
                   カテゴリから探す
                 </Text>
-                <CustomBlogsMenu attribute="category" />
+                <CustomBlogsMenu2 attribute="category" />
               </Box>
             </Box>
           </Box>

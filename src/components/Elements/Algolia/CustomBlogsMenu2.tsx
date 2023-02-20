@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { BaseLink } from 'components/Elements';
 import { BLOG_CATEGORIES, BlogCategoryProps } from 'configs';
+import { useRouter } from 'next/router';
 import { FC, useState } from 'react';
 import { MenuProps, useMenu } from 'react-instantsearch-hooks-web';
 
@@ -98,13 +99,17 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
 //   );
 // };
 
-export const CustomBlogsMenu: FC<MenuProps> = (props) => {
+export const CustomBlogsMenu2: FC<MenuProps> = (props) => {
   const { refine } = useMenu(props);
+
+  const router = useRouter();
 
   const [activeCategory, setActiveCategory] = useState('');
   const handleClick = (value: string): void => {
     setActiveCategory(value);
     refine(value);
+    router.push(`/blogs?blog%5Bmenu%5D%5Bcategory%5D=${value}`);
+    router.events.on('routeChangeComplete', router.reload);
   };
 
   return (

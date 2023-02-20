@@ -2,6 +2,7 @@ export * from './CustomBlogSearchBox';
 export * from './CustomBlogSearchBox2';
 export * from './CustomBlogsHits';
 export * from './CustomBlogsMenu';
+export * from './CustomBlogsMenu2';
 export * from './CustomBlogsPagination';
 export * from './CustomHits';
 export * from './CustomMenu';
