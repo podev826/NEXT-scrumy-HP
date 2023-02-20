@@ -11,7 +11,7 @@ import { BlogItemProps } from 'types';
 
 import { BlogContact } from './Contact';
 import { RelatedContents } from './RelatedContents';
-import { SearchModal } from './SearchModal';
+import { SearchModal2 } from './SearchModal2';
 import { BlogsShare } from './Share';
 import { TableOfContents } from './TableOfContent';
 import { BlogsWriter } from './Writer';
@@ -44,7 +44,7 @@ export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
             <Box position="sticky" top="40">
               <InstantSearch searchClient={searchClient} indexName="blog">
                 <Box justifyContent={'flex-start'}>
-                  <SearchModal />
+                  <SearchModal2 />
                   <RelatedContents contents={related.contents} />
                 </Box>
               </InstantSearch>

@@ -1,4 +1,5 @@
 export * from './CustomBlogSearchBox';
+export * from './CustomBlogSearchBox2';
 export * from './CustomBlogsHits';
 export * from './CustomBlogsMenu';
 export * from './CustomBlogsPagination';
@@ -6,4 +7,3 @@ export * from './CustomHits';
 export * from './CustomMenu';
 export * from './CustomPagination';
 export * from './CustomSearchBox';
-export * from './prottype';

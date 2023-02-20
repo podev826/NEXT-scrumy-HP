@@ -7,34 +7,28 @@ import { useForm } from 'react-hook-form';
 
 export const CustomBlogSearchBox2 = () => {
   // const { refine } = useSearchBox(props);
-  const { register, watch } = useForm();
+  const { register, watch, handleSubmit } = useForm();
 
   const router = useRouter();
 
-  const onSubmit = () => {
-    router.push(`?blog%5Bquery%5D=${watch('query')}`);
-  };
+  const onSubmit = handleSubmit(() => {
+    router.push(`/blogs?blog%5Bquery%5D=${watch('query')}`);
+    router.events.on('routeChangeComplete', router.reload);
+  });
 
-  const handleOnSubmit = () => {
-    return false;
-  };
+  // const handleOnSubmit = () => {
+  //   onsubmit;
+  //   return false;
+  // };
 
   return (
     <Box>
-      <Box
-        as="form"
-        onSubmit={handleOnSubmit}
-        // () => {
-        // router.push(`?blog%5Bquery%5D=${watch('query')}`);
-        // }
-        action=""
-        target="_blank"
-      >
+      <Box as="form" action="">
         <Box position={'relative'}>
           <Input
             pl={{ base: 7, xl: 9 }}
             pr={{ base: '52px', xl: '60px' }}
-            formAction={`?blog%5Bquery%5D=${watch('query')}`}
+            // formAction={`/blogs?blog%5Bquery%5D=${watch('query')}`}
             minH={12}
             py={2}
             bg="base.100"
@@ -73,13 +67,12 @@ export const CustomBlogSearchBox2 = () => {
             zIndex={'2'}
           >
             <Box as="button" onClick={onSubmit}>
-              <BaseLink
-                href={`?blog%5Bquery%5D=${watch('query')}`}
+              {/* <BaseLink
+                href={`/blogs?blog%5Bquery%5D=${watch('query')}`}
                 rel="noopener noreferrer"
-                target="_self"
-              >
-                <MagnifyingGlass />
-              </BaseLink>
+              > */}
+              <MagnifyingGlass />
+              {/* </BaseLink> */}
             </Box>
           </Box>
         </Box>
