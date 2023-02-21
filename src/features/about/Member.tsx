@@ -38,7 +38,8 @@ export const AboutMember: FC = () => {
                 <AccordionItem
                   key={item.name}
                   w={{
-                    base: '60vw',
+                    base: '75vw',
+                    sm: '60vw',
                     md: '340px',
                     lg: '410px',
                     xl: '500px',
@@ -75,8 +76,8 @@ export const AboutMember: FC = () => {
                                 <Text
                                   fontWeight="bold"
                                   fontSize={{
-                                    base: '2.2vw',
-                                    md: 'sm',
+                                    base: '2.6vw',
+                                    sm: 'sm',
 
                                     lg: 'md',
                                   }}
@@ -94,7 +95,7 @@ export const AboutMember: FC = () => {
                               >
                                 <Text
                                   fontSize={{
-                                    base: '3.5vw',
+                                    base: '3.9vw',
                                     sm: '2.8vw',
 
                                     md: '20px',
@@ -109,7 +110,7 @@ export const AboutMember: FC = () => {
                                 <Text
                                   fontWeight="bold"
                                   fontSize={{
-                                    base: '2.8vw',
+                                    base: '3.6vw',
                                     sm: '2.4vw',
 
                                     md: '15px',
@@ -120,12 +121,12 @@ export const AboutMember: FC = () => {
                                   {item.name_en}
                                 </Text>
                                 <Box
-                                  fontSize={{ base: 14, sm: 'xl', xl: '2xl' }}
+                                  fontSize={{ base: 17, sm: 'xl', xl: '2xl' }}
                                   color={'accent.100'}
                                   position="absolute"
-                                  top={{ base: '2.5vw', sm: 2, md: 3 }}
+                                  top={{ base: '1.8vw', sm: 2, md: 3 }}
                                   left={{
-                                    base: '48vw',
+                                    base: '61vw',
 
                                     sm: '50vw',
                                     md: '270px',
@@ -158,8 +159,8 @@ export const AboutMember: FC = () => {
                       >
                         <Text
                           fontSize={{
-                            base: '2.8vw',
-                            sm: '2.4vw',
+                            base: '3.0vw',
+                            sm: '2.2vw',
                             md: '1.9vw',
                             lg: '1.4vw',
                           }}
