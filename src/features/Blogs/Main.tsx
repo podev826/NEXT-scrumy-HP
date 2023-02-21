@@ -45,7 +45,6 @@ export const BlogMain: FC = () => {
                 w={{ base: 'full', lg: '70vw' }}
                 ml={{ base: '', lg: 4 }}
                 mx={{ base: 4, lg: '' }}
-                mb="4"
               >
                 <Box pl={{ base: 1, lg: 0 }}>
                   <PrimaryTitle en="Articles" />
