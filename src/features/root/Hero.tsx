@@ -11,7 +11,7 @@ export const RootHero: FC = () => {
         pt={{ base: '120px', sm: '130px', lg: '180px', xl: '230px' }}
         justifyContent="center"
         direction={{ base: 'column', lg: 'row' }}
-        alignItems={'ceter'}
+        alignItems="center"
       >
         <Box
           pb={{ base: '12.8vw', sm: '5.2vw', xl: '2.222vw' }}
