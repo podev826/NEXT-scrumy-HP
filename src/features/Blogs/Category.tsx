@@ -9,9 +9,9 @@ export const BlogCategory: FC = () => {
     <IdWrapper id="category">
       <Box
         as="section"
-        py={{ base: 7, xl: 14 }}
+        py={{ base: 7, lg: 14 }}
         px={8}
-        pt={{ base: 100, xl: 10 }}
+        pt={{ base: 76, lg: 10 }}
         mx="auto"
         bg="gray.100"
       >
@@ -41,27 +41,25 @@ export const BlogCategory: FC = () => {
                   }}
                   pb={{ base: 3, lg: 0 }}
                 >
-                  <Box>
-                    <BaseLink
-                      href={`?blog%5Bmenu%5D%5Bcategory%5D=${item.name}`}
-                      rel="noopener noreferrer"
-                      h="full"
-                      _hover={{
-                        opacity: 1,
-                      }}
-                    >
-                      <Box px={{ base:1,md:3}} py={{ base: 4, lg: 5 }}>
-                        <Image
-                          src={item.image}
-                          width="100%"
-                          height="100%"
-                          boxShadow={'lg'}
-                          borderRadius="10px"
-                          alt=""
-                        />
-                      </Box>
-                    </BaseLink>
-                  </Box>
+                  <BaseLink
+                    href={`?blog%5Bmenu%5D%5Bcategory%5D=${item.name}`}
+                    rel="noopener noreferrer"
+                    h="full"
+                    _hover={{
+                      opacity: 1,
+                    }}
+                  >
+                    <Box px={{ base: 1, md: 3 }} py={{ base: 4, lg: 5 }}>
+                      <Image
+                        src={item.image}
+                        width="100%"
+                        height="100%"
+                        boxShadow={'lg'}
+                        borderRadius="10px"
+                        alt=""
+                      />
+                    </Box>
+                  </BaseLink>
                 </Box>
               ))}
             </Stack>

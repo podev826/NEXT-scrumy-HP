@@ -22,9 +22,9 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
 
   return (
     <FadeInAnimation>
-      <text>
+      <Text>
         {results && results.query !== '' ? `${results.query}の検索結果` : null}
-      </text>
+      </Text>
       <Accordion allowToggle allowMultiple>
         {hits.map((hit) => (
           <AccordionItem
@@ -54,36 +54,28 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
                       w={{ base: '', sm: '37vw', lg: '25vw' }}
                     />
                   </Box>
-                  <Box flex={{ base: '1.6', xl: '2.3' }}>
-                    <Box display={{ base: 'none', sm: 'block' }}>
-                      <Text
-                        textAlign={'left'}
-                        fontWeight="bold"
-                        fontSize={{
-                          base: 'md',
-                          md: 'md',
-                          lg: '1.4vw',
-                          xl: 'xl',
-                        }}
-                      >
-                        {hit.title}
-                      </Text>
-                      <Text
-                        fontSize={{ base: 'md', md: 'md', xl: 'md' }}
-                        textAlign={'left'}
-                        overflow="hidden"
-                        display="-webkit-box"
-                        sx={{
-                          WebkitBoxOrient: 'vertical',
-                          WebkitLineClamp: 4,
-                        }}
-                      >
-                        {hit.description}
-                      </Text>
-                      <Text float={'right'} fontSize={{ base: 'sm', xl: 'md' }}>
-                        {dayjs(hit.publishedAt).format('YYYY.MM.DD')}
-                      </Text>
-                    </Box>
+                  <Box
+                    flex={{ base: '1.6', xl: '2.3' }}
+                    display={{ base: 'none', sm: 'block' }}
+                  >
+                    <Text textAlign={'left'} fontWeight="bold" fontSize="lg">
+                      {hit.title}
+                    </Text>
+                    <Text
+                      fontSize="md"
+                      textAlign={'left'}
+                      overflow="hidden"
+                      display="-webkit-box"
+                      sx={{
+                        WebkitBoxOrient: 'vertical',
+                        WebkitLineClamp: 4,
+                      }}
+                    >
+                      {hit.description}
+                    </Text>
+                    <Text float={'right'} fontSize={{ base: 'sm', xl: 'md' }}>
+                      {dayjs(hit.publishedAt).format('YYYY.MM.DD')}
+                    </Text>
                   </Box>
                 </Box>
                 <Box

@@ -42,10 +42,12 @@ export const BlogMain: FC = () => {
               <Box
                 bg="white"
                 p={{ base: '3', lg: '4', xl: '7' }}
-                w={{ base: '100vw', lg: '67vw', xl: '67vw' }}
-                ml="0"
+                w={{ base: 'full', lg: '70vw' }}
+                ml={{ base: '', lg: 4 }}
+                mx={{ base: 4, lg: '' }}
+                mb="4"
               >
-                <Box pl={{base:5,lg:4,xl:1}}>
+                <Box pl={{ base: 1, lg: 0 }}>
                   <PrimaryTitle en="Articles" />
                 </Box>
                 <Box pt={{ base: 6, xl: 0 }} mx="auto">

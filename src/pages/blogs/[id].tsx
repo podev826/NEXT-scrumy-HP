@@ -14,13 +14,11 @@ export const BlogId = ({ blog, related }: blogType) => {
     <BlogMainLayout meta={META.media}>
       <IdWrapper id={blog.title}>
         <BlogContentMain blog={blog} related={related} />
-        {/* <RelatedContents contents={related.contents} /> */}
       </IdWrapper>
     </BlogMainLayout>
   );
 };
 
-// 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
   const blog = await Blogclient.get({
     endpoint: 'blogs',
@@ -33,7 +31,6 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-// データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async (context: ContextType) => {
   const id = context.params.id;
   const data: BlogItemProps = await Blogclient.get({

@@ -16,8 +16,7 @@ export const TableOfContents: FC<TocTypeProps> = ({ toc }) => {
           {isOpen ? '[閉じる]' : '[開く]'}
         </Box>
       </Box>
-      <Box pb={5} px="7" display={isOpen ? 'block' : 'none'}>
-        <Box mt="3">
+      <Box pb={5} px="7" display={isOpen ? 'block' : 'none'} mt="3">
           {toc.map((data: TocType) => (
             <Text key={data.id}>
               <Link
@@ -29,7 +28,6 @@ export const TableOfContents: FC<TocTypeProps> = ({ toc }) => {
               </Link>
             </Text>
           ))}
-        </Box>
       </Box>
     </Box>
   );

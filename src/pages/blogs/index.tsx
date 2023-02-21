@@ -20,13 +20,4 @@ export const getBlogStaticProps = async () => {
   };
 };
 
-// const Blog = (searchword: string) => {
-//   return (
-//     <BlogMainLayout meta={META.media}>
-//       <BlogCategory />
-//       <BlogMain searchword={searchword} />
-//     </BlogMainLayout>
-//   );
-// };
-
 export default Blog;

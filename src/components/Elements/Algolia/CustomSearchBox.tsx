@@ -15,8 +15,8 @@ export const CustomSearchBox = (props: SearchBoxProps) => {
     <Box as="form" onSubmit={handleSubmit(search)}>
       <Box position={'relative'}>
         <Input
-          pl={{ base: 7,lg:5, xl: 9 }}
-          pr={{ base: '52px', xl: '60px' }}
+          pl={{ base: 7,lg:5 }}
+          pr={'52px'}
           minH={12}
           py={2}
           bg="base.100"
@@ -39,9 +39,6 @@ export const CustomSearchBox = (props: SearchBoxProps) => {
               fontSize: 'sm',
               fontWeight: 'bold',
               color: 'sub.200',
-            },
-            xl: {
-              fontSize: 'md',
             },
           }}
           {...register('q')}

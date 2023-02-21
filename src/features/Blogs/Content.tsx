@@ -28,41 +28,41 @@ type blogType = {
 export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
   const toc = renderToc(blog.content);
   return (
-    <Box pt={{ base:'14',lg:'0'}}>
+    <Box pt={{ base: '5vh', lg: '0' }} bg="gray.100">
       <FadeInAnimation>
         <Box
           display={{ base: 'block', lg: 'flex' }}
           flexDirection={'row-reverse'}
           justifyContent={'space-between'}
         >
-          <Box
-            py="20"
-            display={{ base: 'none', lg: 'block' }}
-            bg="gray.100"
-            w="30vw"
-          >
+          <Box py="20" display={{ base: 'none', lg: 'block' }} w="30vw">
             <Box position="sticky" top="36">
               <InstantSearch searchClient={searchClient} indexName="blog">
-                <Box justifyContent={'flex-start'}>
-                  <SearchModal2 />
-                  <RelatedContents contents={related.contents} />
-                </Box>
+                <SearchModal2 />
+                <RelatedContents contents={related.contents} />
               </InstantSearch>
             </Box>
           </Box>
           <Box
-            w={{ base: '90vw', lg: '64vw' }}
+            w={{ base: '95vw', lg: '68vw' }}
+            p="4"
+            mt={10}
+            ml={{ base: '', lg: 4 }}
             mx="auto"
-            mt={ 10 }
+            bg="white"
           >
-            <Text fontSize={{ base:'2xl',xl: '3xl' }} fontWeight="bold" mb={'5'}>
+            <Text
+              fontSize={{ base: 'xl', md: '2xl', xl: '3xl' }}
+              fontWeight="bold"
+              mb={'5'}
+            >
               {blog.title}
             </Text>
             <Image
               alt=""
               src={blog.eyecatch.url}
               objectFit="contain"
-              w={{ base: '75vw', xl: '60vw' }}
+              w={{ base: '90vw', md: '75vw', xl: '60vw' }}
               mx="auto"
             />
             <Text float={'right'}>
@@ -98,27 +98,3 @@ export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
     </Box>
   );
 };
-
-// export const getStaticProps = async (context: ContextType) => {
-//   const id = context.params.id;
-//   const data: BlogItemProps = await Blogclient.get({
-//     endpoint: 'blogs',
-//     contentId: id,
-//   });
-
-//   const category = data.category.id;
-//   const data2: BlogItemProps = await Blogclient.get({
-//     endpoint: 'blogs',
-//     queries: {
-//       limit: 6,
-//       orders: '-publishedAt',
-//       filters: `category[equals]${category}[and]contentId[not_equals]${id}`,
-//     },
-//   });
-
-//   return {
-//     props: {
-//       related: data2,
-//     },
-//   };
-// };

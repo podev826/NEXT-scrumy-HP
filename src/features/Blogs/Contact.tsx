@@ -52,17 +52,15 @@ export const BlogContact: FC = () => {
       maxW="calc(820px + (96px * 2))"
       mx={{ base: 'auto', xl: '0' }}
     >
-      <Box
-        maxW={{ base: 'full', xl: 'full' }}
-        onClick={() => setIsFormOpen(!isFormOpen)}
-      >
         <Box
           as="button"
+          maxW={{ base: 'full', xl: 'full' }}
+          onClick={() => setIsFormOpen(!isFormOpen)}
           px={{ base: 10, xl: 8 }}
           py={{ base: 3, xl: 4 }}
           fontSize={{ base: 'md', xl: 'xl' }}
           fontWeight="bold"
-          minH={{ base: 12, xl: '72px' }}
+          minH={{ base: 12, lg: 14, xl: 18 }}
           display="inline-flex"
           justifyContent="center"
           alignItems="center"
@@ -99,7 +97,6 @@ export const BlogContact: FC = () => {
             {isFormOpen ? <AngleUpIcon /> : <AngleDownIcon />}
           </Flex>
         </Box>
-      </Box>
       <Box
         as="form"
         onSubmit={handleSubmit(onSubmit)}
