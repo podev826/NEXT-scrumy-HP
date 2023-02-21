@@ -160,7 +160,6 @@ export const SearchModalSp: FC = () => {
                 <Box mt={{ base: 4, xl: 4 }}>
                   <Box as="form" onSubmit={toggleBlogHeader}>
                     <CustomBlogSearchBox2 />
-
                     {/* <Box position={'relative'}>
                       <Input
                         pl={{ base: 7, xl: 9 }}

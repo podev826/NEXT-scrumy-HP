@@ -84,7 +84,7 @@ export const SECONDARY_NAV: SecondaryNavProps = {
     list: [],
   },
   privacyPolicy: {
-    title: 'privacy policy',
+    title: 'Privacy Policy',
     href: '/privacy-policy',
     list: [],
   },

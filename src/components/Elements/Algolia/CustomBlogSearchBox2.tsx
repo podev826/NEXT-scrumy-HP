@@ -1,5 +1,5 @@
 import { Box, Input } from '@chakra-ui/react';
-import { BaseLink, MagnifyingGlass } from 'components/Elements';
+import { MagnifyingGlass } from 'components/Elements';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 

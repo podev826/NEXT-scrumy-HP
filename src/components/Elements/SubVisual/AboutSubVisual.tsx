@@ -6,7 +6,6 @@ import { FadeInAnimation } from '../Animations';
 export const AboutSubVisual: FC = () => {
   return (
     <Box
-      // smサイズの時のheightを修正
       backgroundImage={{
         base: "url('/images/about/about_sub-visual_bg.png')",
       }}
@@ -50,55 +49,52 @@ export const AboutSubVisual: FC = () => {
               as="h1"
               mt={{ md: '7.444vw', xl: '104px' }}
               fontSize={{
-                base: '6.467vw',
+                base: '5.467vw',
                 sm: '5vw',
                 md: '3.333vw',
                 '2xl': '6xl',
               }}
               fontWeight="bold"
               lineHeight={{ base: '1.32', md: '1.5' }}
+              w={{ base: '', sm: '75vw', md: '50vw' }}
             >
-              <Box as="span" display={{ md: 'inline', base: 'block' }}>
-                世界一のESG
+              <Box as="span" display={'block'}>
+                サステナブルファイナンスで
               </Box>
-              <Box as="span" display={{ md: 'inline', base: 'block' }}>
-                プラットフォーマーになる
+              <Box as="span" display={'block'}>
+                国際金融市場の懸け橋となる
               </Box>
             </Text>
             <Text
               w={{ base: '72vw', md: 'auto' }}
-              fontSize={{
-                base: '18px',
-                md: '2.1vw',
-                lg: '1.767vw',
-              }}
+              fontSize={{ base: 'lg', md: '2vw', xl: 'xl' }}
               fontWeight="medium"
               lineHeight="1.667"
               mt={{ base: '15vw', md: '13vw' }}
             >
               <Box as="span" display={{ base: 'none', md: 'block' }}>
-                「サステナビリティ」をブームで終わらせず、経営戦略に革命を起こすために、
+                「サステナビリティ」を一時のブームで終わらせず、経営戦略に革命を起こすため、
               </Box>
               <Box as="span" display={{ base: 'none', md: 'block' }}>
-                サービスの開発に加えて、領域の先駆者として政策・法律の整備を含めて取り組んでいます。
+                サービスの開発に加えて領域の先駆者として法政策の整備にも取り組んでいます
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                「サステナビリティ」をブームで
+                「サステナビリティ」を
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                終わらせず、経営戦略に革命を
+                一時のブームで終わらせず、
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                起こすために、サービスの開発に
+                経営戦略に革命を起こすため、
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                加えて、領域の先駆者として
+                サービスの開発に加えて
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                政策・法律の整備を含めて
+                領域の先駆者として
               </Box>
               <Box as="span" display={{ base: 'block', md: 'none' }}>
-                取り組んでいます。
+                法政策の整備にも取り組んでいます
               </Box>
             </Text>
           </Flex>

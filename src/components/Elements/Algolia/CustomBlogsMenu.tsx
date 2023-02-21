@@ -59,6 +59,7 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
 };
 
 // ページ遷移をはさみたくない場合は、BaseLinkタグをaタグに変更
+
 // type CustomBlogMenuItemSpProps = {
 //   category: BlogCategoryProps;
 //   handleClick: (value: string) => void;
