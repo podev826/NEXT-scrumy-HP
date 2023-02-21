@@ -15,7 +15,7 @@ export const CustomSearchBox = (props: SearchBoxProps) => {
     <Box as="form" onSubmit={handleSubmit(search)}>
       <Box position={'relative'}>
         <Input
-          pl={{ base: 7, xl: 9 }}
+          pl={{ base: 7,lg:5, xl: 9 }}
           pr={{ base: '52px', xl: '60px' }}
           minH={12}
           py={2}

@@ -26,7 +26,7 @@ export const CustomBlogSearchBox2 = () => {
       <Box as="form" action="">
         <Box position={'relative'}>
           <Input
-            pl={{ base: 7, xl: 9 }}
+            pl={{ base: 3, xl: 9 }}
             pr={{ base: '52px', xl: '60px' }}
             // formAction={`/blogs?blog%5Bquery%5D=${watch('query')}`}
             minH={12}

@@ -9,7 +9,9 @@ export const BlogsWriter: FC = () => {
     <ContentWrapper
       as="section"
       bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
-      py={'5'}
+      py={'4'}
+      mt='20'
+      px='10'
     >
       <FadeInAnimation>
         <Box>
@@ -31,7 +33,7 @@ export const BlogsWriter: FC = () => {
             <Box
               bg="white"
               fontSize={{ base: 'md', xl: 'lg' }}
-              p="8"
+              p="6"
               w={'70vw'}
               mx={{ base: 'auto', lg: 0 }}
             >

@@ -51,7 +51,6 @@ export const BlogContact: FC = () => {
     <ContentWrapper
       maxW="calc(820px + (96px * 2))"
       mx={{ base: 'auto', xl: '0' }}
-      pb="0"
     >
       <Box
         maxW={{ base: 'full', xl: 'full' }}
@@ -63,7 +62,7 @@ export const BlogContact: FC = () => {
           py={{ base: 3, xl: 4 }}
           fontSize={{ base: 'md', xl: 'xl' }}
           fontWeight="bold"
-          minH={{ base: 14, xl: '72px' }}
+          minH={{ base: 12, xl: '72px' }}
           display="inline-flex"
           justifyContent="center"
           alignItems="center"

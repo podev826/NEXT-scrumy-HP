@@ -14,31 +14,31 @@ export const SearchModal = () => {
     //     <InstantSearch searchClient={searchClient} indexName="blog">
 
     <Box
-      pb={{ base: 16, xl: 0 }}
-      w={{ base: '70vw', xl: 330 }}
+      pb={{ base: 16, lg: 0 }}
+      w={{ base: '70vw',lg:300 ,xl: 330 }}
       alignItems={'center'}
       mx="auto"
     >
       <Box textAlign={'center'}>
         <Text
-          fontSize={{ base: 'xl', xl: '2xl' }}
+          fontSize={{ base: 'xl', lg: '2xl' }}
           fontWeight="bold"
-          flexBasis={{ xl: '264px' }}
-          pr={{ xl: 0 }}
+          flexBasis={{ lg: '264px' }}
+          pr={{ lg: 0 }}
         >
           キーワードから探す
         </Text>
-        <Box mt={{ base: 4, xl: 4 }}>
+        <Box mt={{ base: 4, lg: 4 }}>
           <CustomSearchBox />
         </Box>
       </Box>
 
       <Text
-        fontSize={{ base: 'xl', xl: '2xl' }}
+        fontSize={{ base: 'xl', lg: '2xl' }}
         fontWeight="bold"
         textAlign={'center'}
-        ml={{ xl: 30 }}
-        mt={{ base: 7, xl: 10 }}
+        ml={{ lg: 30 }}
+        mt={{ base: 7, lg: 10 }}
       >
         カテゴリから探す
       </Text>

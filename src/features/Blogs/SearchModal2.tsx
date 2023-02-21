@@ -14,8 +14,8 @@ export const SearchModal2 = () => {
     //     <InstantSearch searchClient={searchClient} indexName="blog">
 
     <Box
-      pb={{ base: 16, xl: 0 }}
-      w={{ base: '70vw', xl: 330 }}
+      pb={{ base: 16, lg: 0 }}
+      w={{ base: '70vw', lg: 290,xl:330}}
       alignItems={'center'}
       mx="auto"
     >

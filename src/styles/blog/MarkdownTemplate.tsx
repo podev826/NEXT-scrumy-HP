@@ -26,7 +26,6 @@ const h2 = {
 };
 const h3 = {
   props: {
-    mt: '10px',
     mb: '16px',
     p: '10px',
     fontSize: 'xl',
@@ -42,7 +41,7 @@ const p = {
   props: {
     lineHeight: '1.7',
     fontSize: 'xl',
-    mb: '10',
+    mb:10,
   },
 };
 
@@ -89,7 +88,7 @@ const img = {
   props: {
     mx: 'auto',
     // width: { base:'70vw',md: '50vw', xl: '550px' },
-    h: '30vh',
+    w: {base:'70vw',lg:'50vw'},
   },
 };
 

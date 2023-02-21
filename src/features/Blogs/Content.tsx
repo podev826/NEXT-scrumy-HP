@@ -28,20 +28,20 @@ type blogType = {
 export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
   const toc = renderToc(blog.content);
   return (
-    <Box>
+    <Box pt={{ base:'14',lg:'0'}}>
       <FadeInAnimation>
         <Box
-          display={{ base: 'block', xl: 'flex' }}
+          display={{ base: 'block', lg: 'flex' }}
           flexDirection={'row-reverse'}
           justifyContent={'space-between'}
         >
           <Box
             py="20"
-            display={{ base: 'none', xl: 'block' }}
+            display={{ base: 'none', lg: 'block' }}
             bg="gray.100"
             w="30vw"
           >
-            <Box position="sticky" top="40">
+            <Box position="sticky" top="36">
               <InstantSearch searchClient={searchClient} indexName="blog">
                 <Box justifyContent={'flex-start'}>
                   <SearchModal2 />
@@ -51,11 +51,11 @@ export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
             </Box>
           </Box>
           <Box
-            w={{ base: '90vw', lg: '85vw', xl: '65vw' }}
+            w={{ base: '90vw', lg: '64vw' }}
             mx="auto"
-            mt={{ xl: 20 }}
+            mt={ 10 }
           >
-            <Text fontSize={{ xl: '3xl' }} fontWeight="bold" mb={'5'}>
+            <Text fontSize={{ base:'2xl',xl: '3xl' }} fontWeight="bold" mb={'5'}>
               {blog.title}
             </Text>
             <Image
@@ -74,7 +74,7 @@ export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
             </Box>
             <Box>
               <BlogsWriter />
-              <Box display={{ base: 'none', md: 'block' }}>
+              <Box display={{ base: 'none', lg: 'block' }}>
                 <ContactMain />
               </Box>
               <Box
@@ -83,7 +83,7 @@ export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
                 px={{ base: 6, md: 10, lg: 16, xl: 24 }}
                 py={{ base: 16, md: 20, xl: 24 }}
                 maxW="calc(820px + (96px * 2))"
-                display={{ base: 'block', md: 'none' }}
+                display={{ base: 'block', lg: 'none' }}
               >
                 <SecondaryLink href="/contact" w="full" variant={'tertiary'}>
                   お問い合わせはこちら

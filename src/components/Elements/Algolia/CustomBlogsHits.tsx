@@ -31,7 +31,7 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
             key={hit.objectID}
             border="none"
             p={0}
-            px={{ base: 18, xl: 0 }}
+            px={{ base: 18, lg: 0 }}
             mb={{ base: 8, lg: 12 }}
             justifyItems={{ base: 'Center', md: '' }}
           >
@@ -41,46 +41,53 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
                   fontSize={{ base: 'xl', xl: 'lg' }}
                   display={'flex'}
                   alignItems={'center'}
-                  w={{ base: '', xl: '60vw' }}
                 >
                   <Box
                     lang="en"
-                    mr={{ base: 0, md: 8 }}
+                    mr={{ base: 0, sm: 3 }}
                     justifyContent={{ base: 'center', md: 'left' }}
                   >
                     <Image
                       alt="アイキャッチ"
                       src={hit.image.url}
                       objectFit="contain"
-                      w={{ base: '', lg: '25vw' }}
+                      w={{ base: '', sm: '37vw', lg: '25vw' }}
                     />
                   </Box>
                   <Box flex={{ base: '1.6', xl: '2.3' }}>
-                    <Box display={{ base: 'none', lg: 'block' }}>
+                    <Box display={{ base: 'none', sm: 'block' }}>
                       <Text
                         textAlign={'left'}
                         fontWeight="bold"
-                        fontSize={{ base: 'lg', md: '2xl', xl: 'xl' }}
+                        fontSize={{
+                          base: 'md',
+                          md: 'md',
+                          lg: '1.4vw',
+                          xl: 'xl',
+                        }}
                       >
                         {hit.title}
                       </Text>
                       <Text
-                        fontSize={{ base: 'md', md: 'xl', xl: 'lg' }}
+                        fontSize={{ base: 'md', md: 'md', xl: 'md' }}
                         textAlign={'left'}
+                        overflow="hidden"
+                        display="-webkit-box"
+                        sx={{
+                          WebkitBoxOrient: 'vertical',
+                          WebkitLineClamp: 4,
+                        }}
                       >
                         {hit.description}
                       </Text>
-                      <Text
-                        float={'right'}
-                        fontSize={{ base: 'sm', md: 'lg', xl: 'md' }}
-                      >
+                      <Text float={'right'} fontSize={{ base: 'sm', xl: 'md' }}>
                         {dayjs(hit.publishedAt).format('YYYY.MM.DD')}
                       </Text>
                     </Box>
                   </Box>
                 </Box>
                 <Box
-                  display={{ base: 'block', lg: 'none' }}
+                  display={{ base: 'block', sm: 'none' }}
                   mt={2}
                   fontSize={'xl'}
                 >

@@ -16,7 +16,7 @@ import { SearchModal } from './SearchModal';
 export const BlogMain: FC = () => {
   return (
     <IdWrapper id="blog">
-      <Box as="section" py={0} px={5} bg="gray.100" mx="0">
+      <Box as="section" py={0} pr={5} bg="gray.100" mx="0">
         <InstantSearch
           searchClient={searchClient}
           indexName="blog"
@@ -25,22 +25,29 @@ export const BlogMain: FC = () => {
           <FadeInAnimation>
             <Configure hitsPerPage={BLOG_PER_PAGE} />
             <Box
-              display={{ base: 'block', xl: 'flex' }}
-              flexDirection={{ base: 'column', xl: 'row-reverse' }}
+              display={{ base: 'block', lg: 'flex' }}
+              flexDirection={{ base: 'column', lg: 'row-reverse' }}
               alignItems={'baseline'}
             >
               <Box
-                display={{ base: 'none', xl: 'block' }}
+                display={{ base: 'none', lg: 'block' }}
                 justifyContent={'flex-start'}
                 position="sticky"
-                top="40"
+                top={{ base: '32', xl: '36' }}
                 mx="auto"
                 pb="10"
               >
                 <SearchModal />
               </Box>
-              <Box bg="white" p="7" w={{ base: '95vw', xl: '67vw' }} mx="auto">
-                <PrimaryTitle en="Articles" />
+              <Box
+                bg="white"
+                p={{ base: '3', lg: '4', xl: '7' }}
+                w={{ base: '100vw', lg: '67vw', xl: '67vw' }}
+                ml="0"
+              >
+                <Box pl={{base:5,lg:4,xl:1}}>
+                  <PrimaryTitle en="Articles" />
+                </Box>
                 <Box pt={{ base: 6, xl: 0 }} mx="auto">
                   <CustomBlogsHits />
                   <Box mt={{ base: 16, xl: 20 }}>

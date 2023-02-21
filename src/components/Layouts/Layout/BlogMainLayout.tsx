@@ -22,13 +22,13 @@ export const BlogMainLayout: FC<MainLayoutProps> = ({ meta, children }) => {
           <title>404 Not Found | 株式会社Scrumy</title>
         </Head>
       )}
-      <Box display={{ base: 'none', xl: 'block' }}>
+      <Box display={{ base: 'none', lg: 'block' }}>
         <Header />
       </Box>
-      <Box display={{ base: 'block', xl: 'none' }}>
+      <Box display={{ base: 'block', lg: 'none' }}>
         <BlogSPHeader />
       </Box>
-      <Box display={{ base: 'none', xl: 'block' }}>
+      <Box display={{ base: 'none', lg: 'block' }}>
         <Box
           bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
           pt={{ base: '175px', md: '104px', xl: '120px' }}

@@ -28,7 +28,7 @@ export const BlogCategory: FC = () => {
           >
             <Stack
               justifyContent="center"
-              direction={{ base: 'column', md: 'row' }}
+              direction={{ base: 'column', sm: 'row' }}
               alignItems="center"
             >
               {BLOG_LIST.map((item) => (
@@ -36,7 +36,7 @@ export const BlogCategory: FC = () => {
                   key={item.href}
                   w={{
                     base: '55vw',
-                    lg: '30vw',
+                    sm: '33vw',
                     xl: '25vw',
                   }}
                   pb={{ base: 3, lg: 0 }}
@@ -50,7 +50,7 @@ export const BlogCategory: FC = () => {
                         opacity: 1,
                       }}
                     >
-                      <Box px={3} py={{ base: 4, lg: 5 }}>
+                      <Box px={{ base:1,md:3}} py={{ base: 4, lg: 5 }}>
                         <Image
                           src={item.image}
                           width="100%"
