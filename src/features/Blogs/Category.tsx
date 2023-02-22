@@ -2,9 +2,11 @@ import { Box, Image, Stack } from '@chakra-ui/react';
 import { BaseLink, FadeInAnimation, PrimaryTitle } from 'components/Elements';
 import { IdWrapper } from 'components/Layouts';
 import { BLOG_LIST } from 'configs';
+import { useRouter } from 'next/router';
 import React, { FC } from 'react';
 
 export const BlogCategory: FC = () => {
+  const router = useRouter();
   return (
     <IdWrapper id="category">
       <Box
@@ -41,25 +43,36 @@ export const BlogCategory: FC = () => {
                   }}
                   pb={{ base: 3, lg: 0 }}
                 >
-                  <BaseLink
-                    href={`?blog%5Bmenu%5D%5Bcategory%5D=${item.name}`}
+                  {/* <BaseLink
+                    href={`/blogs?blog%5Bmenu%5D%5Bcategory%5D=${item.name}`}
                     rel="noopener noreferrer"
                     h="full"
                     _hover={{
                       opacity: 1,
                     }}
+                  > */}
+                  <Box
+                    px={{ base: 1, md: 3 }}
+                    py={{ base: 4, lg: 5 }}
+                    as={'button'}
+                    onClick={() => {
+                      router.push(
+                        `/blogs?blog%5Bmenu%5D%5Bcategory%5D=${item.name}`
+                      );
+                      router.events.on('routeChangeComplete', router.reload);
+                    }}
+                    // rel="noopener noreferrer"
                   >
-                    <Box px={{ base: 1, md: 3 }} py={{ base: 4, lg: 5 }}>
-                      <Image
-                        src={item.image}
-                        width="100%"
-                        height="100%"
-                        boxShadow={'lg'}
-                        borderRadius="10px"
-                        alt=""
-                      />
-                    </Box>
-                  </BaseLink>
+                    <Image
+                      src={item.image}
+                      width="100%"
+                      height="100%"
+                      boxShadow={'lg'}
+                      borderRadius="10px"
+                      alt=""
+                    />
+                  </Box>
+                  {/* </BaseLink> */}
                 </Box>
               ))}
             </Stack>
