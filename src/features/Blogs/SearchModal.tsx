@@ -15,7 +15,7 @@ export const SearchModal = () => {
 
     <Box
       pb={{ base: 16, lg: 0 }}
-      w={{ base: '70vw',lg:300 }}
+      w={{ base: '70vw', lg: 300 }}
       alignItems={'center'}
       mx="auto"
     >
@@ -24,7 +24,6 @@ export const SearchModal = () => {
           fontSize={{ base: 'xl', lg: '2xl' }}
           fontWeight="bold"
           flexBasis={{ lg: '264px' }}
-          pr={{ lg: 0 }}
         >
           キーワードから探す
         </Text>
