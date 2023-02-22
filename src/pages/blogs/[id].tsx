@@ -43,7 +43,7 @@ export const getStaticProps = async (context: ContextType) => {
   const data2: BlogItemProps = await Blogclient.get({
     endpoint: 'blogs',
     queries: {
-      limit: 3,
+      limit: 4,
       orders: '-publishedAt',
       filters: `category[equals]${category}[and]contentId[not_equals]${id}`,
     },

@@ -2,13 +2,10 @@ import {
   Accordion,
   AccordionItem,
   Box,
-  Flex,
   Image,
   Link,
   Text,
 } from '@chakra-ui/react';
-import { FadeInAnimation } from 'components/Elements';
-import { ContentWrapper, IdWrapper } from 'components/Layouts';
 import { FC } from 'react';
 import { BlogItemProps } from 'types';
 
@@ -31,47 +28,56 @@ export const RelatedContents: FC<BlogTypeProps> = ({ contents }) => {
   //   return <div>ブログコンテンツがありません</div>;
   // }
   return (
-    <IdWrapper id="category">
-      <ContentWrapper py={{ base: 7, xl: 14 }} px={5}>
-        <FadeInAnimation>
-          <Box>
-            <Flex alignItems="center">
-              <Text
-                fontSize={{ base: '2xl', md: '4xl', xl: '5xl' }}
-                fontWeight="extrabold"
-                lang="en"
-              >
-                関連記事
-              </Text>
-            </Flex>
-          </Box>
+    <Box
+      py={{ base: 7, xl: 7 }}
+      px={5}
+      pb={{ base: 16, xl: 0 }}
+      w={{ base: '70vw', lg: '25vw' }}
+      flexDirection={'column'}
+      alignItems={'center'}
+      display={'flex'}
+      mx="auto"
+    >
+      <Box textAlign={'center'}>
+        <Text
+          fontSize={{ base: 'xl', xl: '2xl' }}
+          fontWeight="bold"
+          flexBasis={{ xl: '264px' }}
+          pr={{ xl: 0 }}
+        >
+          関連記事
+        </Text>
+      </Box>
 
-          <Accordion allowToggle allowMultiple>
-            {contents.map((blog: BlogItemProps) => (
-              <AccordionItem
-                key={blog.id}
-                border="none"
-                p={0}
-                px={{ base: 18, xl: 0 }}
-                mb={{ base: 8, lg: 12 }}
-              >
-                <Box mt="xl">
-                  <Link href={`/blogs/${blog.id}`}>
-                    <Box
-                      fontSize={{ base: 'xl', xl: 'lg' }}
-                      display={'flex'}
-                      alignItems={'center'}
-                      w={{ base: '30vw', xl: 300 }} //ここを変更する
-                    >
-                      <Box lang="en" mr={3}>
-                        <Image
-                          alt="アイキャッチ"
-                          src={blog.eyecatch.url}
-                          objectFit="contain"
-                          w={{ base: '30vw', xl: 150 }}
-                        />
-                      </Box>
-                      {/* <Box
+      <Accordion allowToggle allowMultiple mt={{ base: 4, xl: 2 }}>
+        {contents.map((blog: BlogItemProps) => (
+          <AccordionItem
+            key={blog.id}
+            border="none"
+            py={{ base: 8, lg: 2 }}
+            px={3}
+            mb={4}
+            bg="white"
+            borderRadius={'30px'}
+          >
+            <Box mt="xl" bg="white" borderRadius={'30px'}>
+              <Link href={`/blogs/${blog.id}`}>
+                <Box
+                  fontSize={{ base: 'xl', xl: 'lg' }}
+                  display={'flex'}
+                  alignItems={'center'}
+                  justifyItems={'center'}
+                  w={{ base: '30vw', lg: '25vw' }} //ここを変更する
+                >
+                  <Box lang="en" mx={2}>
+                    <Image
+                      alt="アイキャッチ"
+                      src={blog.eyecatch.url}
+                      objectFit="contain"
+                      w={{ base: '30vw', lg: '10vw' }}
+                    />
+                  </Box>
+                  {/* <Box
                     flex={{ base: '1.6', xl: '2.3' }}
                     w={{ base: '30vw', xl: '25vw' }}
                   >
@@ -90,53 +96,26 @@ export const RelatedContents: FC<BlogTypeProps> = ({ contents }) => {
                     </Box>
                   </Box> */}
 
-                      <Box
-                        mt={2}
-                        fontSize={'xl'}
-                        w={{ base: '30vw', xl: 200 }}
-                        flex={{ base: '1.6', xl: '2.3' }}
-                      >
-                        <Box display={{ base: 'none', lg: 'block' }} w={200}>
-                          <Text
-                            textAlign={'left'}
-                            fontSize={{ base: 'lg', md: '2xl', xl: 'lg' }}
-                          >
-                            {blog.title}
-                          </Text>
-                        </Box>
-                        {/* <Text
-                          textAlign={'left'}
-                          fontSize={{ base: 'md', md: 'xl', xl: 'sm' }}
-                        >
-                          {blog.description}
-                        </Text> */}
-                      </Box>
+                  <Box
+                    mt={2}
+                    w={{ base: '30vw', lg: '5vw' }}
+                    flex={{ base: '1.6', xl: '2.3' }}
+                  >
+                    <Box
+                      display={{ base: 'none', lg: 'block' }}
+                      fontSize={{ base: 'sm', lg: 'md', xl: 'lg' }}
+                    >
+                      <Text textAlign={'left'}>{blog.title}</Text>
                     </Box>
-                  </Link>
+                  </Box>
                 </Box>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </FadeInAnimation>
-      </ContentWrapper>
-    </IdWrapper>
+              </Link>
+            </Box>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </Box>
   );
 };
-
-// データをテンプレートに受け渡す部分の処理を記述します
-// export const getStaticProps = async (context: ContextType) => {
-//   const id = context.params.category;
-//   console.log(id);
-//   const data = await Blogclient.get({
-//     endpoint: 'blogs',
-//     queries: { filters: `category[equals]${id}` },
-//   });
-
-//   return {
-//     props: {
-//       blog: data.contents,
-//     },
-//   };
-// };
 
 export default RelatedContents;

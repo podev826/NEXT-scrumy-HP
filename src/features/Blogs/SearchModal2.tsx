@@ -3,12 +3,7 @@ import { CustomBlogSearchBox2, CustomBlogsMenu2 } from 'components/Elements';
 
 export const SearchModal2 = () => {
   return (
-    <Box
-      pb={{ base: 16, lg: 0 }}
-      w={{ base: '70vw', lg: 290, xl: 330 }}
-      alignItems={'center'}
-      mx="auto"
-    >
+    <Box w={{ base: '70vw', lg: 290, xl: 330 }} alignItems={'center'} mx="auto">
       <Box textAlign={'center'}>
         <Text
           fontSize={{ base: 'xl', xl: '2xl' }}
@@ -28,7 +23,7 @@ export const SearchModal2 = () => {
         fontWeight="bold"
         textAlign={'center'}
         ml={{ xl: 30 }}
-        mt={{ base: 7, xl: 10 }}
+        mt={{ base: 7, xl: 7 }}
       >
         カテゴリから探す
       </Text>
