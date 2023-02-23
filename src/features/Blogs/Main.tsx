@@ -17,7 +17,7 @@ import { SearchModal } from './SearchModal';
 export const BlogMain: FC = () => {
   return (
     <IdWrapper id="blog">
-      <Box as="section" py={0} bg="gray.100" mx="0">
+      <Box as="section" py={0} bg="gray.100" mx="auto">
         <InstantSearch
           searchClient={searchClient}
           indexName="blog"
@@ -44,9 +44,9 @@ export const BlogMain: FC = () => {
               <Box
                 bg="white"
                 p={{ base: '3', lg: '4', xl: '7' }}
-                w={{ base: 'full', lg: '70vw' }}
+                w={{ base: '95vw', lg: '70vw' }}
                 ml={{ base: '', lg: 4 }}
-                mx={{ base: 4, lg: '' }}
+                mx='auto'
               >
                 <Box pl={{ base: 1, lg: 0 }}>
                   <PrimaryTitle en="Articles" />

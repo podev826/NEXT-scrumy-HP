@@ -28,7 +28,7 @@ const BlogCategoryMenu: FC<CustomBlogMenuItemPcProps> = ({
         }}
         pb={{ base: 3, lg: 0 }}
         px={{ base: 1, md: 3 }}
-        py={{ base: 4, lg: 5 }}
+        py={{ base:1,md: 4, lg: 5 }}
       >
         <BaseLink href={`/blogs?blog%5Bmenu%5D%5Bcategory%5D=${category.name}`}>
           <Image src={category.image} borderRadius="10px" alt="" />
@@ -49,7 +49,7 @@ export const BlogCategory: FC<MenuProps> = (props) => {
 
   return (
     <>
-      <Box px={10}>
+      <Box px={8} pt={{base:'16',md:'20',lg:'8'}}>
         <Box>
           <PrimaryTitle en="Categories" />
         </Box>
