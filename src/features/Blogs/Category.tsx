@@ -43,14 +43,6 @@ export const BlogCategory: FC = () => {
                   }}
                   pb={{ base: 3, lg: 0 }}
                 >
-                  {/* <BaseLink
-                    href={`/blogs?blog%5Bmenu%5D%5Bcategory%5D=${item.name}`}
-                    rel="noopener noreferrer"
-                    h="full"
-                    _hover={{
-                      opacity: 1,
-                    }}
-                  > */}
                   <Box
                     px={{ base: 1, md: 3 }}
                     py={{ base: 4, lg: 5 }}
@@ -61,7 +53,6 @@ export const BlogCategory: FC = () => {
                       );
                       router.events.on('routeChangeComplete', router.reload);
                     }}
-                    // rel="noopener noreferrer"
                   >
                     <Image
                       src={item.image}
@@ -72,7 +63,6 @@ export const BlogCategory: FC = () => {
                       alt=""
                     />
                   </Box>
-                  {/* </BaseLink> */}
                 </Box>
               ))}
             </Stack>

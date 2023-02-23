@@ -5,6 +5,7 @@ import {
   FadeInAnimation,
   PrimaryTitle,
 } from 'components/Elements';
+import { BlogCategory } from 'components/Elements/Algolia/CategoryBlog';
 import { IdWrapper } from 'components/Layouts';
 import { searchClient } from 'libraries/algolia';
 import { FC } from 'react';
@@ -16,7 +17,7 @@ import { SearchModal } from './SearchModal';
 export const BlogMain: FC = () => {
   return (
     <IdWrapper id="blog">
-      <Box as="section" py={0} pr={5} bg="gray.100" mx="0">
+      <Box as="section" py={0} bg="gray.100" mx="0">
         <InstantSearch
           searchClient={searchClient}
           indexName="blog"
@@ -24,6 +25,7 @@ export const BlogMain: FC = () => {
         >
           <FadeInAnimation>
             <Configure hitsPerPage={BLOG_PER_PAGE} />
+            <BlogCategory attribute="category" />
             <Box
               display={{ base: 'block', lg: 'flex' }}
               flexDirection={{ base: 'column', lg: 'row-reverse' }}
