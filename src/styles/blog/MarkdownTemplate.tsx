@@ -41,7 +41,7 @@ const p = {
   props: {
     lineHeight: '1.7',
     fontSize: 'xl',
-    mb:10,
+    mb: 10,
   },
 };
 
@@ -88,7 +88,7 @@ const img = {
   props: {
     mx: 'auto',
     // width: { base:'70vw',md: '50vw', xl: '550px' },
-    w: {base:'70vw',lg:'50vw'},
+    w: { base: '70vw', lg: '50vw' },
   },
 };
 

@@ -10,8 +10,8 @@ export const BlogsWriter: FC = () => {
       as="section"
       bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
       py={'4'}
-      mt='20'
-      px='10'
+      mt="20"
+      px="10"
     >
       <FadeInAnimation>
         <Box>

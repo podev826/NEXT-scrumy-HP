@@ -1,7 +1,8 @@
 import { Box } from '@chakra-ui/react';
 import { BaseLink } from 'components/Elements';
 import { BLOG_CATEGORIES, BlogCategoryProps } from 'configs';
-import { FC, useState } from 'react';
+import { ActiveCategory } from 'features/Blogs';
+import { FC, useContext, useState } from 'react';
 import { MenuProps, useMenu } from 'react-instantsearch-hooks-web';
 
 type CustomBlogMenuItemPcProps = {
@@ -102,7 +103,7 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
 export const CustomBlogsMenu: FC<MenuProps> = (props) => {
   const { refine } = useMenu(props);
 
-  const [activeCategory, setActiveCategory] = useState('');
+  const { activeCategory, setActiveCategory } = useContext(ActiveCategory);
   const handleClick = (value: string): void => {
     setActiveCategory(value);
     refine(value);

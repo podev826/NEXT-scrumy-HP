@@ -1,5 +1,5 @@
 import { Box, Image, Stack } from '@chakra-ui/react';
-import { BaseLink, FadeInAnimation, PrimaryTitle } from 'components/Elements';
+import { FadeInAnimation, PrimaryTitle } from 'components/Elements';
 import { IdWrapper } from 'components/Layouts';
 import { BLOG_LIST } from 'configs';
 import { useRouter } from 'next/router';
