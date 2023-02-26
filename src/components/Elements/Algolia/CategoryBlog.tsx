@@ -1,7 +1,7 @@
 import { Box, Image, Text } from '@chakra-ui/react';
 import { BaseLink, PrimaryTitle } from 'components/Elements';
 import { BLOG_CATEGORIES, BlogCategoryProps } from 'configs';
-import { ActiveCategory } from 'features/Blogs';
+import { ActiveCategory } from 'pages/blogs';
 import { FC, useContext } from 'react';
 import { MenuProps, useMenu } from 'react-instantsearch-hooks-web';
 
@@ -145,5 +145,7 @@ export const BlogCategory: FC<MenuProps> = (props) => {
         </Box>
       </>
     );
+  } else {
+    return null;
   }
 };

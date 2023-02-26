@@ -2,7 +2,10 @@ import { BlogMainLayout, IdWrapper } from 'components/Layouts';
 import { META } from 'configs';
 import { BlogContentMain } from 'features/Blogs/Content';
 import { Blogclient } from 'libraries/microcms';
+import { useState } from 'react';
 import { BlogDataProps, BlogItemProps, ContentType, ContextType } from 'types';
+
+import { ActiveCategory } from '.';
 
 type blogType = {
   blog: BlogItemProps;
@@ -10,12 +13,19 @@ type blogType = {
 };
 
 export const BlogId = ({ blog, related }: blogType) => {
+  const [activeCategory, setActiveCategory] = useState('');
+  const value = {
+    activeCategory,
+    setActiveCategory,
+  };
   return (
-    <BlogMainLayout meta={META.media}>
-      <IdWrapper id={blog.title}>
-        <BlogContentMain blog={blog} related={related} />
-      </IdWrapper>
-    </BlogMainLayout>
+    <ActiveCategory.Provider value={value}>
+      <BlogMainLayout meta={META.media}>
+        <IdWrapper id={blog.title}>
+          <BlogContentMain blog={blog} related={related} />
+        </IdWrapper>
+      </BlogMainLayout>
+    </ActiveCategory.Provider>
   );
 };
 

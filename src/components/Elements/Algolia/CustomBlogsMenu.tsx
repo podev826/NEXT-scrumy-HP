@@ -1,13 +1,20 @@
 import { Box } from '@chakra-ui/react';
 import { BaseLink } from 'components/Elements';
 import { BLOG_CATEGORIES, BlogCategoryProps } from 'configs';
-import { ActiveCategory } from 'features/Blogs';
-import { FC, useContext, useState } from 'react';
+import { useRouter } from 'next/router';
+import { ActiveCategory } from 'pages/blogs';
+import { FC, useContext } from 'react';
 import { MenuProps, useMenu } from 'react-instantsearch-hooks-web';
 
 type CustomBlogMenuItemPcProps = {
   category: BlogCategoryProps;
   handleClick: (value: string) => void;
+  active: boolean;
+};
+
+type CustomBlogMenuAllPcProps = {
+  category: BlogCategoryProps;
+  handleAllClick: (value: string) => void;
   active: boolean;
 };
 
@@ -43,10 +50,7 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
       >
         <BaseLink
           href={`/blogs?blog%5Bmenu%5D%5Bcategory%5D=${category.name}`}
-          // href={encodeURI(`?blog%5Bmenu%5D%5Bcategory%5D=${category.name}`)}
-          // href={`/blogs/category/${category.slug}`}
           rel="noopener noreferrer"
-          // target="_blank"
           h="full"
           _hover={{
             opacity: 1,
@@ -59,54 +63,66 @@ const CustomBlogMenuItemPc: FC<CustomBlogMenuItemPcProps> = ({
   );
 };
 
-// ページ遷移をはさみたくない場合は、BaseLinkタグをaタグに変更
-
-// type CustomBlogMenuItemSpProps = {
-//   category: BlogCategoryProps;
-//   handleClick: (value: string) => void;
-// };
-
-// const CustomBlogMenuItemSp: FC<CustomBlogMenuItemSpProps> = ({
-//   category,
-//   handleClick,
-// }) => {
-//   return (
-//     <Box
-//       as="button"
-//       onClick={() => handleClick(category.text)}
-//       px={7}
-//       w="full"
-//       minH={12}
-//       display="grid"
-//       alignItems={'center'}
-//       fontWeight="bold"
-//       textAlign={'left'}
-//       _hover={{
-//         color: 'base.100',
-//         backgroundColor: 'sub.200',
-//       }}
-//     >
-//       <BaseLink
-//         href={`/blogs/category/${category.slug}`}
-//         rel="noopener noreferrer"
-//         h="full"
-//         _hover={{
-//           opacity: 1,
-//         }}
-//       >
-//         {category.name}
-//       </BaseLink>
-//     </Box>
-//   );
-// };
+const CustomBlogMenuAllPc: FC<CustomBlogMenuAllPcProps> = ({
+  category,
+  handleAllClick,
+  active,
+}) => {
+  return (
+    <Box as="li">
+      <Box
+        as="button"
+        onClick={() => handleAllClick(category.text)}
+        fontWeight={'bold'}
+        color={active ? 'base.100' : 'sub.100'}
+        bg={active ? 'sub.100' : 'base.100'}
+        border="3px solid"
+        borderColor={'sub.100'}
+        py={2}
+        px={6}
+        mt={5}
+        w={210}
+        cursor={active ? 'auto' : 'pointer'}
+        pointerEvents={active ? 'none' : 'auto'}
+        borderRadius="full"
+        transitionProperty="all"
+        transitionTimingFunction="linear"
+        transitionDuration="fast"
+        _hover={{
+          color: 'base.100',
+          bg: 'sub.100',
+        }}
+      >
+        <BaseLink
+          href={`/blogs`}
+          rel="noopener noreferrer"
+          h="full"
+          _hover={{
+            opacity: 1,
+          }}
+        >
+          {category.name}
+        </BaseLink>
+      </Box>
+    </Box>
+  );
+};
 
 export const CustomBlogsMenu: FC<MenuProps> = (props) => {
   const { refine } = useMenu(props);
+  const router = useRouter();
 
   const { activeCategory, setActiveCategory } = useContext(ActiveCategory);
   const handleClick = (value: string): void => {
     setActiveCategory(value);
     refine(value);
+  };
+
+  const handleAllClick = (value: string): void => {
+    setActiveCategory(value);
+    refine(value);
+    router.push(`/blogs`);
+    router.events.on('routeChangeComplete', router.reload);
   };
 
   return (
@@ -183,8 +199,8 @@ export const CustomBlogsMenu: FC<MenuProps> = (props) => {
         justifyContent={'center'}
         flexBasis={'calc(100% - 264px)'}
       >
-        <CustomBlogMenuItemPc
-          handleClick={handleClick}
+        <CustomBlogMenuAllPc
+          handleAllClick={handleAllClick}
           category={BLOG_CATEGORIES.all}
           active={activeCategory === BLOG_CATEGORIES.all.text}
         />
