@@ -27,6 +27,16 @@ type blogType = {
 
 export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
   const toc = renderToc(blog.content);
+  let category: string
+  if (blog.category.id === '8a_cl5gq5dy') {
+     category = 'ESG／SDGsとは？　＞';
+  } else if (blog.category.id === '3kjcv5uy5l') {
+     category = 'サステナブル経営　＞';
+  } else if (blog.category.id === 'ad_du_l5jb') {
+     category = 'ESG投資　＞';
+  } else {
+     category=''
+  }
   return (
     <Box pt={{ base: '5vh', lg: '0' }} bg="gray.100">
       <FadeInAnimation>
@@ -51,6 +61,13 @@ export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
             mx="auto"
             bg="white"
           >
+            <Text
+              fontSize={'md'}
+              fontWeight="bold"
+              mb="4"
+            >
+              ホーム　＞　{category} {blog.title}
+            </Text>
             <Text
               fontSize={{ base: 'xl', md: '2xl', xl: '3xl' }}
               fontWeight="bold"

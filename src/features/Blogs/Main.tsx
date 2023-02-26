@@ -8,16 +8,18 @@ import {
 import { BlogCategory } from 'components/Elements/Algolia/CategoryBlog';
 import { IdWrapper } from 'components/Layouts';
 import { searchClient } from 'libraries/algolia';
-import React, { FC } from 'react';
+import { ActiveCategory } from 'pages/blogs';
+import React, { FC, useContext } from 'react';
 import { Configure, InstantSearch } from 'react-instantsearch-hooks-web';
 import { BLOG_PER_PAGE } from 'types';
 
 import { SearchModal } from './SearchModal';
 
 export const BlogMain: FC = () => {
+  const { activeCategory } = useContext(ActiveCategory);
   return (
     <IdWrapper id="blog">
-      <Box as="section" py={0} bg="gray.100" mx="auto">
+      <Box as="section" py='4' bg="gray.100" mx="auto">
         <InstantSearch
           searchClient={searchClient}
           indexName="blog"
@@ -25,7 +27,9 @@ export const BlogMain: FC = () => {
         >
           <FadeInAnimation>
             <Configure hitsPerPage={BLOG_PER_PAGE} />
-            <BlogCategory attribute="category" />
+            <Box display={activeCategory === '' ? 'block' : 'none'}>
+              <BlogCategory attribute="category" />
+            </Box>
             <Box
               display={{ base: 'block', lg: 'flex' }}
               flexDirection={{ base: 'column', lg: 'row-reverse' }}
@@ -44,11 +48,17 @@ export const BlogMain: FC = () => {
               <Box
                 bg="white"
                 p={{ base: '3', lg: '4', xl: '7' }}
-                w={{ base: '95vw', lg: '70vw' }}
+                w={{ base: '95vw', lg: '67vw', xl: '70vw' }}
                 ml={{ base: '', lg: 4 }}
                 mx="auto"
               >
-                <Box pl={{ base: 1, lg: 0 }}>
+                <Box display={activeCategory === '' ? 'none' : 'block'}>
+                  <BlogCategory attribute="category" />
+                </Box>
+                <Box
+                  pl={{ base: 1, lg: 0 }}
+                  display={activeCategory === '' ? 'block' : 'none'}
+                >
                   <PrimaryTitle en="Articles" />
                 </Box>
                 <Box pt={{ base: 6, xl: 0 }} mx="auto">

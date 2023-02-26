@@ -15,7 +15,7 @@ export const SearchModal = () => {
 
     <Box
       pb={{ base: 16, lg: 0 }}
-      w={{ base: '70vw', lg: 300 }}
+      w={{ base: '70vw', lg: 290, xl: 300 }}
       alignItems={'center'}
       mx="auto"
     >

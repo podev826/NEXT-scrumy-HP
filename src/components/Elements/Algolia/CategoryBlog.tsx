@@ -92,16 +92,20 @@ export const BlogCategory: FC<MenuProps> = (props) => {
   if (activeCategory === BLOG_CATEGORIES.esgsdgs.text) {
     return (
       <>
-        <Box w="65vw">
-          <Text fontSize={'2xl'} color="black">
+        <Box mb="8" mt={{ base: '10', sm: '14', lg: 0 }}>
+          <Text fontWeight="bold" fontSize={'lg'} color="black">
             ホーム　＞　ESG／SDGsとは?
           </Text>
+          <Text fontWeight="bold" fontSize={'2xl'} color="black" mt="4">
+            ESG／SDGsとは?
+          </Text>
 
-          <Box mb="50px">
+          <Box mt="2">
             <Image
               alt=""
               src={'/images/root/blog1.png'}
-              width={{ base: 'full', xl: '65vw' }}
+              width={{ base: '90vw', lg: '700px' }}
+              mx={{base:'auto',lg:'0'}}
             />
           </Box>
         </Box>
@@ -111,16 +115,20 @@ export const BlogCategory: FC<MenuProps> = (props) => {
   if (activeCategory === BLOG_CATEGORIES.sustainable.text) {
     return (
       <>
-        <Box w="65vw">
-          <Text fontSize={'2xl'} color="black">
+        <Box mb="8" mt={{ base: '10', sm: '14', lg: 0 }}>
+          <Text fontWeight="bold" fontSize={'lg'} color="black">
             ホーム　＞　サステナブル経営
           </Text>
+          <Text fontWeight="bold" fontSize={'2xl'} color="black" mt="4">
+            サステナブル経営
+          </Text>
 
-          <Box mb="50px">
+          <Box mt="2">
             <Image
               alt=""
               src={'/images/root/blog2.png'}
-              width={{ base: 'full', xl: '65vw' }}
+              width={{ base: '90vw', lg: '700px' }}
+              mx={{ base: 'auto', lg: '0' }}
             />
           </Box>
         </Box>
@@ -130,16 +138,20 @@ export const BlogCategory: FC<MenuProps> = (props) => {
   if (activeCategory === BLOG_CATEGORIES.esginvestment.text) {
     return (
       <>
-        <Box w="65vw">
-          <Text fontSize={'2xl'} color="black">
+        <Box mb="8" mt={{ base: '10', sm: '14', lg: 0 }}>
+          <Text fontWeight="bold" fontSize={'lg'} color="black">
             ホーム　＞　ESG投資
           </Text>
+          <Text fontWeight="bold" fontSize={'2xl'} color="black" mt="4">
+            ESG投資
+          </Text>
 
-          <Box mb="50px">
+          <Box mt="2">
             <Image
               alt=""
               src={'/images/root/blog3.png'}
-              width={{ base: 'full', xl: '65vw' }}
+              width={{ base: '90vw', lg: '700px' }}
+              mx={{ base: 'auto', lg: '0' }}
             />
           </Box>
         </Box>
