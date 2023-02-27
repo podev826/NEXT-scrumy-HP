@@ -1,6 +1,6 @@
-import { BlogContentProps, NewsContentProps } from 'types';
+import { NewsContentProps } from 'types';
 
-import { Blogclient, Newsclient } from './client';
+import { Newsclient } from './client';
 
 export const NewsgetAllContents = async (
   limit = 10,
@@ -23,23 +23,23 @@ export const NewsgetAllContents = async (
   return data.contents;
 };
 
-export const BloggetAllContents = async (
-  limit = 10,
-  offset = 0
-): Promise<BlogContentProps[]> => {
-  const data = await Blogclient.get({
-    endpoint: 'blogs',
-    queries: { limit, offset },
-  });
+// export const BloggetAllContents = async (
+//   limit = 10,
+//   offset = 0
+// ): Promise<BlogContentProps[]> => {
+//   const data = await Blogclient.get({
+//     endpoint: 'blogs',
+//     queries: { limit, offset },
+//   });
 
-  if (data.offset + data.limit < data.totalCount) {
-    const contents = await BloggetAllContents(
-      data.limit,
-      data.offset + data.limit
-    );
+//   if (data.offset + data.limit < data.totalCount) {
+//     const contents = await BloggetAllContents(
+//       data.limit,
+//       data.offset + data.limit
+//     );
 
-    return [...data.contents, ...contents];
-  }
+//     return [...data.contents, ...contents];
+//   }
 
-  return data.contents;
-};
+//   return data.contents;
+// };
