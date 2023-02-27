@@ -50,6 +50,7 @@ export const BlogMain: FC = () => {
                 p={{ base: '3', lg: '4', xl: '7' }}
                 w={{ base: '95vw', lg: '67vw', xl: '70vw' }}
                 ml={{ base: '', lg: 4 }}
+                mt='4'
                 mx="auto"
               >
                 <Box display={activeCategory === '' ? 'none' : 'block'}>

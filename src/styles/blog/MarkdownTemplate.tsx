@@ -18,7 +18,7 @@ type MarkdownTemplateProps = {
 const h2 = {
   props: {
     mb: '10px',
-    p: '15px',
+    p: { base:'10px',md:'15px'},
     fontSize: '2xl',
     backgroundColor: '#38B5A6',
     color: 'white',
@@ -27,7 +27,7 @@ const h2 = {
 const h3 = {
   props: {
     mb: '16px',
-    p: '10px',
+    p: { base: '5px', md: '10px' },
     fontSize: 'xl',
     borderLeftWidth: '10px',
     borderTopWidth: '2px',
@@ -40,7 +40,7 @@ const h3 = {
 const p = {
   props: {
     lineHeight: '1.7',
-    fontSize: 'xl',
+    fontSize: 'lg',
     mb: 10,
   },
 };
@@ -59,7 +59,6 @@ const li = {
   },
 };
 
-// 追加
 const blockquote = {
   props: {
     color: 'gray.500',
@@ -87,24 +86,13 @@ const a = {
 const img = {
   props: {
     mx: 'auto',
-    // width: { base:'70vw',md: '50vw', xl: '550px' },
-    w: { base: '70vw', lg: '50vw' },
+    w: { base: '85vw', lg: '50vw' },
   },
 };
 
 const options: HTMLReactParserOptions = {
   replace: (domNode: any) => {
     if (domNode.type === 'tag') {
-      // if (domNode.name === 'h1') {
-      //   return (
-      //     <IdWrapper id={domNode.children[0].data}>
-      //       <Heading as="h1" {...h1.props}>
-      //         {domToReact(domNode.children, options)}
-      //       </Heading>
-      //     </IdWrapper>
-      //   );
-      // }
-
       if (domNode.name === 'h2') {
         return (
           <IdWrapper id={domNode.children[0].data}>
@@ -142,7 +130,6 @@ const options: HTMLReactParserOptions = {
           <Text {...p.props}>{domToReact(domNode.children, options)}</Text>
         );
       }
-      // 追加
       if (domNode.name === 'blockquote') {
         return (
           <Box as="blockquote" {...blockquote.props}>

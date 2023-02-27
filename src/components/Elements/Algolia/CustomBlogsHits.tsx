@@ -83,8 +83,8 @@ export const CustomBlogsHits: FC<HitsProps<BlogItemProps>> = (props) => {
                   mt={2}
                   fontSize={'xl'}
                 >
-                  <Text textAlign={'left'}>{hit.description}</Text>
-                  <Text float={'right'}>
+                  <Text textAlign={'left'} fontSize='md'>{hit.description}</Text>
+                  <Text float={'right'} fontSize='md'>
                     {dayjs(hit.publishedAt).format('YYYY.MM.DD')}
                   </Text>
                 </Box>

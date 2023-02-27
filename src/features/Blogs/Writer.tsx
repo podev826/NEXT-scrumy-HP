@@ -1,5 +1,4 @@
 import { Box, Flex, Image, Link, Text } from '@chakra-ui/react';
-import { FadeInAnimation } from 'components/Elements';
 import { ContentWrapper } from 'components/Layouts';
 import { MEMBER_LIST } from 'configs';
 import { FC } from 'react';
@@ -11,9 +10,8 @@ export const BlogsWriter: FC = () => {
       bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
       py={'4'}
       mt="20"
-      px="10"
+      px={{base:0,md:8}}
     >
-      <FadeInAnimation>
         <Box>
           <Flex
             direction={{ md: 'row' }}
@@ -34,7 +32,7 @@ export const BlogsWriter: FC = () => {
               bg="white"
               fontSize={{ base: 'md', xl: 'lg' }}
               p="6"
-              w={'70vw'}
+              w={'75vw'}
               mx={{ base: 'auto', lg: 0 }}
             >
               <Text
@@ -123,7 +121,6 @@ export const BlogsWriter: FC = () => {
             </Link>
           </Box>
         </Box>
-      </FadeInAnimation>
     </ContentWrapper>
   );
 };

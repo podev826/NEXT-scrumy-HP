@@ -23,7 +23,7 @@ export const CustomBlogSearchBox2 = () => {
 
   return (
     <Box>
-      <Box as="form" action="">
+      <Box>
         <Box position={'relative'}>
           <Input
             pl={{ base: 3, xl: 9 }}

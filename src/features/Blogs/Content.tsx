@@ -29,16 +29,16 @@ export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
   const toc = renderToc(blog.content);
   let category: string
   if (blog.category.id === '8a_cl5gq5dy') {
-     category = 'ESG／SDGsとは？　＞';
+     category = '　＞　ESG／SDGsとは？';
   } else if (blog.category.id === '3kjcv5uy5l') {
-     category = 'サステナブル経営　＞';
+     category = '　＞　サステナブル経営';
   } else if (blog.category.id === 'ad_du_l5jb') {
-     category = 'ESG投資　＞';
+     category = '　＞　ESG投資';
   } else {
      category=''
   }
   return (
-    <Box pt={{ base: '5vh', lg: '0' }} bg="gray.100">
+    <Box pt={{base:'65px' ,sm: 20, lg: 4 }} bg="gray.100">
       <FadeInAnimation>
         <Box
           display={{ base: 'block', lg: 'flex' }}
@@ -56,7 +56,6 @@ export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
           <Box
             w={{ base: '95vw', lg: '68vw' }}
             p="4"
-            mt={10}
             ml={{ base: '', lg: 4 }}
             mx="auto"
             bg="white"
@@ -66,7 +65,7 @@ export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
               fontWeight="bold"
               mb="4"
             >
-              ホーム　＞　{category} {blog.title}
+              ホーム{category} <Text as='span' display={{base:'none',lg:'inline'}}>　＞　{blog.title}</Text>
             </Text>
             <Text
               fontSize={{ base: 'xl', md: '2xl', xl: '3xl' }}
@@ -75,11 +74,11 @@ export const BlogContentMain: FC<blogType> = ({ blog, related }: blogType) => {
             >
               {blog.title}
             </Text>
-            <Image
+              <Image
               alt=""
               src={blog.eyecatch.url}
               objectFit="contain"
-              w={{ base: '90vw', md: '75vw', xl: '60vw' }}
+              w={{ base: '90vw', md: '85vw', xl: '60vw' }}
               mx="auto"
             />
             <Text float={'right'}>
