@@ -96,10 +96,7 @@ export const RootService: FC = () => {
                       >
                         {item.title_en}
                       </Text>
-                      <Text
-                        mt={{ base: 4 }}
-                        fontSize='md'
-                      >
+                      <Text mt={{ base: 4 }} fontSize="md">
                         {item.text1}
                         <br />
                         {item.text2}

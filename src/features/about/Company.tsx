@@ -68,12 +68,7 @@ export const AboutCompany: FC = () => {
         <FadeInAnimation>
           <PrimaryTitle en="Company" />
           <Box mt={{ base: 8, xl: 16 }}>
-            <Text
-              fontSize='md'
-              fontWeight="medium"
-              lineHeight="1.667"
-              w="full"
-            >
+            <Text fontSize="md" fontWeight="medium" lineHeight="1.667" w="full">
               <Text as="span" display="block">
                 株式会社Scrumy（スクラミー）は、サステナブル経営とサステナブルファイナンスを専門とする戦略コンサルティングファームです。
               </Text>

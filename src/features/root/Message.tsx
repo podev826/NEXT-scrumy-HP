@@ -59,7 +59,11 @@ export const RootMessage: FC = () => {
                   </Text>
                 </Text>
               </Box>
-              <Box mt={{ base: 5, xl: 6 }} gridArea={{ xl: 'content' }} fontSize='md'>
+              <Box
+                mt={{ base: 5, xl: 6 }}
+                gridArea={{ xl: 'content' }}
+                fontSize="md"
+              >
                 <Text>
                   Scrumyは「利益追求」と「幸福追求」を両立できる社会の実現を目指しています。
                 </Text>

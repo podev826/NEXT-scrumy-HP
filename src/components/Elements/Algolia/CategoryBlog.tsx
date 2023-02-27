@@ -105,7 +105,7 @@ export const BlogCategory: FC<MenuProps> = (props) => {
               alt=""
               src={'/images/root/blog1.png'}
               width={{ base: '90vw', lg: '700px' }}
-              mx={{base:'auto',lg:'0'}}
+              mx={{ base: 'auto', lg: '0' }}
             />
           </Box>
         </Box>

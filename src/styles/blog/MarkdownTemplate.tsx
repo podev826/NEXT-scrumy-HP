@@ -18,7 +18,7 @@ type MarkdownTemplateProps = {
 const h2 = {
   props: {
     mb: '10px',
-    p: { base:'10px',md:'15px'},
+    p: { base: '10px', md: '15px' },
     fontSize: '2xl',
     backgroundColor: '#38B5A6',
     color: 'white',

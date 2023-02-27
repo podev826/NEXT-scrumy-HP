@@ -17,17 +17,17 @@ export const TableOfContents: FC<TocTypeProps> = ({ toc }) => {
         </Box>
       </Box>
       <Box pb={5} px="7" display={isOpen ? 'block' : 'none'} mt="3">
-          {toc.map((data: TocType) => (
-            <Text key={data.id}>
-              <Link
-                href={`#${data.text}`}
-                ml={data.name == 'h3' ? '4' : 0}
-                cursor={'pointer'}
-              >
-                {data.text}
-              </Link>
-            </Text>
-          ))}
+        {toc.map((data: TocType) => (
+          <Text key={data.id}>
+            <Link
+              href={`#${data.text}`}
+              ml={data.name == 'h3' ? '4' : 0}
+              cursor={'pointer'}
+            >
+              {data.text}
+            </Link>
+          </Text>
+        ))}
       </Box>
     </Box>
   );

@@ -52,51 +52,51 @@ export const BlogContact: FC = () => {
       maxW="calc(820px + (96px * 2))"
       mx={{ base: 'auto', xl: '0' }}
     >
-        <Box
-          as="button"
-          maxW={{ base: 'full', xl: 'full' }}
-          onClick={() => setIsFormOpen(!isFormOpen)}
-          px={{ base: 10, xl: 8 }}
-          py={{ base: 3, xl: 4 }}
-          fontSize={{ base: 'md', xl: 'xl' }}
-          fontWeight="bold"
-          minH={{ base: 12, lg: 14, xl: 18 }}
-          display="inline-flex"
-          justifyContent="center"
+      <Box
+        as="button"
+        maxW={{ base: 'full', xl: 'full' }}
+        onClick={() => setIsFormOpen(!isFormOpen)}
+        px={{ base: 10, xl: 8 }}
+        py={{ base: 3, xl: 4 }}
+        fontSize={{ base: 'md', xl: 'xl' }}
+        fontWeight="bold"
+        minH={{ base: 12, lg: 14, xl: 18 }}
+        display="inline-flex"
+        justifyContent="center"
+        alignItems="center"
+        borderRadius="full"
+        boxShadow="primary"
+        textAlign="center"
+        w="full"
+        color="base.100"
+        bg="accent.200"
+        position="relative"
+        overflow="hidden"
+        _before={{
+          content: '""',
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          bottom: '0',
+          right: '0',
+          bgGradient: 'linear(to-r,accent.200,accent.100,accent.300)',
+          transitionProperty: 'common',
+          transitionTimingFunction: 'linear',
+          transitionDuration: 'fast',
+        }}
+      >
+        <Flex
+          as="span"
           alignItems="center"
-          borderRadius="full"
-          boxShadow="primary"
-          textAlign="center"
-          w="full"
-          color="base.100"
-          bg="accent.200"
+          justifyContent="center"
           position="relative"
-          overflow="hidden"
-          _before={{
-            content: '""',
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            bottom: '0',
-            right: '0',
-            bgGradient: 'linear(to-r,accent.200,accent.100,accent.300)',
-            transitionProperty: 'common',
-            transitionTimingFunction: 'linear',
-            transitionDuration: 'fast',
-          }}
         >
-          <Flex
-            as="span"
-            alignItems="center"
-            justifyContent="center"
-            position="relative"
-          >
-            <Box as="span" mr={4}>
-              コメントはこちらから
-            </Box>
-            {isFormOpen ? <AngleUpIcon /> : <AngleDownIcon />}
-          </Flex>
-        </Box>
+          <Box as="span" mr={4}>
+            コメントはこちらから
+          </Box>
+          {isFormOpen ? <AngleUpIcon /> : <AngleDownIcon />}
+        </Flex>
+      </Box>
       <Box
         as="form"
         onSubmit={handleSubmit(onSubmit)}
