@@ -6,7 +6,7 @@ import type { NextPage } from 'next';
 
 const PrivacyPolicy: NextPage = () => {
   return (
-    <MainLayout meta={META.privacyPolicy}>
+    <MainLayout meta={META.PrivacyPolicy}>
       <PrivacyPolicySubVisual />
       <PrivacyPolicyMain />
     </MainLayout>
