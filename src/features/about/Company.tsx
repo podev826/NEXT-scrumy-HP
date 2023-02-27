@@ -7,12 +7,14 @@ import { FC } from 'react';
 type AboutCompanyItemProps = {
   term: string;
   description: string | string[];
+  description2: string | string[];
   last: boolean;
 };
 
 const AboutCompanyItem: FC<AboutCompanyItemProps> = ({
   term,
   description,
+  description2,
   last,
 }) => {
   return (
@@ -52,6 +54,8 @@ const AboutCompanyItem: FC<AboutCompanyItemProps> = ({
         flexBasis={{ xl: 'calc(100% - 240px)' }}
       >
         {description}
+        <br />
+        {description2}
       </Box>
     </Box>
   );
@@ -64,24 +68,17 @@ export const AboutCompany: FC = () => {
         <FadeInAnimation>
           <PrimaryTitle en="Company" />
           <Box mt={{ base: 8, xl: 16 }}>
-            <Text
-              fontSize={{ base: 'lg', md: 'lg', xl: 'xl' }}
-              fontWeight="medium"
-              lineHeight="1.667"
-              // w={{ md: 'full', sm: 'full' }}
-              w="full"
-            >
+            <Text fontSize="md" fontWeight="medium" lineHeight="1.667" w="full">
               <Text as="span" display="block">
-                株式会社Scrumy (スクラミー)
-                は、サステナブル経営やサステナブルファイナンスを専門とする戦略コンサルティングファームです。
+                株式会社Scrumy（スクラミー）は、サステナブル経営とサステナブルファイナンスを専門とする戦略コンサルティングファームです。
               </Text>
               <br />
               <Text as="span" display="block">
-                国内外の大企業、政府・自治体、大学・研究所、非営利組織、機関投資家、メディアの皆様と連携させていただいてまいりました。
+                国内外の大企業、政府・自治体、大学・研究所、非営利組織、機関投資家、メディアの皆様と連携させていただいております。
               </Text>
               <br />
               <Text as="span" display="block">
-                今後も、環境・人事・医療・法制度・監査・マネジメントの経験豊富な各専門家が一致団結し、日々進化を続けるSXデータベース「Scrumy-Code」に基づくデータドリブンな戦略コンサルティングサービスを提供してまいります。
+                サステナビリティに関するあらゆる領域（法律、会計・監査、医療・ヘルスケア、金融、環境、人権、HR、ガバナンス・情報セキュリティ）の経験豊富な専門家集団として、日々進化を続けるSXデータベース「Scrumy-Code」に基づくデータドリブンな戦略コンサルティングサービスを提供してまいります。
               </Text>
             </Text>
           </Box>
@@ -89,7 +86,7 @@ export const AboutCompany: FC = () => {
             as="dl"
             mx="auto"
             w={{ base: 'calc(100% - 36px)', xl: '100%' }}
-            maxW="844px"
+            maxW="1055px"
             display="grid"
             gap={{ base: 4, xl: 6 }}
             bg="base.100"
@@ -102,6 +99,7 @@ export const AboutCompany: FC = () => {
                 key={item.term}
                 term={item.term}
                 description={item.description}
+                description2={item.description2}
                 last={index + 1 === COMPANY_INFORMATION.length ? true : false}
               />
             ))}

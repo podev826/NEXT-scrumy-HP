@@ -72,7 +72,7 @@ export const ContactMain: FC = () => {
             </FormItem>
             <FormItem>
               <FormTerm require={true} htmlFor="company_name">
-                貴社名
+                御社名
               </FormTerm>
               <FormDescriptionInput
                 id="company_name"
@@ -80,7 +80,7 @@ export const ContactMain: FC = () => {
                 placeholder="例）株式会社Scrumy"
                 error={errors.company_name}
                 register={register('company_name', {
-                  required: '貴社名は必須項目です。',
+                  required: '御社名は必須項目です。',
                 })}
               />
             </FormItem>

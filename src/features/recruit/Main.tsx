@@ -21,8 +21,11 @@ const JobDescriptionDetail: FC<JobDescriptionDetailProps> = ({
 }) => {
   return (
     <Box
-      fontWeight={'bold'}
-      pb={{ base: 6 }}
+      pb={{ base: 4, xl: 6 }}
+      px={{ base: 4, xl: 10 }}
+      display={{ xl: 'flex' }}
+      alignItems={{ xl: 'center' }}
+      justifyContent={{ xl: 'space-between' }}
       position="relative"
       _after={{
         content: '""',
@@ -36,23 +39,18 @@ const JobDescriptionDetail: FC<JobDescriptionDetailProps> = ({
         left: 0,
         right: 0,
       }}
-      _last={{
-        pb: {
-          base: 0,
-          md: 6,
-        },
-        '::after': {
-          base: {
-            opacity: 0,
-          },
-          md: {
-            opacity: '0.16 !important',
-          },
-        },
-      }}
     >
-      <Text>{term}</Text>
-      <Text mt={2}>{description}</Text>
+      <Box as="dt" fontWeight={'bold'} flexBasis={{ xl: '200px' }}>
+        {term}
+      </Box>
+      <Box
+        as="dd"
+        mt={{ base: '6px', xl: '0' }}
+        fontWeight={'medium'}
+        flexBasis={{ xl: 'calc(100% - 240px)' }}
+      >
+        {description}
+      </Box>
     </Box>
   );
 };
@@ -131,17 +129,22 @@ export const RecruitMain: FC = () => {
                 />
               ))}
             </Accordion>
-            <Box mt={{ base: 8, xl: 10 }}>
-              <PrimaryLink
-                href="/contact"
-                bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
-                w="full"
-                maxW={{ base: '280px', xl: '284px' }}
-                color="white"
-              >
-                応募する
-              </PrimaryLink>
-            </Box>
+          </Box>
+          <Box
+            mt={{ base: 8, xl: 10 }}
+            mx={'auto'}
+            display={'flex'}
+            justifyContent={'center'}
+          >
+            <PrimaryLink
+              href="/contact"
+              bgGradient="linear(to-r,accent.200,accent.100,accent.300)"
+              w="full"
+              maxW={{ base: '280px', xl: '284px' }}
+              color="white"
+            >
+              応募する
+            </PrimaryLink>
           </Box>
         </FadeInAnimation>
       </ContentWrapper>

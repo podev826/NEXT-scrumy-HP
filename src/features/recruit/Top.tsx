@@ -33,7 +33,7 @@ export const RecruitTop: FC = () => {
         </Box>
         <Box mt={{ base: 8, md: 12, xl: 16 }}>
           <Text
-            fontSize={{ base: 'lg', md: 'xl', xl: '2xl' }}
+            fontSize={{ base: 'md', lg: 'lg' }}
             fontWeight="bold"
             textAlign={'center'}
             lineHeight={{ base: '2', md: '2.2', xl: '2.4' }}

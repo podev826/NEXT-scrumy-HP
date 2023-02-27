@@ -16,7 +16,11 @@ export const NewsMain: FC = () => {
   return (
     <IdWrapper id="news">
       <ContentWrapper as="section" maxW={'calc(1080px + (96px * 2))'}>
-        <InstantSearch searchClient={searchClient} indexName="news">
+        <InstantSearch
+          searchClient={searchClient}
+          indexName="news"
+          routing={true}
+        >
           <FadeInAnimation>
             <Configure hitsPerPage={NEWS_PER_PAGE} />
             <Box

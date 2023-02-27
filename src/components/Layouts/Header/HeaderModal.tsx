@@ -8,7 +8,6 @@ import { HeaderModalListPc, HeaderModalListSp } from './HeaderModalList';
 
 export const HeaderModal: FC = () => {
   const { headerIsActive, toggleHeader, closeHeader } = useHeader();
-
   return (
     <>
       <Box
@@ -163,6 +162,7 @@ export const HeaderModal: FC = () => {
           <HeaderModalListSp content={SECONDARY_NAV.about} />
           <HeaderModalListSp content={SECONDARY_NAV.news} />
           <HeaderModalListSp content={SECONDARY_NAV.recruit} />
+          <HeaderModalListSp content={SECONDARY_NAV.media} />
           <HeaderModalListSp content={SECONDARY_NAV.privacyPolicy} />
         </Grid>
         <Box mt={10} w="180px">
@@ -294,6 +294,7 @@ export const HeaderModal: FC = () => {
               <Grid gap={10}>
                 <HeaderModalListPc content={SECONDARY_NAV.news} />
                 <HeaderModalListPc content={SECONDARY_NAV.recruit} />
+                <HeaderModalListPc content={SECONDARY_NAV.media} />
               </Grid>
             </Flex>
             <Box>
@@ -305,7 +306,7 @@ export const HeaderModal: FC = () => {
                 pb={1}
                 onClick={closeHeader}
               >
-                privacy-policy
+                Privacy-Policy
               </BaseLink>
               <Text mt="10px" fontSize={12}>
                 <small lang="en">

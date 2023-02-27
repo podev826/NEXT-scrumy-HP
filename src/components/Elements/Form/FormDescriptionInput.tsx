@@ -23,7 +23,7 @@ export const FormDescriptionInput: FC<FormDescriptionInputProps> = ({
         px={8}
         py={2}
         _placeholder={{
-          color: 'gray.200',
+          color: 'gray.100',
           fontWeight: 'bold',
         }}
         _hover={{

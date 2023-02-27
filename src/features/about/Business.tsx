@@ -11,7 +11,7 @@ export const AboutBusiness: FC = () => {
           <PrimaryTitle en="Business" />
           <Box mt={{ base: 8, xl: 16 }}>
             <Text
-              fontSize={{ base: 'lg', md: 'lg', xl: 'xl' }}
+              fontSize="md"
               fontWeight="medium"
               lineHeight="1.667"
               w={{ md: '60vw', sm: 'full' }}
@@ -21,7 +21,7 @@ export const AboutBusiness: FC = () => {
               </Text>
               <br />
               <Text as="span" display="block">
-                我々はサステナブルファイナンスの専門家集団としてサステナブル情報のプラットフォーマーを目指して、コンサルテーション、プロダクト開発に加えて政府や国際団体をも巻き込んだ政策提言を推進しております。
+                我々はサステナブルファイナンスの専門家集団としてサステナブル情報のプラットフォーマーを目指し、コンサルテーション、プロダクト開発に加えて政府や国際団体をも巻き込んだ政策提言を推進しております。
               </Text>
             </Text>
           </Box>

@@ -78,8 +78,13 @@ export const SECONDARY_NAV: SecondaryNavProps = {
       },
     ],
   },
+  media: {
+    title: 'Media',
+    href: 'https://blog-scrumy.com/', //ここを '/blogs', に変更
+    list: [],
+  },
   privacyPolicy: {
-    title: 'privacy policy',
+    title: 'Privacy Policy',
     href: '/privacy-policy',
     list: [],
   },

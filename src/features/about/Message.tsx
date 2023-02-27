@@ -34,51 +34,13 @@ export const AboutMessage: FC = () => {
             </Box>
 
             <Box mt={{ base: 5, xl: 0 }}>
-              <Box gridArea={{ xl: 'title' }}>
-                <Text fontSize={{ base: 'xl', '2xl': '2xl' }} fontWeight="bold">
-                  <Text
-                    as="span"
-                    display={{ xl: 'inline-block' }}
-                    px={{ xl: 3 }}
-                    py={{ xl: 2 }}
-                    bg={{ xl: 'main.100' }}
-                    mt={{ xl: 3 }}
-                    mb={{ base: 10, xl: 6 }}
-                  >
-                    <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-                      <Text
-                        as="span"
-                        display="inline-block"
-                        bg="main.100"
-                        px={{ base: 2, xl: 0 }}
-                        py={{ base: 1, xl: 0 }}
-                        mt={{ base: 2, xl: 0 }}
-                      >
-                        持続可能な新しい資本主義を
-                      </Text>
-                    </Text>
-                    <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-                      <Text
-                        as="span"
-                        display="inline-block"
-                        bg="main.100"
-                        px={{ base: 2, xl: 0 }}
-                        py={{ base: 1, xl: 0 }}
-                        mt={{ base: 2, xl: 0 }}
-                      >
-                        日本から世界へ
-                      </Text>
-                    </Text>
-                  </Text>
-                </Text>
-              </Box>
               <Box mt={{ base: 5, xl: 6 }} gridArea={{ xl: 'content' }}>
                 <Text>
-                  弊社では弁護士、会計士、産業医、証券アナリスト、サステナビリティ学者など多種多様な分野の研究と実務に通じたメンバーが集い、科学的手法に基づいたデータドリブンな情報基盤をご提供いたします。
+                  弊社では弁護士、公認会計士・税理士、医師、証券アナリスト、サステナビリティ学者など多種多様な分野の研究と実務に通じたメンバーが集い、科学的手法に基づいたデータドリブンな情報基盤をご提供します。
                 </Text>
                 <Box display={{ base: 'none', md: 'block' }}>
                   <Text mt={6}>
-                    Scrumyでは、一人ひとりが企画部長であり、発案者であり、代表者であるという誇りを持ちながら、日々壮大な事業にコミットしています。
+                    Scrumyでは、一人ひとりがリーダーであり、発案者であり、責任者であるという誇りを持ちながら、国際金融市場という壮大な事業に取り組んでいます。
                   </Text>
                 </Box>
                 <Box display={{ base: 'none', md: 'block' }}>
@@ -98,7 +60,7 @@ export const AboutMessage: FC = () => {
                     {({ isExpanded }) => (
                       <>
                         <AccordionPanel pt={0} px={0} pb={5}>
-                          Scrumyでは、一人ひとりが企画部長であり、発案者であり、代表者であるという誇りを持ちながら、日々壮大な事業にコミットしています。
+                          Scrumyでは、一人ひとりがリーダーであり、発案者であり、責任者であるという誇りを持ちながら、国際金融市場という壮大な事業に取り組んでいます。
                         </AccordionPanel>
                         <AccordionPanel pt={0} px={0} pb={5}>
                           日本や世界が抱える社会課題に真摯に向き合い、どうすれば乗り越えられるのか。いつも問い続け、考え続け、語り続け、動き続ける。どんな領域でも役立つ、社会課題解決に向けて徹底的にやり抜くための「真の哲学力」が自然と身につくことが、当社ならではの魅力です。
