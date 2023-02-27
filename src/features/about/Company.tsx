@@ -69,10 +69,9 @@ export const AboutCompany: FC = () => {
           <PrimaryTitle en="Company" />
           <Box mt={{ base: 8, xl: 16 }}>
             <Text
-              fontSize={{ base: 'lg', md: 'lg', xl: 'xl' }}
+              fontSize='md'
               fontWeight="medium"
               lineHeight="1.667"
-              // w={{ md: 'full', sm: 'full' }}
               w="full"
             >
               <Text as="span" display="block">

@@ -11,7 +11,7 @@ export const AboutBusiness: FC = () => {
           <PrimaryTitle en="Business" />
           <Box mt={{ base: 8, xl: 16 }}>
             <Text
-              fontSize={{ base: 'lg', md: 'lg', xl: 'xl' }}
+              fontSize='md'
               fontWeight="medium"
               lineHeight="1.667"
               w={{ md: '60vw', sm: 'full' }}

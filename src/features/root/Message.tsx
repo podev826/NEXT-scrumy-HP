@@ -22,44 +22,44 @@ export const RootMessage: FC = () => {
 
             <Box mt={{ base: 5, xl: 0 }}>
               <Box gridArea={{ xl: 'title' }}>
-                <Text fontSize={{ base: 'xl', '2xl': '2xl' }} fontWeight="bold">
-                  <Text
-                    as="span"
-                    display={{ xl: 'inline-block' }}
-                    px={{ xl: 3 }}
-                    py={{ xl: 2 }}
-                    bg={{ xl: 'main.100' }}
-                    mt={{ xl: 3 }}
-                    mb={{ base: 10, xl: 6 }}
-                  >
-                    <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-                      <Text
-                        as="span"
-                        display="inline-block"
-                        bg="main.100"
-                        px={{ base: 2, xl: 0 }}
-                        py={{ base: 1, xl: 0 }}
-                        mt={{ base: 2, xl: 0 }}
-                      >
-                        持続可能な資本主義を
-                      </Text>
+                <Text
+                  as="span"
+                  fontSize={{ base: 'xl', '2xl': '2xl' }}
+                  fontWeight="bold"
+                  display={{ xl: 'inline-block' }}
+                  px={{ xl: 3 }}
+                  py={{ xl: 2 }}
+                  bg={{ xl: 'main.100' }}
+                  mt={{ xl: 3 }}
+                  mb={{ base: 10, xl: 6 }}
+                >
+                  <Text as="span" display={{ base: 'block', xl: 'inline' }}>
+                    <Text
+                      as="span"
+                      display="inline-block"
+                      bg="main.100"
+                      px={{ base: 2, xl: 0 }}
+                      py={{ base: 1, xl: 0 }}
+                      mt={{ base: 2, xl: 0 }}
+                    >
+                      持続可能な資本主義を
                     </Text>
-                    <Text as="span" display={{ base: 'block', xl: 'inline' }}>
-                      <Text
-                        as="span"
-                        display="inline-block"
-                        bg="main.100"
-                        px={{ base: 2, xl: 0 }}
-                        py={{ base: 1, xl: 0 }}
-                        mt={{ base: 2, xl: 0 }}
-                      >
-                        日本から世界へ
-                      </Text>
+                  </Text>
+                  <Text as="span" display={{ base: 'block', xl: 'inline' }}>
+                    <Text
+                      as="span"
+                      display="inline-block"
+                      bg="main.100"
+                      px={{ base: 2, xl: 0 }}
+                      py={{ base: 1, xl: 0 }}
+                      mt={{ base: 2, xl: 0 }}
+                    >
+                      日本から世界へ
                     </Text>
                   </Text>
                 </Text>
               </Box>
-              <Box mt={{ base: 5, xl: 6 }} gridArea={{ xl: 'content' }}>
+              <Box mt={{ base: 5, xl: 6 }} gridArea={{ xl: 'content' }} fontSize='md'>
                 <Text>
                   Scrumyは「利益追求」と「幸福追求」を両立できる社会の実現を目指しています。
                 </Text>
