@@ -161,8 +161,7 @@ export const AboutMember: FC = () => {
                           fontSize={{
                             base: '3.0vw',
                             sm: '2.2vw',
-                            md: '1.9vw',
-                            lg: '1.4vw',
+                            md: 'md',
                           }}
                         >
                           {item.description}
