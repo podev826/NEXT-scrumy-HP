@@ -1,0 +1,24 @@
+name: Deploy to Amazon EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: deploy the new code
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: 34.146.216.72
+          username: gcloud
+          key: ${{ secrets.KEY }}
+          port: 22
+          script: |
+            cd scrumy-HP
+            git pull --no-rebase --autostash
